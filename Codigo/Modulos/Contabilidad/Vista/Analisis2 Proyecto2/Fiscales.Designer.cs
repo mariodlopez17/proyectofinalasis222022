@@ -36,6 +36,7 @@ namespace Analisis2_Proyecto2
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMenuP = new System.Windows.Forms.Button();
             this.btnSalirFisc = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -44,6 +45,7 @@ namespace Analisis2_Proyecto2
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Info;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.btnSalirFisc);
             this.panel1.Controls.Add(this.btnMenuP);
             this.panel1.Controls.Add(this.button1);
@@ -103,6 +105,15 @@ namespace Analisis2_Proyecto2
             this.btnSalirFisc.UseVisualStyleBackColor = true;
             this.btnSalirFisc.Click += new System.EventHandler(this.btnSalirFisc_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(685, 22);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // Fiscales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -128,5 +139,6 @@ namespace Analisis2_Proyecto2
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel Pprincipal;
+        private System.Windows.Forms.Button button2;
     }
 }
