@@ -29,6 +29,7 @@ namespace Vista
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Nav));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -84,9 +85,9 @@ namespace Vista
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(0, 427);
+            this.panel1.Location = new System.Drawing.Point(0, 370);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(233, 133);
+            this.panel1.Size = new System.Drawing.Size(200, 115);
             this.panel1.TabIndex = 1;
             // 
             // panelLogo
@@ -95,7 +96,7 @@ namespace Vista
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(233, 100);
+            this.panelLogo.Size = new System.Drawing.Size(197, 87);
             this.panelLogo.TabIndex = 0;
             // 
             // pictureBox1
@@ -103,7 +104,7 @@ namespace Vista
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(233, 100);
+            this.pictureBox1.Size = new System.Drawing.Size(197, 87);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
@@ -113,12 +114,12 @@ namespace Vista
             this.btnCrud.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCrud.FlatAppearance.BorderSize = 0;
             this.btnCrud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrud.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCrud.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.btnCrud.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
-            this.btnCrud.Location = new System.Drawing.Point(0, 100);
+            this.btnCrud.Location = new System.Drawing.Point(0, 87);
             this.btnCrud.Name = "btnCrud";
-            this.btnCrud.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.btnCrud.Size = new System.Drawing.Size(233, 45);
+            this.btnCrud.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
+            this.btnCrud.Size = new System.Drawing.Size(197, 39);
             this.btnCrud.TabIndex = 0;
             this.btnCrud.Text = "Operaciones Basicas";
             this.btnCrud.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -143,76 +144,77 @@ namespace Vista
             this.panelCrud.Controls.Add(this.btnModificar);
             this.panelCrud.Controls.Add(this.btnInsert);
             this.panelCrud.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelCrud.Location = new System.Drawing.Point(0, 145);
+            this.panelCrud.Location = new System.Drawing.Point(0, 126);
             this.panelCrud.Name = "panelCrud";
-            this.panelCrud.Size = new System.Drawing.Size(233, 291);
+            this.panelCrud.Size = new System.Drawing.Size(197, 252);
             this.panelCrud.TabIndex = 1;
             // 
             // pictureBox9
             // 
-            
-            this.pictureBox9.Location = new System.Drawing.Point(0, 240);
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(0, 208);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(51, 34);
+            this.pictureBox9.Size = new System.Drawing.Size(44, 29);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 15;
             this.pictureBox9.TabStop = false;
             // 
             // pictureBox8
             // 
-            
-            this.pictureBox8.Location = new System.Drawing.Point(0, 200);
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(0, 173);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(51, 34);
+            this.pictureBox8.Size = new System.Drawing.Size(44, 29);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 14;
             this.pictureBox8.TabStop = false;
             // 
             // pictureBox7
             // 
-          
-            this.pictureBox7.Location = new System.Drawing.Point(0, 160);
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(0, 139);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(51, 34);
+            this.pictureBox7.Size = new System.Drawing.Size(44, 29);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 13;
             this.pictureBox7.TabStop = false;
             // 
             // pictureBox6
             // 
-           
-            this.pictureBox6.Location = new System.Drawing.Point(0, 120);
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(0, 104);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(51, 34);
+            this.pictureBox6.Size = new System.Drawing.Size(44, 29);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 12;
             this.pictureBox6.TabStop = false;
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(0, 80);
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(0, 69);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(51, 34);
+            this.pictureBox5.Size = new System.Drawing.Size(44, 29);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 11;
             this.pictureBox5.TabStop = false;
             // 
             // pictureBox4
             // 
-           
-            this.pictureBox4.Location = new System.Drawing.Point(0, 40);
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(0, 35);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(51, 34);
+            this.pictureBox4.Size = new System.Drawing.Size(44, 29);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 10;
             this.pictureBox4.TabStop = false;
             // 
             // pictureBox3
             // 
-            
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(51, 34);
+            this.pictureBox3.Size = new System.Drawing.Size(44, 29);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 9;
             this.pictureBox3.TabStop = false;
@@ -222,11 +224,11 @@ namespace Vista
             this.btnUpdate.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnUpdate.FlatAppearance.BorderSize = 0;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnUpdate.Location = new System.Drawing.Point(0, 240);
+            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnUpdate.Location = new System.Drawing.Point(0, 210);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Padding = new System.Windows.Forms.Padding(75, 0, 0, 0);
-            this.btnUpdate.Size = new System.Drawing.Size(233, 40);
+            this.btnUpdate.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnUpdate.Size = new System.Drawing.Size(197, 35);
             this.btnUpdate.TabIndex = 6;
             this.btnUpdate.Text = "Actualizar";
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -238,11 +240,11 @@ namespace Vista
             this.btnSearch.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSearch.Location = new System.Drawing.Point(0, 200);
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnSearch.Location = new System.Drawing.Point(0, 175);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Padding = new System.Windows.Forms.Padding(75, 0, 0, 0);
-            this.btnSearch.Size = new System.Drawing.Size(233, 40);
+            this.btnSearch.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnSearch.Size = new System.Drawing.Size(197, 35);
             this.btnSearch.TabIndex = 5;
             this.btnSearch.Text = "Consultar";
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -254,11 +256,11 @@ namespace Vista
             this.btnDelete.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDelete.Location = new System.Drawing.Point(0, 160);
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnDelete.Location = new System.Drawing.Point(0, 140);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Padding = new System.Windows.Forms.Padding(75, 0, 0, 0);
-            this.btnDelete.Size = new System.Drawing.Size(233, 40);
+            this.btnDelete.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnDelete.Size = new System.Drawing.Size(197, 35);
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Eliminar";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -270,11 +272,11 @@ namespace Vista
             this.btnCancel.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCancel.Location = new System.Drawing.Point(0, 120);
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnCancel.Location = new System.Drawing.Point(0, 105);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Padding = new System.Windows.Forms.Padding(75, 0, 0, 0);
-            this.btnCancel.Size = new System.Drawing.Size(233, 40);
+            this.btnCancel.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnCancel.Size = new System.Drawing.Size(197, 35);
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Cancelar";
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -286,11 +288,11 @@ namespace Vista
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSave.Location = new System.Drawing.Point(0, 80);
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnSave.Location = new System.Drawing.Point(0, 70);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Padding = new System.Windows.Forms.Padding(75, 0, 0, 0);
-            this.btnSave.Size = new System.Drawing.Size(233, 40);
+            this.btnSave.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnSave.Size = new System.Drawing.Size(197, 35);
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Guardar";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -302,11 +304,11 @@ namespace Vista
             this.btnModificar.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnModificar.FlatAppearance.BorderSize = 0;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnModificar.Location = new System.Drawing.Point(0, 40);
+            this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnModificar.Location = new System.Drawing.Point(0, 35);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Padding = new System.Windows.Forms.Padding(75, 0, 0, 0);
-            this.btnModificar.Size = new System.Drawing.Size(233, 40);
+            this.btnModificar.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnModificar.Size = new System.Drawing.Size(197, 35);
             this.btnModificar.TabIndex = 1;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -318,11 +320,11 @@ namespace Vista
             this.btnInsert.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnInsert.FlatAppearance.BorderSize = 0;
             this.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInsert.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnInsert.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.btnInsert.Location = new System.Drawing.Point(0, 0);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Padding = new System.Windows.Forms.Padding(75, 0, 0, 0);
-            this.btnInsert.Size = new System.Drawing.Size(233, 40);
+            this.btnInsert.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnInsert.Size = new System.Drawing.Size(197, 35);
             this.btnInsert.TabIndex = 0;
             this.btnInsert.Text = "Insertar";
             this.btnInsert.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -335,12 +337,12 @@ namespace Vista
             this.btnNav.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNav.FlatAppearance.BorderSize = 0;
             this.btnNav.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNav.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnNav.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.btnNav.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
-            this.btnNav.Location = new System.Drawing.Point(0, 436);
+            this.btnNav.Location = new System.Drawing.Point(0, 378);
             this.btnNav.Name = "btnNav";
-            this.btnNav.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.btnNav.Size = new System.Drawing.Size(233, 45);
+            this.btnNav.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
+            this.btnNav.Size = new System.Drawing.Size(197, 39);
             this.btnNav.TabIndex = 2;
             this.btnNav.Text = "Navegación";
             this.btnNav.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -359,47 +361,47 @@ namespace Vista
             this.panelTools.Controls.Add(this.btnBefore);
             this.panelTools.Controls.Add(this.btnStart);
             this.panelTools.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTools.Location = new System.Drawing.Point(0, 481);
+            this.panelTools.Location = new System.Drawing.Point(0, 417);
             this.panelTools.Name = "panelTools";
-            this.panelTools.Size = new System.Drawing.Size(233, 171);
+            this.panelTools.Size = new System.Drawing.Size(197, 148);
             this.panelTools.TabIndex = 3;
             // 
             // pictureBox14
             // 
-           
-            this.pictureBox14.Location = new System.Drawing.Point(0, 80);
+            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
+            this.pictureBox14.Location = new System.Drawing.Point(0, 69);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(51, 34);
+            this.pictureBox14.Size = new System.Drawing.Size(44, 29);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox14.TabIndex = 20;
             this.pictureBox14.TabStop = false;
             // 
             // pictureBox13
             // 
-            
-            this.pictureBox13.Location = new System.Drawing.Point(0, 40);
+            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
+            this.pictureBox13.Location = new System.Drawing.Point(0, 35);
             this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(51, 34);
+            this.pictureBox13.Size = new System.Drawing.Size(44, 29);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox13.TabIndex = 19;
             this.pictureBox13.TabStop = false;
             // 
             // pictureBox12
             // 
-            
-            this.pictureBox12.Location = new System.Drawing.Point(0, 120);
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(0, 104);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(51, 34);
+            this.pictureBox12.Size = new System.Drawing.Size(44, 29);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 18;
             this.pictureBox12.TabStop = false;
             // 
             // pictureBox11
             // 
-            
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
             this.pictureBox11.Location = new System.Drawing.Point(0, 0);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(51, 34);
+            this.pictureBox11.Size = new System.Drawing.Size(44, 29);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 17;
             this.pictureBox11.TabStop = false;
@@ -409,11 +411,11 @@ namespace Vista
             this.btnEnd.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEnd.FlatAppearance.BorderSize = 0;
             this.btnEnd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnd.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnEnd.Location = new System.Drawing.Point(0, 120);
+            this.btnEnd.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnEnd.Location = new System.Drawing.Point(0, 105);
             this.btnEnd.Name = "btnEnd";
-            this.btnEnd.Padding = new System.Windows.Forms.Padding(75, 0, 0, 0);
-            this.btnEnd.Size = new System.Drawing.Size(233, 40);
+            this.btnEnd.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnEnd.Size = new System.Drawing.Size(197, 35);
             this.btnEnd.TabIndex = 3;
             this.btnEnd.Text = "Fin";
             this.btnEnd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -425,11 +427,11 @@ namespace Vista
             this.btnNext.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNext.FlatAppearance.BorderSize = 0;
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnNext.Location = new System.Drawing.Point(0, 80);
+            this.btnNext.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnNext.Location = new System.Drawing.Point(0, 70);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Padding = new System.Windows.Forms.Padding(75, 0, 0, 0);
-            this.btnNext.Size = new System.Drawing.Size(233, 40);
+            this.btnNext.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnNext.Size = new System.Drawing.Size(197, 35);
             this.btnNext.TabIndex = 2;
             this.btnNext.Text = "Siguiente";
             this.btnNext.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -441,11 +443,11 @@ namespace Vista
             this.btnBefore.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBefore.FlatAppearance.BorderSize = 0;
             this.btnBefore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBefore.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnBefore.Location = new System.Drawing.Point(0, 40);
+            this.btnBefore.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnBefore.Location = new System.Drawing.Point(0, 35);
             this.btnBefore.Name = "btnBefore";
-            this.btnBefore.Padding = new System.Windows.Forms.Padding(75, 0, 0, 0);
-            this.btnBefore.Size = new System.Drawing.Size(233, 40);
+            this.btnBefore.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnBefore.Size = new System.Drawing.Size(197, 35);
             this.btnBefore.TabIndex = 1;
             this.btnBefore.Text = "Anterior";
             this.btnBefore.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -457,11 +459,11 @@ namespace Vista
             this.btnStart.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnStart.FlatAppearance.BorderSize = 0;
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStart.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnStart.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.btnStart.Location = new System.Drawing.Point(0, 0);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Padding = new System.Windows.Forms.Padding(75, 0, 0, 0);
-            this.btnStart.Size = new System.Drawing.Size(233, 40);
+            this.btnStart.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnStart.Size = new System.Drawing.Size(197, 35);
             this.btnStart.TabIndex = 0;
             this.btnStart.Text = "Inicio";
             this.btnStart.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -474,12 +476,12 @@ namespace Vista
             this.btnHelp.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHelp.FlatAppearance.BorderSize = 0;
             this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHelp.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnHelp.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.btnHelp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
-            this.btnHelp.Location = new System.Drawing.Point(0, 697);
+            this.btnHelp.Location = new System.Drawing.Point(0, 604);
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.btnHelp.Size = new System.Drawing.Size(233, 45);
+            this.btnHelp.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
+            this.btnHelp.Size = new System.Drawing.Size(197, 39);
             this.btnHelp.TabIndex = 5;
             this.btnHelp.Text = "Ayuda";
             this.btnHelp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -492,12 +494,12 @@ namespace Vista
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
-            this.btnExit.Location = new System.Drawing.Point(0, 742);
+            this.btnExit.Location = new System.Drawing.Point(0, 643);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.btnExit.Size = new System.Drawing.Size(233, 45);
+            this.btnExit.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
+            this.btnExit.Size = new System.Drawing.Size(197, 39);
             this.btnExit.TabIndex = 6;
             this.btnExit.Text = "Salir";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -506,10 +508,10 @@ namespace Vista
             // 
             // pictureBox10
             // 
-    
-            this.pictureBox10.Location = new System.Drawing.Point(0, 99);
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(0, 86);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(51, 46);
+            this.pictureBox10.Size = new System.Drawing.Size(44, 40);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 9;
             this.pictureBox10.TabStop = false;
@@ -531,7 +533,7 @@ namespace Vista
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(250, 670);
+            this.panelSideMenu.Size = new System.Drawing.Size(214, 581);
             this.panelSideMenu.TabIndex = 0;
             // 
             // btnReport
@@ -540,27 +542,27 @@ namespace Vista
             this.btnReport.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReport.FlatAppearance.BorderSize = 0;
             this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReport.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnReport.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.btnReport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
-            this.btnReport.Location = new System.Drawing.Point(0, 652);
+            this.btnReport.Location = new System.Drawing.Point(0, 565);
             this.btnReport.Name = "btnReport";
-            this.btnReport.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.btnReport.Size = new System.Drawing.Size(233, 45);
+            this.btnReport.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
+            this.btnReport.Size = new System.Drawing.Size(197, 39);
             this.btnReport.TabIndex = 4;
             this.btnReport.Text = "Reporteador";
             this.btnReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReport.UseVisualStyleBackColor = true;
             this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
-            // Form1
+            // Nav
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(934, 670);
+            this.ClientSize = new System.Drawing.Size(801, 581);
             this.Controls.Add(this.panelSideMenu);
             this.Controls.Add(this.panel1);
-            this.MinimumSize = new System.Drawing.Size(950, 600);
-            this.Name = "Form1";
+            this.MinimumSize = new System.Drawing.Size(817, 525);
+            this.Name = "Nav";
             this.Text = "Form1";
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
