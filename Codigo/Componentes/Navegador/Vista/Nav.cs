@@ -161,5 +161,10 @@ namespace Vista
         {
 
         }
+
+        private void iconPictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
