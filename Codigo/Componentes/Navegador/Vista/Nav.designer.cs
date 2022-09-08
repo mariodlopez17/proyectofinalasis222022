@@ -52,6 +52,11 @@ namespace Vista
             this.btnInsert = new System.Windows.Forms.Button();
             this.btnNav = new System.Windows.Forms.Button();
             this.panelTools = new System.Windows.Forms.Panel();
+            this.iconPictureBox14 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox13 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox12 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox11 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox10 = new FontAwesome.Sharp.IconPictureBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnEnd = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
@@ -59,11 +64,6 @@ namespace Vista
             this.btnStart = new System.Windows.Forms.Button();
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox10 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox11 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox12 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox13 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox14 = new FontAwesome.Sharp.IconPictureBox();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelCrud.SuspendLayout();
@@ -76,13 +76,13 @@ namespace Vista
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.panelTools.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox10)).BeginInit();
             this.panelSideMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox14)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -271,7 +271,7 @@ namespace Vista
             this.btnReporte.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReporte.FlatAppearance.BorderSize = 0;
             this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReporte.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnReporte.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReporte.Location = new System.Drawing.Point(0, 245);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
@@ -286,7 +286,7 @@ namespace Vista
             this.btnUpdate.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnUpdate.FlatAppearance.BorderSize = 0;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.Location = new System.Drawing.Point(0, 210);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
@@ -302,7 +302,7 @@ namespace Vista
             this.btnSearch.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Location = new System.Drawing.Point(0, 175);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
@@ -318,7 +318,7 @@ namespace Vista
             this.btnDelete.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Location = new System.Drawing.Point(0, 140);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
@@ -334,7 +334,7 @@ namespace Vista
             this.btnCancel.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(0, 105);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
@@ -350,7 +350,7 @@ namespace Vista
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Location = new System.Drawing.Point(0, 70);
             this.btnSave.Name = "btnSave";
             this.btnSave.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
@@ -366,7 +366,7 @@ namespace Vista
             this.btnModificar.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnModificar.FlatAppearance.BorderSize = 0;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.Location = new System.Drawing.Point(0, 35);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
@@ -382,7 +382,7 @@ namespace Vista
             this.btnInsert.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnInsert.FlatAppearance.BorderSize = 0;
             this.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInsert.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnInsert.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsert.Location = new System.Drawing.Point(0, 0);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
@@ -430,12 +430,82 @@ namespace Vista
             this.panelTools.Size = new System.Drawing.Size(197, 187);
             this.panelTools.TabIndex = 3;
             // 
+            // iconPictureBox14
+            // 
+            this.iconPictureBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(215)))), ((int)(((byte)(249)))));
+            this.iconPictureBox14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
+            this.iconPictureBox14.IconChar = FontAwesome.Sharp.IconChar.XmarkSquare;
+            this.iconPictureBox14.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
+            this.iconPictureBox14.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox14.IconSize = 29;
+            this.iconPictureBox14.Location = new System.Drawing.Point(0, 140);
+            this.iconPictureBox14.Name = "iconPictureBox14";
+            this.iconPictureBox14.Size = new System.Drawing.Size(44, 29);
+            this.iconPictureBox14.TabIndex = 28;
+            this.iconPictureBox14.TabStop = false;
+            // 
+            // iconPictureBox13
+            // 
+            this.iconPictureBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(215)))), ((int)(((byte)(249)))));
+            this.iconPictureBox13.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.iconPictureBox13.IconChar = FontAwesome.Sharp.IconChar.Forward;
+            this.iconPictureBox13.IconColor = System.Drawing.Color.DeepSkyBlue;
+            this.iconPictureBox13.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox13.IconSize = 29;
+            this.iconPictureBox13.Location = new System.Drawing.Point(0, 105);
+            this.iconPictureBox13.Name = "iconPictureBox13";
+            this.iconPictureBox13.Size = new System.Drawing.Size(44, 29);
+            this.iconPictureBox13.TabIndex = 27;
+            this.iconPictureBox13.TabStop = false;
+            // 
+            // iconPictureBox12
+            // 
+            this.iconPictureBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(215)))), ((int)(((byte)(249)))));
+            this.iconPictureBox12.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.iconPictureBox12.IconChar = FontAwesome.Sharp.IconChar.StepForward;
+            this.iconPictureBox12.IconColor = System.Drawing.Color.DeepSkyBlue;
+            this.iconPictureBox12.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox12.IconSize = 29;
+            this.iconPictureBox12.Location = new System.Drawing.Point(0, 70);
+            this.iconPictureBox12.Name = "iconPictureBox12";
+            this.iconPictureBox12.Size = new System.Drawing.Size(44, 29);
+            this.iconPictureBox12.TabIndex = 26;
+            this.iconPictureBox12.TabStop = false;
+            // 
+            // iconPictureBox11
+            // 
+            this.iconPictureBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(215)))), ((int)(((byte)(249)))));
+            this.iconPictureBox11.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.iconPictureBox11.IconChar = FontAwesome.Sharp.IconChar.StepBackward;
+            this.iconPictureBox11.IconColor = System.Drawing.Color.DeepSkyBlue;
+            this.iconPictureBox11.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox11.IconSize = 29;
+            this.iconPictureBox11.Location = new System.Drawing.Point(0, 35);
+            this.iconPictureBox11.Name = "iconPictureBox11";
+            this.iconPictureBox11.Size = new System.Drawing.Size(44, 29);
+            this.iconPictureBox11.TabIndex = 25;
+            this.iconPictureBox11.TabStop = false;
+            // 
+            // iconPictureBox10
+            // 
+            this.iconPictureBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(215)))), ((int)(((byte)(249)))));
+            this.iconPictureBox10.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.iconPictureBox10.IconChar = FontAwesome.Sharp.IconChar.Backward;
+            this.iconPictureBox10.IconColor = System.Drawing.Color.DeepSkyBlue;
+            this.iconPictureBox10.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox10.IconSize = 29;
+            this.iconPictureBox10.Location = new System.Drawing.Point(0, 0);
+            this.iconPictureBox10.Name = "iconPictureBox10";
+            this.iconPictureBox10.Size = new System.Drawing.Size(44, 29);
+            this.iconPictureBox10.TabIndex = 24;
+            this.iconPictureBox10.TabStop = false;
+            // 
             // btnSalir
             // 
             this.btnSalir.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Location = new System.Drawing.Point(0, 140);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
@@ -450,7 +520,7 @@ namespace Vista
             this.btnEnd.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEnd.FlatAppearance.BorderSize = 0;
             this.btnEnd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnd.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnEnd.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnd.Location = new System.Drawing.Point(0, 105);
             this.btnEnd.Name = "btnEnd";
             this.btnEnd.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
@@ -466,7 +536,7 @@ namespace Vista
             this.btnNext.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNext.FlatAppearance.BorderSize = 0;
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnNext.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.Location = new System.Drawing.Point(0, 70);
             this.btnNext.Name = "btnNext";
             this.btnNext.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
@@ -482,7 +552,7 @@ namespace Vista
             this.btnBefore.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBefore.FlatAppearance.BorderSize = 0;
             this.btnBefore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBefore.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnBefore.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBefore.Location = new System.Drawing.Point(0, 35);
             this.btnBefore.Name = "btnBefore";
             this.btnBefore.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
@@ -498,7 +568,7 @@ namespace Vista
             this.btnStart.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnStart.FlatAppearance.BorderSize = 0;
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStart.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnStart.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStart.Location = new System.Drawing.Point(0, 0);
             this.btnStart.Name = "btnStart";
             this.btnStart.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
@@ -539,76 +609,6 @@ namespace Vista
             this.iconPictureBox1.TabIndex = 2;
             this.iconPictureBox1.TabStop = false;
             // 
-            // iconPictureBox10
-            // 
-            this.iconPictureBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(215)))), ((int)(((byte)(249)))));
-            this.iconPictureBox10.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.iconPictureBox10.IconChar = FontAwesome.Sharp.IconChar.Backward;
-            this.iconPictureBox10.IconColor = System.Drawing.Color.DeepSkyBlue;
-            this.iconPictureBox10.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox10.IconSize = 29;
-            this.iconPictureBox10.Location = new System.Drawing.Point(0, 0);
-            this.iconPictureBox10.Name = "iconPictureBox10";
-            this.iconPictureBox10.Size = new System.Drawing.Size(44, 29);
-            this.iconPictureBox10.TabIndex = 24;
-            this.iconPictureBox10.TabStop = false;
-            // 
-            // iconPictureBox11
-            // 
-            this.iconPictureBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(215)))), ((int)(((byte)(249)))));
-            this.iconPictureBox11.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.iconPictureBox11.IconChar = FontAwesome.Sharp.IconChar.StepBackward;
-            this.iconPictureBox11.IconColor = System.Drawing.Color.DeepSkyBlue;
-            this.iconPictureBox11.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox11.IconSize = 29;
-            this.iconPictureBox11.Location = new System.Drawing.Point(0, 35);
-            this.iconPictureBox11.Name = "iconPictureBox11";
-            this.iconPictureBox11.Size = new System.Drawing.Size(44, 29);
-            this.iconPictureBox11.TabIndex = 25;
-            this.iconPictureBox11.TabStop = false;
-            // 
-            // iconPictureBox12
-            // 
-            this.iconPictureBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(215)))), ((int)(((byte)(249)))));
-            this.iconPictureBox12.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.iconPictureBox12.IconChar = FontAwesome.Sharp.IconChar.StepForward;
-            this.iconPictureBox12.IconColor = System.Drawing.Color.DeepSkyBlue;
-            this.iconPictureBox12.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox12.IconSize = 29;
-            this.iconPictureBox12.Location = new System.Drawing.Point(0, 70);
-            this.iconPictureBox12.Name = "iconPictureBox12";
-            this.iconPictureBox12.Size = new System.Drawing.Size(44, 29);
-            this.iconPictureBox12.TabIndex = 26;
-            this.iconPictureBox12.TabStop = false;
-            // 
-            // iconPictureBox13
-            // 
-            this.iconPictureBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(215)))), ((int)(((byte)(249)))));
-            this.iconPictureBox13.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.iconPictureBox13.IconChar = FontAwesome.Sharp.IconChar.Forward;
-            this.iconPictureBox13.IconColor = System.Drawing.Color.DeepSkyBlue;
-            this.iconPictureBox13.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox13.IconSize = 29;
-            this.iconPictureBox13.Location = new System.Drawing.Point(0, 105);
-            this.iconPictureBox13.Name = "iconPictureBox13";
-            this.iconPictureBox13.Size = new System.Drawing.Size(44, 29);
-            this.iconPictureBox13.TabIndex = 27;
-            this.iconPictureBox13.TabStop = false;
-            // 
-            // iconPictureBox14
-            // 
-            this.iconPictureBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(215)))), ((int)(((byte)(249)))));
-            this.iconPictureBox14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
-            this.iconPictureBox14.IconChar = FontAwesome.Sharp.IconChar.XmarkSquare;
-            this.iconPictureBox14.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
-            this.iconPictureBox14.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox14.IconSize = 29;
-            this.iconPictureBox14.Location = new System.Drawing.Point(0, 140);
-            this.iconPictureBox14.Name = "iconPictureBox14";
-            this.iconPictureBox14.Size = new System.Drawing.Size(44, 29);
-            this.iconPictureBox14.TabIndex = 28;
-            this.iconPictureBox14.TabStop = false;
-            // 
             // Nav
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -631,13 +631,13 @@ namespace Vista
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.panelTools.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox10)).EndInit();
             this.panelSideMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox14)).EndInit();
             this.ResumeLayout(false);
 
         }
