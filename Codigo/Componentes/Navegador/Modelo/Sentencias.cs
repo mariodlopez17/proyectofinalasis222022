@@ -35,5 +35,19 @@ namespace Modelo
             cmd.ExecuteNonQuery();
 
         }
+
+        public string buscarid(string tabla, string tipo)
+        {
+            string dato= " ";
+            string sql = "select " + tipo + " from " + tabla + " Order by " + tipo + " Desc Limit 1";
+            OdbcCommand cmd = new OdbcCommand(sql, con.conexion());
+            OdbcDataReader lr = cmd.ExecuteReader();
+            while(lr.Read())
+            {
+                dato = lr.GetString(0);
+            }
+
+            return dato;
+        }
     }
 }

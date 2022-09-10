@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
 using System.Data.Odbc;
+using FontAwesome.Sharp;
 using Modelo;
 
 namespace Controlador
@@ -21,11 +22,12 @@ namespace Controlador
             DataTable table = new DataTable();
             dt.Fill(table);
             tabla.DataSource = table;
+            
 
 
         }
 
-        public void limpiar(Control control)//Funcion para limpiar Componentes
+        public void limpiar(Control control)// limpia Componentes
         {
             foreach (var txt in control.Controls)
             {
@@ -44,7 +46,7 @@ namespace Controlador
             }
         }
 
-        public void activar(Control control)//Funcion para Activar componentes
+        public void activar(Control control)// Activa componentes
         {
             foreach (var txt in control.Controls)
             {
@@ -64,7 +66,7 @@ namespace Controlador
         }
 
 
-        public void desactivar(Control control)//Funcion para Desactivar componentes
+        public void desactivar(Control control)//Desactiva componentes
         {
             foreach (var txt in control.Controls)
             {
@@ -83,7 +85,7 @@ namespace Controlador
             }
         }
 
-        public void enfocar(TextBox[] textbox)
+        public void enfocar(TextBox[] textbox)//desabilita el primer textbox y enfoca el segundo
         {
             textbox[0].Enabled = false;
             textbox[1].Focus();
@@ -92,68 +94,239 @@ namespace Controlador
         public void llenartxt(TextBox[] textbox, DataGridView tabla)//Llena los textbox con datos del datagriedview
 
         {
-
+            
             for (int x = 0; x < tabla.ColumnCount; x++)
             {
                 textbox[x].Text = tabla.CurrentRow.Cells[x].Value.ToString();
+                
             }
 
         }
 
-        public void ingresar(TextBox[] textbox, DataGridView tabla)
+        public void moverseIF(TextBox[] textbox, DataGridView tabla, string mover)//Metodo para moverse al inicio y final
         {
-            string dato = " ";
-            string tipo = " ";
-            for (int x = 0; x < textbox.Length; x++)
+            int fin = (tabla.Rows.Count - 2); ;
+            int posicion;
+
+            if (mover.Equals("i"))
             {
-
-                if (x == textbox.Length - 1)
+                posicion = 0;
+                cursor(tabla, posicion);
+                tabla.CurrentCell.Selected = true;
+                for (int x = 0; x < tabla.ColumnCount; x++)
                 {
-                    dato += "'" + textbox[x].Text + "'";
-                    tipo += textbox[x].Tag.ToString();
+                    textbox[x].Text = tabla.Rows[posicion].Cells[x].Value.ToString();
+                    
                 }
-                else
-                {
-                    dato += "'" + textbox[x].Text + "',";
-                    tipo += textbox[x].Tag.ToString() + ",";
-                }
-
             }
-
-            sn.insertar(dato, tipo, tabla.Tag.ToString());
+            else if(mover.Equals("f"))
+            {
+                posicion = fin;
+                cursor(tabla, posicion);
+                for (int x = 0; x < tabla.ColumnCount; x++)
+                {
+                     
+                    textbox[x].Text = tabla.Rows[posicion].Cells[x].Value.ToString();
+                    
+                }
+            }
 
 
         }
 
-        public void actualizar(TextBox[] textbox, DataGridView tabla)
+         void cursor(DataGridView tabla, int puntero)//ubica el cursor y marca la fila en el datagriedview
         {
-            string dato = " ";
-            string condicion = "(" + textbox[0].Tag.ToString() + " = '" + textbox[0].Text + "')";
+            tabla.CurrentCell = tabla.Rows[puntero].Cells[0];
+            tabla.CurrentRow.Selected = true;
 
-            for (int x = 1; x < textbox.Length; x++)
+        }
+
+        public void ingresar(TextBox[] textbox, DataGridView tabla, IconButton[] boton)//Crea cadenas de datos para la insercion
+        {
+            string autorizazcion = evaluarcampos(textbox);
+
+            if(autorizazcion == "si")
             {
-
-                if (x == textbox.Length - 1)
+                string dato = " ";
+                string tipo = " ";
+                for (int x = 0; x < textbox.Length; x++)
                 {
-                    dato += " " + textbox[x].Tag.ToString() + " = '" + textbox[x].Text + "' ";
+
+                    if (x == textbox.Length - 1)
+                    {
+                        dato += "'" + textbox[x].Text + "'";
+                        tipo += textbox[x].Tag.ToString();
+                    }
+                    else
+                    {
+                        dato += "'" + textbox[x].Text + "',";
+                        tipo += textbox[x].Tag.ToString() + ",";
+                    }
 
                 }
-                else if (x == 1)
-                {
-                    dato += "SET " + textbox[x].Tag.ToString() + " = '" + textbox[x].Text + "', ";
 
-                }
-                else
+                sn.insertar(dato, tipo, tabla.Tag.ToString());
+                //MessageBox.Show("Dato Insertado");
+                for (int x = 0; x < textbox.Length; x++)
                 {
-                    dato += " " + textbox[x].Tag.ToString() + " = '" + textbox[x].Text + "', ";
-
+                    textbox[x].Enabled = false;
                 }
+                boton[0].Enabled = false;
+                boton[1].Enabled = false;
+                boton[2].Enabled = true;
+                boton[3].Enabled = true;
+                boton[4].Enabled = true;
+                boton[5].Enabled = true;
+                boton[6].Enabled = true;
+                boton[7].Enabled = true;
+            }
+            else if (autorizazcion == "no")
+            {
+                boton[0].Enabled = true;
+                boton[1].Enabled = true;
+                boton[2].Enabled = false;
+                boton[3].Enabled = false;
+                boton[4].Enabled = false;
+                boton[5].Enabled = false;
+                boton[6].Enabled = false;
+                boton[7].Enabled = false;
+            }
+           
+            
+
+
+        }
+
+
+        public void crearid(TextBox[] textbox, DataGridView tabla)//Crea el id siguiente a ingresar
+        {
+            
+            int incremento = 0;
+            textbox[0].Enabled = false;
+            textbox[1].Focus();
+            string resultado = sn.buscarid(tabla.Tag.ToString(), textbox[0].Tag.ToString());
+            incremento = Convert.ToInt32(resultado) + 1;
+            textbox[0].Text = incremento.ToString();
+
+            
+        }
+
+        public void actualizar(TextBox[] textbox, DataGridView tabla, IconButton[] boton)//Crea cadenas de datos para la actualizacion
+        {
+
+            string autorizazcion = evaluarcampos(textbox);
+
+            if (autorizazcion == "no")
+            {
+                boton[0].Enabled = true;
+                boton[1].Enabled = true;
+                boton[2].Enabled = false;
+                boton[3].Enabled = false;
+                boton[4].Enabled = false;
+                boton[5].Enabled = false;
+                boton[6].Enabled = false;
+                boton[7].Enabled = false;
+
 
             }
+            else if(autorizazcion == "si")
+            {
+               string dato = " ";
+                string condicion = "(" + textbox[0].Tag.ToString() + " = '" + textbox[0].Text + "')";
 
-            sn.actualizar(dato, condicion, tabla.Tag.ToString());
+                for (int x = 1; x < textbox.Length; x++)
+                {
+
+                    if (x == textbox.Length - 1)
+                    {
+                        dato += " " + textbox[x].Tag.ToString() + " = '" + textbox[x].Text + "' ";
+
+                    }
+                    else if (x == 1)
+                    {
+                        dato += "SET " + textbox[x].Tag.ToString() + " = '" + textbox[x].Text + "', ";
+
+                    }
+                    else
+                    {
+                        dato += " " + textbox[x].Tag.ToString() + " = '" + textbox[x].Text + "', ";
+
+                    }
+
+                }
+
+                sn.actualizar(dato, condicion, tabla.Tag.ToString());
+                MessageBox.Show("Dato actualizado");
+                for(int x = 0; x < textbox.Length; x++)
+                {
+                    textbox[x].Enabled = false;
+                }
+                boton[0].Enabled = false;
+                boton[1].Enabled = false;
+                boton[2].Enabled = true;
+                boton[3].Enabled = true;
+                boton[4].Enabled = true;
+                boton[5].Enabled = true;
+                boton[6].Enabled = true;
+                boton[7].Enabled = true;
+            }
 
 
+        }
+
+        public void bloquearbotones(IconButton[] boton, bool bloqueo)//bloquea botones
+        {
+            if(bloqueo == true)//activa el boton guardar y cancelar
+            {
+                boton[0].Enabled = true;
+                boton[1].Enabled = true;
+                boton[2].Enabled = false;
+                boton[3].Enabled = false;
+                boton[4].Enabled = false;
+                boton[5].Enabled = false;
+                boton[6].Enabled = false;
+                boton[7].Enabled = false;
+                
+               
+
+
+
+            }
+            else if(bloqueo == false)//bloque el boton guardar y cancelar
+            {
+                boton[0].Enabled = false;
+                boton[1].Enabled = false;
+                boton[2].Enabled = true;
+                boton[3].Enabled = true;
+                boton[4].Enabled = true;
+                boton[5].Enabled = true;
+                boton[6].Enabled = true;
+                boton[7].Enabled = true;
+               
+
+
+            }
+        }
+
+        string evaluarcampos(TextBox[] textbox)
+        {
+            string autorizacion = " ";
+            for(int x = 0; x < textbox.Length; x++)
+            {
+                if(textbox[x].Text.Length == 0 )
+                {
+                    MessageBox.Show("Por favor llenar el campo: "+textbox[x].Tag.ToString());
+                    autorizacion = "no";
+                    break;
+                    
+                }
+                else if (textbox[x].Text.Length != 0)
+                {
+                    autorizacion = "si";
+                }
+            }
+
+            return autorizacion;
         }
     }
 }
