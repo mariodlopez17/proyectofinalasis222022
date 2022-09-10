@@ -389,6 +389,8 @@ namespace Vista
             this.dgv_tabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_tabla.Location = new System.Drawing.Point(13, 352);
             this.dgv_tabla.Name = "dgv_tabla";
+            this.dgv_tabla.ReadOnly = true;
+            this.dgv_tabla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_tabla.Size = new System.Drawing.Size(520, 176);
             this.dgv_tabla.TabIndex = 18;
             this.dgv_tabla.Tag = "empleados";
@@ -450,6 +452,7 @@ namespace Vista
             this.Controls.Add(this.btnInsert);
             this.Name = "navegador";
             this.Text = "navegador";
+            this.Load += new System.EventHandler(this.navegador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tabla)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
