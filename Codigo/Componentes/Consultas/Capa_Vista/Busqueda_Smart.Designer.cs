@@ -32,7 +32,7 @@ namespace Capa_Vista
             this.tbcBusqueda = new System.Windows.Forms.TabControl();
             this.tbpCreacion = new System.Windows.Forms.TabPage();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.iconButton11 = new FontAwesome.Sharp.IconButton();
+            this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.iconButton6 = new FontAwesome.Sharp.IconButton();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -69,7 +69,7 @@ namespace Capa_Vista
             this.panel18 = new System.Windows.Forms.Panel();
             this.iconButton7 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnNuevo = new FontAwesome.Sharp.IconButton();
             this.panel19 = new System.Windows.Forms.Panel();
             this.label27 = new System.Windows.Forms.Label();
             this.comboBox16 = new System.Windows.Forms.ComboBox();
@@ -146,13 +146,13 @@ namespace Capa_Vista
             this.label1 = new System.Windows.Forms.Label();
             this.tbpBE = new System.Windows.Forms.TabPage();
             this.panel20 = new System.Windows.Forms.Panel();
-            this.iconButton33 = new FontAwesome.Sharp.IconButton();
             this.iconButton28 = new FontAwesome.Sharp.IconButton();
             this.iconButton26 = new FontAwesome.Sharp.IconButton();
             this.iconButton25 = new FontAwesome.Sharp.IconButton();
             this.label32 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox13 = new System.Windows.Forms.TextBox();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.tbcBusqueda.SuspendLayout();
             this.tbpCreacion.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -204,7 +204,7 @@ namespace Capa_Vista
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
-            this.panel12.Controls.Add(this.iconButton11);
+            this.panel12.Controls.Add(this.btnEliminar);
             this.panel12.Controls.Add(this.iconButton6);
             this.panel12.Controls.Add(this.textBox8);
             this.panel12.Controls.Add(this.label18);
@@ -216,19 +216,20 @@ namespace Capa_Vista
             this.panel12.Size = new System.Drawing.Size(1103, 688);
             this.panel12.TabIndex = 1;
             // 
-            // iconButton11
+            // btnEliminar
             // 
-            this.iconButton11.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            this.iconButton11.IconColor = System.Drawing.Color.DimGray;
-            this.iconButton11.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton11.IconSize = 50;
-            this.iconButton11.Location = new System.Drawing.Point(824, 492);
-            this.iconButton11.Name = "iconButton11";
-            this.iconButton11.Size = new System.Drawing.Size(62, 68);
-            this.iconButton11.TabIndex = 9;
-            this.iconButton11.Text = "Elimiar";
-            this.iconButton11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton11.UseVisualStyleBackColor = true;
+            this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.btnEliminar.IconColor = System.Drawing.Color.DimGray;
+            this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEliminar.IconSize = 50;
+            this.btnEliminar.Location = new System.Drawing.Point(824, 492);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(62, 68);
+            this.btnEliminar.TabIndex = 9;
+            this.btnEliminar.Text = "Elimiar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.iconButton11_Click);
             // 
             // iconButton6
             // 
@@ -578,7 +579,7 @@ namespace Capa_Vista
             // 
             this.panel18.Controls.Add(this.iconButton7);
             this.panel18.Controls.Add(this.iconButton2);
-            this.panel18.Controls.Add(this.iconButton1);
+            this.panel18.Controls.Add(this.btnNuevo);
             this.panel18.Controls.Add(this.panel19);
             this.panel18.Controls.Add(this.label27);
             this.panel18.Controls.Add(this.comboBox16);
@@ -623,20 +624,21 @@ namespace Capa_Vista
             this.iconButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton2.UseVisualStyleBackColor = true;
             // 
-            // iconButton1
+            // btnNuevo
             // 
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 60;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.iconButton1.Location = new System.Drawing.Point(403, 51);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(64, 68);
-            this.iconButton1.TabIndex = 18;
-            this.iconButton1.Text = "Agregar";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.btnNuevo.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnNuevo.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
+            this.btnNuevo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnNuevo.IconSize = 60;
+            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnNuevo.Location = new System.Drawing.Point(403, 51);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(64, 68);
+            this.btnNuevo.TabIndex = 18;
+            this.btnNuevo.Text = "Agregar";
+            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // panel19
             // 
@@ -1407,7 +1409,7 @@ namespace Capa_Vista
             // 
             // panel20
             // 
-            this.panel20.Controls.Add(this.iconButton33);
+            this.panel20.Controls.Add(this.iconButton1);
             this.panel20.Controls.Add(this.iconButton28);
             this.panel20.Controls.Add(this.iconButton26);
             this.panel20.Controls.Add(this.iconButton25);
@@ -1418,21 +1420,6 @@ namespace Capa_Vista
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(954, 379);
             this.panel20.TabIndex = 18;
-            // 
-            // iconButton33
-            // 
-            this.iconButton33.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
-            this.iconButton33.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
-            this.iconButton33.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton33.IconSize = 60;
-            this.iconButton33.Location = new System.Drawing.Point(647, 14);
-            this.iconButton33.Name = "iconButton33";
-            this.iconButton33.Size = new System.Drawing.Size(64, 68);
-            this.iconButton33.TabIndex = 28;
-            this.iconButton33.Text = "Editar";
-            this.iconButton33.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton33.UseVisualStyleBackColor = true;
-            this.iconButton33.Click += new System.EventHandler(this.iconButton33_Click);
             // 
             // iconButton28
             // 
@@ -1503,6 +1490,21 @@ namespace Capa_Vista
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(300, 20);
             this.textBox13.TabIndex = 9;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.iconButton1.IconColor = System.Drawing.Color.DimGray;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 50;
+            this.iconButton1.Location = new System.Drawing.Point(647, 14);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(62, 68);
+            this.iconButton1.TabIndex = 18;
+            this.iconButton1.Text = "Elimiar";
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click_1);
             // 
             // Busqueda_Smart
             // 
@@ -1648,11 +1650,11 @@ namespace Capa_Vista
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnNuevo;
         private FontAwesome.Sharp.IconButton iconButton4;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton11;
+        private FontAwesome.Sharp.IconButton btnEliminar;
         private FontAwesome.Sharp.IconButton iconButton6;
         private FontAwesome.Sharp.IconButton iconButton10;
         private FontAwesome.Sharp.IconButton iconButton5;
@@ -1679,6 +1681,6 @@ namespace Capa_Vista
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.Panel panel20;
-        private FontAwesome.Sharp.IconButton iconButton33;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }
