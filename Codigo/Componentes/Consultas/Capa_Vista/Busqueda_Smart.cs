@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Capa_Controlador;
+
+
 
 namespace Capa_Vista
 {
@@ -64,6 +67,58 @@ namespace Capa_Vista
         private void iconButton33_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void iconButton11_Click(object sender, EventArgs e)
+        {
+       /*   try
+            {
+                String codigo2 = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                String atributo2 = "codigo";
+                var resultado = MessageBox.Show("Desea borrar el registro seleccionado", "Confirme su accion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resultado == DialogResult.Yes)
+                {
+                  Capa_Modelo fn=new Capa_Modelo; 
+                                            
+                    String tabla = "Consulta";
+                  fn.eliminar(tabla, atributo2, codigo2);
+
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("No se ha seleccionado ningun registro a eliminar"  , "Confirme su accion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);)
+            }*/
+
+
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void iconButton1_Click_1(object sender, EventArgs e)
+        {
+        /*  try
+            {
+                String codigo2 = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                String atributo2 = "codigo";
+                var resultado = MessageBox.Show("Desea borrar el registro seleccionado", "Confirme su accion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resultado == DialogResult.Yes)
+                {
+                   Capa_Modelo fn=new Capa_Modelo; 
+                    String tabla = "Consulta";
+                  fn.eliminar(tabla, atributo2, codigo2);
+
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("No se ha seleccionado ningun registro a eliminar", "Confirme su accion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);)
+            }*/
         }
     }
 }
