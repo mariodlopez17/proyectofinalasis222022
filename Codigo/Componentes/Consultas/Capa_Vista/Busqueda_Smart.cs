@@ -47,7 +47,21 @@ namespace Capa_Vista
 
         private void iconButton26_Click(object sender, EventArgs e)
         {
+        /*  int flag = 0;
+            string cadena = "idConsulta = ' ', Cadena = ' ', NombreConsulta = ' ', Usuario = ' ', disponible = ' '"
+            SqlCommand comando = new SqlCommand(cadena, conexion);
+            flag = comando.ExecuteNonQuery();
 
+            if (flag == 1)
+            {
+                MessageBox.Show("Se realizo el cambio correctamente");
+            }
+            else
+            {
+                MessageBox.Show("No se encontro a la persona");
+            }
+            tbpBE.Text = "";
+            Consulta();*/
         }
 
         private void iconButton33_Click(object sender, EventArgs e)
