@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,8 @@ using Capa_Controlador;
 
 namespace Capa_Vista
 {
+    
+
     public partial class Busqueda_Smart : Form
     {
         public Busqueda_Smart()
