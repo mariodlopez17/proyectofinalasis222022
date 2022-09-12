@@ -58,7 +58,8 @@ namespace Capa_vista
             this.aYUDAToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(750, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(749, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -82,26 +83,30 @@ namespace Capa_vista
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // aplicacionesToolStripMenuItem
             // 
             this.aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
-            this.aplicacionesToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
+            this.aplicacionesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.aplicacionesToolStripMenuItem.Text = "Aplicaciones";
+            this.aplicacionesToolStripMenuItem.Click += new System.EventHandler(this.aplicacionesToolStripMenuItem_Click);
             // 
             // módulosToolStripMenuItem
             // 
             this.módulosToolStripMenuItem.Name = "módulosToolStripMenuItem";
-            this.módulosToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
+            this.módulosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.módulosToolStripMenuItem.Text = "Módulos";
+            this.módulosToolStripMenuItem.Click += new System.EventHandler(this.módulosToolStripMenuItem_Click);
             // 
             // perfilesToolStripMenuItem
             // 
             this.perfilesToolStripMenuItem.Name = "perfilesToolStripMenuItem";
-            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
+            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.perfilesToolStripMenuItem.Text = "Perfiles";
+            this.perfilesToolStripMenuItem.Click += new System.EventHandler(this.perfilesToolStripMenuItem_Click);
             // 
             // aSIGNACIONESToolStripMenuItem
             // 
@@ -118,18 +123,21 @@ namespace Capa_vista
             this.asignacionesDeAplicacionesAUsuariosToolStripMenuItem.Name = "asignacionesDeAplicacionesAUsuariosToolStripMenuItem";
             this.asignacionesDeAplicacionesAUsuariosToolStripMenuItem.Size = new System.Drawing.Size(360, 26);
             this.asignacionesDeAplicacionesAUsuariosToolStripMenuItem.Text = "Asignaciones de Aplicaciones a Usuarios";
+            this.asignacionesDeAplicacionesAUsuariosToolStripMenuItem.Click += new System.EventHandler(this.asignacionesDeAplicacionesAUsuariosToolStripMenuItem_Click);
             // 
             // asignaciónDePerfilesAUsuariosToolStripMenuItem
             // 
             this.asignaciónDePerfilesAUsuariosToolStripMenuItem.Name = "asignaciónDePerfilesAUsuariosToolStripMenuItem";
             this.asignaciónDePerfilesAUsuariosToolStripMenuItem.Size = new System.Drawing.Size(360, 26);
             this.asignaciónDePerfilesAUsuariosToolStripMenuItem.Text = "Asignación de Perfiles a Usuarios";
+            this.asignaciónDePerfilesAUsuariosToolStripMenuItem.Click += new System.EventHandler(this.asignaciónDePerfilesAUsuariosToolStripMenuItem_Click);
             // 
             // asignaciónDeAplicacionesAPerfilesToolStripMenuItem
             // 
             this.asignaciónDeAplicacionesAPerfilesToolStripMenuItem.Name = "asignaciónDeAplicacionesAPerfilesToolStripMenuItem";
             this.asignaciónDeAplicacionesAPerfilesToolStripMenuItem.Size = new System.Drawing.Size(360, 26);
             this.asignaciónDeAplicacionesAPerfilesToolStripMenuItem.Text = "Asignación de Aplicaciones a Perfiles";
+            this.asignaciónDeAplicacionesAPerfilesToolStripMenuItem.Click += new System.EventHandler(this.asignaciónDeAplicacionesAPerfilesToolStripMenuItem_Click);
             // 
             // cAMBIOCONTRASEÑAToolStripMenuItem
             // 
@@ -153,8 +161,9 @@ namespace Capa_vista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(750, 450);
+            this.ClientSize = new System.Drawing.Size(749, 450);
             this.Controls.Add(this.menuStrip1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Navegador_seg";
             this.Text = "Navegador_seg";
             this.menuStrip1.ResumeLayout(false);

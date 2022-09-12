@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace Capa_vista
 {
-    public partial class Navegador_seg : Form
+    public partial class Modulos : Form
     {
-        public Navegador_seg()
+        public Modulos()
         {
             InitializeComponent();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Navegador_seg b = new Navegador_seg();
+            b.Show();
+            this.Hide();
         }
     }
 }
