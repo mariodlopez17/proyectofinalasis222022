@@ -53,6 +53,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Busqueda Avanzada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busqueda Avanzada.Designer.cs">
+      <DependentUpon>Busqueda Avanzada.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRUDC.cs" />
     <Compile Include="CRUD.cs" />
     <Compile Include="Form1.cs">
@@ -63,6 +69,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Busqueda Avanzada.resx">
+      <DependentUpon>Busqueda Avanzada.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
