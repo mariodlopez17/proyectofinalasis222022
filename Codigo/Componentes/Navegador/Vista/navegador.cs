@@ -19,13 +19,14 @@ namespace Vista
         {
             InitializeComponent();
         }
-        bool opcion;
+        int opcion=0;
         //si opcion es true será insercion
         //si opcion es false será actualizacion
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            opcion = true;
-            IconButton[] boton = { btnSave, btnCancelar, btnInsert, btnModificar, btnDelete, btnUpdate, btnConsultar, btnReporte };
+            opcion = 1;
+            IconButton[] boton = { btnSave, btnCancelar, btnInsert, btnModificar, btnDelete, btnUpdate, btnConsultar, btnReporte,
+                                   btnNext, btnBack, btnStart, btnEnd, btnExit, btnHelp };
             cn.bloquearbotones(boton, true);
             cn.limpiar(this);
             cn.activar(this);
@@ -37,8 +38,9 @@ namespace Vista
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            opcion = false;
-            IconButton[] boton = { btnSave, btnCancelar, btnInsert, btnModificar, btnDelete, btnUpdate, btnConsultar, btnReporte };
+            opcion = 2;
+            IconButton[] boton = { btnSave, btnCancelar, btnInsert, btnModificar, btnDelete, btnUpdate, btnConsultar, btnReporte,
+                                   btnNext, btnBack, btnStart, btnEnd, btnExit, btnHelp };
             cn.bloquearbotones(boton, true);
             TextBox[] textbox = { textBox1, textBox2 };
             cn.activar(this);
@@ -47,7 +49,14 @@ namespace Vista
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
+            opcion = 3;
+            IconButton[] boton = { btnSave, btnCancelar, btnInsert, btnModificar, btnDelete, btnUpdate, btnConsultar, btnReporte,
+                                   btnNext, btnBack, btnStart, btnEnd, btnExit, btnHelp };
+            cn.bloquearbotones(boton, true);
+            cn.activar(this);
+            TextBox[] textbox = { textBox1, textBox2, textBox3, textBox4, textBox5 };
+            cn.enfocarEliminar(textbox);
+            MessageBox.Show("Esta Seguro de eliminar el registro, si es así seleccione Guardar.");
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -59,27 +68,33 @@ namespace Vista
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            IconButton[] boton = { btnSave, btnCancelar, btnInsert, btnModificar, btnDelete, btnUpdate, btnConsultar, btnReporte };
-            
+            IconButton[] boton = { btnSave, btnCancelar, btnInsert, btnModificar, btnDelete, btnUpdate, btnConsultar, btnReporte,
+                                   btnNext, btnBack, btnStart, btnEnd, btnExit, btnHelp };
+
             TextBox[] textbox = { textBox1, textBox2, textBox3, textBox4, textBox5 };
-            if (opcion == true)//Insercion
+            if (opcion == 1)//Insercion
             {
                 cn.ingresar(textbox, dgv_tabla, boton);
                 
 
             }
-            else if (opcion == false)//actualizacion
+            else if (opcion == 2)//actualizacion
             {
                 cn.actualizar(textbox, dgv_tabla,boton);
                
                
                 
             }
+            else if (opcion == 3)//eliminar
+            {
+                cn.delete(textbox, dgv_tabla, boton);
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            IconButton[] boton = { btnSave, btnCancelar, btnInsert, btnModificar, btnDelete, btnUpdate, btnConsultar, btnReporte };
+            IconButton[] boton = { btnSave, btnCancelar, btnInsert, btnModificar, btnDelete, btnUpdate, btnConsultar, btnReporte,
+                                   btnNext, btnBack, btnStart, btnEnd, btnExit, btnHelp };
             TextBox[] textbox = { textBox1, textBox2, textBox3, textBox4, textBox5 };
             cn.bloquearbotones(boton, false);
             cn.limpiar(this);
@@ -114,12 +129,16 @@ namespace Vista
 
         private void bnNext_Click(object sender, EventArgs e)
         {
-
+            TextBox[] textbox = { textBox1, textBox2, textBox3, textBox4, textBox5 };
+            cn.moverseIF(textbox, dgv_tabla, "b");
+            cn.desactivar(this);
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-
+            TextBox[] textbox = { textBox1, textBox2, textBox3, textBox4, textBox5 };
+            cn.moverseIF(textbox, dgv_tabla, "s");
+            cn.desactivar(this);
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -138,7 +157,8 @@ namespace Vista
             cn.llenartablaa(dgv_tabla.Tag.ToString(), dgv_tabla);
             cn.desactivar(this);
             cn.llenartxt(textbox, dgv_tabla);
-            IconButton[] boton = { btnSave, btnCancelar, btnInsert, btnModificar, btnDelete, btnUpdate, btnConsultar, btnReporte };
+            IconButton[] boton = { btnSave, btnCancelar, btnInsert, btnModificar, btnDelete, btnUpdate, btnConsultar, btnReporte,
+                                   btnNext, btnBack, btnStart, btnEnd, btnExit, btnHelp };
             cn.bloquearbotones(boton,false);
             
         }

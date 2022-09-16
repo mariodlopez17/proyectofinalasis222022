@@ -39,7 +39,7 @@ namespace Vista
             this.btnReporte = new FontAwesome.Sharp.IconButton();
             this.btnStart = new FontAwesome.Sharp.IconButton();
             this.btnBack = new FontAwesome.Sharp.IconButton();
-            this.bnNext = new FontAwesome.Sharp.IconButton();
+            this.btnNext = new FontAwesome.Sharp.IconButton();
             this.btnEnd = new FontAwesome.Sharp.IconButton();
             this.btnExit = new FontAwesome.Sharp.IconButton();
             this.btnHelp = new FontAwesome.Sharp.IconButton();
@@ -105,7 +105,7 @@ namespace Vista
             this.btnDelete.IconColor = System.Drawing.Color.DimGray;
             this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnDelete.IconSize = 40;
-            this.btnDelete.Location = new System.Drawing.Point(12, 79);
+            this.btnDelete.Location = new System.Drawing.Point(12, 85);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(69, 61);
             this.btnDelete.TabIndex = 3;
@@ -124,7 +124,7 @@ namespace Vista
             this.btnUpdate.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
             this.btnUpdate.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnUpdate.IconSize = 40;
-            this.btnUpdate.Location = new System.Drawing.Point(87, 79);
+            this.btnUpdate.Location = new System.Drawing.Point(87, 85);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(69, 61);
             this.btnUpdate.TabIndex = 4;
@@ -162,7 +162,7 @@ namespace Vista
             this.btnCancelar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
             this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnCancelar.IconSize = 40;
-            this.btnCancelar.Location = new System.Drawing.Point(178, 79);
+            this.btnCancelar.Location = new System.Drawing.Point(178, 85);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(69, 61);
             this.btnCancelar.TabIndex = 6;
@@ -200,7 +200,7 @@ namespace Vista
             this.btnReporte.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
             this.btnReporte.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnReporte.IconSize = 36;
-            this.btnReporte.Location = new System.Drawing.Point(253, 79);
+            this.btnReporte.Location = new System.Drawing.Point(253, 85);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(69, 61);
             this.btnReporte.TabIndex = 8;
@@ -247,24 +247,24 @@ namespace Vista
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // bnNext
+            // btnNext
             // 
-            this.bnNext.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.bnNext.FlatAppearance.BorderSize = 2;
-            this.bnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bnNext.IconChar = FontAwesome.Sharp.IconChar.Backward;
-            this.bnNext.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
-            this.bnNext.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.bnNext.IconSize = 40;
-            this.bnNext.Location = new System.Drawing.Point(342, 12);
-            this.bnNext.Name = "bnNext";
-            this.bnNext.Size = new System.Drawing.Size(69, 61);
-            this.bnNext.TabIndex = 11;
-            this.bnNext.Text = "Anterior";
-            this.bnNext.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.bnNext.UseVisualStyleBackColor = true;
-            this.bnNext.Click += new System.EventHandler(this.bnNext_Click);
+            this.btnNext.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnNext.FlatAppearance.BorderSize = 2;
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.IconChar = FontAwesome.Sharp.IconChar.Backward;
+            this.btnNext.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
+            this.btnNext.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnNext.IconSize = 40;
+            this.btnNext.Location = new System.Drawing.Point(342, 12);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(69, 61);
+            this.btnNext.TabIndex = 11;
+            this.btnNext.Text = "Anterior";
+            this.btnNext.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.bnNext_Click);
             // 
             // btnEnd
             // 
@@ -314,7 +314,7 @@ namespace Vista
             this.btnHelp.IconColor = System.Drawing.Color.DimGray;
             this.btnHelp.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnHelp.IconSize = 40;
-            this.btnHelp.Location = new System.Drawing.Point(504, 79);
+            this.btnHelp.Location = new System.Drawing.Point(504, 85);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(69, 61);
             this.btnHelp.TabIndex = 14;
@@ -439,7 +439,7 @@ namespace Vista
             this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnEnd);
-            this.Controls.Add(this.bnNext);
+            this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.btnReporte);
@@ -471,7 +471,7 @@ namespace Vista
         private FontAwesome.Sharp.IconButton btnReporte;
         private FontAwesome.Sharp.IconButton btnStart;
         private FontAwesome.Sharp.IconButton btnBack;
-        private FontAwesome.Sharp.IconButton bnNext;
+        private FontAwesome.Sharp.IconButton btnNext;
         private FontAwesome.Sharp.IconButton btnEnd;
         private FontAwesome.Sharp.IconButton btnExit;
         private FontAwesome.Sharp.IconButton btnHelp;

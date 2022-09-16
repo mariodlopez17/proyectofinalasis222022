@@ -16,6 +16,8 @@ namespace Controlador
     {
         Sentencias sn = new Sentencias();
 
+        int next, mov;
+
         public void llenartablaa(string ntabla, DataGridView tabla)//Funcion para llenar tabla
         {
             OdbcDataAdapter dt = sn.llenartabla(ntabla);
@@ -91,6 +93,15 @@ namespace Controlador
             textbox[1].Focus();
         }
 
+        public void enfocarEliminar(TextBox[] textbox) //disabled todos los textbox y enfoca el primer textbox
+        {
+            textbox[0].Focus();
+            textbox[1].Enabled = false;
+            textbox[2].Enabled = false;
+            textbox[3].Enabled = false;
+            textbox[4].Enabled = false;
+        }
+
         public void llenartxt(TextBox[] textbox, DataGridView tabla)//Llena los textbox con datos del datagriedview
 
         {
@@ -130,6 +141,37 @@ namespace Controlador
                     
                 }
             }
+            else if (mover.Equals("b"))
+            {
+                mov = tabla.CurrentRow.Index - 1;
+                if (mov >= 0)
+                {
+                    tabla.CurrentCell = tabla.Rows[mov].Cells[tabla.CurrentCell.ColumnIndex];
+                    for (int x = 0; x < tabla.ColumnCount; x++)
+                    {
+
+                        textbox[x].Text = tabla.Rows[mov].Cells[x].Value.ToString();
+
+                    }
+                }
+
+
+
+            }
+            else if (mover.Equals("s"))
+            {
+                next = tabla.CurrentRow.Index + 1;
+                if (next < tabla.Rows.Count)
+                {
+                    tabla.CurrentCell = tabla.Rows[next].Cells[tabla.CurrentCell.ColumnIndex];
+                    for (int x = 0; x < tabla.ColumnCount; x++)
+                    {
+
+                        textbox[x].Text = tabla.Rows[next].Cells[x].Value.ToString();
+
+                    }
+                }
+            }
 
 
         }
@@ -141,12 +183,69 @@ namespace Controlador
 
         }
 
+        public void delete(TextBox[] textbox, DataGridView tabla, IconButton[] boton)
+        {
+            string autorizazcion = evaluarcampos(textbox);
+
+
+            if (autorizazcion == "no")
+            {
+                boton[0].Enabled = true;
+                boton[1].Enabled = true;
+                boton[2].Enabled = false;
+                boton[3].Enabled = false;
+                boton[4].Enabled = false;
+                boton[5].Enabled = false;
+                boton[6].Enabled = false;
+                boton[7].Enabled = false;
+                boton[8].Enabled = false;
+                boton[9].Enabled = false;
+                boton[10].Enabled = false;
+                boton[11].Enabled = false;
+                boton[12].Enabled = false;
+                boton[13].Enabled = false;
+
+
+            }
+            else if (autorizazcion == "si")
+            {
+                string campo = textbox[0].Tag.ToString();
+                int clave = int.Parse(textbox[0].Text);
+
+                sn.eliminar( clave, campo, tabla.Tag.ToString());
+                MessageBox.Show("Dato Eliminado");
+                for (int x = 0; x < textbox.Length; x++)
+                {
+                    textbox[x].Enabled = false;
+
+
+                }
+                boton[0].Enabled = false;
+                boton[1].Enabled = false;
+                boton[2].Enabled = true;
+                boton[3].Enabled = true;
+                boton[4].Enabled = true;
+                boton[5].Enabled = true;
+                boton[6].Enabled = true;
+                boton[7].Enabled = true;
+                boton[8].Enabled = true;
+                boton[9].Enabled = true;
+                boton[10].Enabled = true;
+                boton[11].Enabled = true;
+                boton[12].Enabled = true;
+                boton[13].Enabled = true;
+            }
+
+
+        }
         public void ingresar(TextBox[] textbox, DataGridView tabla, IconButton[] boton)//Crea cadenas de datos para la insercion
         {
             string autorizazcion = evaluarcampos(textbox);
 
             if(autorizazcion == "si")
             {
+
+
                 string dato = " ";
                 string tipo = " ";
                 for (int x = 0; x < textbox.Length; x++)
@@ -179,6 +278,12 @@ namespace Controlador
                 boton[5].Enabled = true;
                 boton[6].Enabled = true;
                 boton[7].Enabled = true;
+                boton[8].Enabled = true;
+                boton[9].Enabled = true;
+                boton[10].Enabled = true;
+                boton[11].Enabled = true;
+                boton[12].Enabled = true;
+                boton[13].Enabled = true;
             }
             else if (autorizazcion == "no")
             {
@@ -190,6 +295,12 @@ namespace Controlador
                 boton[5].Enabled = false;
                 boton[6].Enabled = false;
                 boton[7].Enabled = false;
+                boton[8].Enabled = false;
+                boton[9].Enabled = false;
+                boton[10].Enabled = false;
+                boton[11].Enabled = false;
+                boton[12].Enabled = false;
+                boton[13].Enabled = false;
             }
            
             
@@ -226,6 +337,12 @@ namespace Controlador
                 boton[5].Enabled = false;
                 boton[6].Enabled = false;
                 boton[7].Enabled = false;
+                boton[8].Enabled = false;
+                boton[9].Enabled = false;
+                boton[10].Enabled = false;
+                boton[11].Enabled = false;
+                boton[12].Enabled = false;
+                boton[13].Enabled = false;
 
 
             }
@@ -269,6 +386,12 @@ namespace Controlador
                 boton[5].Enabled = true;
                 boton[6].Enabled = true;
                 boton[7].Enabled = true;
+                boton[8].Enabled = true;
+                boton[9].Enabled = true;
+                boton[10].Enabled = true;
+                boton[11].Enabled = true;
+                boton[12].Enabled = true;
+                boton[13].Enabled = true;
             }
 
 
@@ -286,8 +409,13 @@ namespace Controlador
                 boton[5].Enabled = false;
                 boton[6].Enabled = false;
                 boton[7].Enabled = false;
-                
-               
+                boton[8].Enabled = false;
+                boton[9].Enabled = false;
+                boton[10].Enabled = false;
+                boton[11].Enabled = false;
+                boton[12].Enabled = false;
+                boton[13].Enabled = false;
+
 
 
 
@@ -302,12 +430,18 @@ namespace Controlador
                 boton[5].Enabled = true;
                 boton[6].Enabled = true;
                 boton[7].Enabled = true;
-               
+                boton[8].Enabled = true;
+                boton[9].Enabled = true;
+                boton[10].Enabled = true;
+                boton[11].Enabled = true;
+                boton[12].Enabled = true;
+                boton[13].Enabled = true;
+
 
 
             }
         }
-
+        
         string evaluarcampos(TextBox[] textbox)
         {
             string autorizacion = " ";
@@ -328,5 +462,9 @@ namespace Controlador
 
             return autorizacion;
         }
+
+        
+
+        
     }
 }

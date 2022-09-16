@@ -27,6 +27,13 @@ namespace Modelo
 
         }
 
+        public void eliminar(int clave, string campo, string tabla)
+        {
+            string sql = "delete from " + tabla + " where " + campo + "=" + clave + ";" ;
+            OdbcCommand cmd = new OdbcCommand(sql, con.conexion());
+            cmd.ExecuteNonQuery();
+        }
+
         public void actualizar(string dato, string condicion, string tabla)
         {
 
