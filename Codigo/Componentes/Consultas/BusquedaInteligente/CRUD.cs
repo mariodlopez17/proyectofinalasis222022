@@ -5,6 +5,7 @@ using System.Data.Odbc;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace BusquedaInteligente
 {
@@ -59,7 +60,41 @@ namespace BusquedaInteligente
             return true;
         }
     }
-   
 
-    
+    //******************************eliminar*
+    public bool DeleteConsulta(string _ope)
+    {
+        try
+        {
+            using (OdbcConnection con = new OdbcConnection("FIL=MS Access;DSN=Colchoneria"))
+            {
+                OdbcCommand cmd = new OdbcCommand();
+                con.Open();
+                cmd.Connection = con;
+                #region Query
+               
+                string query = @"DELETE FROM busqueda WHERE busqueda.Upc = ?;";
+                #endregion
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = query;
+                cmd.Parameters.Add("@nombre", OdbcType.VarChar).Value = _ope;
+                cmd.ExecuteNonQuery();
+
+                cmd.Parameters.Clear();
+                con.Close();
+            }
+            return true;
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(ex.Message);
+            return false;
+        }
+    }
 }
+
+
+
+
+
+
