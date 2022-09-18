@@ -36,6 +36,15 @@
     <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.1.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -53,11 +62,35 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Activos Fijos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Activos Fijos.designer.cs">
+      <DependentUpon>Activos Fijos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cierre Contable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cierre Contable.designer.cs">
+      <DependentUpon>Cierre Contable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContenedorCF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContenedorCF.designer.cs">
+      <DependentUpon>ContenedorCF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estados Financieros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estados Financieros.designer.cs">
+      <DependentUpon>Estados Financieros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_1.Designer.cs">
+      <DependentUpon>Form_1.cs</DependentUpon>
     </Compile>
     <Compile Include="MantenimientoPolizaContable.cs">
       <SubType>Form</SubType>
@@ -65,22 +98,70 @@
     <Compile Include="MantenimientoPolizaContable.Designer.cs">
       <DependentUpon>MantenimientoPolizaContable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos.designer.cs">
+      <DependentUpon>Mantenimientos.cs</DependentUpon>
+    </Compile>
     <Compile Include="MantenimientoTipodeCuentas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MantenimientoTipodeCuentas.Designer.cs">
       <DependentUpon>MantenimientoTipodeCuentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Nuevo Cierre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nuevo Cierre.designer.cs">
+      <DependentUpon>Nuevo Cierre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Polizas_Locales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Polizas_Locales.designer.cs">
+      <DependentUpon>Polizas_Locales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presupuestos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presupuestos.designer.cs">
+      <DependentUpon>Presupuestos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Activos Fijos.resx">
+      <DependentUpon>Activos Fijos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cierre Contable.resx">
+      <DependentUpon>Cierre Contable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContenedorCF.resx">
+      <DependentUpon>ContenedorCF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estados Financieros.resx">
+      <DependentUpon>Estados Financieros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_1.resx">
+      <DependentUpon>Form_1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoPolizaContable.resx">
       <DependentUpon>MantenimientoPolizaContable.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos.resx">
+      <DependentUpon>Mantenimientos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoTipodeCuentas.resx">
       <DependentUpon>MantenimientoTipodeCuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nuevo Cierre.resx">
+      <DependentUpon>Nuevo Cierre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Polizas_Locales.resx">
+      <DependentUpon>Polizas_Locales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presupuestos.resx">
+      <DependentUpon>Presupuestos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

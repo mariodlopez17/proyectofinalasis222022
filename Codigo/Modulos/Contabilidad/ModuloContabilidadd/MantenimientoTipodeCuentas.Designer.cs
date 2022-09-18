@@ -248,6 +248,7 @@ namespace ModuloContabilidadd
             this.Controls.Add(this.groupBox1);
             this.Name = "MantenimientoTipodeCuentas";
             this.Text = "MantenimientoTipodeCuentas";
+            this.Load += new System.EventHandler(this.MantenimientoTipodeCuentas_Load);
             this.Detalle.ResumeLayout(false);
             this.Detalle.PerformLayout();
             this.groupBox5.ResumeLayout(false);

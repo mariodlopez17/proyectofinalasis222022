@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ModuloContabilidadd
 {
-    public partial class MantenimientoTipodeCuentas : Form
+    public partial class Nuevo_Cierre : Form
     {
-        public MantenimientoTipodeCuentas()
+        public Nuevo_Cierre()
         {
             InitializeComponent();
-        }
-
-        private void MantenimientoTipodeCuentas_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
