@@ -10,16 +10,18 @@ using System.Windows.Forms;
 
 namespace ModuloContabilidadd
 {
-    public partial class MantenimientoTipodeCuentas : Form
+    public partial class Polizas_Locales : Form
     {
-        public MantenimientoTipodeCuentas()
+        public Polizas_Locales()
         {
             InitializeComponent();
         }
 
-        private void MantenimientoTipodeCuentas_Load(object sender, EventArgs e)
+        private void bnt_menuP_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            ContenedorCF menuP = new ContenedorCF();
+            menuP.Show();
         }
     }
 }
