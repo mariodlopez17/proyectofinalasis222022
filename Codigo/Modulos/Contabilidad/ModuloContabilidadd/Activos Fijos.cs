@@ -10,16 +10,23 @@ using System.Windows.Forms;
 
 namespace ModuloContabilidadd
 {
-    public partial class MantenimientoTipodeCuentas : Form
+    public partial class Activos_Fijos : Form
     {
-        public MantenimientoTipodeCuentas()
+        public Activos_Fijos()
         {
             InitializeComponent();
         }
 
-        private void MantenimientoTipodeCuentas_Load(object sender, EventArgs e)
+        private void Activos_Fijos_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void bnt_menuP_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ContenedorCF menuP = new ContenedorCF();
+            menuP.Show();
         }
     }
 }

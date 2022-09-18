@@ -4,7 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ModuloContabilidadd
+
+namespace EjecucionConsultaInteligente
 {
     static class Program
     {
@@ -16,7 +17,7 @@ namespace ModuloContabilidadd
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ContenedorCF());
+            Application.Run(new Capa_Vista.Form1());
         }
     }
 }
