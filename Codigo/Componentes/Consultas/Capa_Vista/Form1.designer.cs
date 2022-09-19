@@ -148,13 +148,13 @@ namespace BusquedaInteligente
             this.label1 = new System.Windows.Forms.Label();
             this.tbpBE = new System.Windows.Forms.TabPage();
             this.panel20 = new System.Windows.Forms.Panel();
-            this.iconButton12 = new FontAwesome.Sharp.IconButton();
+            this.iconbtnElimina = new FontAwesome.Sharp.IconButton();
             this.iconButton28 = new FontAwesome.Sharp.IconButton();
             this.iconButton26 = new FontAwesome.Sharp.IconButton();
             this.iconButton25 = new FontAwesome.Sharp.IconButton();
             this.label32 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textConsultaBusqueda = new System.Windows.Forms.TextBox();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -1448,31 +1448,32 @@ namespace BusquedaInteligente
             // 
             // panel20
             // 
-            this.panel20.Controls.Add(this.iconButton12);
+            this.panel20.Controls.Add(this.iconbtnElimina);
             this.panel20.Controls.Add(this.iconButton28);
             this.panel20.Controls.Add(this.iconButton26);
             this.panel20.Controls.Add(this.iconButton25);
             this.panel20.Controls.Add(this.label32);
             this.panel20.Controls.Add(this.dataGridView1);
-            this.panel20.Controls.Add(this.textBox13);
+            this.panel20.Controls.Add(this.textConsultaBusqueda);
             this.panel20.Location = new System.Drawing.Point(23, 7);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(954, 379);
             this.panel20.TabIndex = 18;
             // 
-            // iconButton12
+            // iconbtnElimina
             // 
-            this.iconButton12.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            this.iconButton12.IconColor = System.Drawing.Color.DimGray;
-            this.iconButton12.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton12.IconSize = 50;
-            this.iconButton12.Location = new System.Drawing.Point(639, 11);
-            this.iconButton12.Name = "iconButton12";
-            this.iconButton12.Size = new System.Drawing.Size(62, 68);
-            this.iconButton12.TabIndex = 22;
-            this.iconButton12.Text = "Elimiar";
-            this.iconButton12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton12.UseVisualStyleBackColor = true;
+            this.iconbtnElimina.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.iconbtnElimina.IconColor = System.Drawing.Color.DimGray;
+            this.iconbtnElimina.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconbtnElimina.IconSize = 50;
+            this.iconbtnElimina.Location = new System.Drawing.Point(639, 11);
+            this.iconbtnElimina.Name = "iconbtnElimina";
+            this.iconbtnElimina.Size = new System.Drawing.Size(62, 68);
+            this.iconbtnElimina.TabIndex = 22;
+            this.iconbtnElimina.Text = "Elimiar";
+            this.iconbtnElimina.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconbtnElimina.UseVisualStyleBackColor = true;
+            this.iconbtnElimina.Click += new System.EventHandler(this.iconButton12_Click);
             // 
             // iconButton28
             // 
@@ -1536,12 +1537,12 @@ namespace BusquedaInteligente
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // textBox13
+            // textConsultaBusqueda
             // 
-            this.textBox13.Location = new System.Drawing.Point(166, 35);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(300, 20);
-            this.textBox13.TabIndex = 9;
+            this.textConsultaBusqueda.Location = new System.Drawing.Point(166, 35);
+            this.textConsultaBusqueda.Name = "textConsultaBusqueda";
+            this.textConsultaBusqueda.Size = new System.Drawing.Size(300, 20);
+            this.textConsultaBusqueda.TabIndex = 9;
             // 
             // Form1
             // 
@@ -1645,7 +1646,7 @@ namespace BusquedaInteligente
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox textConsultaBusqueda;
         private FontAwesome.Sharp.IconButton btnEliminar;
         private FontAwesome.Sharp.IconButton iconButton6;
         private FontAwesome.Sharp.IconButton iconButton10;
@@ -1660,7 +1661,7 @@ namespace BusquedaInteligente
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton iconButton11;
         private FontAwesome.Sharp.IconButton iconButton13;
-        private FontAwesome.Sharp.IconButton iconButton12;
+        private FontAwesome.Sharp.IconButton iconbtnElimina;
         private FontAwesome.Sharp.IconButton iconButton28;
         private FontAwesome.Sharp.IconButton iconButton26;
         private FontAwesome.Sharp.IconButton iconButton25;
