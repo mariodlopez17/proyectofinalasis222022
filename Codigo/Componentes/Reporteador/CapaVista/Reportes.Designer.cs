@@ -37,7 +37,7 @@ namespace CapaVista
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.idreporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ubicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado_impresion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,8 +46,7 @@ namespace CapaVista
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idreporte,
-            this.ubicacion,
-            this.Estado_impresion});
+            this.ubicacion});
             this.dataGridView1.Location = new System.Drawing.Point(32, 84);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(524, 129);
@@ -93,10 +92,13 @@ namespace CapaVista
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(329, 43);
+            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(32, 43);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(146, 20);
+            this.textBox1.Size = new System.Drawing.Size(443, 20);
             this.textBox1.TabIndex = 5;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // idreporte
             // 
@@ -108,16 +110,11 @@ namespace CapaVista
             this.ubicacion.HeaderText = "ubicacion";
             this.ubicacion.Name = "ubicacion";
             // 
-            // Estado_impresion
-            // 
-            this.Estado_impresion.HeaderText = "estado_impresion";
-            this.Estado_impresion.Name = "Estado_impresion";
-            // 
             // Reportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(579, 270);
+            this.ClientSize = new System.Drawing.Size(579, 300);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -135,13 +132,13 @@ namespace CapaVista
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idreporte;
         private System.Windows.Forms.DataGridViewTextBoxColumn ubicacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado_impresion;
+        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.TextBox textBox1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }
