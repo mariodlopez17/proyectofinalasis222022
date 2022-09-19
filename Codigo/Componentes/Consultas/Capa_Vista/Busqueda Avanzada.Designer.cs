@@ -29,38 +29,78 @@ namespace Capa_Vista
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelBusqueda = new System.Windows.Forms.Panel();
+            this.pnl_BuscarBA = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btn_CancelarBA = new FontAwesome.Sharp.IconButton();
+            this.btn_BuscarBA = new FontAwesome.Sharp.IconButton();
             this.txt_buscar = new System.Windows.Forms.TextBox();
             this.cbo_buscaren = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvDato = new System.Windows.Forms.DataGridView();
             this.panelResultado = new System.Windows.Forms.Panel();
-            this.btn_BuscarBA = new FontAwesome.Sharp.IconButton();
-            this.btn_CancelarBA = new FontAwesome.Sharp.IconButton();
-            this.label3 = new System.Windows.Forms.Label();
             this.btn_SalirBA = new FontAwesome.Sharp.IconButton();
             this.bnt_nuevaBA = new FontAwesome.Sharp.IconButton();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panelBusqueda.SuspendLayout();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pnl_BuscarBA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDato)).BeginInit();
             this.panelResultado.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelBusqueda
+            // pnl_BuscarBA
             // 
-            this.panelBusqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
-            this.panelBusqueda.Controls.Add(this.label4);
-            this.panelBusqueda.Controls.Add(this.btn_CancelarBA);
-            this.panelBusqueda.Controls.Add(this.btn_BuscarBA);
-            this.panelBusqueda.Controls.Add(this.txt_buscar);
-            this.panelBusqueda.Controls.Add(this.cbo_buscaren);
-            this.panelBusqueda.Controls.Add(this.label1);
-            this.panelBusqueda.Controls.Add(this.label2);
-            this.panelBusqueda.Location = new System.Drawing.Point(12, 12);
-            this.panelBusqueda.Name = "panelBusqueda";
-            this.panelBusqueda.Size = new System.Drawing.Size(408, 258);
-            this.panelBusqueda.TabIndex = 9;
+            this.pnl_BuscarBA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
+            this.pnl_BuscarBA.Controls.Add(this.label4);
+            this.pnl_BuscarBA.Controls.Add(this.btn_CancelarBA);
+            this.pnl_BuscarBA.Controls.Add(this.btn_BuscarBA);
+            this.pnl_BuscarBA.Controls.Add(this.txt_buscar);
+            this.pnl_BuscarBA.Controls.Add(this.cbo_buscaren);
+            this.pnl_BuscarBA.Controls.Add(this.label1);
+            this.pnl_BuscarBA.Controls.Add(this.label2);
+            this.pnl_BuscarBA.Location = new System.Drawing.Point(12, 12);
+            this.pnl_BuscarBA.Name = "pnl_BuscarBA";
+            this.pnl_BuscarBA.Size = new System.Drawing.Size(408, 258);
+            this.pnl_BuscarBA.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(134, 18);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(157, 20);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "Busqueda Avanzada";
+            // 
+            // btn_CancelarBA
+            // 
+            this.btn_CancelarBA.IconChar = FontAwesome.Sharp.IconChar.XmarkCircle;
+            this.btn_CancelarBA.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
+            this.btn_CancelarBA.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_CancelarBA.IconSize = 60;
+            this.btn_CancelarBA.Location = new System.Drawing.Point(292, 176);
+            this.btn_CancelarBA.Name = "btn_CancelarBA";
+            this.btn_CancelarBA.Size = new System.Drawing.Size(64, 68);
+            this.btn_CancelarBA.TabIndex = 32;
+            this.btn_CancelarBA.Text = "Cancelar";
+            this.btn_CancelarBA.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_CancelarBA.UseVisualStyleBackColor = true;
+            this.btn_CancelarBA.Click += new System.EventHandler(this.btn_CancelarBA_Click);
+            // 
+            // btn_BuscarBA
+            // 
+            this.btn_BuscarBA.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btn_BuscarBA.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
+            this.btn_BuscarBA.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_BuscarBA.IconSize = 60;
+            this.btn_BuscarBA.Location = new System.Drawing.Point(221, 176);
+            this.btn_BuscarBA.Name = "btn_BuscarBA";
+            this.btn_BuscarBA.Size = new System.Drawing.Size(64, 68);
+            this.btn_BuscarBA.TabIndex = 31;
+            this.btn_BuscarBA.Text = "Buscar";
+            this.btn_BuscarBA.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_BuscarBA.UseVisualStyleBackColor = true;
+            this.btn_BuscarBA.Click += new System.EventHandler(this.btn_BuscarBA_Click);
             // 
             // txt_buscar
             // 
@@ -119,46 +159,6 @@ namespace Capa_Vista
             this.panelResultado.TabIndex = 11;
             this.panelResultado.Visible = false;
             // 
-            // btn_BuscarBA
-            // 
-            this.btn_BuscarBA.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.btn_BuscarBA.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
-            this.btn_BuscarBA.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_BuscarBA.IconSize = 60;
-            this.btn_BuscarBA.Location = new System.Drawing.Point(221, 176);
-            this.btn_BuscarBA.Name = "btn_BuscarBA";
-            this.btn_BuscarBA.Size = new System.Drawing.Size(64, 68);
-            this.btn_BuscarBA.TabIndex = 31;
-            this.btn_BuscarBA.Text = "Buscar";
-            this.btn_BuscarBA.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_BuscarBA.UseVisualStyleBackColor = true;
-            this.btn_BuscarBA.Click += new System.EventHandler(this.btn_BuscarBA_Click);
-            // 
-            // btn_CancelarBA
-            // 
-            this.btn_CancelarBA.IconChar = FontAwesome.Sharp.IconChar.XmarkCircle;
-            this.btn_CancelarBA.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
-            this.btn_CancelarBA.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_CancelarBA.IconSize = 60;
-            this.btn_CancelarBA.Location = new System.Drawing.Point(292, 176);
-            this.btn_CancelarBA.Name = "btn_CancelarBA";
-            this.btn_CancelarBA.Size = new System.Drawing.Size(64, 68);
-            this.btn_CancelarBA.TabIndex = 32;
-            this.btn_CancelarBA.Text = "Cancelar";
-            this.btn_CancelarBA.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_CancelarBA.UseVisualStyleBackColor = true;
-            this.btn_CancelarBA.Click += new System.EventHandler(this.btn_CancelarBA_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(136, 6);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 20);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Datos de Busqueda";
-            // 
             // btn_SalirBA
             // 
             this.btn_SalirBA.IconChar = FontAwesome.Sharp.IconChar.PersonWalkingArrowRight;
@@ -189,15 +189,15 @@ namespace Capa_Vista
             this.bnt_nuevaBA.UseVisualStyleBackColor = true;
             this.bnt_nuevaBA.Click += new System.EventHandler(this.bnt_nuevaBA_Click);
             // 
-            // label4
+            // label3
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(134, 18);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(157, 20);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "Busqueda Avanzada";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(136, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(151, 20);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Datos de Busqueda";
             // 
             // Busqueda_Avanzada
             // 
@@ -206,11 +206,11 @@ namespace Capa_Vista
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(868, 292);
             this.Controls.Add(this.panelResultado);
-            this.Controls.Add(this.panelBusqueda);
+            this.Controls.Add(this.pnl_BuscarBA);
             this.Name = "Busqueda_Avanzada";
             this.Text = "Busqueda Avanzada";
-            this.panelBusqueda.ResumeLayout(false);
-            this.panelBusqueda.PerformLayout();
+            this.pnl_BuscarBA.ResumeLayout(false);
+            this.pnl_BuscarBA.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDato)).EndInit();
             this.panelResultado.ResumeLayout(false);
             this.panelResultado.PerformLayout();
@@ -220,7 +220,7 @@ namespace Capa_Vista
 
         #endregion
 
-        private System.Windows.Forms.Panel panelBusqueda;
+        private System.Windows.Forms.Panel pnl_BuscarBA;
         private System.Windows.Forms.TextBox txt_buscar;
         private System.Windows.Forms.ComboBox cbo_buscaren;
         private System.Windows.Forms.Label label1;
