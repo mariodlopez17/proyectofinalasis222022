@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AB54FC7C-AB3B-41FC-901F-B8281F24A5CF}</ProjectGuid>
+    <ProjectGuid>{2BB902F5-A467-4870-9215-9D31D847450C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Capa_Modelo</RootNamespace>
-    <AssemblyName>Capa Modelo</AssemblyName>
+    <RootNamespace>CapaControlador</RootNamespace>
+    <AssemblyName>CapaControlador</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CapaModelo">
+      <HintPath>..\CapaModelo\bin\Debug\CapaModelo.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

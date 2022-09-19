@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Capa_Vista
+namespace Ejecucion
 {
-    public partial class Bancario : Form
+    public partial class Form1 : Form
     {
-        public Bancario()
+        public Form1()
         {
             InitializeComponent();
         }
