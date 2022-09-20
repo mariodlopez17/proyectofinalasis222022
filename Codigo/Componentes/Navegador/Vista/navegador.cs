@@ -148,7 +148,9 @@ namespace Vista
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
-
+            //Menú de Ayuda hecho por Ester López
+            menuAyuda frm = new menuAyuda();
+            frm.Show();
         }
 
         private void navegador_Load(object sender, EventArgs e)

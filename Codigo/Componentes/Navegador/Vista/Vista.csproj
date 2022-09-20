@@ -53,6 +53,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="menuAyuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menuAyuda.Designer.cs">
+      <DependentUpon>menuAyuda.cs</DependentUpon>
+    </Compile>
     <Compile Include="navegador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     <Content Include="Resources\settings.png" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="menuAyuda.resx">
+      <DependentUpon>menuAyuda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="navegador.resx">
       <DependentUpon>navegador.cs</DependentUpon>
     </EmbeddedResource>
