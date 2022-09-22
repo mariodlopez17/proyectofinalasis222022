@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Capa_Controlador;
 using System.Data.Odbc;
 
-namespace BusquedaInteligente
+namespace Capa_Vista 
 {
     public partial class Form1 : Form
     {
@@ -171,11 +171,53 @@ namespace BusquedaInteligente
 
         private void iconButton12_Click(object sender, EventArgs e)
         {
-            cn.ejecutarconsulta(textConsultaBusqueda.Text);
+           // cn.ejecutarconsulta(textConsultaBusqueda.Text);
             MessageBox.Show("Las consultas con nombre " + textConsultaBusqueda.Text + " Han sido eliminadas");
             actualizaconsultas();
 
             textConsultaBusqueda.Text = "";
+        }
+         
+        private void iconButton11_Click(object sender, EventArgs e)
+        {
+            finaleditar = csimpleeditar + " " + whereeditar + " " + andeditar + " " + groupeditar + ";";
+            if (csimpleeditar == "")
+            {
+                MessageBox.Show("Consulta incorrecta");
+            }
+            else
+            {
+                MessageBox.Show("Consulta Almacenada");
+                cn.editarconsulta(textBox3.Text, finaleditar);
+                llenarcboquery();
+            }
+            textBox8.Text = "";
+            checkBox2.Checked = false;
+            richTextBox2.Text = "";
+            textBox2.Text = "";
+            finaleditar = "";
+            csimpleeditar = "";
+            whereeditar = "";
+            andeditar = "";
+            groupeditar = "";
+            textBox1.Text = "";
+            textBox1.Enabled = true;
+        }
+        string transfiera = "";
+        //Joselyne Rivera 0901-17-5
+        private void iconButton26_Click(object sender, EventArgs e)
+        {
+            transfiera = textConsultaBusqueda.Text;
+            textBox1.Text = transfiera;
+            textBox3.Text = transfiera;
+            groupBox2.Enabled = true;
+            panel20.Hide();
+            panel1.Show();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+           
         }
     }
     }
