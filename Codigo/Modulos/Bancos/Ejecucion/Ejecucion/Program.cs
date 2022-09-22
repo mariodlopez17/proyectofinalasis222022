@@ -16,7 +16,7 @@ namespace Ejecucion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CapaVista.Form1());
+            Application.Run(new CapaVista.Bancos1());
         }
     }
 }
