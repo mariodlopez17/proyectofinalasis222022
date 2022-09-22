@@ -118,7 +118,7 @@ namespace Vista
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 29;
-            this.textBox2.Tag = "nombre_completo2";
+            this.textBox2.Tag = "nombre_completo";
             // 
             // textBox1
             // 
