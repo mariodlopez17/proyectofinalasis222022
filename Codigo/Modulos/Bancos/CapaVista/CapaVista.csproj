@@ -59,11 +59,38 @@
     <Compile Include="Bancos.Designer.cs">
       <DependentUpon>Bancos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bancos1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bancos1.Designer.cs">
+      <DependentUpon>Bancos1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContenedorMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContenedorMDI.Designer.cs">
+      <DependentUpon>ContenedorMDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dummie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dummie.Designer.cs">
+      <DependentUpon>dummie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Bancos.resx">
       <DependentUpon>Bancos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bancos1.resx">
+      <DependentUpon>Bancos1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContenedorMDI.resx">
+      <DependentUpon>ContenedorMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dummie.resx">
+      <DependentUpon>dummie.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
