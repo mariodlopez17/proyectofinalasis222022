@@ -53,23 +53,35 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="menuAyuda.cs">
+    <Compile Include="Agregar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="menuAyuda.Designer.cs">
-      <DependentUpon>menuAyuda.cs</DependentUpon>
+    <Compile Include="Agregar.Designer.cs">
+      <DependentUpon>Agregar.cs</DependentUpon>
     </Compile>
-    <Compile Include="navegador.cs">
+    <Compile Include="Eliminar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="navegador.Designer.cs">
-      <DependentUpon>navegador.cs</DependentUpon>
+    <Compile Include="Eliminar.Designer.cs">
+      <DependentUpon>Eliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modificar.Designer.cs">
+      <DependentUpon>Modificar.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Prueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prueba.Designer.cs">
+      <DependentUpon>Prueba.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -97,15 +109,21 @@
     <Content Include="Resources\settings.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="menuAyuda.resx">
-      <DependentUpon>menuAyuda.cs</DependentUpon>
+    <EmbeddedResource Include="Agregar.resx">
+      <DependentUpon>Agregar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="navegador.resx">
-      <DependentUpon>navegador.cs</DependentUpon>
+    <EmbeddedResource Include="Eliminar.resx">
+      <DependentUpon>Eliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modificar.resx">
+      <DependentUpon>Modificar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prueba.resx">
+      <DependentUpon>Prueba.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
