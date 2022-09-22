@@ -123,28 +123,25 @@ namespace BusquedaInteligente
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.chkcondicioneseditar = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cboxCampoEDTR = new System.Windows.Forms.ComboBox();
+            this.cboTablaCSimple = new System.Windows.Forms.ComboBox();
             this.iconButton14 = new FontAwesome.Sharp.IconButton();
             this.iconButton15 = new FontAwesome.Sharp.IconButton();
             this.iconButton16 = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtAliasEDITAR = new System.Windows.Forms.TextBox();
+            this.txtNombreConsulta = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconButton11 = new FontAwesome.Sharp.IconButton();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.iconButton13 = new FontAwesome.Sharp.IconButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbpBE = new System.Windows.Forms.TabPage();
             this.panel20 = new System.Windows.Forms.Panel();
@@ -155,6 +152,8 @@ namespace BusquedaInteligente
             this.label32 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textConsultaBusqueda = new System.Windows.Forms.TextBox();
+            this.cbonombreconsulta = new System.Windows.Forms.ComboBox();
+            this.cboTabla = new System.Windows.Forms.ComboBox();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -847,6 +846,8 @@ namespace BusquedaInteligente
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cboTabla);
+            this.panel1.Controls.Add(this.cbonombreconsulta);
             this.panel1.Controls.Add(this.textBox10);
             this.panel1.Controls.Add(this.label33);
             this.panel1.Controls.Add(this.groupBox6);
@@ -854,14 +855,11 @@ namespace BusquedaInteligente
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.iconButton1);
             this.panel1.Controls.Add(this.iconButton11);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.iconButton13);
-            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(6, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(952, 698);
+            this.panel1.Size = new System.Drawing.Size(952, 771);
             this.panel1.TabIndex = 1;
             // 
             // textBox10
@@ -903,6 +901,7 @@ namespace BusquedaInteligente
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(107, 21);
             this.comboBox7.TabIndex = 35;
+            this.comboBox7.SelectedIndexChanged += new System.EventHandler(this.comboBox7_SelectedIndexChanged);
             // 
             // iconButton21
             // 
@@ -994,7 +993,7 @@ namespace BusquedaInteligente
             // 
             this.groupBox3.Controls.Add(this.groupBox5);
             this.groupBox3.Controls.Add(this.groupBox4);
-            this.groupBox3.Controls.Add(this.checkBox2);
+            this.groupBox3.Controls.Add(this.chkcondicioneseditar);
             this.groupBox3.Location = new System.Drawing.Point(3, 290);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(912, 223);
@@ -1192,28 +1191,28 @@ namespace BusquedaInteligente
             this.label9.TabIndex = 27;
             this.label9.Text = "Operador Logico";
             // 
-            // checkBox2
+            // chkcondicioneseditar
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(6, 19);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(124, 17);
-            this.checkBox2.TabIndex = 4;
-            this.checkBox2.Text = "Agregar Condiciones";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chkcondicioneseditar.AutoSize = true;
+            this.chkcondicioneseditar.Location = new System.Drawing.Point(6, 19);
+            this.chkcondicioneseditar.Name = "chkcondicioneseditar";
+            this.chkcondicioneseditar.Size = new System.Drawing.Size(124, 17);
+            this.chkcondicioneseditar.TabIndex = 4;
+            this.chkcondicioneseditar.Text = "Agregar Condiciones";
+            this.chkcondicioneseditar.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.richTextBox2);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.comboBox2);
+            this.groupBox2.Controls.Add(this.cboxCampoEDTR);
+            this.groupBox2.Controls.Add(this.cboTablaCSimple);
             this.groupBox2.Controls.Add(this.iconButton14);
             this.groupBox2.Controls.Add(this.iconButton15);
             this.groupBox2.Controls.Add(this.iconButton16);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.txtAliasEDITAR);
+            this.groupBox2.Controls.Add(this.txtNombreConsulta);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label5);
@@ -1233,21 +1232,21 @@ namespace BusquedaInteligente
             this.richTextBox2.TabIndex = 44;
             this.richTextBox2.Text = "";
             // 
-            // comboBox1
+            // cboxCampoEDTR
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(167, 104);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(135, 21);
-            this.comboBox1.TabIndex = 43;
+            this.cboxCampoEDTR.FormattingEnabled = true;
+            this.cboxCampoEDTR.Location = new System.Drawing.Point(167, 104);
+            this.cboxCampoEDTR.Name = "cboxCampoEDTR";
+            this.cboxCampoEDTR.Size = new System.Drawing.Size(135, 21);
+            this.cboxCampoEDTR.TabIndex = 43;
             // 
-            // comboBox2
+            // cboTablaCSimple
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(167, 71);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(135, 21);
-            this.comboBox2.TabIndex = 42;
+            this.cboTablaCSimple.FormattingEnabled = true;
+            this.cboTablaCSimple.Location = new System.Drawing.Point(167, 71);
+            this.cboTablaCSimple.Name = "cboTablaCSimple";
+            this.cboTablaCSimple.Size = new System.Drawing.Size(135, 21);
+            this.cboTablaCSimple.TabIndex = 42;
             // 
             // iconButton14
             // 
@@ -1311,19 +1310,19 @@ namespace BusquedaInteligente
             this.checkBox1.Text = "Todos los campos";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // txtAliasEDITAR
             // 
-            this.textBox2.Location = new System.Drawing.Point(154, 192);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(135, 20);
-            this.textBox2.TabIndex = 36;
+            this.txtAliasEDITAR.Location = new System.Drawing.Point(154, 192);
+            this.txtAliasEDITAR.Name = "txtAliasEDITAR";
+            this.txtAliasEDITAR.Size = new System.Drawing.Size(135, 20);
+            this.txtAliasEDITAR.TabIndex = 36;
             // 
-            // textBox3
+            // txtNombreConsulta
             // 
-            this.textBox3.Location = new System.Drawing.Point(167, 32);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(135, 20);
-            this.textBox3.TabIndex = 35;
+            this.txtNombreConsulta.Location = new System.Drawing.Point(167, 32);
+            this.txtNombreConsulta.Name = "txtNombreConsulta";
+            this.txtNombreConsulta.Size = new System.Drawing.Size(135, 20);
+            this.txtNombreConsulta.TabIndex = 35;
             // 
             // label3
             // 
@@ -1388,22 +1387,7 @@ namespace BusquedaInteligente
             this.iconButton11.Text = "Editar";
             this.iconButton11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton11.UseVisualStyleBackColor = true;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(207, 730);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(538, 20);
-            this.textBox6.TabIndex = 12;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(115, 730);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(83, 13);
-            this.label15.TabIndex = 11;
-            this.label15.Text = "Cadena generar";
+            this.iconButton11.Click += new System.EventHandler(this.iconButton11_Click);
             // 
             // iconButton13
             // 
@@ -1418,13 +1402,6 @@ namespace BusquedaInteligente
             this.iconButton13.Text = "Buscar";
             this.iconButton13.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton13.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(289, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(446, 20);
-            this.textBox1.TabIndex = 1;
             // 
             // label1
             // 
@@ -1503,6 +1480,7 @@ namespace BusquedaInteligente
             this.iconButton26.Text = "Update";
             this.iconButton26.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton26.UseVisualStyleBackColor = true;
+            this.iconButton26.Click += new System.EventHandler(this.iconButton26_Click);
             // 
             // iconButton25
             // 
@@ -1544,11 +1522,27 @@ namespace BusquedaInteligente
             this.textConsultaBusqueda.Size = new System.Drawing.Size(300, 20);
             this.textConsultaBusqueda.TabIndex = 9;
             // 
+            // cbonombreconsulta
+            // 
+            this.cbonombreconsulta.FormattingEnabled = true;
+            this.cbonombreconsulta.Location = new System.Drawing.Point(281, 9);
+            this.cbonombreconsulta.Name = "cbonombreconsulta";
+            this.cbonombreconsulta.Size = new System.Drawing.Size(408, 21);
+            this.cbonombreconsulta.TabIndex = 37;
+            // 
+            // cboTabla
+            // 
+            this.cboTabla.FormattingEnabled = true;
+            this.cboTabla.Location = new System.Drawing.Point(795, 646);
+            this.cboTabla.Name = "cboTabla";
+            this.cboTabla.Size = new System.Drawing.Size(19, 21);
+            this.cboTabla.TabIndex = 38;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 749);
+            this.ClientSize = new System.Drawing.Size(1169, 833);
             this.Controls.Add(this.tbcBusqueda);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
@@ -1638,9 +1632,6 @@ namespace BusquedaInteligente
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TabPage tbpEditar;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tbpBE;
         private System.Windows.Forms.Panel panel20;
@@ -1709,22 +1700,24 @@ namespace BusquedaInteligente
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox chkcondicioneseditar;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cboxCampoEDTR;
+        private System.Windows.Forms.ComboBox cboTablaCSimple;
         private FontAwesome.Sharp.IconButton iconButton14;
         private FontAwesome.Sharp.IconButton iconButton15;
         private FontAwesome.Sharp.IconButton iconButton16;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtAliasEDITAR;
+        private System.Windows.Forms.TextBox txtNombreConsulta;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cbonombreconsulta;
+        private System.Windows.Forms.ComboBox cboTabla;
     }
 }
 

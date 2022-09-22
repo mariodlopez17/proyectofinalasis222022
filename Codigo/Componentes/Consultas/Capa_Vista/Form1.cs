@@ -14,6 +14,14 @@ namespace BusquedaInteligente
 {
     public partial class Form1 : Form
     {
+        string campo = "";
+        string csimple = "";
+        string where = "";
+        string and = "";
+        string group = "";
+        string final = "";
+        string orden = "";
+
         public Form1()
         {
             InitializeComponent();
@@ -31,6 +39,106 @@ namespace BusquedaInteligente
         */
         //CRUD crud = new CRUD();
 
+        private void ConsultasInteligentes_Load(object sender, EventArgs e)
+        {
+
+            llenarcboquery();
+            llenarcomboeditar();
+        }
+
+        public void llenarcomboeditar()
+        {
+            cbonombreconsulta.Items.Clear();
+            OdbcDataReader datareader = cn.llenarcbonombreconsulta();
+            while (datareader.Read())
+            {
+                cbonombreconsulta.Items.Add(datareader[0].ToString());
+            }
+        }
+        private void cbonombreconsulta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtNombreConsulta.Text = cbonombreconsulta.SelectedItem.ToString();
+            groupBox2.Enabled = true;
+
+        }
+
+        private void cboTablaConsultaSimple_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txttablaeditar.Text = cboTablaConsultaSimple.SelectedItem.ToString();
+            llenarcombosactualizar();
+            chkSelectTodosConsultaSimple.Enabled = true;
+        }
+
+        public void tablaseditar()
+        {
+            cboTabla.Items.Clear();
+            OdbcDataReader datareader = cn.llenarcbo();
+            while (datareader.Read())
+            {
+                cboTablaConsultaSimple.Items.Add(datareader[0].ToString());
+            }
+        }
+        private void chkSelectTodosConsultaSimple_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (chkSelectTodosConsultaSimple.Checked == true)
+            {
+                txtAliasEDITAR.Text = "";
+                txtAliasEDITAR.Enabled = false;
+                cboxCampoEDTR.Text = "";
+                cboxCampoEDTR.Enabled = false;
+                txtcamposelectoseditar.Text = "";
+            }
+            else
+            {
+                txtAliasEDITAR.Text = "";
+                txtAliasEDITAR.Enabled = true;
+                cboxCampoEDTR.Text = "";
+                cboxCampoEDTR.Enabled = true;
+            }
+        }
+
+        private void chkcondicioneseditar_CheckedChanged(object sender, EventArgs e)
+        {
+            if ((chkcondicioneseditar.Checked == true) && (csimpleeditar != ""))
+            {
+                groupBox3.Enabled = true;
+                groupBox6.Enabled = true;
+            }
+            else
+            {
+                groupBox3.Enabled = false;
+                groupBox6.Enabled = false;
+                chkcondicioneseditar.Checked = false;
+            }
+        }
+
+        private void comboBox7_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox7.SelectedIndex == 1)
+            {
+                panel2.Enabled = true;
+            }
+            else
+            {
+                panel2.Enabled = false;
+                radioButton2.Checked = false;
+                radioButton1.Checked = false;
+            }
+        }
+
+        string query = "registro_consultas";
+        public void llenarcboquery()
+        {
+            comboBox9.Items.Clear();
+            cbocopiaquery.Items.Clear();
+            OdbcDataReader datareader = cn.llenarcboq(query);
+            while (datareader.Read())
+            {
+                comboBox9.Items.Add(datareader[0].ToString());
+                cbocopiaquery.Items.Add(datareader[1].ToString());
+            }
+        }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             //bool resultado = crud.InsertBusqueda(textBox12.Text, textBox14.Text, textBox15.Text, textBox11.Text);
@@ -128,8 +236,8 @@ namespace BusquedaInteligente
                     if (dataGridView1.Columns[e.ColumnIndex].Name == "ColumnDgvModificar")
                     {
                         textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-                        textBox2.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                        textBox3.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                        txtAliasEDITAR.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                        txtNombreConsulta.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
                         dataGridView1.Rows.RemoveAt(e.RowIndex);
                     }
 
@@ -177,8 +285,54 @@ namespace BusquedaInteligente
 
             textConsultaBusqueda.Text = "";
         }
+
+        private void iconButton11_Click(object sender, EventArgs e)
+        {
+            finalEditar = csimpleEditar + " " + whereEditar + " " + andEditar + " " + groupEditar + ";";
+            if (csimpleEditar == "")
+            {
+                MessageBox.Show("Consulta incorrecta");
+            }
+            else
+            {
+                MessageBox.Show("Consulta Almacenada");
+                cn.textBox10(txtNombreConsulta.Text, finalEditar);
+                llenarcboquery();
+            }
+            textBox10.Text = "";
+            chkcondicioneseditar.Checked = false;
+            richTextBox2.Text = "";
+            txtAliasEDITAR.Text = "";
+            transfiera = "";
+            csimpleEditar = "";
+            whereEditar = "";
+            andEditar = "";
+            groupEditar = "";
+            cbonombreconsulta.Text = "";
+            cbonombreconsulta.Enabled = true;
+
+        }
+        string transfiera = "";
+        string camposeditar = "";
+        string csimpleEditar = "";
+        string whereEditar = "";
+        string andEditar = "";
+        string ordenEditar = "";
+        string groupEditar = "";
+        string finalEditar = "";
+        private void iconButton26_Click(object sender, EventArgs e)
+        {
+            transfiera = textConsultaBusqueda.Text;
+            cbonombreconsulta.Text = transfiera;
+            txtNombreConsulta.Text = transfiera;
+            groupBox2.Enabled = true;
+            panel20.Hide();
+            panel1.Show();
+
+        }
+
     }
-    }
+}
 
 
 
