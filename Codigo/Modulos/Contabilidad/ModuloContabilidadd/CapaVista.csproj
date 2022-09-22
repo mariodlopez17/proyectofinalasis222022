@@ -134,6 +134,12 @@
     <Compile Include="Polizas_Locales.designer.cs">
       <DependentUpon>Polizas_Locales.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presupuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presupuesto.Designer.cs">
+      <DependentUpon>Presupuesto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presupuestos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Polizas_Locales.resx">
       <DependentUpon>Polizas_Locales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presupuesto.resx">
+      <DependentUpon>Presupuesto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presupuestos.resx">
       <DependentUpon>Presupuestos.cs</DependentUpon>
