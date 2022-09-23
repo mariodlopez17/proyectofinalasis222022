@@ -1,5 +1,5 @@
 ﻿
-namespace Capa_Vista
+namespace BusquedaInteligente
 {
     partial class Busqueda
     {
@@ -154,7 +154,6 @@ namespace Capa_Vista
             this.label32 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textConsultaBusqueda = new System.Windows.Forms.TextBox();
-            this.cbosubquery = new System.Windows.Forms.TextBox();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -258,10 +257,6 @@ namespace Capa_Vista
             // comboBox16
             // 
             this.comboBox16.FormattingEnabled = true;
-            this.comboBox16.Items.AddRange(new object[] {
-            "Seleccionar",
-            "Agrupar",
-            "Ordenar"});
             this.comboBox16.Location = new System.Drawing.Point(105, 25);
             this.comboBox16.Name = "comboBox16";
             this.comboBox16.Size = new System.Drawing.Size(107, 21);
@@ -285,15 +280,6 @@ namespace Capa_Vista
             // comboBox17
             // 
             this.comboBox17.FormattingEnabled = true;
-            this.comboBox17.Items.AddRange(new object[] {
-            "idProductos",
-            "NombreProducto",
-            "Descripción",
-            "PrecioVenta",
-            "PrecioCompra",
-            "FechaIngreso",
-            "idCategoria",
-            "idProveedores"});
             this.comboBox17.Location = new System.Drawing.Point(106, 65);
             this.comboBox17.Name = "comboBox17";
             this.comboBox17.Size = new System.Drawing.Size(107, 21);
@@ -392,15 +378,6 @@ namespace Capa_Vista
             // comboBox15
             // 
             this.comboBox15.FormattingEnabled = true;
-            this.comboBox15.Items.AddRange(new object[] {
-            "idProductos",
-            "NombreProducto",
-            "Descripción",
-            "PrecioVenta",
-            "PrecioCompra",
-            "FechaIngreso",
-            "idCategoria",
-            "idProveedores"});
             this.comboBox15.Location = new System.Drawing.Point(129, 63);
             this.comboBox15.Name = "comboBox15";
             this.comboBox15.Size = new System.Drawing.Size(100, 21);
@@ -409,9 +386,6 @@ namespace Capa_Vista
             // comboBox14
             // 
             this.comboBox14.FormattingEnabled = true;
-            this.comboBox14.Items.AddRange(new object[] {
-            "Seleccion",
-            "WHERE"});
             this.comboBox14.Location = new System.Drawing.Point(127, 17);
             this.comboBox14.Name = "comboBox14";
             this.comboBox14.Size = new System.Drawing.Size(103, 21);
@@ -509,11 +483,6 @@ namespace Capa_Vista
             // comboBox13
             // 
             this.comboBox13.FormattingEnabled = true;
-            this.comboBox13.Items.AddRange(new object[] {
-            "Seleccionar",
-            "OR",
-            "AND",
-            "NOT"});
             this.comboBox13.Location = new System.Drawing.Point(102, 23);
             this.comboBox13.Name = "comboBox13";
             this.comboBox13.Size = new System.Drawing.Size(107, 21);
@@ -522,15 +491,6 @@ namespace Capa_Vista
             // comboBox12
             // 
             this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Items.AddRange(new object[] {
-            "idProductos",
-            "NombreProducto",
-            "Descripción",
-            "PrecioVenta",
-            "PrecioCompra",
-            "FechaIngreso",
-            "idCategoria",
-            "idProveedores"});
             this.comboBox12.Location = new System.Drawing.Point(103, 63);
             this.comboBox12.Name = "comboBox12";
             this.comboBox12.Size = new System.Drawing.Size(107, 21);
@@ -641,30 +601,6 @@ namespace Capa_Vista
             // comboBox10
             // 
             this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Items.AddRange(new object[] {
-            "bitacora",
-            "campos",
-            "categoría",
-            "clientes",
-            "compras",
-            "consulta",
-            "devoluciones",
-            "empleados",
-            "facturadetalle",
-            "facturaenca",
-            "horarios",
-            "indicetablas",
-            "indicetablas_consulta",
-            "inventario",
-            "nominas",
-            "productos",
-            "proveedores",
-            "puestos",
-            "sucursal",
-            "sueldos",
-            "transporte",
-            "usuario ",
-            "ventas"});
             this.comboBox10.Location = new System.Drawing.Point(157, 51);
             this.comboBox10.Name = "comboBox10";
             this.comboBox10.Size = new System.Drawing.Size(135, 21);
@@ -883,11 +819,6 @@ namespace Capa_Vista
             // comboBox9
             // 
             this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Items.AddRange(new object[] {
-            "Simple",
-            "Simple Todos",
-            "Compleja",
-            "Complejo Todos"});
             this.comboBox9.Location = new System.Drawing.Point(1, 46);
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(166, 21);
@@ -928,11 +859,7 @@ namespace Capa_Vista
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(6, 6);
             this.panel1.Name = "panel1";
-<<<<<<< HEAD:Codigo/Componentes/Consultas/Capa_Vista/Consulta Inteligente.designer.cs
             this.panel1.Size = new System.Drawing.Size(952, 771);
-=======
-            this.panel1.Size = new System.Drawing.Size(1096, 698);
->>>>>>> 2064caf593dbefa07afb973ca6f95264929cfaeb:Codigo/Componentes/Consultas/Capa_Vista/Form1.designer.cs
             this.panel1.TabIndex = 1;
             // 
             // cboTabla
@@ -986,9 +913,6 @@ namespace Capa_Vista
             // comboBox7
             // 
             this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Items.AddRange(new object[] {
-            "Ordenar",
-            "Agrupar"});
             this.comboBox7.Location = new System.Drawing.Point(92, 21);
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(107, 21);
@@ -1012,10 +936,6 @@ namespace Capa_Vista
             // comboBox8
             // 
             this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Items.AddRange(new object[] {
-            "NitCliente",
-            "NombreCliente",
-            "ApellidoCliente"});
             this.comboBox8.Location = new System.Drawing.Point(93, 61);
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(107, 21);
@@ -1117,10 +1037,6 @@ namespace Capa_Vista
             // comboBox5
             // 
             this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "NitCliente",
-            "NombreCliente",
-            "ApellidoCliente"});
             this.comboBox5.Location = new System.Drawing.Point(120, 66);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(100, 21);
@@ -1129,8 +1045,6 @@ namespace Capa_Vista
             // comboBox6
             // 
             this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
-            "WHERE"});
             this.comboBox6.Location = new System.Drawing.Point(118, 20);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(103, 21);
@@ -1218,10 +1132,6 @@ namespace Capa_Vista
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "AND",
-            "OR",
-            "NOT"});
             this.comboBox3.Location = new System.Drawing.Point(102, 21);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(107, 21);
@@ -1230,10 +1140,6 @@ namespace Capa_Vista
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "NitCliente",
-            "NombreCliente",
-            "ApellidoCliente"});
             this.comboBox4.Location = new System.Drawing.Point(103, 61);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(107, 21);
@@ -1313,7 +1219,6 @@ namespace Capa_Vista
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.cbosubquery);
             this.groupBox2.Controls.Add(this.richTextBox2);
             this.groupBox2.Controls.Add(this.cboxCampoEDTR);
             this.groupBox2.Controls.Add(this.cboTablaCSimple);
@@ -1345,69 +1250,19 @@ namespace Capa_Vista
             // 
             // cboxCampoEDTR
             // 
-<<<<<<< HEAD:Codigo/Componentes/Consultas/Capa_Vista/Consulta Inteligente.designer.cs
             this.cboxCampoEDTR.FormattingEnabled = true;
             this.cboxCampoEDTR.Location = new System.Drawing.Point(167, 104);
             this.cboxCampoEDTR.Name = "cboxCampoEDTR";
             this.cboxCampoEDTR.Size = new System.Drawing.Size(135, 21);
             this.cboxCampoEDTR.TabIndex = 43;
-=======
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "idBitacora",
-            "usuario",
-            "fecha",
-            "HoraInicioSesion",
-            "idSucursal",
-            "idEmpleados",
-            "HoraCierreSesion",
-            "host",
-            "idConsulta"});
-            this.comboBox1.Location = new System.Drawing.Point(167, 104);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(135, 21);
-            this.comboBox1.TabIndex = 43;
->>>>>>> 2064caf593dbefa07afb973ca6f95264929cfaeb:Codigo/Componentes/Consultas/Capa_Vista/Form1.designer.cs
             // 
             // cboTablaCSimple
             // 
-<<<<<<< HEAD:Codigo/Componentes/Consultas/Capa_Vista/Consulta Inteligente.designer.cs
             this.cboTablaCSimple.FormattingEnabled = true;
             this.cboTablaCSimple.Location = new System.Drawing.Point(167, 71);
             this.cboTablaCSimple.Name = "cboTablaCSimple";
             this.cboTablaCSimple.Size = new System.Drawing.Size(135, 21);
             this.cboTablaCSimple.TabIndex = 42;
-=======
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "bitacora",
-            "campos",
-            "categoría",
-            "clientes",
-            "compras",
-            "consulta",
-            "devoluciones",
-            "empleados",
-            "facturadetalle",
-            "facturaenca",
-            "horarios",
-            "indicetablas",
-            "indicetablas_consulta",
-            "inventario",
-            "nominas",
-            "productos",
-            "proveedores",
-            "puestos",
-            "sucursal",
-            "sueldos",
-            "transporte",
-            "usuario ",
-            "ventas"});
-            this.comboBox2.Location = new System.Drawing.Point(167, 71);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(135, 21);
-            this.comboBox2.TabIndex = 42;
->>>>>>> 2064caf593dbefa07afb973ca6f95264929cfaeb:Codigo/Componentes/Consultas/Capa_Vista/Form1.designer.cs
             // 
             // iconButton14
             // 
@@ -1464,7 +1319,7 @@ namespace Capa_Vista
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(99, 151);
+            this.checkBox1.Location = new System.Drawing.Point(167, 151);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(112, 17);
             this.checkBox1.TabIndex = 37;
@@ -1534,7 +1389,6 @@ namespace Capa_Vista
             this.iconButton1.Text = "Borrar";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // iconButton11
             // 
@@ -1550,25 +1404,6 @@ namespace Capa_Vista
             this.iconButton11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton11.UseVisualStyleBackColor = true;
             this.iconButton11.Click += new System.EventHandler(this.iconButton11_Click);
-<<<<<<< HEAD:Codigo/Componentes/Consultas/Capa_Vista/Consulta Inteligente.designer.cs
-=======
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(207, 730);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(538, 20);
-            this.textBox6.TabIndex = 12;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(115, 730);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(83, 13);
-            this.label15.TabIndex = 11;
-            this.label15.Text = "Cadena generar";
->>>>>>> 2064caf593dbefa07afb973ca6f95264929cfaeb:Codigo/Componentes/Consultas/Capa_Vista/Form1.designer.cs
             // 
             // iconButton13
             // 
@@ -1703,26 +1538,16 @@ namespace Capa_Vista
             this.textConsultaBusqueda.Size = new System.Drawing.Size(300, 20);
             this.textConsultaBusqueda.TabIndex = 9;
             // 
-            // cbosubquery
-            // 
-            this.cbosubquery.Location = new System.Drawing.Point(278, 148);
-            this.cbosubquery.Name = "cbosubquery";
-            this.cbosubquery.Size = new System.Drawing.Size(24, 20);
-            this.cbosubquery.TabIndex = 45;
-            // 
             // Busqueda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD:Codigo/Componentes/Consultas/Capa_Vista/Consulta Inteligente.designer.cs
             this.ClientSize = new System.Drawing.Size(1169, 833);
-=======
-            this.ClientSize = new System.Drawing.Size(1157, 749);
->>>>>>> 2064caf593dbefa07afb973ca6f95264929cfaeb:Codigo/Componentes/Consultas/Capa_Vista/Form1.designer.cs
             this.Controls.Add(this.tbcBusqueda);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Busqueda";
-            this.Text = "Form1";
+            this.Text = "Busqueda Inteligente";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel13.ResumeLayout(false);
@@ -1894,7 +1719,6 @@ namespace Capa_Vista
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbonombreconsulta;
         private System.Windows.Forms.ComboBox cboTabla;
-        private System.Windows.Forms.TextBox cbosubquery;
     }
 }
 
