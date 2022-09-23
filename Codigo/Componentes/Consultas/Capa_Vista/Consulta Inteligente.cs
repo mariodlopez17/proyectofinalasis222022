@@ -12,8 +12,9 @@ using System.Data.Odbc;
 
 namespace BusquedaInteligente
 {
-    public partial class Form1 : Form
+    public partial class Busqueda : Form
     {
+        OdbcConnection cn = new OdbcConnection("DSN = Colchoneria");
         string campo = "";
         string csimple = "";
         string where = "";
@@ -22,7 +23,7 @@ namespace BusquedaInteligente
         string final = "";
         string orden = "";
 
-        public Form1()
+        public Busqueda()
         {
             InitializeComponent();
         }
@@ -42,8 +43,10 @@ namespace BusquedaInteligente
         private void ConsultasInteligentes_Load(object sender, EventArgs e)
         {
 
+
             llenarcboquery();
             llenarcomboeditar();
+            tablaseditar();
         }
 
         public void llenarcomboeditar()
@@ -55,6 +58,24 @@ namespace BusquedaInteligente
                 cbonombreconsulta.Items.Add(datareader[0].ToString());
             }
         }
+
+        public void llenarcombosactualizar()
+        {
+            cboxCampoEDTR.Items.Clear();
+            comboBox4.Items.Clear();
+            cboxCampoEDTR.Items.Clear();
+            comboBox8.Items.Clear();
+            OdbcDataReader datareader = cn.llenarcbo2(cbosubquery.Text);
+            while (datareader.Read())
+            {
+                cboxCampoEDTR.Items.Add(datareader[0].ToString());
+                comboBox4.Items.Add(datareader[0].ToString());
+                cboxCampoEDTR.Items.Add(datareader[0].ToString());
+                comboBox8.Items.Add(datareader[0].ToString());
+            }
+        }
+
+
         private void cbonombreconsulta_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtNombreConsulta.Text = cbonombreconsulta.SelectedItem.ToString();
@@ -64,9 +85,9 @@ namespace BusquedaInteligente
 
         private void cboTablaConsultaSimple_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txttablaeditar.Text = cboTablaConsultaSimple.SelectedItem.ToString();
+            cbosubquery.Text = cboTablaCSimple.SelectedItem.ToString();
             llenarcombosactualizar();
-            chkSelectTodosConsultaSimple.Enabled = true;
+            checkBox1.Enabled = true;
         }
 
         public void tablaseditar()
@@ -75,19 +96,19 @@ namespace BusquedaInteligente
             OdbcDataReader datareader = cn.llenarcbo();
             while (datareader.Read())
             {
-                cboTablaConsultaSimple.Items.Add(datareader[0].ToString());
+                cboTablaCSimple.Items.Add(datareader[0].ToString());
             }
         }
         private void chkSelectTodosConsultaSimple_CheckedChanged(object sender, EventArgs e)
         {
 
-            if (chkSelectTodosConsultaSimple.Checked == true)
+            if (checkBox1.Checked == true)
             {
                 txtAliasEDITAR.Text = "";
                 txtAliasEDITAR.Enabled = false;
                 cboxCampoEDTR.Text = "";
                 cboxCampoEDTR.Enabled = false;
-                txtcamposelectoseditar.Text = "";
+                richTextBox2.Text = "";
             }
             else
             {
@@ -100,7 +121,7 @@ namespace BusquedaInteligente
 
         private void chkcondicioneseditar_CheckedChanged(object sender, EventArgs e)
         {
-            if ((chkcondicioneseditar.Checked == true) && (csimpleeditar != ""))
+            if ((chkcondicioneseditar.Checked == true) && (csimpleEditar != ""))
             {
                 groupBox3.Enabled = true;
                 groupBox6.Enabled = true;
@@ -131,12 +152,12 @@ namespace BusquedaInteligente
         public void llenarcboquery()
         {
             comboBox9.Items.Clear();
-            cbocopiaquery.Items.Clear();
+            cbosubquery.Items.Clear();
             OdbcDataReader datareader = cn.llenarcboq(query);
             while (datareader.Read())
             {
                 comboBox9.Items.Add(datareader[0].ToString());
-                cbocopiaquery.Items.Add(datareader[1].ToString());
+                cbosubquery.Items.Add(datareader[1].ToString());
             }
         }
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -235,7 +256,7 @@ namespace BusquedaInteligente
                 {
                     if (dataGridView1.Columns[e.ColumnIndex].Name == "ColumnDgvModificar")
                     {
-                        textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                        cbosubquery.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                         txtAliasEDITAR.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                         txtNombreConsulta.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
                         dataGridView1.Rows.RemoveAt(e.RowIndex);
@@ -331,6 +352,10 @@ namespace BusquedaInteligente
 
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

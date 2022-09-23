@@ -1,7 +1,7 @@
 ﻿
 namespace BusquedaInteligente
 {
-    partial class Form1
+    partial class Busqueda
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -92,6 +92,8 @@ namespace BusquedaInteligente
             this.label16 = new System.Windows.Forms.Label();
             this.tbpEditar = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cboTabla = new System.Windows.Forms.ComboBox();
+            this.cbonombreconsulta = new System.Windows.Forms.ComboBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -152,8 +154,7 @@ namespace BusquedaInteligente
             this.label32 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textConsultaBusqueda = new System.Windows.Forms.TextBox();
-            this.cbonombreconsulta = new System.Windows.Forms.ComboBox();
-            this.cboTabla = new System.Windows.Forms.ComboBox();
+            this.cbosubquery = new System.Windows.Forms.TextBox();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -862,6 +863,22 @@ namespace BusquedaInteligente
             this.panel1.Size = new System.Drawing.Size(952, 771);
             this.panel1.TabIndex = 1;
             // 
+            // cboTabla
+            // 
+            this.cboTabla.FormattingEnabled = true;
+            this.cboTabla.Location = new System.Drawing.Point(795, 646);
+            this.cboTabla.Name = "cboTabla";
+            this.cboTabla.Size = new System.Drawing.Size(19, 21);
+            this.cboTabla.TabIndex = 38;
+            // 
+            // cbonombreconsulta
+            // 
+            this.cbonombreconsulta.FormattingEnabled = true;
+            this.cbonombreconsulta.Location = new System.Drawing.Point(281, 9);
+            this.cbonombreconsulta.Name = "cbonombreconsulta";
+            this.cbonombreconsulta.Size = new System.Drawing.Size(408, 21);
+            this.cbonombreconsulta.TabIndex = 37;
+            // 
             // textBox10
             // 
             this.textBox10.Location = new System.Drawing.Point(278, 647);
@@ -1203,6 +1220,7 @@ namespace BusquedaInteligente
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cbosubquery);
             this.groupBox2.Controls.Add(this.richTextBox2);
             this.groupBox2.Controls.Add(this.cboxCampoEDTR);
             this.groupBox2.Controls.Add(this.cboTablaCSimple);
@@ -1303,7 +1321,7 @@ namespace BusquedaInteligente
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(167, 151);
+            this.checkBox1.Location = new System.Drawing.Point(99, 151);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(112, 17);
             this.checkBox1.TabIndex = 37;
@@ -1522,30 +1540,21 @@ namespace BusquedaInteligente
             this.textConsultaBusqueda.Size = new System.Drawing.Size(300, 20);
             this.textConsultaBusqueda.TabIndex = 9;
             // 
-            // cbonombreconsulta
+            // cbosubquery
             // 
-            this.cbonombreconsulta.FormattingEnabled = true;
-            this.cbonombreconsulta.Location = new System.Drawing.Point(281, 9);
-            this.cbonombreconsulta.Name = "cbonombreconsulta";
-            this.cbonombreconsulta.Size = new System.Drawing.Size(408, 21);
-            this.cbonombreconsulta.TabIndex = 37;
+            this.cbosubquery.Location = new System.Drawing.Point(278, 148);
+            this.cbosubquery.Name = "cbosubquery";
+            this.cbosubquery.Size = new System.Drawing.Size(24, 20);
+            this.cbosubquery.TabIndex = 45;
             // 
-            // cboTabla
-            // 
-            this.cboTabla.FormattingEnabled = true;
-            this.cboTabla.Location = new System.Drawing.Point(795, 646);
-            this.cboTabla.Name = "cboTabla";
-            this.cboTabla.Size = new System.Drawing.Size(19, 21);
-            this.cboTabla.TabIndex = 38;
-            // 
-            // Form1
+            // Busqueda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1169, 833);
             this.Controls.Add(this.tbcBusqueda);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Form1";
+            this.Name = "Busqueda";
             this.Text = "Form1";
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
@@ -1718,6 +1727,7 @@ namespace BusquedaInteligente
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbonombreconsulta;
         private System.Windows.Forms.ComboBox cboTabla;
+        private System.Windows.Forms.TextBox cbosubquery;
     }
 }
 
