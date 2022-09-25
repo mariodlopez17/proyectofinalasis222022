@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 //Libreria--------
 using System.Data.Odbc;
 
-namespace Modelo
+namespace NavegadorModelo
 {
     class Conexion
     {

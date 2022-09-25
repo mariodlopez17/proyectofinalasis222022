@@ -7,9 +7,9 @@ using System.Windows.Forms;
 using System.Data;
 using System.Data.Odbc;
 using FontAwesome.Sharp;
-using Modelo;
+using NavegadorModelo;
 
-namespace Controlador
+namespace NavegadorControlador
 {
  
     public class csControlador
@@ -18,13 +18,7 @@ namespace Controlador
 
         int next, mov;
 
-        private int opcionboton;
-
-        public int Opcionboton
-        {
-            get { return this.opcionboton; }
-            set { this.opcionboton = value; }
-        }
+        
        
         public void llenartablaa(string ntabla, DataGridView tabla)//Funcion para llenar tabla
         {
@@ -58,23 +52,88 @@ namespace Controlador
             }
             return posicionamiento;
         }
-        public void llenartablaa(string ntabla, DataGridView tabla, int posicion, TextBox[] textbox)//Funcion para llenar tabla
+        public void llenartablainicio(string ntabla, DataGridView tabla, TextBox[] textbox)//Funcion para llenar tabla
+        {
+            try
+            {
+                int permiso = comprobacionvacio(tabla);
+
+                if(permiso != 0)
+                {
+                    OdbcDataAdapter dt = sn.llenartabla(ntabla);
+                    DataTable table = new DataTable();
+                    dt.Fill(table);
+                    tabla.DataSource = table;
+
+
+                    for (int x = 0; x < table.Columns.Count; x++)
+                    {
+
+                        textbox[x].Text = table.Rows[0][x].ToString();
+
+                    }
+                }
+                else
+                {
+                    OdbcDataAdapter dt = sn.llenartabla(ntabla);
+                    DataTable table = new DataTable();
+                    dt.Fill(table);
+                    tabla.DataSource = table;
+                }
+
+                
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show("Error:" + e);
+            }
+        }
+        public void llenartabla5(string ntabla, DataGridView tabla, TextBox[] textbox, int posicion)//Funcion para llenar tabla
         {
             try
             {
                 OdbcDataAdapter dt = sn.llenartabla(ntabla);
                 DataTable table = new DataTable();
                 dt.Fill(table);
-
-
+                
+                
                 for (int x = 0; x < table.Columns.Count; x++)
                 {
                     textbox[x].Text = table.Rows[posicion][x].ToString();
+                    textbox[x].Enabled = false;
 
 
                 }
             }
-            
+
+            catch (Exception e)
+            {
+                MessageBox.Show("Error:" + e);
+            }
+        }
+        public void llenartxt(TextBox[] textbox, DataGridView tabla)//Llena los textbox con datos del datagriedview
+
+        {
+            try
+            {
+                int permiso = comprobacionvacio(tabla);
+                if(permiso != 0)
+                {
+                    for (int x = 0; x < tabla.ColumnCount; x++)
+                    {
+                        textbox[x].Text = tabla.CurrentRow.Cells[x].Value.ToString();
+
+
+                    }
+                }
+                else
+                {
+
+                }
+               
+
+            }
             catch (Exception e)
             {
                 MessageBox.Show("Error:" + e);
@@ -82,6 +141,8 @@ namespace Controlador
 
 
         }
+
+
 
         public void limpiar(Control control)// limpia Componentes
         {
@@ -181,87 +242,51 @@ namespace Controlador
             
         }
 
-        public void enfocarEliminar(TextBox[] textbox) //disabled todos los textbox y enfoca el primer textbox
-        {
-            try
-            {
-                textbox[0].Focus();
-                textbox[1].Enabled = false;
-                textbox[2].Enabled = false;
-                textbox[3].Enabled = false;
-                textbox[4].Enabled = false;
-
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Error:" + e);
-            }
-           
-        }
-
-        public void llenartxt(TextBox[] textbox, DataGridView tabla)//Llena los textbox con datos del datagriedview
-
-        {
-            try
-            {
-                for (int x = 0; x < tabla.ColumnCount; x++)
-                {
-                    textbox[x].Text = tabla.CurrentRow.Cells[x].Value.ToString();
-                    MessageBox.Show(textbox[x].Text + "    " + tabla.CurrentRow.Cells[x].Value.ToString());
-
-                }
-
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Error:" + e);
-            }
-            
-
-        }
-
         
-
-
          public void moverseIF(DataGridView tabla, string mover)//Metodo para moverse al inicio, final, siguiente, anterior
         {
             try
             {
-                int fin = (tabla.Rows.Count - 2); ;
-                int posicion;
-
-                if (mover.Equals("i"))
+                int permiso = comprobacionvacio(tabla);
+                if(permiso != 0)
                 {
-                    posicion = 0;
-                    tabla.CurrentCell = tabla.Rows[posicion].Cells[tabla.CurrentCell.ColumnIndex];
+                    int fin = (tabla.Rows.Count - 2); ;
+                    int posicion;
 
-                }
-                else if (mover.Equals("f"))
-                {
-                    posicion = fin;
-                    tabla.CurrentCell = tabla.Rows[posicion].Cells[tabla.CurrentCell.ColumnIndex];
-
-                }
-                else if (mover.Equals("b"))
-                {
-                    mov = tabla.CurrentRow.Index - 1;
-                    if (mov >= 0)
+                    if (mover.Equals("i"))
                     {
-                        tabla.CurrentCell = tabla.Rows[mov].Cells[tabla.CurrentCell.ColumnIndex];
+                        posicion = 0;
+                        tabla.CurrentCell = tabla.Rows[posicion].Cells[tabla.CurrentCell.ColumnIndex];
 
                     }
-
-
-                }
-                else if (mover.Equals("s"))
-                {
-                    next = tabla.CurrentRow.Index + 1;
-                    if (next < tabla.Rows.Count - 1)
+                    else if (mover.Equals("f"))
                     {
-                        tabla.CurrentCell = tabla.Rows[next].Cells[tabla.CurrentCell.ColumnIndex];
+                        posicion = fin;
+                        tabla.CurrentCell = tabla.Rows[posicion].Cells[tabla.CurrentCell.ColumnIndex];
 
                     }
+                    else if (mover.Equals("b"))
+                    {
+                        mov = tabla.CurrentRow.Index - 1;
+                        if (mov >= 0)
+                        {
+                            tabla.CurrentCell = tabla.Rows[mov].Cells[tabla.CurrentCell.ColumnIndex];
+
+                        }
+
+
+                    }
+                    else if (mover.Equals("s"))
+                    {
+                        next = tabla.CurrentRow.Index + 1;
+                        if (next < tabla.Rows.Count - 1)
+                        {
+                            tabla.CurrentCell = tabla.Rows[next].Cells[tabla.CurrentCell.ColumnIndex];
+
+                        }
+                    }
                 }
+                
             }
             catch(Exception e)
             {
@@ -277,17 +302,22 @@ namespace Controlador
         {
             try
             {
-                string campo = textbox[0].Tag.ToString();
-                int clave = int.Parse(textbox[0].Text);
-
-                sn.eliminar(clave, campo, tabla.Tag.ToString());
-                MessageBox.Show("Dato Eliminado");
-                for (int x = 0; x < textbox.Length; x++)
+                int permiso = comprobacionvacio(tabla);
+                if(permiso != 0)
                 {
-                    textbox[x].Enabled = false;
+                    string campo = textbox[0].Tag.ToString();
+                    int clave = int.Parse(textbox[0].Text);
+
+                    sn.eliminar(clave, campo, tabla.Tag.ToString());
+                    MessageBox.Show("Dato Eliminado");
+                    for (int x = 0; x < textbox.Length; x++)
+                    {
+                        textbox[x].Enabled = false;
 
 
+                    }
                 }
+                
             }
             catch (Exception e)
             {
@@ -358,9 +388,20 @@ namespace Controlador
                 int incremento = 0;
                 textbox[0].Enabled = false;
                 textbox[1].Focus();
-                string resultado = sn.buscarid(tabla.Tag.ToString(), textbox[0].Tag.ToString());
-                incremento = Convert.ToInt32(resultado) + 1;
-                textbox[0].Text = incremento.ToString();
+                int permiso = comprobacionvacio(tabla);
+                if(permiso != 0)
+                {
+                    string resultado = sn.buscarid(tabla.Tag.ToString(), textbox[0].Tag.ToString());
+                    incremento = Convert.ToInt32(resultado) + 1;
+                    textbox[0].Text = incremento.ToString();
+                }
+                else
+                {
+                    incremento =  1;
+                    textbox[0].Text = incremento.ToString();
+                }
+               
+                
 
             }
             catch (Exception e)
@@ -376,47 +417,54 @@ namespace Controlador
         {
             try
             {
-                string autorizazcion = evaluarcampos(textbox);
-                bool comporbar = comprobaractualizacion(tabla, textbox);
+                int permiso = comprobacionvacio(tabla);
 
-                if (autorizazcion == "no" && comporbar == false)
+                if(permiso != 0)
                 {
+                    string autorizazcion = evaluarcampos(textbox);
+                    bool comporbar = comprobaractualizacion(tabla, textbox);
 
-
-
-                }
-                else if (autorizazcion == "si" && comporbar == true)
-                {
-                    string dato = " ";
-                    string condicion = "(" + textbox[0].Tag.ToString() + " = '" + textbox[0].Text + "')";
-
-                    for (int x = 1; x < textbox.Length; x++)
+                    if (autorizazcion == "no" && comporbar == false)
                     {
 
-                        if (x == textbox.Length - 1)
-                        {
-                            dato += " " + textbox[x].Tag.ToString() + " = '" + textbox[x].Text + "' ";
 
-                        }
-                        else if (x == 1)
-                        {
-                            dato += "SET " + textbox[x].Tag.ToString() + " = '" + textbox[x].Text + "', ";
-
-                        }
-                        else
-                        {
-                            dato += " " + textbox[x].Tag.ToString() + " = '" + textbox[x].Text + "', ";
-
-                        }
 
                     }
-
-                    sn.actualizar(dato, condicion, tabla.Tag.ToString());
-                    MessageBox.Show("Dato actualizado");
-                    for (int x = 0; x < textbox.Length; x++)
+                    else if (autorizazcion == "si" && comporbar == true)
                     {
-                        textbox[x].Enabled = false;
+                        string dato = " ";
+                        string condicion = "(" + textbox[0].Tag.ToString() + " = '" + textbox[0].Text + "')";
+
+                        for (int x = 1; x < textbox.Length; x++)
+                        {
+
+                            if (x == textbox.Length - 1)
+                            {
+                                dato += " " + textbox[x].Tag.ToString() + " = '" + textbox[x].Text + "' ";
+
+                            }
+                            else if (x == 1)
+                            {
+                                dato += "SET " + textbox[x].Tag.ToString() + " = '" + textbox[x].Text + "', ";
+
+                            }
+                            else
+                            {
+                                dato += " " + textbox[x].Tag.ToString() + " = '" + textbox[x].Text + "', ";
+
+                            }
+
+                        }
+
+                        sn.actualizar(dato, condicion, tabla.Tag.ToString());
+                        MessageBox.Show("Dato actualizado");
+                        for (int x = 0; x < textbox.Length; x++)
+                        {
+                            textbox[x].Enabled = false;
+                        }
                     }
+
+                
 
 
                 }
@@ -430,51 +478,22 @@ namespace Controlador
 
         }
 
-        public void bloquearbotones(IconButton[] boton, bool bloqueo)//bloquea botones
+        public void bloquearbotonesGC(IconButton[] boton, bool bloqueo)//bloquea botones  guardar y cancelar
         {
             try
             {
-                if (bloqueo == true)//activa el boton guardar y cancelar
-                {
-                    boton[0].Enabled = true;
-                    boton[1].Enabled = true;
-                    boton[2].Enabled = false;
-                    boton[3].Enabled = false;
-                    boton[4].Enabled = false;
-                    boton[5].Enabled = false;
-                    boton[6].Enabled = false;
-                    boton[7].Enabled = false;
-                    boton[8].Enabled = false;
-                    boton[9].Enabled = false;
-                    boton[10].Enabled = false;
-                    boton[11].Enabled = false;
-                    boton[12].Enabled = false;
-                    boton[13].Enabled = false;
-
-
-
-
-                }
-                else if (bloqueo == false)//bloque el boton guardar y cancelar
+                if(bloqueo == true)//si es true bloquea botones
                 {
                     boton[0].Enabled = false;
                     boton[1].Enabled = false;
-                    boton[2].Enabled = true;
-                    boton[3].Enabled = true;
-                    boton[4].Enabled = true;
-                    boton[5].Enabled = true;
-                    boton[6].Enabled = true;
-                    boton[7].Enabled = true;
-                    boton[8].Enabled = true;
-                    boton[9].Enabled = true;
-                    boton[10].Enabled = true;
-                    boton[11].Enabled = true;
-                    boton[12].Enabled = true;
-                    boton[13].Enabled = true;
-
-
-
                 }
+               else if(bloqueo == false)//si es true desbloquea botones
+                {
+                    boton[0].Enabled = true;
+                    boton[1].Enabled = true;
+                }
+
+                
             }
             catch (Exception e)
             {
@@ -513,32 +532,37 @@ namespace Controlador
             return autorizacion;
         }
 
-       public void evaluartags(TextBox[] textbox, DataGridView tabla, string BD, Form formulario)//Metodo para evaluar los tags
+       public void evaluartags(TextBox[] textbox, DataGridView tabla, string BD)//Metodo para evaluar los tags
         {
 
             try
             {
-                OdbcDataAdapter dt = sn.buscarnombretabla(tabla.Tag.ToString(), textbox.Length, BD);
+                OdbcDataAdapter dt = sn.buscarnombretabla2(tabla.Tag.ToString(), textbox.Length, BD);
                 DataTable table = new DataTable();
                 dt.Fill(table);
+                string[] datos = new string[textbox.Length];
+                for(int x = 0; x< textbox.Length; x++)
+                {
+                    datos[x] = textbox[x].Tag.ToString();
+                }
 
-
-
+                Array.Sort(datos);
+               
                 for (int x = 0; x < textbox.Length; x++)
                 {
-                    if (textbox[x].Tag.ToString() != table.Rows[x][0].ToString())
+
+                    if (datos[x] != table.Rows[x][0].ToString())
                     {
-
-
-                        MessageBox.Show("Por favor Verificar el nombre de la columna: " + textbox[x].Tag.ToString() + ", Debe de ser: " + table.Rows[x][0].ToString());
-                        formulario.Close();
-                        break;
+                        string mensaje = "Por favor Verificar el nombre de la columna: " + table.Rows[x][0].ToString();
+                        MessageBox.Show(mensaje, " Error Campo  ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         
-
+                            Application.Exit();
+                            break;
+                        
                     }
                     else
                     {
-
+                        //MessageBox.Show(datos[x]);
                     }
                 }
             }
@@ -550,7 +574,7 @@ namespace Controlador
             
 
 
-        }
+         }
         
             bool comprobaractualizacion (DataGridView tabla, TextBox[] textbox)
         {
@@ -592,6 +616,54 @@ namespace Controlador
             return permiso;
         }
 
+        
+        public void inicializargrid (DataGridView tabla)
+        {
+            tabla.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            tabla.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        public void evaluartabla(DataGridView tabla)//Metodo para evaluar el nombre de la tabla
+        {
+
+            try
+            {
+                OdbcDataAdapter dt = sn.buscarnombretabla();
+                DataTable table = new DataTable();
+                dt.Fill(table);
+
+                int conteo = 0;
+
+                for (int x = 0; x < table.Rows.Count; x++)
+                {
+
+                    if (tabla.Tag.ToString() != table.Rows[x][0].ToString())
+                    {
+                         conteo += 1;
+                    }
+                    
+                }
+                if(conteo == table.Rows.Count)
+                {
+                    string mensaje = "La tabla: " + tabla.Tag.ToString() + " no aparece en la Base de datos ";
+                    MessageBox.Show(mensaje," Error Tabla ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Application.Exit();
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+            }
+
+        }
+
+        public int comprobacionvacio(DataGridView tabla)
+        {
+            int resultado = 0;
+            resultado = sn.estadotabla(tabla.Tag.ToString());
+
+            return resultado;
+        }
 
 
     }

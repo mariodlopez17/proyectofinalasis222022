@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32802.440
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vista", "Vista\Vista.csproj", "{AB293353-FCE3-47AC-A5F8-4BADBF91F517}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavegadorVista", "Vista\NavegadorVista.csproj", "{AB293353-FCE3-47AC-A5F8-4BADBF91F517}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelo", "Modelo\Modelo.csproj", "{996984C0-E3F4-4A7F-AC3E-15FC04F05DDC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavegadorModelo", "Modelo\NavegadorModelo.csproj", "{996984C0-E3F4-4A7F-AC3E-15FC04F05DDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controlador", "Controlador\Controlador.csproj", "{F03DE0C1-B8F2-40EF-9782-E8E6FEF71D14}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavegadorControlador", "Controlador\NavegadorControlador.csproj", "{F03DE0C1-B8F2-40EF-9782-E8E6FEF71D14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

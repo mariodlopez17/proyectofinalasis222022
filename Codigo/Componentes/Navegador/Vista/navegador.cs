@@ -8,161 +8,163 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
-using Controlador;
+using NavegadorControlador;
 
-namespace Vista
+namespace NavegadorVista
 {
-    public partial class navegador : Form
+    public partial class Navegador : UserControl
     {
         csControlador cn = new csControlador();
-        public navegador()
+        public Navegador()
         {
             InitializeComponent();
         }
-        int opcion=0;
-        //si opcion es true será insercion
-        //si opcion es false será actualizacion
-        private void btnInsert_Click(object sender, EventArgs e)
+
+        public Form actual = new Form();
+        public TextBox[] textbox = { };
+        public TextBox[] textboxi = { };
+        public DataGridView tabla;
+       
+
+        int opcion; 
+        public void cargar(DataGridView dtabla, TextBox[] text, string BD)
         {
-            opcion = 1;
-            IconButton[] boton = { btnSave, btnCancelar, btnInsert, btnModificar, btnDelete, btnUpdate, btnConsultar, btnReporte,
-                                   btnNext, btnBack, btnStart, btnEnd, btnExit, btnHelp };
-            cn.bloquearbotones(boton, true);
-            cn.limpiar(this);
-            cn.activar(this);
-            TextBox[] textbox = { textBox1, textBox2 };
-            cn.crearid(textbox, dgv_tabla);
+            cn.evaluartabla(dtabla);
+            cn.inicializargrid(dtabla);
+            cn.llenartablainicio(dtabla.Tag.ToString(), dtabla, text);
+            cn.evaluartags(text, dtabla, BD);
+            cn.desactivar(actual);
+           
             
 
+
+        }
+      
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            actual.Close();
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
+        private void ComponenteNavegador_Load(object sender, EventArgs e)
         {
-            opcion = 2;
-            IconButton[] boton = { btnSave, btnCancelar, btnInsert, btnModificar, btnDelete, btnUpdate, btnConsultar, btnReporte,
-                                   btnNext, btnBack, btnStart, btnEnd, btnExit, btnHelp };
-            cn.bloquearbotones(boton, true);
-            TextBox[] textbox = { textBox1, textBox2 };
-            cn.activar(this);
-            cn.enfocar(textbox);
+            IconButton[] botongc = { btnSave, btnCancelar };
+            cn.bloquearbotonesGC(botongc, true);
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            cn.moverseIF(tabla, "b");
+            cn.llenartxt(textbox, tabla);
+            cn.desactivar(actual);
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            cn.moverseIF(tabla, "s");
+            cn.llenartxt(textbox, tabla);
+            cn.desactivar(actual);
+        }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            cn.moverseIF(tabla, "i");
+            cn.llenartxt(textbox, tabla);
+            cn.desactivar(actual);
+        }
+
+        private void btnEnd_Click(object sender, EventArgs e)
+        {
+            cn.moverseIF(tabla, "f");
+            cn.llenartxt(textbox, tabla);
+            cn.desactivar(actual);
+        }
+
+        private void btnInsert_Click(object sender, EventArgs e)
+        {
+            IconButton[] botongc = { btnSave, btnCancelar };
+            opcion = 1;
+            cn.limpiar(actual);
+            cn.activar(actual);
+            cn.crearid(textboxi, tabla);
+            cn.bloquearbotonesGC(botongc, false);
+            
+
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             opcion = 3;
-            IconButton[] boton = { btnSave, btnCancelar, btnInsert, btnModificar, btnDelete, btnUpdate, btnConsultar, btnReporte,
-                                   btnNext, btnBack, btnStart, btnEnd, btnExit, btnHelp };
-            cn.bloquearbotones(boton, true);
-            cn.activar(this);
-            TextBox[] textbox = { textBox1, textBox2, textBox3, textBox4, textBox5 };
-            cn.enfocarEliminar(textbox);
-            MessageBox.Show("Esta Seguro de eliminar el registro, si es así seleccione Guardar.");
+            int permiso = cn.comprobacionvacio(tabla);
+            if (permiso != 0)
+            {
+                IconButton[] botongc = { btnSave, btnCancelar };
+                cn.bloquearbotonesGC(botongc, false);
+            }
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void btnModificar_Click(object sender, EventArgs e)
         {
-            TextBox[] textbox = { textBox1, textBox2, textBox3, textBox4, textBox5 };
-            cn.moverseIF(textbox, dgv_tabla, "i");
-            cn.llenartablaa(dgv_tabla.Tag.ToString(), dgv_tabla);
+            opcion = 2;
+            int permiso = cn.comprobacionvacio(tabla);
+            if(permiso != 0)
+            {
+                cn.activar(actual);
+                cn.enfocar(textboxi);
+                IconButton[] botongc = { btnSave, btnCancelar };
+                cn.bloquearbotonesGC(botongc, false);
+            }
+           
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            IconButton[] boton = { btnSave, btnCancelar, btnInsert, btnModificar, btnDelete, btnUpdate, btnConsultar, btnReporte,
-                                   btnNext, btnBack, btnStart, btnEnd, btnExit, btnHelp };
-
-            TextBox[] textbox = { textBox1, textBox2, textBox3, textBox4, textBox5 };
-            if (opcion == 1)//Insercion
+            IconButton[] botongc = { btnSave, btnCancelar };
+           
+            if (opcion == 1)
             {
-                cn.ingresar(textbox, dgv_tabla, boton);
-                
-
+                cn.ingresar(textbox, tabla);
+                //cn.bloquearbotonesGC(botongc, true);
             }
-            else if (opcion == 2)//actualizacion
+            else if (opcion == 2)
             {
-                cn.actualizar(textbox, dgv_tabla,boton);
-               
-               
-                
+                cn.actualizar(textbox, tabla);
+               // cn.bloquearbotonesGC(botongc, true);
             }
-            else if (opcion == 3)//eliminar
+            else if(opcion == 3)
             {
-                cn.delete(textbox, dgv_tabla, boton);
+                DialogResult resultado = MessageBox.Show("Desea eliminar el Resgistro", "Eliminar", MessageBoxButtons.YesNo);
+                if(resultado == DialogResult.Yes)
+                {
+                    cn.delete(textbox, tabla);
+                    //cn.bloquearbotonesGC(botongc, true);
+                }
+                else if(resultado == DialogResult.No)
+                {
+
+                    cn.limpiar(actual);
+                    cn.desactivar(actual);
+                    cn.llenartxt(textbox, tabla);
+                    cn.bloquearbotonesGC(botongc, true);
+                }
+               
             }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            IconButton[] boton = { btnSave, btnCancelar, btnInsert, btnModificar, btnDelete, btnUpdate, btnConsultar, btnReporte,
-                                   btnNext, btnBack, btnStart, btnEnd, btnExit, btnHelp };
-            TextBox[] textbox = { textBox1, textBox2, textBox3, textBox4, textBox5 };
-            cn.bloquearbotones(boton, false);
-            cn.limpiar(this);
-            cn.desactivar(this);
-            cn.llenartxt(textbox, dgv_tabla);
-
+            cn.limpiar(actual);
+            cn.desactivar(actual);
+            cn.llenartxt(textbox, tabla);
+            IconButton[] botongc = { btnSave, btnCancelar };
+            cn.bloquearbotonesGC(botongc, true);
         }
 
-        private void btnConsultar_Click(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnReporte_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnStart_Click(object sender, EventArgs e)
-        {
-            TextBox[] textbox = { textBox1, textBox2, textBox3, textBox4, textBox5 };
-            cn.moverseIF(textbox,dgv_tabla,"i");
-            cn.desactivar(this);
-        }
-
-        private void btnEnd_Click(object sender, EventArgs e)
-        {
-            TextBox[] textbox = { textBox1, textBox2, textBox3, textBox4, textBox5 };
-            cn.moverseIF(textbox, dgv_tabla, "f");
-            cn.desactivar(this);
-        }
-
-        private void bnNext_Click(object sender, EventArgs e)
-        {
-            TextBox[] textbox = { textBox1, textBox2, textBox3, textBox4, textBox5 };
-            cn.moverseIF(textbox, dgv_tabla, "b");
-            cn.desactivar(this);
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            TextBox[] textbox = { textBox1, textBox2, textBox3, textBox4, textBox5 };
-            cn.moverseIF(textbox, dgv_tabla, "s");
-            cn.desactivar(this);
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnHelp_Click(object sender, EventArgs e)
-        {
-            //Menú de Ayuda hecho por Ester López
-            menuAyuda frm = new menuAyuda();
-            frm.Show();
-        }
-
-        private void navegador_Load(object sender, EventArgs e)
-        {
-            TextBox[] textbox = { textBox1, textBox2, textBox3, textBox4, textBox5 };
-            cn.llenartablaa(dgv_tabla.Tag.ToString(), dgv_tabla);
-            cn.desactivar(this);
-            cn.llenartxt(textbox, dgv_tabla);
-            IconButton[] boton = { btnSave, btnCancelar, btnInsert, btnModificar, btnDelete, btnUpdate, btnConsultar, btnReporte,
-                                   btnNext, btnBack, btnStart, btnEnd, btnExit, btnHelp };
-            cn.bloquearbotones(boton,false);
-            
+            cn.moverseIF(tabla, "i");
+            cn.llenartablainicio(tabla.Tag.ToString(), tabla, textbox);
         }
     }
 }

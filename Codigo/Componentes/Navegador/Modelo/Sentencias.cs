@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Odbc;
 
-namespace Modelo
+namespace NavegadorModelo
 {
     public class Sentencias
     {
@@ -94,23 +94,20 @@ namespace Modelo
         }
 
         
-
-       /* public OdbcDataAdapter buscarnombretabla(string tabla, int numero, string BD)
+        public OdbcDataAdapter buscarnombretabla2(string tabla, int numero, string BD)
         {
             string[] dato = new string[numero];
-            string sql = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS  WHERE TABLE_SCHEMA= '" + BD + "' AND TABLE_NAME= '" + tabla + "'";
+            string sql = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS  WHERE TABLE_SCHEMA= '" + BD + "' AND TABLE_NAME= '" + tabla + "' order by COLUMN_NAME asc";
             OdbcDataAdapter datatable = new OdbcDataAdapter(sql, con.conexion());
 
             return datatable;
-        }*/
-        public OdbcDataAdapter buscarnombretabla(string tabla, int numero, string BD)
+        }
+        public OdbcDataAdapter buscarnombretabla()
         {
             
-                string[] dato = new string[numero];
-                string sql = "show columns from " + tabla + "";
+                string sql = "show tables";
                 OdbcDataAdapter datatable = new OdbcDataAdapter(sql, con.conexion());
            
-
             return datatable;
         }
 
@@ -133,6 +130,22 @@ namespace Modelo
             
 
             return datos;
+        }
+
+        public int estadotabla(string tabla)
+        {
+           int dato = 0;
+            string sql = "select count(*) as total from "+tabla;
+            OdbcCommand cmd = new OdbcCommand(sql, con.conexion());
+            OdbcDataReader lr = cmd.ExecuteReader();
+            while (lr.Read())
+            {
+                
+                    dato = lr.GetInt32(0);
+                
+
+            }
+            return dato;
         }
 
     }
