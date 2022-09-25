@@ -30,12 +30,13 @@ namespace NavegadorVista
         int opcion; 
         public void cargar(DataGridView dtabla, TextBox[] text, string BD)
         {
+            IconButton[] botongc = {btnInsert, btnModificar, btnDelete, btnConsultar, btnReporte};
             cn.evaluartabla(dtabla);
             cn.inicializargrid(dtabla);
             cn.llenartablainicio(dtabla.Tag.ToString(), dtabla, text);
             cn.evaluartags(text, dtabla, BD);
             cn.desactivar(actual);
-           
+            cn.bloqueobtn(botongc);
             
 
 

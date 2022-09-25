@@ -147,6 +147,24 @@ namespace NavegadorModelo
             }
             return dato;
         }
+        public string[] buscarseguridad(int id,int mod)
+        {
+            string[] save = new string[7];
+            string sql1 = "select * from tbl_permisosaplicacionesusuario where fk_id_usuario=" + id + " and fk_id_aplicacion ="+mod+";";
+            OdbcCommand cmd = new OdbcCommand(sql1, con.conexion());
+            OdbcDataReader s = cmd.ExecuteReader();
+            while (s.Read())
+            {
+              
+                for (int x = 0; x < 7; x++)
+                {
+                    save[x] = s.GetString(x);
+                }
+            }
+
+            return save;
+           
+        }
 
     }
 }

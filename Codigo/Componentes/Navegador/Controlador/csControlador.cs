@@ -664,7 +664,36 @@ namespace NavegadorControlador
 
             return resultado;
         }
+        public void bloqueobtn(IconButton[] boton)//Metodo para evaluar el nombre de la tabla
+        {
+            string[] seguridad = new string[7];
+            seguridad = sn.buscarseguridad(7,2000);
+            int [] evaluacion = new int [7];
+            
+
+            try
+            { 
+                for (int x = 0; x < 7; x++)
+                {
+                    evaluacion[x] = Convert.ToInt32(seguridad[x]);
+                    if (evaluacion[x] == 0)
+                    {
+                        boton[x-2].Enabled = false;
 
 
-    }
+
+                    }
+                }
+
+
+
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+            }
+        }
+
+     }
 }
