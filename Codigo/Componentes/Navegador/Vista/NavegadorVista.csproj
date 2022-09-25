@@ -53,6 +53,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ayuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ayuda.Designer.cs">
+      <DependentUpon>Ayuda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Navegador.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -67,30 +73,46 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\siguiente.jpg" />
+    <None Include="Resources\actualizar.jpg" />
+    <None Include="Resources\agregar.jpg" />
+    <None Include="Resources\ant.jpg" />
     <Content Include="Resources\boton-actualizar.png" />
     <Content Include="Resources\boton-de-flecha-de-navegacion-hacia-atras-apuntando-a-la-izquierda.png" />
     <Content Include="Resources\buscador.png" />
+    <None Include="Resources\cancelar.jpg" />
     <Content Include="Resources\cancelar.png" />
     <Content Include="Resources\consulta.png" />
+    <None Include="Resources\Consultar.jpg" />
     <Content Include="Resources\disquete.png" />
     <Content Include="Resources\editar.png" />
+    <None Include="Resources\eli.jpg" />
     <Content Include="Resources\eliminar.png" />
     <Content Include="Resources\exit.png" />
     <Content Include="Resources\exit1.png" />
+    <None Include="Resources\fin.jpg" />
     <Content Include="Resources\flecha-a-la-navegacion-derecha.png" />
     <Content Include="Resources\flecha-a-la-navegacion-derecha1.png" />
     <Content Include="Resources\flecha-correcta.png" />
     <Content Include="Resources\flecha-izquierda.png" />
+    <None Include="Resources\guard.jpg" />
+    <None Include="Resources\inicio.jpg" />
     <Content Include="Resources\insertar.png" />
+    <None Include="Resources\mod.jpg" />
     <Content Include="Resources\printer.png" />
     <Content Include="Resources\printer1.png" />
     <Content Include="Resources\printer2.png" />
     <Content Include="Resources\question.png" />
     <Content Include="Resources\question1.png" />
     <Content Include="Resources\question2.png" />
+    <None Include="Resources\reportes.jpg" />
+    <None Include="Resources\salir.jpg" />
     <Content Include="Resources\settings.png" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Ayuda.resx">
+      <DependentUpon>Ayuda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Navegador.resx">
       <DependentUpon>Navegador.cs</DependentUpon>
     </EmbeddedResource>

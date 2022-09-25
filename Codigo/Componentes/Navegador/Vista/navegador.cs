@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
 using NavegadorControlador;
+using Vista;
 
 namespace NavegadorVista
 {
@@ -165,6 +166,13 @@ namespace NavegadorVista
         {
             cn.moverseIF(tabla, "i");
             cn.llenartablainicio(tabla.Tag.ToString(), tabla, textbox);
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            Ayuda ayuda = new Ayuda();
+            ayuda.Show();
+
         }
     }
 }
