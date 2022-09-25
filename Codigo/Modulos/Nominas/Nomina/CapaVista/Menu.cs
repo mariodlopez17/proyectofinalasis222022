@@ -24,6 +24,7 @@ namespace CapaVista
             paninvent2.Visible = false;
             paninvent3.Visible = false;
             paninvent4.Visible = false;
+            paninvent5.Visible = false;
         }
 
         private void hideSubMenu()
@@ -36,6 +37,8 @@ namespace CapaVista
                 paninvent3.Visible = false;
             if (paninvent4.Visible == true)
                 paninvent4.Visible = false;
+            if (paninvent5.Visible == true)
+                paninvent5.Visible = false;
         }
 
         private void showSubMenu(Panel subMenu)
@@ -100,13 +103,6 @@ namespace CapaVista
             hideSubMenu();
         }
 
-        private void btnMuestreo_Click(object sender, EventArgs e)
-        {
-            Planilla b = new Planilla();
-            b.Show();
-            hideSubMenu();
-        }
-
         private void button6_Click(object sender, EventArgs e)
         {
             BajasEmpleados b = new BajasEmpleados();
@@ -114,11 +110,63 @@ namespace CapaVista
             hideSubMenu();
         }
 
-        private void btntrans_Click(object sender, EventArgs e)
+        private void btnMenu5_Click(object sender, EventArgs e)
         {
-            Contrato b = new Contrato();
+            showSubMenu(paninvent5);
+        }
+
+
+        private void btnPlanilla_Click(object sender, EventArgs e)
+        {
+            Planilla b = new Planilla();
             b.Show();
             hideSubMenu();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBajaE_Click(object sender, EventArgs e)
+        {
+            PuestosTrabajos b = new PuestosTrabajos();
+            b.MdiParent = this;
+            b.Show();
+            pictureBox2.Visible = false;
+            hideSubMenu();
+            Size = new Size(762, 367);
+        }
+
+        private void btnGestionarC_Click(object sender, EventArgs e)
+        {
+            Contrato b = new Contrato();
+            b.MdiParent = this;
+            b.Show();
+            pictureBox2.Visible = false;
+            hideSubMenu();
+            Size = new Size(875, 575);
+        }
+
+        private void btnTipoC_Click(object sender, EventArgs e)
+        {
+            tipoContrato b = new tipoContrato();
+            b.MdiParent = this;
+            b.Show();
+            pictureBox2.Visible = false;
+            hideSubMenu();
+            Size = new Size(735, 395);
+        }
+
+        private void btnBajaE_Click_1(object sender, EventArgs e)
+        {
+
+            BajasEmpleados b = new BajasEmpleados();
+            b.MdiParent = this;
+            b.Show();
+            pictureBox2.Visible = false;
+            hideSubMenu();
+            Size = new Size(765, 400);
         }
     }
 }
