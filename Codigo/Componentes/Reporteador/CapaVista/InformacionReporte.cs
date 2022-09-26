@@ -15,6 +15,22 @@ namespace CapaVista
         public InformacionReporte()
         {
             InitializeComponent();
+            
+        }
+
+        public void axAcroPDF1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void imprimirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SendKeys.Send("^{p}");
         }
     }
 }
