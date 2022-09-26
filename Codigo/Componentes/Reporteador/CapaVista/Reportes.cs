@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace CapaVista
 {
-    public partial class Reportes : Form
+    public partial class Reportes_ : Form
     {
         
-        public Reportes()
+        public Reportes_()
         {
             InitializeComponent();
             String direc = textBox1.Text;
@@ -21,7 +21,6 @@ namespace CapaVista
 
         public void button1_Click(object sender, EventArgs e)
         {
-            InformacionReporte inforep = new InformacionReporte();
             OpenFileDialog abrirdocumento = new OpenFileDialog();
             if (abrirdocumento.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
@@ -31,10 +30,9 @@ namespace CapaVista
 
         private void button2_Click(object sender, EventArgs e)
         {
-            InformacionReporte inforep = new InformacionReporte();
-            inforep.Show();
-            inforep.axAcroPDF1_reporteria.src = textBox1.Text;
-            
+            ver_reporte rep = new ver_reporte();
+            rep.ShowDialog();
+
 
         }
 
@@ -51,6 +49,18 @@ namespace CapaVista
         private void printPreviewDialog1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            PrintDialog printDialog = new PrintDialog();
+            if (printDialog.ShowDialog() == DialogResult.OK)
+            {
+                CrystalDecisions.CrystalReports.Engine.ReportDocument reportDocument = new CrystalDecisions.CrystalReports.Engine.ReportDocument();
+                reportDocument.Load(Application.StartupPath + "\\CrystalReport1.rpt");
+                reportDocument.PrintOptions.PrinterName = printDialog.PrinterSettings.PrinterName;
+                reportDocument.PrintToPrinter(printDialog.PrinterSettings.Copies, printDialog.PrinterSettings.Collate, printDialog.PrinterSettings.FromPage, printDialog.PrinterSettings.ToPage);
+            }
         }
     }
 }
