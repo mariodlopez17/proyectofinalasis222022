@@ -175,5 +175,21 @@ namespace NavegadorVista
             ayuda.Show();
 
         }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            //Consulta.Vista cv = new Consulta.Vista();
+            /*
+             * Form 'fcv' = new 'cv.BusquedaAvanzada';
+             */
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            //Reportes.Vista cr = new Reportes.Vista();
+            /*
+             * Form 'fcr' = new 'cr.BusquedaAvanzada';
+             */
+        }
     }
 }

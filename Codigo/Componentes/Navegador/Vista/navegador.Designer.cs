@@ -55,10 +55,9 @@ namespace NavegadorVista
             this.btnInsert.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
             this.btnInsert.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnInsert.IconSize = 40;
-            this.btnInsert.Location = new System.Drawing.Point(15, 11);
-            this.btnInsert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnInsert.Location = new System.Drawing.Point(11, 9);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(92, 75);
+            this.btnInsert.Size = new System.Drawing.Size(69, 61);
             this.btnInsert.TabIndex = 44;
             this.btnInsert.Text = "Agregar";
             this.btnInsert.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -75,10 +74,9 @@ namespace NavegadorVista
             this.btnModificar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
             this.btnModificar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnModificar.IconSize = 40;
-            this.btnModificar.Location = new System.Drawing.Point(115, 11);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModificar.Location = new System.Drawing.Point(86, 9);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(92, 75);
+            this.btnModificar.Size = new System.Drawing.Size(69, 61);
             this.btnModificar.TabIndex = 45;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -95,10 +93,9 @@ namespace NavegadorVista
             this.btnDelete.IconColor = System.Drawing.Color.DimGray;
             this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnDelete.IconSize = 40;
-            this.btnDelete.Location = new System.Drawing.Point(15, 101);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Location = new System.Drawing.Point(11, 82);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(92, 75);
+            this.btnDelete.Size = new System.Drawing.Size(69, 61);
             this.btnDelete.TabIndex = 46;
             this.btnDelete.Text = "Eliminar";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -115,10 +112,9 @@ namespace NavegadorVista
             this.btnUpdate.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
             this.btnUpdate.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnUpdate.IconSize = 40;
-            this.btnUpdate.Location = new System.Drawing.Point(115, 101);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.Location = new System.Drawing.Point(86, 82);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(92, 75);
+            this.btnUpdate.Size = new System.Drawing.Size(69, 61);
             this.btnUpdate.TabIndex = 47;
             this.btnUpdate.Text = "Actualizar";
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -135,14 +131,14 @@ namespace NavegadorVista
             this.btnConsultar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
             this.btnConsultar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnConsultar.IconSize = 40;
-            this.btnConsultar.Location = new System.Drawing.Point(341, 11);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnConsultar.Location = new System.Drawing.Point(256, 9);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(92, 75);
+            this.btnConsultar.Size = new System.Drawing.Size(69, 61);
             this.btnConsultar.TabIndex = 48;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // btnReporte
             // 
@@ -154,14 +150,14 @@ namespace NavegadorVista
             this.btnReporte.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
             this.btnReporte.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnReporte.IconSize = 36;
-            this.btnReporte.Location = new System.Drawing.Point(341, 101);
-            this.btnReporte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReporte.Location = new System.Drawing.Point(256, 82);
             this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(92, 75);
+            this.btnReporte.Size = new System.Drawing.Size(69, 61);
             this.btnReporte.TabIndex = 49;
             this.btnReporte.Text = "Reportes";
             this.btnReporte.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // btnStart
             // 
@@ -173,10 +169,9 @@ namespace NavegadorVista
             this.btnStart.IconColor = System.Drawing.Color.Black;
             this.btnStart.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnStart.IconSize = 40;
-            this.btnStart.Location = new System.Drawing.Point(441, 101);
-            this.btnStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStart.Location = new System.Drawing.Point(331, 82);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(92, 75);
+            this.btnStart.Size = new System.Drawing.Size(69, 61);
             this.btnStart.TabIndex = 50;
             this.btnStart.Text = "Inicio";
             this.btnStart.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -193,10 +188,9 @@ namespace NavegadorVista
             this.btnBack.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
             this.btnBack.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnBack.IconSize = 40;
-            this.btnBack.Location = new System.Drawing.Point(541, 11);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBack.Location = new System.Drawing.Point(406, 9);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(92, 75);
+            this.btnBack.Size = new System.Drawing.Size(69, 61);
             this.btnBack.TabIndex = 51;
             this.btnBack.Text = "Siguiente";
             this.btnBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -213,10 +207,9 @@ namespace NavegadorVista
             this.btnNext.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
             this.btnNext.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnNext.IconSize = 40;
-            this.btnNext.Location = new System.Drawing.Point(441, 11);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNext.Location = new System.Drawing.Point(331, 9);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(92, 75);
+            this.btnNext.Size = new System.Drawing.Size(69, 61);
             this.btnNext.TabIndex = 52;
             this.btnNext.Text = "Anterior";
             this.btnNext.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -233,10 +226,9 @@ namespace NavegadorVista
             this.btnEnd.IconColor = System.Drawing.Color.Black;
             this.btnEnd.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnEnd.IconSize = 40;
-            this.btnEnd.Location = new System.Drawing.Point(541, 101);
-            this.btnEnd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEnd.Location = new System.Drawing.Point(406, 82);
             this.btnEnd.Name = "btnEnd";
-            this.btnEnd.Size = new System.Drawing.Size(92, 75);
+            this.btnEnd.Size = new System.Drawing.Size(69, 61);
             this.btnEnd.TabIndex = 53;
             this.btnEnd.Text = "Fin";
             this.btnEnd.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -253,10 +245,9 @@ namespace NavegadorVista
             this.btnExit.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
             this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnExit.IconSize = 40;
-            this.btnExit.Location = new System.Drawing.Point(657, 11);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExit.Location = new System.Drawing.Point(493, 9);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(92, 75);
+            this.btnExit.Size = new System.Drawing.Size(69, 61);
             this.btnExit.TabIndex = 54;
             this.btnExit.Text = "Salir";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -273,10 +264,9 @@ namespace NavegadorVista
             this.btnHelp.IconColor = System.Drawing.Color.DimGray;
             this.btnHelp.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnHelp.IconSize = 40;
-            this.btnHelp.Location = new System.Drawing.Point(657, 101);
-            this.btnHelp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHelp.Location = new System.Drawing.Point(493, 82);
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(92, 75);
+            this.btnHelp.Size = new System.Drawing.Size(69, 61);
             this.btnHelp.TabIndex = 55;
             this.btnHelp.Text = "Ayuda";
             this.btnHelp.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -293,10 +283,9 @@ namespace NavegadorVista
             this.btnSave.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
             this.btnSave.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnSave.IconSize = 40;
-            this.btnSave.Location = new System.Drawing.Point(231, 11);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Location = new System.Drawing.Point(173, 9);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(92, 75);
+            this.btnSave.Size = new System.Drawing.Size(69, 61);
             this.btnSave.TabIndex = 56;
             this.btnSave.Text = "Guardar";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -313,10 +302,9 @@ namespace NavegadorVista
             this.btnCancelar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
             this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnCancelar.IconSize = 40;
-            this.btnCancelar.Location = new System.Drawing.Point(231, 101);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Location = new System.Drawing.Point(173, 82);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(92, 75);
+            this.btnCancelar.Size = new System.Drawing.Size(69, 61);
             this.btnCancelar.TabIndex = 57;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -325,7 +313,7 @@ namespace NavegadorVista
             // 
             // Navegador
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSave);
@@ -341,9 +329,8 @@ namespace NavegadorVista
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.btnReporte);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Navegador";
-            this.Size = new System.Drawing.Size(765, 187);
+            this.Size = new System.Drawing.Size(574, 152);
             this.Load += new System.EventHandler(this.ComponenteNavegador_Load);
             this.ResumeLayout(false);
 
