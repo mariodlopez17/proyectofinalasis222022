@@ -32,7 +32,7 @@ namespace Capa_Vista
         {
             InitializeComponent();
             CargarTablas();
-            
+
         }
         string consulta = "";
         public void actualizardatagrid()
@@ -47,7 +47,7 @@ namespace Capa_Vista
             cboTabla.DataSource = con.GetSchema("Tables");
             cboTabla.DisplayMember = "TABLE_NAME";
             con.Close();
-            con.Close();
+
 
         }
 
@@ -56,34 +56,83 @@ namespace Capa_Vista
             try
             {
                 con.Open();
-            String cadenaB;
-            DataTable dt = new DataTable();
-            cadenaB = "";
-            
-            cadenaB = " SELECT * FROM " + tablabusqueda ;
-            //lbl_cadena.Text = "Buscando : " + datobuscar + " En Columna : " + buscaren;
-            OdbcDataAdapter datos = new OdbcDataAdapter(cadenaB, con);
-            datos.Fill(dt);
-            
-            DataGridView colums = new DataGridView();
-            colums.DataSource = dt;
-            int ndgv = colums.Columns.Count;
+                String cadenaB;
+                DataTable dt = new DataTable();
+                cadenaB = "";
 
-            for (int i = 0; i < ndgv; i++)
-            {
-                String nameC;
-                nameC = colums.Columns[i].HeaderText;
-                int ncbx = comboBox11.Items.Count;
-                if (ncbx < ndgv)
+                cadenaB = " SELECT * FROM " + tablabusqueda;
+                //lbl_cadena.Text = "Buscando : " + datobuscar + " En Columna : " + buscaren;
+                OdbcDataAdapter datos = new OdbcDataAdapter(cadenaB, con);
+                datos.Fill(dt);
+                OdbcCommand comando = new OdbcCommand(cadenaB, con);
+                OdbcDataReader leer;
+                leer = comando.ExecuteReader();
+                DataGridView colums = new DataGridView();
+                colums.DataSource = dt;
+                int ndgv = colums.Columns.Count;
+
+                for (int i = 0; i < ndgv; i++)
                 {
-                    comboBox11.Items.Add(nameC);
+                    String nameC;
+                    nameC = colums.Columns[i].HeaderText;
+                    int ncbx = cboTabla.Items.Count;
+
+                    if (ncbx < ndgv)
+                    {
+                        comboBox11.Items.Add(nameC);
+                    }
+
                 }
-            }
+                for (int i = 0; i < ndgv; i++)
+                {
+                    String nameD;
+                    nameD = colums.Columns[i].HeaderText;
+                    int ncbx = cboTablaConsultaSimple.Items.Count;
+
+                    if (ncbx < ndgv)
+                    {
+                        cboCamposEDITAR.Items.Add(nameD);
+                    }
+                }
+                for (int i = 0; i < ndgv; i++)
+                {
+                    String nameE;
+                    nameE = colums.Columns[i].HeaderText;
+                    int ncbx = cboOperadorLogicoEDITAR.Items.Count;
+
+                    if (ncbx < ndgv)
+                    {
+                        cboCampoConsultaComplejaEditar.Items.Add(nameE);
+                    }
+                }
+                for (int i = 0; i < ndgv; i++)
+                {
+                    String nameE;
+                    nameE = colums.Columns[i].HeaderText;
+                    int ncbx = cboTipoComparadorEditar.Items.Count;
+
+                    if (ncbx < ndgv)
+                    {
+                        cboCampoEditar.Items.Add(nameE);
+                    }
+                }
+                for (int i = 0; i < ndgv; i++)
+                {
+                    String nameF;
+                    nameF = colums.Columns[i].HeaderText;
+                    int ncbx = cboAgruparEditar.Items.Count;
+
+                    if (ncbx < ndgv)
+                    {
+                        cboCampoAgruparEditar.Items.Add(nameF);
+                    }
+                }
             }
             catch
             {
             }
             con.Close();
+
         }
 
 
@@ -92,16 +141,17 @@ namespace Capa_Vista
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             Capa_ControladorConsultas.clscontrolador crud = new Capa_ControladorConsultas.clscontrolador();
-           bool resultado = crud.InsertBusqueda(txtNombreConsulta.Text, cboTabla.Text, comboBox11.Text, textBox11.Text, null);
-            
+            bool resultado = crud.InsertBusqueda(txtNombreConsulta.Text, cboTabla.Text, comboBox11.Text, textBox11.Text, null);
+
             if (resultado)
 
             {
                 MessageBox.Show("Datos guardados");
             }
 
-           textBox1.Text = (txtNombreConsulta.Text + "+" + cboTabla.Text + "+" + comboBox11.Text + "+" + textBox11.Text);
-
+            textBox1.Text = (txtNombreConsulta.Text + "+" + cboTabla.Text + "+" + comboBox11.Text + "+" + textBox11.Text);
+            string columnasbd = comboBox11.Text;
+            CargarColumnas(columnasbd, comboBox11);
         }
 
         private void iconButton7_Click(object sender, EventArgs e)
@@ -115,7 +165,7 @@ namespace Capa_Vista
 
         }
 
-        
+
         private void iconButton3_Click(object sender, EventArgs e)
         {
             Capa_ControladorConsultas.clscontrolador crud = new Capa_ControladorConsultas.clscontrolador();
@@ -187,7 +237,7 @@ namespace Capa_Vista
 
         }
 
-  
+
         private void panel18_Paint(object sender, PaintEventArgs e)
         {
 
@@ -195,24 +245,24 @@ namespace Capa_Vista
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-          
-           // textBox1.Text = txtNombreConsulta.Text+ cboTabla.Text+ comboBox11.Text+ textBox11.Text;
+
+            // textBox1.Text = txtNombreConsulta.Text+ cboTabla.Text+ comboBox11.Text+ textBox11.Text;
         }
 
         //se necesita actualizaciones para terminar boton eliminar
         //Diana Victores 9959-19-1471
         public void actualizaconsultas()
         {
-          
+
         }
 
         //boton eliminar de la forma Buscar/Eliminar - Diana Victores 9959-19-1471
         private void iconButton12_Click(object sender, EventArgs e)
         {
-            cn.ejecutarconsulta(txtNombreConsultaBUSCARyELIMINAR.Text);
-            MessageBox.Show("Las consultas con nombre " + txtNombreConsultaBUSCARyELIMINAR.Text + " Han sido eliminadas");
+            cn.ejecutarconsulta(txtNombreConsultaBusquedaElimar.Text);
+            MessageBox.Show("Las consultas con nombre " + txtNombreConsultaBusquedaElimar.Text + " Han sido eliminadas");
             actualizaconsultas();
-            txtNombreConsultaBUSCARyELIMINAR.Text = "";
+            txtNombreConsultaBusquedaElimar.Text = "";
         }
         public void actualizaconsultas2(string condicion)
         {
@@ -221,7 +271,7 @@ namespace Capa_Vista
         }
         private void ConsultasInteligentes_Load(object sender, EventArgs e)
         {
-            
+
             llenarcboquery();
             llenarcomboeditar();
             tablaseditar();
@@ -229,27 +279,27 @@ namespace Capa_Vista
 
         public void llenarcomboeditar()
         {
-            cbonombreconsulta.Items.Clear();
+            cbonombrebuscar.Items.Clear();
             OdbcDataReader datareader = cn.llenarcbonombreconsulta();
             while (datareader.Read())
             {
-                cbonombreconsulta.Items.Add(datareader[0].ToString());
+                cbonombrebuscar.Items.Add(datareader[0].ToString());
             }
         }
 
         public void llenarcombosactualizar()
         {
             cboCamposEDITAR.Items.Clear();
-            cboCampoConsultaComplejaEDITAR.Items.Clear();
-            cboCampoEDITAR.Items.Clear();
-            cboCampoAgruparEDITAR.Items.Clear();
-            OdbcDataReader datareader = cn.llenarcbo2(txttablaeditar.Text);
+            cboCampoConsultaComplejaEditar.Items.Clear();
+            cboCampoEditar.Items.Clear();
+            cboCampoAgruparEditar.Items.Clear();
+            OdbcDataReader datareader = cn.llenarcbodatabase2(txttablaeditar.Text);
             while (datareader.Read())
             {
                 cboCamposEDITAR.Items.Add(datareader[0].ToString());
-                cboCampoConsultaComplejaEDITAR.Items.Add(datareader[0].ToString());
-                cboCampoEDITAR.Items.Add(datareader[0].ToString());
-                cboCampoAgruparEDITAR.Items.Add(datareader[0].ToString());
+                cboCampoConsultaComplejaEditar.Items.Add(datareader[0].ToString());
+                cboCampoEditar.Items.Add(datareader[0].ToString());
+                cboCampoAgruparEditar.Items.Add(datareader[0].ToString());
             }
         }
 
@@ -269,7 +319,7 @@ namespace Capa_Vista
         public void tablaseditar()
         {
             cboTabla.Items.Clear();
-            OdbcDataReader datareader = cn.llenarcbo();
+            OdbcDataReader datareader = cn.llenarcbodatabase();
             while (datareader.Read())
             {
                 cboTablaConsultaSimple.Items.Add(datareader[0].ToString());
@@ -299,20 +349,20 @@ namespace Capa_Vista
             else
             {
                 MessageBox.Show("Consulta Almacenada");
-                cn.editarconsulta(txtTablaConsultaSimple.Text, finaleditar);
+                cn.editarconsulta(txtTablaConsulta.Text, finaleditar);
                 llenarcboquery();
             }
             txtCadenaGeneradaEDITAR.Text = "";
             chkcondicioneseditar.Checked = false;
             txtcamposelectoseditar.Text = "";
-            txtNombreRepresentativoEDITAR.Text = "";
+            txtNombreAlias.Text = "";
             finaleditar = "";
             csimpleeditar = "";
             whereeditar = "";
             andeditar = "";
             groupeditar = "";
-            cbonombreconsulta.Text = "";
-            cbonombreconsulta.Enabled = true;
+            cbonombrebuscar.Text = "";
+            cbonombrebuscar.Enabled = true;
         }
 
         string transfiere = "";
@@ -326,9 +376,9 @@ namespace Capa_Vista
 
         private void iconButton26_Click(object sender, EventArgs e)
         {
-            transfiere = txtNombreConsultaBUSCARyELIMINAR.Text;
-            cbonombreconsulta.Text = transfiere;
-            txtTablaConsultaSimple.Text = transfiere;
+            transfiere = txtNombreConsultaBusquedaElimar.Text;
+            cbonombrebuscar.Text = transfiere;
+            txtTablaConsulta.Text = transfiere;
             groupBox2.Enabled = true;
             tbpBE.Hide();
             tbpEditar.Show();
@@ -352,7 +402,7 @@ namespace Capa_Vista
 
         private void cboAgruparEDITAR_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cboAgruparEDITAR.SelectedIndex == 1)
+            if (cboAgruparEditar.SelectedIndex == 1)
             {
                 groupBox7.Enabled = true;
             }
@@ -376,19 +426,19 @@ namespace Capa_Vista
             }
 
 
-            if ((cboAgruparEDITAR.Text == "") || (cboCampoAgruparEDITAR.Text == ""))
+            if ((cboAgruparEditar.Text == "") || (cboCampoAgruparEditar.Text == ""))
             {
                 MessageBox.Show("Debe utilizar todos los campos de agrupacion");
             }
             else
             {
-                if (cboAgruparEDITAR.SelectedIndex == 0)
+                if (cboAgruparEditar.SelectedIndex == 0)
                 {
-                    groupeditar = "group by " + cboCampoAgruparEDITAR.SelectedItem.ToString();
+                    groupeditar = "group by " + cboCampoAgruparEditar.SelectedItem.ToString();
                 }
-                else if (cboAgruparEDITAR.SelectedIndex == 1)
+                else if (cboAgruparEditar.SelectedIndex == 1)
                 {
-                    groupeditar = "order by " + cboCampoAgruparEDITAR.SelectedItem.ToString() + " " + ordeneditar;
+                    groupeditar = "order by " + cboCampoAgruparEditar.SelectedItem.ToString() + " " + ordeneditar;
 
                 }
                 txtCadenaGeneradaEDITAR.Text = csimpleeditar + whereeditar + andeditar + groupeditar;
@@ -397,7 +447,7 @@ namespace Capa_Vista
 
         private void btnAgregarComparacionEDITAR_Click(object sender, EventArgs e)
         {
-            if ((cboTipoComparadorEDITAR.Text == "") || (cboCampoEDITAR.Text == "") || (txtValorComparacionEDITAR.Text == "") || (cbocompwhere.Text == ""))
+            if ((cboTipoComparadorEditar.Text == "") || (cboCampoEditar.Text == "") || (txtValorComparacionEDITAR.Text == "") || (cbocompwhere.Text == ""))
             {
                 MessageBox.Show("Clausula where estructurada erroneamente");
             }
@@ -405,13 +455,13 @@ namespace Capa_Vista
             {
                 if (cbocompwhere.SelectedItem.ToString() == "like")
                 {
-                    whereeditar = cboTipoComparadorEDITAR.SelectedItem.ToString() + " " + cboCampoEDITAR.SelectedItem.ToString() + " " +
+                    whereeditar = cboTipoComparadorEditar.SelectedItem.ToString() + " " + cboCampoEditar.SelectedItem.ToString() + " " +
                     cbocompwhere.SelectedItem.ToString() + " " + '"' + "%" + txtValorComparacionEDITAR.Text + "%" + '"' + " ";
                     txtCadenaGeneradaEDITAR.Text = csimpleeditar + whereeditar;
                 }
                 else
                 {
-                    whereeditar = cboTipoComparadorEDITAR.SelectedItem.ToString() + " " + cboCampoEDITAR.SelectedItem.ToString() + " " +
+                    whereeditar = cboTipoComparadorEditar.SelectedItem.ToString() + " " + cboCampoEditar.SelectedItem.ToString() + " " +
                     cbocompwhere.SelectedItem.ToString() + '"' + txtValorComparacionEDITAR.Text + '"' + " ";
                     txtCadenaGeneradaEDITAR.Text = csimpleeditar + whereeditar;
                 }
@@ -420,7 +470,7 @@ namespace Capa_Vista
 
         private void btnagregarCONSULTACOMPLEJAEDITAR_Click(object sender, EventArgs e)
         {
-            if ((cboOperadorLogicoEDITAR.Text == "") || (cboCampoConsultaComplejaEDITAR.Text == "") || (txtvalorConsultaComplejaEDITAR.Text == ""))
+            if ((cboOperadorLogicoEDITAR.Text == "") || (cboCampoConsultaComplejaEditar.Text == "") || (txtvalorConsultaComplejaEDITAR.Text == ""))
             {
                 MessageBox.Show("Utilice todos los campos logicos");
             }
@@ -432,14 +482,14 @@ namespace Capa_Vista
                     if (cbocompand.SelectedItem.ToString() == "like")
                     {
                         andeditar = andeditar + cboOperadorLogicoEDITAR.SelectedItem.ToString() + " "
-                         + cboCampoConsultaComplejaEDITAR.SelectedItem.ToString() + " " +
+                         + cboCampoConsultaComplejaEditar.SelectedItem.ToString() + " " +
                         cbocompand.SelectedItem.ToString() + " " + '"' + "%" + txtvalorConsultaComplejaEDITAR.Text + " %" + '"' + " ";
                         txtCadenaGeneradaEDITAR.Text = csimpleeditar + whereeditar + andeditar;
                     }
                     else
                     {
                         andeditar = andeditar + cboOperadorLogicoEDITAR.SelectedItem.ToString() + " "
-                         + cboCampoConsultaComplejaEDITAR.SelectedItem.ToString() + " " +
+                         + cboCampoConsultaComplejaEditar.SelectedItem.ToString() + " " +
                         cbocompand.SelectedItem.ToString() + " " + '"' + txtvalorConsultaComplejaEDITAR.Text + '"' + " ";
                         txtCadenaGeneradaEDITAR.Text = csimpleeditar + whereeditar + andeditar;
                     }
@@ -456,16 +506,18 @@ namespace Capa_Vista
 
         private void chkcondicioneseditar_CheckedChanged(object sender, EventArgs e)
         {
-            if ((chkcondicioneseditar.Checked == true) && (csimpleeditar != ""))
+            if (chkcondicioneseditar.Checked == true)
+
             {
                 groupBox4.Enabled = true;
+                groupBox5.Enabled = true;
                 groupBox6.Enabled = true;
             }
             else
             {
                 groupBox4.Enabled = false;
+                groupBox5.Enabled = false;
                 groupBox6.Enabled = false;
-                chkcondicioneseditar.Checked = false;
             }
         }
 
@@ -481,74 +533,45 @@ namespace Capa_Vista
                 Console.WriteLine(csimpleeditar);
                 txtCadenaGeneradaEDITAR.Text = csimpleeditar;
                 campoeditar = "";
-                txtNombreRepresentativoEDITAR.Text = "";
+                txtNombreAlias.Text = "";
                 cboCamposEDITAR.Text = "";
                 txtcamposelectoseditar.Text = "";
                 cboTablaConsultaSimple.Text = "";
                 chkSelectTodosConsultaSimple.Checked = false;
-                cbonombreconsulta.Enabled = false;
+                cbonombrebuscar.Enabled = false;
             }
         }
 
         private void btnAgregarCONSULTASIMPLE_Click(object sender, EventArgs e)
         {
-            if (chkSelectTodosConsultaSimple.Checked == false)
+            Capa_ControladorConsultas.clscontrolador crud = new Capa_ControladorConsultas.clscontrolador();
+            bool resultado = crud.InsertBusqueda(txtTablaConsulta.Text, cboTablaConsultaSimple.Text, cboCamposEDITAR.Text, cboCamposEDITAR.Text, null);
+
+            if (resultado)
+
             {
-                if (txtcamposelectoseditar.Text.Equals(""))
-                {
-                    if (txtNombreRepresentativoEDITAR.Text.Equals(""))
-                    {
-                        txtcamposelectoseditar.Text = "";
-                        campoeditar = campoeditar + cboCamposEDITAR.SelectedItem.ToString() + " ";
-                        txtcamposelectoseditar.Text = campoeditar;
-                    }
-                    else
-                    {
-                        txtcamposelectoseditar.Text = "";
-                        campoeditar = campoeditar + cboCamposEDITAR.SelectedItem.ToString() + " as " + txtNombreRepresentativoEDITAR.Text + " ";
-                        txtcamposelectoseditar.Text = campoeditar;
-                    }
-                }
-                else
-                {
-                    if (txtNombreRepresentativoEDITAR.Text.Equals(""))
-                    {
-                        txtcamposelectoseditar.Text = "";
-                        campoeditar = campoeditar + ", " + cboCamposEDITAR.SelectedItem.ToString() + " ";
-                        txtcamposelectoseditar.Text = campoeditar;
-                    }
-                    else
-                    {
-                        txtcamposelectoseditar.Text = "";
-                        campoeditar = campoeditar + ", " + cboCamposEDITAR.SelectedItem.ToString() + " as " + txtNombreRepresentativoEDITAR.Text + " ";
-                        txtcamposelectoseditar.Text = campoeditar;
-                    }
-                }
+                MessageBox.Show("Datos guardados");
             }
-            else
-            {
-                txtcamposelectoseditar.Text = "";
-                campoeditar = "";
-                campoeditar = " * ";
-                txtcamposelectoseditar.Text = "Todos los campos seleccionados";
-                Console.WriteLine(campoeditar);
-            }
+
+            txtTablaConsulta.Text = (txtTablaConsulta.Text + "+" + cboTablaConsultaSimple.Text + "+" + cboCamposEDITAR.Text + "+" + cboCamposEDITAR.Text);
+            string columnasbd = comboBox11.Text;
+            CargarColumnas(columnasbd, comboBox11);
         }
 
         private void chkSelectTodosConsultaSimple_CheckedChanged(object sender, EventArgs e)
         {
             if (chkSelectTodosConsultaSimple.Checked == true)
             {
-                txtNombreRepresentativoEDITAR.Text = "";
-                txtNombreRepresentativoEDITAR.Enabled = false;
+                txtNombreAlias.Text = "";
+                txtNombreAlias.Enabled = false;
                 cboCamposEDITAR.Text = "";
                 cboCamposEDITAR.Enabled = false;
                 txtcamposelectoseditar.Text = "";
             }
             else
             {
-                txtNombreRepresentativoEDITAR.Text = "";
-                txtNombreRepresentativoEDITAR.Enabled = true;
+                txtNombreAlias.Text = "";
+                txtNombreAlias.Enabled = true;
                 cboCamposEDITAR.Text = "";
                 cboCamposEDITAR.Enabled = true;
             }
@@ -556,12 +579,17 @@ namespace Capa_Vista
 
         private void iconButton25_Click(object sender, EventArgs e)
         {
-            actualizaconsultas2(txtNombreConsultaBUSCARyELIMINAR.Text);
+            actualizaconsultas2(txtNombreConsultaBusquedaElimar.Text);
         }
 
         private void btnActualizarBUSCARyELIMINAR_Click(object sender, EventArgs e)
         {
-
+            transfiere = txtNombreConsultaBusquedaElimar.Text;
+            cbonombrebuscar.Text = transfiere;
+            txtTablaConsulta.Text = transfiere;
+            groupBox2.Enabled = true;
+            tbpBE.Hide();
+            tbpEditar.Show();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -650,15 +678,26 @@ namespace Capa_Vista
 
         private void cbonombreconsulta_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            txtTablaConsultaSimple.Text = cbonombreconsulta.SelectedItem.ToString();
+            txtTablaConsulta.Text = cbonombrebuscar.SelectedItem.ToString();
             groupBox2.Enabled = true;
         }
 
         private void cboTabla_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             String tablabusqueda;
-            tablabusqueda = cboTablaConsultaSimple.Text;
-            CargarColumnas(tablabusqueda, comboBox11);
+            //tablabusqueda = cboTablaConsultaSimple.Text;
+            //CargarColumnas(tablabusqueda, comboBox11);
+            tablabusqueda = cboTabla.Text;
+            //label37.Text = tablabusqueda;
+
+            //tablabusqueda = cboTabla.SelectedValue.ToString();
+            
+                CargarColumnas(tablabusqueda, cboCamposEDITAR);
+            
+            
+                
+            
         }
 
         private void cboCamposEDITAR_SelectedIndexChanged(object sender, EventArgs e)
@@ -668,7 +707,15 @@ namespace Capa_Vista
 
         private void cboTablaConsultaSimple_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-           
+            String tablabusqueda;
+            //tablabusqueda = cboTablaConsultaSimple.Text;
+            //CargarColumnas(tablabusqueda, comboBox11);
+            tablabusqueda = cboTablaConsultaSimple.Text;
+            label36.Text = tablabusqueda;
+
+            //tablabusqueda = cboTabla.SelectedValue.ToString();
+
+            CargarColumnas(tablabusqueda, cboCamposEDITAR);
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
@@ -688,31 +735,22 @@ namespace Capa_Vista
 
         private void panel12_Paint(object sender, PaintEventArgs e)
         {
-            String tablabusqueda;
-            tablabusqueda = cboTablaConsultaSimple.Text;
-
-            CargarColumnas(tablabusqueda,comboBox11);
+            
         }
 
         public void comboBox11_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+     
         }
 
         private void cboTabla_MouseClick(object sender, MouseEventArgs e)
         {
-            String tablabusqueda;
-            tablabusqueda = cboTablaConsultaSimple.Text;
-
-            CargarColumnas(tablabusqueda, comboBox11);
+            
         }
 
         private void cboTabla_SelectedValueChanged(object sender, EventArgs e)
         {
-            String tablabusqueda;
-            tablabusqueda = cboTablaConsultaSimple.Text;
-
-            CargarColumnas(tablabusqueda, comboBox11);
+            
         }
 
         private void comboBox11_SelectedValueChanged(object sender, EventArgs e)
@@ -726,6 +764,36 @@ namespace Capa_Vista
             tablabusqueda = cboTablaConsultaSimple.Text;
 
             CargarColumnas(tablabusqueda, comboBox11);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void comboBox12_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboCampoConsultaComplejaEDITAR_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboCampoEDITAR_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTablaConsulta_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
     }

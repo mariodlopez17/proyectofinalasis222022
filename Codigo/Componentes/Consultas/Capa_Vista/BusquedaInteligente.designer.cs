@@ -65,6 +65,7 @@ namespace Capa_Vista
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
+            this.label36 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox11 = new System.Windows.Forms.ComboBox();
             this.cboTabla = new System.Windows.Forms.ComboBox();
@@ -93,15 +94,15 @@ namespace Capa_Vista
             this.label16 = new System.Windows.Forms.Label();
             this.tbpEditar = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cbonombreconsulta = new System.Windows.Forms.ComboBox();
+            this.cbonombrebuscar = new System.Windows.Forms.ComboBox();
             this.txtCadenaGeneradaEDITAR = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.rdbdescEDITAR = new System.Windows.Forms.RadioButton();
             this.rdbAscEDITAR = new System.Windows.Forms.RadioButton();
-            this.cboAgruparEDITAR = new System.Windows.Forms.ComboBox();
-            this.cboCampoAgruparEDITAR = new System.Windows.Forms.ComboBox();
+            this.cboAgruparEditar = new System.Windows.Forms.ComboBox();
+            this.cboCampoAgruparEditar = new System.Windows.Forms.ComboBox();
             this.btnCancelarAgruparOrdenarEDITAR = new FontAwesome.Sharp.IconButton();
             this.btnAgregarAgruparOrdenarEDITAR = new FontAwesome.Sharp.IconButton();
             this.label13 = new System.Windows.Forms.Label();
@@ -111,8 +112,8 @@ namespace Capa_Vista
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.cbocompwhere = new System.Windows.Forms.ComboBox();
             this.txtValorComparacionEDITAR = new System.Windows.Forms.TextBox();
-            this.cboTipoComparadorEDITAR = new System.Windows.Forms.ComboBox();
-            this.cboCampoEDITAR = new System.Windows.Forms.ComboBox();
+            this.cboTipoComparadorEditar = new System.Windows.Forms.ComboBox();
+            this.cboCampoEditar = new System.Windows.Forms.ComboBox();
             this.label35 = new System.Windows.Forms.Label();
             this.txtcancelarComparacionEDITAR = new FontAwesome.Sharp.IconButton();
             this.btnAgregarComparacionEDITAR = new FontAwesome.Sharp.IconButton();
@@ -122,7 +123,7 @@ namespace Capa_Vista
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.cbocompand = new System.Windows.Forms.ComboBox();
             this.txtvalorConsultaComplejaEDITAR = new System.Windows.Forms.TextBox();
-            this.cboCampoConsultaComplejaEDITAR = new System.Windows.Forms.ComboBox();
+            this.cboCampoConsultaComplejaEditar = new System.Windows.Forms.ComboBox();
             this.cboOperadorLogicoEDITAR = new System.Windows.Forms.ComboBox();
             this.label34 = new System.Windows.Forms.Label();
             this.btnCancelarCONSULTACOMPLEJAEDITAR = new FontAwesome.Sharp.IconButton();
@@ -133,10 +134,10 @@ namespace Capa_Vista
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtcamposelectoseditar = new System.Windows.Forms.TextBox();
             this.txttablaeditar = new System.Windows.Forms.TextBox();
-            this.txtNombreRepresentativoEDITAR = new System.Windows.Forms.TextBox();
+            this.txtNombreAlias = new System.Windows.Forms.TextBox();
             this.cboTablaConsultaSimple = new System.Windows.Forms.ComboBox();
             this.cboCamposEDITAR = new System.Windows.Forms.ComboBox();
-            this.txtTablaConsultaSimple = new System.Windows.Forms.TextBox();
+            this.txtTablaConsulta = new System.Windows.Forms.TextBox();
             this.chkSelectTodosConsultaSimple = new System.Windows.Forms.CheckBox();
             this.btnCancelarCONSULTASIMPLE = new FontAwesome.Sharp.IconButton();
             this.btnagregarcamposeditar = new FontAwesome.Sharp.IconButton();
@@ -156,11 +157,11 @@ namespace Capa_Vista
             this.panel20 = new System.Windows.Forms.Panel();
             this.iconButton12 = new FontAwesome.Sharp.IconButton();
             this.iconButton28 = new FontAwesome.Sharp.IconButton();
-            this.btnActualizarBUSCARyELIMINAR = new FontAwesome.Sharp.IconButton();
+            this.btnActualizar = new FontAwesome.Sharp.IconButton();
             this.iconButton25 = new FontAwesome.Sharp.IconButton();
             this.label32 = new System.Windows.Forms.Label();
             this.dgvBUSCARyELIMINAR = new System.Windows.Forms.DataGridView();
-            this.txtNombreConsultaBUSCARyELIMINAR = new System.Windows.Forms.TextBox();
+            this.txtNombreConsultaBusquedaElimar = new System.Windows.Forms.TextBox();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -516,6 +517,7 @@ namespace Capa_Vista
             this.comboBox12.Name = "comboBox12";
             this.comboBox12.Size = new System.Drawing.Size(107, 21);
             this.comboBox12.TabIndex = 25;
+            this.comboBox12.SelectedIndexChanged += new System.EventHandler(this.comboBox12_SelectedIndexChanged);
             // 
             // textBox16
             // 
@@ -583,6 +585,7 @@ namespace Capa_Vista
             // 
             // panel18
             // 
+            this.panel18.Controls.Add(this.label36);
             this.panel18.Controls.Add(this.textBox1);
             this.panel18.Controls.Add(this.comboBox11);
             this.panel18.Controls.Add(this.cboTabla);
@@ -603,10 +606,19 @@ namespace Capa_Vista
             this.panel18.TabIndex = 0;
             this.panel18.Paint += new System.Windows.Forms.PaintEventHandler(this.panel18_Paint);
             // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(356, 130);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(41, 13);
+            this.label36.TabIndex = 31;
+            this.label36.Text = "label36";
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(425, 72);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(214, 20);
             this.textBox1.TabIndex = 30;
@@ -768,7 +780,7 @@ namespace Capa_Vista
             this.tbpCreacion.Controls.Add(this.panel12);
             this.tbpCreacion.Location = new System.Drawing.Point(4, 22);
             this.tbpCreacion.Name = "tbpCreacion";
-            this.tbpCreacion.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpCreacion.Padding = new System.Windows.Forms.Padding(3);
             this.tbpCreacion.Size = new System.Drawing.Size(1005, 802);
             this.tbpCreacion.TabIndex = 0;
             this.tbpCreacion.Text = "Creación";
@@ -781,7 +793,7 @@ namespace Capa_Vista
             this.tbpConsultas.Controls.Add(this.panel9);
             this.tbpConsultas.Location = new System.Drawing.Point(4, 22);
             this.tbpConsultas.Name = "tbpConsultas";
-            this.tbpConsultas.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpConsultas.Padding = new System.Windows.Forms.Padding(3);
             this.tbpConsultas.Size = new System.Drawing.Size(1005, 802);
             this.tbpConsultas.TabIndex = 1;
             this.tbpConsultas.Text = "Consultas";
@@ -885,7 +897,7 @@ namespace Capa_Vista
             this.tbpEditar.Controls.Add(this.panel1);
             this.tbpEditar.Location = new System.Drawing.Point(4, 22);
             this.tbpEditar.Name = "tbpEditar";
-            this.tbpEditar.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpEditar.Padding = new System.Windows.Forms.Padding(3);
             this.tbpEditar.Size = new System.Drawing.Size(1005, 802);
             this.tbpEditar.TabIndex = 2;
             this.tbpEditar.Text = "Editar";
@@ -893,7 +905,7 @@ namespace Capa_Vista
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.cbonombreconsulta);
+            this.panel1.Controls.Add(this.cbonombrebuscar);
             this.panel1.Controls.Add(this.txtCadenaGeneradaEDITAR);
             this.panel1.Controls.Add(this.label33);
             this.panel1.Controls.Add(this.groupBox6);
@@ -909,30 +921,31 @@ namespace Capa_Vista
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(952, 698);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // cbonombreconsulta
+            // cbonombrebuscar
             // 
-            this.cbonombreconsulta.BackColor = System.Drawing.Color.White;
-            this.cbonombreconsulta.FormattingEnabled = true;
-            this.cbonombreconsulta.Location = new System.Drawing.Point(293, 9);
-            this.cbonombreconsulta.Name = "cbonombreconsulta";
-            this.cbonombreconsulta.Size = new System.Drawing.Size(443, 21);
-            this.cbonombreconsulta.TabIndex = 39;
-            this.cbonombreconsulta.SelectedIndexChanged += new System.EventHandler(this.cbonombreconsulta_SelectedIndexChanged_1);
+            this.cbonombrebuscar.BackColor = System.Drawing.Color.White;
+            this.cbonombrebuscar.FormattingEnabled = true;
+            this.cbonombrebuscar.Location = new System.Drawing.Point(293, 9);
+            this.cbonombrebuscar.Name = "cbonombrebuscar";
+            this.cbonombrebuscar.Size = new System.Drawing.Size(443, 21);
+            this.cbonombrebuscar.TabIndex = 39;
+            this.cbonombrebuscar.SelectedIndexChanged += new System.EventHandler(this.cbonombreconsulta_SelectedIndexChanged_1);
             // 
             // txtCadenaGeneradaEDITAR
             // 
             this.txtCadenaGeneradaEDITAR.BackColor = System.Drawing.Color.White;
-            this.txtCadenaGeneradaEDITAR.Location = new System.Drawing.Point(269, 651);
+            this.txtCadenaGeneradaEDITAR.Location = new System.Drawing.Point(640, 543);
             this.txtCadenaGeneradaEDITAR.Multiline = true;
             this.txtCadenaGeneradaEDITAR.Name = "txtCadenaGeneradaEDITAR";
-            this.txtCadenaGeneradaEDITAR.Size = new System.Drawing.Size(444, 25);
+            this.txtCadenaGeneradaEDITAR.Size = new System.Drawing.Size(269, 58);
             this.txtCadenaGeneradaEDITAR.TabIndex = 38;
             // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(171, 654);
+            this.label33.Location = new System.Drawing.Point(642, 527);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(83, 13);
             this.label33.TabIndex = 35;
@@ -941,8 +954,8 @@ namespace Capa_Vista
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.groupBox7);
-            this.groupBox6.Controls.Add(this.cboAgruparEDITAR);
-            this.groupBox6.Controls.Add(this.cboCampoAgruparEDITAR);
+            this.groupBox6.Controls.Add(this.cboAgruparEditar);
+            this.groupBox6.Controls.Add(this.cboCampoAgruparEditar);
             this.groupBox6.Controls.Add(this.btnCancelarAgruparOrdenarEDITAR);
             this.groupBox6.Controls.Add(this.btnAgregarAgruparOrdenarEDITAR);
             this.groupBox6.Controls.Add(this.label13);
@@ -969,7 +982,7 @@ namespace Capa_Vista
             // 
             this.rdbdescEDITAR.AutoSize = true;
             this.rdbdescEDITAR.BackColor = System.Drawing.Color.Transparent;
-            this.rdbdescEDITAR.Location = new System.Drawing.Point(21, 36);
+            this.rdbdescEDITAR.Location = new System.Drawing.Point(66, 19);
             this.rdbdescEDITAR.Name = "rdbdescEDITAR";
             this.rdbdescEDITAR.Size = new System.Drawing.Size(50, 17);
             this.rdbdescEDITAR.TabIndex = 3;
@@ -981,7 +994,7 @@ namespace Capa_Vista
             // 
             this.rdbAscEDITAR.AutoSize = true;
             this.rdbAscEDITAR.BackColor = System.Drawing.Color.Transparent;
-            this.rdbAscEDITAR.Location = new System.Drawing.Point(136, 36);
+            this.rdbAscEDITAR.Location = new System.Drawing.Point(122, 19);
             this.rdbAscEDITAR.Name = "rdbAscEDITAR";
             this.rdbAscEDITAR.Size = new System.Drawing.Size(43, 17);
             this.rdbAscEDITAR.TabIndex = 2;
@@ -989,28 +1002,34 @@ namespace Capa_Vista
             this.rdbAscEDITAR.Text = "Asc";
             this.rdbAscEDITAR.UseVisualStyleBackColor = false;
             // 
-            // cboAgruparEDITAR
+            // cboAgruparEditar
             // 
-            this.cboAgruparEDITAR.BackColor = System.Drawing.Color.White;
-            this.cboAgruparEDITAR.FormattingEnabled = true;
-            this.cboAgruparEDITAR.Items.AddRange(new object[] {
+            this.cboAgruparEditar.BackColor = System.Drawing.Color.White;
+            this.cboAgruparEditar.FormattingEnabled = true;
+            this.cboAgruparEditar.Items.AddRange(new object[] {
             "AGRUPAR",
             "ORDENAR"});
-            this.cboAgruparEDITAR.Location = new System.Drawing.Point(93, 23);
-            this.cboAgruparEDITAR.Name = "cboAgruparEDITAR";
-            this.cboAgruparEDITAR.Size = new System.Drawing.Size(100, 21);
-            this.cboAgruparEDITAR.TabIndex = 39;
-            this.cboAgruparEDITAR.SelectedIndexChanged += new System.EventHandler(this.cboAgruparEDITAR_SelectedIndexChanged);
+            this.cboAgruparEditar.Location = new System.Drawing.Point(93, 23);
+            this.cboAgruparEditar.Name = "cboAgruparEditar";
+            this.cboAgruparEditar.Size = new System.Drawing.Size(100, 21);
+            this.cboAgruparEditar.TabIndex = 39;
+            this.cboAgruparEditar.SelectedIndexChanged += new System.EventHandler(this.cboAgruparEDITAR_SelectedIndexChanged);
             // 
-            // cboCampoAgruparEDITAR
+            // cboCampoAgruparEditar
             // 
-            this.cboCampoAgruparEDITAR.BackColor = System.Drawing.Color.White;
-            this.cboCampoAgruparEDITAR.FormattingEnabled = true;
-            this.cboCampoAgruparEDITAR.Location = new System.Drawing.Point(93, 66);
-            this.cboCampoAgruparEDITAR.Name = "cboCampoAgruparEDITAR";
-            this.cboCampoAgruparEDITAR.Size = new System.Drawing.Size(100, 21);
-            this.cboCampoAgruparEDITAR.TabIndex = 38;
-            this.cboCampoAgruparEDITAR.SelectedIndexChanged += new System.EventHandler(this.cboCampoAgruparEDITAR_SelectedIndexChanged);
+            this.cboCampoAgruparEditar.BackColor = System.Drawing.Color.White;
+            this.cboCampoAgruparEditar.FormattingEnabled = true;
+            this.cboCampoAgruparEditar.Items.AddRange(new object[] {
+            "Nombre",
+            "Tabla",
+            "Campos",
+            "Alias",
+            "ID"});
+            this.cboCampoAgruparEditar.Location = new System.Drawing.Point(93, 66);
+            this.cboCampoAgruparEditar.Name = "cboCampoAgruparEditar";
+            this.cboCampoAgruparEditar.Size = new System.Drawing.Size(100, 21);
+            this.cboCampoAgruparEditar.TabIndex = 38;
+            this.cboCampoAgruparEditar.SelectedIndexChanged += new System.EventHandler(this.cboCampoAgruparEDITAR_SelectedIndexChanged);
             // 
             // btnCancelarAgruparOrdenarEDITAR
             // 
@@ -1087,8 +1106,8 @@ namespace Capa_Vista
             // 
             this.groupBox5.Controls.Add(this.cbocompwhere);
             this.groupBox5.Controls.Add(this.txtValorComparacionEDITAR);
-            this.groupBox5.Controls.Add(this.cboTipoComparadorEDITAR);
-            this.groupBox5.Controls.Add(this.cboCampoEDITAR);
+            this.groupBox5.Controls.Add(this.cboTipoComparadorEditar);
+            this.groupBox5.Controls.Add(this.cboCampoEditar);
             this.groupBox5.Controls.Add(this.label35);
             this.groupBox5.Controls.Add(this.txtcancelarComparacionEDITAR);
             this.groupBox5.Controls.Add(this.btnAgregarComparacionEDITAR);
@@ -1126,25 +1145,32 @@ namespace Capa_Vista
             this.txtValorComparacionEDITAR.Size = new System.Drawing.Size(101, 20);
             this.txtValorComparacionEDITAR.TabIndex = 45;
             // 
-            // cboTipoComparadorEDITAR
+            // cboTipoComparadorEditar
             // 
-            this.cboTipoComparadorEDITAR.BackColor = System.Drawing.Color.White;
-            this.cboTipoComparadorEDITAR.FormattingEnabled = true;
-            this.cboTipoComparadorEDITAR.Items.AddRange(new object[] {
+            this.cboTipoComparadorEditar.BackColor = System.Drawing.Color.White;
+            this.cboTipoComparadorEditar.FormattingEnabled = true;
+            this.cboTipoComparadorEditar.Items.AddRange(new object[] {
             "WHERE"});
-            this.cboTipoComparadorEDITAR.Location = new System.Drawing.Point(124, 21);
-            this.cboTipoComparadorEDITAR.Name = "cboTipoComparadorEDITAR";
-            this.cboTipoComparadorEDITAR.Size = new System.Drawing.Size(100, 21);
-            this.cboTipoComparadorEDITAR.TabIndex = 44;
+            this.cboTipoComparadorEditar.Location = new System.Drawing.Point(124, 21);
+            this.cboTipoComparadorEditar.Name = "cboTipoComparadorEditar";
+            this.cboTipoComparadorEditar.Size = new System.Drawing.Size(100, 21);
+            this.cboTipoComparadorEditar.TabIndex = 44;
             // 
-            // cboCampoEDITAR
+            // cboCampoEditar
             // 
-            this.cboCampoEDITAR.BackColor = System.Drawing.Color.White;
-            this.cboCampoEDITAR.FormattingEnabled = true;
-            this.cboCampoEDITAR.Location = new System.Drawing.Point(124, 48);
-            this.cboCampoEDITAR.Name = "cboCampoEDITAR";
-            this.cboCampoEDITAR.Size = new System.Drawing.Size(100, 21);
-            this.cboCampoEDITAR.TabIndex = 43;
+            this.cboCampoEditar.BackColor = System.Drawing.Color.White;
+            this.cboCampoEditar.FormattingEnabled = true;
+            this.cboCampoEditar.Items.AddRange(new object[] {
+            "Nombre",
+            "Tabla",
+            "Campos",
+            "Alias",
+            "ID"});
+            this.cboCampoEditar.Location = new System.Drawing.Point(124, 48);
+            this.cboCampoEditar.Name = "cboCampoEditar";
+            this.cboCampoEditar.Size = new System.Drawing.Size(100, 21);
+            this.cboCampoEditar.TabIndex = 43;
+            this.cboCampoEditar.SelectedIndexChanged += new System.EventHandler(this.cboCampoEDITAR_SelectedIndexChanged);
             // 
             // label35
             // 
@@ -1215,7 +1241,7 @@ namespace Capa_Vista
             // 
             this.groupBox4.Controls.Add(this.cbocompand);
             this.groupBox4.Controls.Add(this.txtvalorConsultaComplejaEDITAR);
-            this.groupBox4.Controls.Add(this.cboCampoConsultaComplejaEDITAR);
+            this.groupBox4.Controls.Add(this.cboCampoConsultaComplejaEditar);
             this.groupBox4.Controls.Add(this.cboOperadorLogicoEDITAR);
             this.groupBox4.Controls.Add(this.label34);
             this.groupBox4.Controls.Add(this.btnCancelarCONSULTACOMPLEJAEDITAR);
@@ -1254,14 +1280,21 @@ namespace Capa_Vista
             this.txtvalorConsultaComplejaEDITAR.Size = new System.Drawing.Size(100, 20);
             this.txtvalorConsultaComplejaEDITAR.TabIndex = 41;
             // 
-            // cboCampoConsultaComplejaEDITAR
+            // cboCampoConsultaComplejaEditar
             // 
-            this.cboCampoConsultaComplejaEDITAR.BackColor = System.Drawing.Color.White;
-            this.cboCampoConsultaComplejaEDITAR.FormattingEnabled = true;
-            this.cboCampoConsultaComplejaEDITAR.Location = new System.Drawing.Point(112, 46);
-            this.cboCampoConsultaComplejaEDITAR.Name = "cboCampoConsultaComplejaEDITAR";
-            this.cboCampoConsultaComplejaEDITAR.Size = new System.Drawing.Size(100, 21);
-            this.cboCampoConsultaComplejaEDITAR.TabIndex = 39;
+            this.cboCampoConsultaComplejaEditar.BackColor = System.Drawing.Color.White;
+            this.cboCampoConsultaComplejaEditar.FormattingEnabled = true;
+            this.cboCampoConsultaComplejaEditar.Items.AddRange(new object[] {
+            "Nombre",
+            "Tabla",
+            "Campos",
+            "Alias",
+            "ID"});
+            this.cboCampoConsultaComplejaEditar.Location = new System.Drawing.Point(112, 46);
+            this.cboCampoConsultaComplejaEditar.Name = "cboCampoConsultaComplejaEditar";
+            this.cboCampoConsultaComplejaEditar.Size = new System.Drawing.Size(100, 21);
+            this.cboCampoConsultaComplejaEditar.TabIndex = 39;
+            this.cboCampoConsultaComplejaEditar.SelectedIndexChanged += new System.EventHandler(this.cboCampoConsultaComplejaEDITAR_SelectedIndexChanged);
             // 
             // cboOperadorLogicoEDITAR
             // 
@@ -1345,10 +1378,10 @@ namespace Capa_Vista
             // 
             this.groupBox2.Controls.Add(this.txtcamposelectoseditar);
             this.groupBox2.Controls.Add(this.txttablaeditar);
-            this.groupBox2.Controls.Add(this.txtNombreRepresentativoEDITAR);
+            this.groupBox2.Controls.Add(this.txtNombreAlias);
             this.groupBox2.Controls.Add(this.cboTablaConsultaSimple);
             this.groupBox2.Controls.Add(this.cboCamposEDITAR);
-            this.groupBox2.Controls.Add(this.txtTablaConsultaSimple);
+            this.groupBox2.Controls.Add(this.txtTablaConsulta);
             this.groupBox2.Controls.Add(this.chkSelectTodosConsultaSimple);
             this.groupBox2.Controls.Add(this.btnCancelarCONSULTASIMPLE);
             this.groupBox2.Controls.Add(this.btnagregarcamposeditar);
@@ -1369,10 +1402,10 @@ namespace Capa_Vista
             // txtcamposelectoseditar
             // 
             this.txtcamposelectoseditar.BackColor = System.Drawing.Color.White;
-            this.txtcamposelectoseditar.Location = new System.Drawing.Point(411, 68);
+            this.txtcamposelectoseditar.Location = new System.Drawing.Point(171, 32);
             this.txtcamposelectoseditar.Multiline = true;
             this.txtcamposelectoseditar.Name = "txtcamposelectoseditar";
-            this.txtcamposelectoseditar.Size = new System.Drawing.Size(225, 82);
+            this.txtcamposelectoseditar.Size = new System.Drawing.Size(101, 19);
             this.txtcamposelectoseditar.TabIndex = 54;
             // 
             // txttablaeditar
@@ -1385,19 +1418,26 @@ namespace Capa_Vista
             this.txttablaeditar.TabIndex = 53;
             this.txttablaeditar.Visible = false;
             // 
-            // txtNombreRepresentativoEDITAR
+            // txtNombreAlias
             // 
-            this.txtNombreRepresentativoEDITAR.BackColor = System.Drawing.Color.White;
-            this.txtNombreRepresentativoEDITAR.Location = new System.Drawing.Point(171, 192);
-            this.txtNombreRepresentativoEDITAR.Name = "txtNombreRepresentativoEDITAR";
-            this.txtNombreRepresentativoEDITAR.Size = new System.Drawing.Size(100, 20);
-            this.txtNombreRepresentativoEDITAR.TabIndex = 52;
+            this.txtNombreAlias.BackColor = System.Drawing.Color.White;
+            this.txtNombreAlias.Location = new System.Drawing.Point(171, 192);
+            this.txtNombreAlias.Name = "txtNombreAlias";
+            this.txtNombreAlias.Size = new System.Drawing.Size(100, 20);
+            this.txtNombreAlias.TabIndex = 52;
             // 
             // cboTablaConsultaSimple
             // 
             this.cboTablaConsultaSimple.BackColor = System.Drawing.Color.White;
             this.cboTablaConsultaSimple.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTablaConsultaSimple.FormattingEnabled = true;
+            this.cboTablaConsultaSimple.Items.AddRange(new object[] {
+            "Seleccionar:",
+            "tbl_perfiles",
+            "tbl_modulos",
+            "tbl_usuarios",
+            "empleados",
+            "consultainteligente"});
             this.cboTablaConsultaSimple.Location = new System.Drawing.Point(171, 71);
             this.cboTablaConsultaSimple.Name = "cboTablaConsultaSimple";
             this.cboTablaConsultaSimple.Size = new System.Drawing.Size(100, 21);
@@ -1409,21 +1449,28 @@ namespace Capa_Vista
             this.cboCamposEDITAR.BackColor = System.Drawing.Color.White;
             this.cboCamposEDITAR.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCamposEDITAR.FormattingEnabled = true;
+            this.cboCamposEDITAR.Items.AddRange(new object[] {
+            "Nombre",
+            "Tabla",
+            "Campos",
+            "Alias",
+            "ID"});
             this.cboCamposEDITAR.Location = new System.Drawing.Point(171, 109);
             this.cboCamposEDITAR.Name = "cboCamposEDITAR";
             this.cboCamposEDITAR.Size = new System.Drawing.Size(100, 21);
             this.cboCamposEDITAR.TabIndex = 50;
             this.cboCamposEDITAR.SelectedIndexChanged += new System.EventHandler(this.cboCamposEDITAR_SelectedIndexChanged);
             // 
-            // txtTablaConsultaSimple
+            // txtTablaConsulta
             // 
-            this.txtTablaConsultaSimple.BackColor = System.Drawing.Color.White;
-            this.txtTablaConsultaSimple.Enabled = false;
-            this.txtTablaConsultaSimple.Location = new System.Drawing.Point(171, 29);
-            this.txtTablaConsultaSimple.Name = "txtTablaConsultaSimple";
-            this.txtTablaConsultaSimple.ReadOnly = true;
-            this.txtTablaConsultaSimple.Size = new System.Drawing.Size(100, 20);
-            this.txtTablaConsultaSimple.TabIndex = 49;
+            this.txtTablaConsulta.BackColor = System.Drawing.Color.White;
+            this.txtTablaConsulta.Location = new System.Drawing.Point(441, 74);
+            this.txtTablaConsulta.Multiline = true;
+            this.txtTablaConsulta.Name = "txtTablaConsulta";
+            this.txtTablaConsulta.ReadOnly = true;
+            this.txtTablaConsulta.Size = new System.Drawing.Size(200, 56);
+            this.txtTablaConsulta.TabIndex = 49;
+            this.txtTablaConsulta.TextChanged += new System.EventHandler(this.txtTablaConsulta_TextChanged);
             // 
             // chkSelectTodosConsultaSimple
             // 
@@ -1534,7 +1581,7 @@ namespace Capa_Vista
             this.iconButton1.IconColor = System.Drawing.Color.DimGray;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 50;
-            this.iconButton1.Location = new System.Drawing.Point(711, 525);
+            this.iconButton1.Location = new System.Drawing.Point(764, 607);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(64, 68);
             this.iconButton1.TabIndex = 31;
@@ -1548,7 +1595,7 @@ namespace Capa_Vista
             this.btneditar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
             this.btneditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btneditar.IconSize = 60;
-            this.btneditar.Location = new System.Drawing.Point(641, 525);
+            this.btneditar.Location = new System.Drawing.Point(694, 607);
             this.btneditar.Name = "btneditar";
             this.btneditar.Size = new System.Drawing.Size(64, 68);
             this.btneditar.TabIndex = 30;
@@ -1586,6 +1633,7 @@ namespace Capa_Vista
             this.iconButton13.Text = "Buscar";
             this.iconButton13.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton13.UseVisualStyleBackColor = true;
+            this.iconButton13.Click += new System.EventHandler(this.iconButton13_Click);
             // 
             // label1
             // 
@@ -1602,7 +1650,7 @@ namespace Capa_Vista
             this.tbpBE.Controls.Add(this.panel20);
             this.tbpBE.Location = new System.Drawing.Point(4, 22);
             this.tbpBE.Name = "tbpBE";
-            this.tbpBE.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpBE.Padding = new System.Windows.Forms.Padding(3);
             this.tbpBE.Size = new System.Drawing.Size(1005, 802);
             this.tbpBE.TabIndex = 3;
             this.tbpBE.Text = "Buscar/Eliminar";
@@ -1611,11 +1659,11 @@ namespace Capa_Vista
             // 
             this.panel20.Controls.Add(this.iconButton12);
             this.panel20.Controls.Add(this.iconButton28);
-            this.panel20.Controls.Add(this.btnActualizarBUSCARyELIMINAR);
+            this.panel20.Controls.Add(this.btnActualizar);
             this.panel20.Controls.Add(this.iconButton25);
             this.panel20.Controls.Add(this.label32);
             this.panel20.Controls.Add(this.dgvBUSCARyELIMINAR);
-            this.panel20.Controls.Add(this.txtNombreConsultaBUSCARyELIMINAR);
+            this.panel20.Controls.Add(this.txtNombreConsultaBusquedaElimar);
             this.panel20.Location = new System.Drawing.Point(23, 7);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(954, 379);
@@ -1651,21 +1699,21 @@ namespace Capa_Vista
             this.iconButton28.UseVisualStyleBackColor = true;
             this.iconButton28.Click += new System.EventHandler(this.iconButton28_Click);
             // 
-            // btnActualizarBUSCARyELIMINAR
+            // btnActualizar
             // 
-            this.btnActualizarBUSCARyELIMINAR.IconChar = FontAwesome.Sharp.IconChar.ArrowRotateForward;
-            this.btnActualizarBUSCARyELIMINAR.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
-            this.btnActualizarBUSCARyELIMINAR.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnActualizarBUSCARyELIMINAR.IconSize = 60;
-            this.btnActualizarBUSCARyELIMINAR.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnActualizarBUSCARyELIMINAR.Location = new System.Drawing.Point(568, 11);
-            this.btnActualizarBUSCARyELIMINAR.Name = "btnActualizarBUSCARyELIMINAR";
-            this.btnActualizarBUSCARyELIMINAR.Size = new System.Drawing.Size(64, 68);
-            this.btnActualizarBUSCARyELIMINAR.TabIndex = 20;
-            this.btnActualizarBUSCARyELIMINAR.Text = "Update";
-            this.btnActualizarBUSCARyELIMINAR.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnActualizarBUSCARyELIMINAR.UseVisualStyleBackColor = true;
-            this.btnActualizarBUSCARyELIMINAR.Click += new System.EventHandler(this.btnActualizarBUSCARyELIMINAR_Click);
+            this.btnActualizar.IconChar = FontAwesome.Sharp.IconChar.ArrowRotateForward;
+            this.btnActualizar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
+            this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnActualizar.IconSize = 60;
+            this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnActualizar.Location = new System.Drawing.Point(568, 11);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(64, 68);
+            this.btnActualizar.TabIndex = 20;
+            this.btnActualizar.Text = "Update";
+            this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizarBUSCARyELIMINAR_Click);
             // 
             // iconButton25
             // 
@@ -1700,12 +1748,12 @@ namespace Capa_Vista
             this.dgvBUSCARyELIMINAR.Size = new System.Drawing.Size(756, 238);
             this.dgvBUSCARyELIMINAR.TabIndex = 10;
             // 
-            // txtNombreConsultaBUSCARyELIMINAR
+            // txtNombreConsultaBusquedaElimar
             // 
-            this.txtNombreConsultaBUSCARyELIMINAR.Location = new System.Drawing.Point(166, 35);
-            this.txtNombreConsultaBUSCARyELIMINAR.Name = "txtNombreConsultaBUSCARyELIMINAR";
-            this.txtNombreConsultaBUSCARyELIMINAR.Size = new System.Drawing.Size(300, 20);
-            this.txtNombreConsultaBUSCARyELIMINAR.TabIndex = 9;
+            this.txtNombreConsultaBusquedaElimar.Location = new System.Drawing.Point(166, 35);
+            this.txtNombreConsultaBusquedaElimar.Name = "txtNombreConsultaBusquedaElimar";
+            this.txtNombreConsultaBusquedaElimar.Size = new System.Drawing.Size(300, 20);
+            this.txtNombreConsultaBusquedaElimar.TabIndex = 9;
             // 
             // Busqueda
             // 
@@ -1713,7 +1761,7 @@ namespace Capa_Vista
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 749);
             this.Controls.Add(this.tbcBusqueda);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Busqueda";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1808,7 +1856,7 @@ namespace Capa_Vista
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.DataGridView dgvBUSCARyELIMINAR;
-        private System.Windows.Forms.TextBox txtNombreConsultaBUSCARyELIMINAR;
+        private System.Windows.Forms.TextBox txtNombreConsultaBusquedaElimar;
         private FontAwesome.Sharp.IconButton btnEliminar;
         private FontAwesome.Sharp.IconButton iconButton6;
         private FontAwesome.Sharp.IconButton iconButton10;
@@ -1825,7 +1873,7 @@ namespace Capa_Vista
         private FontAwesome.Sharp.IconButton iconButton13;
         private FontAwesome.Sharp.IconButton iconButton12;
         private FontAwesome.Sharp.IconButton iconButton28;
-        private FontAwesome.Sharp.IconButton btnActualizarBUSCARyELIMINAR;
+        private FontAwesome.Sharp.IconButton btnActualizar;
         private FontAwesome.Sharp.IconButton iconButton25;
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.ComboBox comboBox11;
@@ -1860,12 +1908,12 @@ namespace Capa_Vista
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.ComboBox cbocompwhere;
         private System.Windows.Forms.TextBox txtValorComparacionEDITAR;
-        private System.Windows.Forms.ComboBox cboTipoComparadorEDITAR;
-        private System.Windows.Forms.ComboBox cboCampoEDITAR;
+        private System.Windows.Forms.ComboBox cboTipoComparadorEditar;
+        private System.Windows.Forms.ComboBox cboCampoEditar;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ComboBox cbocompand;
         private System.Windows.Forms.TextBox txtvalorConsultaComplejaEDITAR;
-        private System.Windows.Forms.ComboBox cboCampoConsultaComplejaEDITAR;
+        private System.Windows.Forms.ComboBox cboCampoConsultaComplejaEditar;
         private System.Windows.Forms.ComboBox cboOperadorLogicoEDITAR;
         private System.Windows.Forms.Label label34;
         private FontAwesome.Sharp.IconButton btnCancelarCONSULTACOMPLEJAEDITAR;
@@ -1874,15 +1922,15 @@ namespace Capa_Vista
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txttablaeditar;
-        private System.Windows.Forms.TextBox txtNombreRepresentativoEDITAR;
+        private System.Windows.Forms.TextBox txtNombreAlias;
         private System.Windows.Forms.ComboBox cboTablaConsultaSimple;
         private System.Windows.Forms.ComboBox cboCamposEDITAR;
-        private System.Windows.Forms.TextBox txtTablaConsultaSimple;
+        private System.Windows.Forms.TextBox txtTablaConsulta;
         private System.Windows.Forms.CheckBox chkSelectTodosConsultaSimple;
         private System.Windows.Forms.TextBox txtCadenaGeneradaEDITAR;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.ComboBox cboAgruparEDITAR;
-        private System.Windows.Forms.ComboBox cboCampoAgruparEDITAR;
+        private System.Windows.Forms.ComboBox cboAgruparEditar;
+        private System.Windows.Forms.ComboBox cboCampoAgruparEditar;
         private FontAwesome.Sharp.IconButton btnCancelarAgruparOrdenarEDITAR;
         private FontAwesome.Sharp.IconButton btnAgregarAgruparOrdenarEDITAR;
         private System.Windows.Forms.RadioButton rdbdescEDITAR;
@@ -1891,9 +1939,10 @@ namespace Capa_Vista
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.CheckBox chkcondicioneseditar;
         private System.Windows.Forms.TextBox txtcamposelectoseditar;
-        private System.Windows.Forms.ComboBox cbonombreconsulta;
+        private System.Windows.Forms.ComboBox cbonombrebuscar;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label36;
     }
 }
 

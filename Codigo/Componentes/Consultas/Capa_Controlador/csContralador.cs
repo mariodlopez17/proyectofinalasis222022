@@ -7,11 +7,12 @@ using Capa_ModeloConsultas;
 using System.Data.Odbc;
 using System.Data;
 
-namespace Capa_ControladorConsultas
+namespace Capa_ControladorConsultas 
 {
     public class clscontrolador
     {
         Sentencias sn = new Sentencias();
+        //rellena tabla controlador
         public DataTable llenartb1(string tabla)
         {
             OdbcDataAdapter dt = sn.llenartb1(tabla);
@@ -19,24 +20,27 @@ namespace Capa_ControladorConsultas
             dt.Fill(table);
             return table;
         }
-        public OdbcDataReader llenarcbo()
+        public OdbcDataReader llenarcbodatabase()
         {
-            string sql = "show full tables from colchoneria";
+            string sql = "show full tables from Colchoneria;";
             return sn.llenarcbotabla(sql);
         }
-        public OdbcDataReader llenarcbo2(string tabla)
+        public OdbcDataReader llenarcbodatabase2(string tabla)
         {
             string sql = "show columns from " + tabla + ";";
             return sn.llenarcbotabla(sql);
         }
+
+        //consultas almacenadas
         public OdbcDataReader llenarcboq(string tabla)
         {
-            string sql = "select nombre, consulta from " + tabla + ";";
+            string sql = "select Nombre, Tabla from " + tabla + ";";
             return sn.llenarcbotabla(sql);
         }
-        public void ingresarconsulta(string nombre, string consulta)
+        //guardamos consultas
+        public void ingresarconsulta(string nombre, string tabla)
         {
-            string sql = "insert into registro_consultas (nombre,consulta) values ( '" + nombre + "', '" + consulta + "') ;";
+            string sql = "insert into consultainteligente (nombre,tabla) values ( '" + nombre + "', '" + tabla + "') ;";
             Console.WriteLine(sql);
             sn.insertarconsulta(sql);
         }
@@ -44,9 +48,11 @@ namespace Capa_ControladorConsultas
         {
             return sn.validarconsulta(sql);
         }
+
+        //datagread
         public DataTable llenartb2()
         {
-            string consulta = "select * from registro_consultas";
+            string consulta = "select * from consultainteligente";
             OdbcDataAdapter dt = sn.llenartb2(consulta);
             DataTable table = new DataTable();
             dt.Fill(table);
@@ -54,7 +60,7 @@ namespace Capa_ControladorConsultas
         }
         public DataTable llenartb3(string condicion)
         {
-            string consulta = "select * from registro_consultas where nombre= " + '"' + condicion + '"';
+            string consulta = "select * from consultainteligente where nombre= " + '"' + condicion + '"';
             OdbcDataAdapter dt = sn.llenartb2(consulta);
             DataTable table = new DataTable();
             dt.Fill(table);
@@ -62,21 +68,22 @@ namespace Capa_ControladorConsultas
         }
         public void ejecutarconsulta(string condicion)
         {
-            string sql = "DELETE FROM registro_consultas where nombre = " + '"' + condicion + '"' + ";";
+            string sql = "DELETE FROM consultainteligente where nombre = " + '"' + condicion + '"' + ";";
             Console.WriteLine(sql);
             sn.insertarconsulta(sql);
         }
         public OdbcDataReader llenarcbonombreconsulta()
         {
-            string sql = "select nombre from registro_consultas;";
+            string sql = "select Campos from consultainteligente;";
             return sn.llenarcbotabla(sql);
         }
-        public void editarconsulta(string nombre, string consulta)
+        public void editarconsulta(string nombre, string campos)
         {
-            string sql = "update registro_consultas set consulta ='" + consulta + "'" + "where nombre = '" + nombre + "' ;";
+            string sql = "update consultainteligente set campos ='" + campos + "'" + "where nombre = '" + nombre + "' ;";
             Console.WriteLine(sql);
             sn.insertarconsulta(sql);
         }
+        //jonathan Xuya 
         OdbcConnection con = new OdbcConnection("FIL=MS Acces;DSN=Colchoneria");
         public bool InsertBusqueda(string _nomb, string _cons, string _area, string _camp, string _IDE)
         {
@@ -91,21 +98,21 @@ namespace Capa_ControladorConsultas
                 #endregion
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = query;
-                
+
                 cmd.Parameters.Add("@Nombre", OdbcType.VarChar).Value = _nomb;
                 cmd.Parameters.Add("@Tabla", OdbcType.VarChar).Value = _cons;
                 cmd.Parameters.Add("@Campos", OdbcType.VarChar).Value = _area;
                 cmd.Parameters.Add("@Alias", OdbcType.VarChar).Value = _camp;
                 cmd.Parameters.Add("@ID", OdbcType.Int).Value = _IDE;
 
-               cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
                 con.Close();
             }
             return true;
         }
         public bool InsertBusquedaCompleja(string _ope, string _camp, string _valo, string _IDE)
         {
-            
+
             using (con)
             {
                 OdbcCommand cmda = new OdbcCommand();
@@ -113,10 +120,10 @@ namespace Capa_ControladorConsultas
                 cmda.Connection = con;
 
                 #region Query
-                
 
-               String query = @"INSERT INTO consultainteligente1 (operador,campos,valor,ID) VALUE(?,?,?,?);";
-                
+
+                String query = @"INSERT INTO consultainteligente1 (operador,campos,valor,ID) VALUE(?,?,?,?);";
+
                 #endregion
                 cmda.CommandType = CommandType.Text;
                 cmda.CommandText = query;
