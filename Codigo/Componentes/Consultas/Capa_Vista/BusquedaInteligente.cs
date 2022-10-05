@@ -416,91 +416,31 @@ namespace Capa_Vista
 
         private void btnAgregarAgruparOrdenarEDITAR_Click(object sender, EventArgs e)
         {
-            if (rdbdescEDITAR.Checked == true)
+            Capa_ControladorConsultas.clscontrolador crud = new Capa_ControladorConsultas.clscontrolador();
+            bool resultado = crud.InsertBusquedaCompleja1(cboAgruparEditar.Text, cboCampoAgruparEditar.Text, null);
+            if (resultado)
             {
-                ordeneditar = "desc";
-            }
-            else
-            {
-                ordeneditar = "asc";
-            }
-
-
-            if ((cboAgruparEditar.Text == "") || (cboCampoAgruparEditar.Text == ""))
-            {
-                MessageBox.Show("Debe utilizar todos los campos de agrupacion");
-            }
-            else
-            {
-                if (cboAgruparEditar.SelectedIndex == 0)
-                {
-                    groupeditar = "group by " + cboCampoAgruparEditar.SelectedItem.ToString();
-                }
-                else if (cboAgruparEditar.SelectedIndex == 1)
-                {
-                    groupeditar = "order by " + cboCampoAgruparEditar.SelectedItem.ToString() + " " + ordeneditar;
-
-                }
-                txtCadenaGeneradaEDITAR.Text = csimpleeditar + whereeditar + andeditar + groupeditar;
+                MessageBox.Show("Datos guardados");
             }
         }
 
         private void btnAgregarComparacionEDITAR_Click(object sender, EventArgs e)
         {
-            if ((cboTipoComparadorEditar.Text == "") || (cboCampoEditar.Text == "") || (txtValorComparacionEDITAR.Text == "") || (cbocompwhere.Text == ""))
+            Capa_ControladorConsultas.clscontrolador crud = new Capa_ControladorConsultas.clscontrolador();
+            bool resultado = crud.InsertBusquedaCompleja(cboTipoComparadorEditar.Text, cboCampoEditar.Text, txtValorComparacionEDITAR.Text, null);
+            if (resultado)
             {
-                MessageBox.Show("Clausula where estructurada erroneamente");
-            }
-            else
-            {
-                if (cbocompwhere.SelectedItem.ToString() == "like")
-                {
-                    whereeditar = cboTipoComparadorEditar.SelectedItem.ToString() + " " + cboCampoEditar.SelectedItem.ToString() + " " +
-                    cbocompwhere.SelectedItem.ToString() + " " + '"' + "%" + txtValorComparacionEDITAR.Text + "%" + '"' + " ";
-                    txtCadenaGeneradaEDITAR.Text = csimpleeditar + whereeditar;
-                }
-                else
-                {
-                    whereeditar = cboTipoComparadorEditar.SelectedItem.ToString() + " " + cboCampoEditar.SelectedItem.ToString() + " " +
-                    cbocompwhere.SelectedItem.ToString() + '"' + txtValorComparacionEDITAR.Text + '"' + " ";
-                    txtCadenaGeneradaEDITAR.Text = csimpleeditar + whereeditar;
-                }
+                MessageBox.Show("Datos guardados");
             }
         }
 
         private void btnagregarCONSULTACOMPLEJAEDITAR_Click(object sender, EventArgs e)
         {
-            if ((cboOperadorLogicoEDITAR.Text == "") || (cboCampoConsultaComplejaEditar.Text == "") || (txtvalorConsultaComplejaEDITAR.Text == ""))
+            Capa_ControladorConsultas.clscontrolador crud = new Capa_ControladorConsultas.clscontrolador();
+            bool resultado = crud.InsertBusquedaCompleja(cboOperadorLogicoEDITAR.Text, cboCampoConsultaComplejaEditar.Text, txtvalorConsultaComplejaEDITAR.Text, null);
+            if (resultado)
             {
-                MessageBox.Show("Utilice todos los campos logicos");
-            }
-            else
-            {
-
-                if (whereeditar != "")
-                {
-                    if (cbocompand.SelectedItem.ToString() == "like")
-                    {
-                        andeditar = andeditar + cboOperadorLogicoEDITAR.SelectedItem.ToString() + " "
-                         + cboCampoConsultaComplejaEditar.SelectedItem.ToString() + " " +
-                        cbocompand.SelectedItem.ToString() + " " + '"' + "%" + txtvalorConsultaComplejaEDITAR.Text + " %" + '"' + " ";
-                        txtCadenaGeneradaEDITAR.Text = csimpleeditar + whereeditar + andeditar;
-                    }
-                    else
-                    {
-                        andeditar = andeditar + cboOperadorLogicoEDITAR.SelectedItem.ToString() + " "
-                         + cboCampoConsultaComplejaEditar.SelectedItem.ToString() + " " +
-                        cbocompand.SelectedItem.ToString() + " " + '"' + txtvalorConsultaComplejaEDITAR.Text + '"' + " ";
-                        txtCadenaGeneradaEDITAR.Text = csimpleeditar + whereeditar + andeditar;
-                    }
-                }
-                else
-                {
-                    andeditar = "";
-                    MessageBox.Show("Para agregar un comparador debe seleccionar un where");
-
-
-                }
+                MessageBox.Show("Datos guardados");
             }
         }
 
@@ -545,7 +485,7 @@ namespace Capa_Vista
         private void btnAgregarCONSULTASIMPLE_Click(object sender, EventArgs e)
         {
             Capa_ControladorConsultas.clscontrolador crud = new Capa_ControladorConsultas.clscontrolador();
-            bool resultado = crud.InsertBusqueda(txtTablaConsulta.Text, cboTablaConsultaSimple.Text, cboCamposEDITAR.Text, cboCamposEDITAR.Text, null);
+            bool resultado = crud.InsertBusqueda(txtNombreConsulta.Text, cboTabla.Text, comboBox11.Text, textBox11.Text, null);
 
             if (resultado)
 
@@ -553,7 +493,7 @@ namespace Capa_Vista
                 MessageBox.Show("Datos guardados");
             }
 
-            txtTablaConsulta.Text = (txtTablaConsulta.Text + "+" + cboTablaConsultaSimple.Text + "+" + cboCamposEDITAR.Text + "+" + cboCamposEDITAR.Text);
+            txtTablaConsulta.Text = (txtcamposelectoseditar.Text + "+" + cboTablaConsultaSimple.Text + "+" + cboCamposEDITAR.Text + "+" + txtNombreAlias.Text);
             string columnasbd = comboBox11.Text;
             CargarColumnas(columnasbd, comboBox11);
         }
@@ -794,6 +734,58 @@ namespace Capa_Vista
         private void txtTablaConsulta_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCancelarAgruparOrdenarEDITAR_Click(object sender, EventArgs e)
+        {
+            cboAgruparEditar.ResetText();
+            cboCampoAgruparEditar.ResetText();
+        }
+
+        private void btnCancelarCONSULTACOMPLEJAEDITAR_Click(object sender, EventArgs e)
+        {
+            cboOperadorLogicoEDITAR.ResetText();
+            cboCampoConsultaComplejaEditar.ResetText();
+            cbocompand.ResetText();
+            txtvalorConsultaComplejaEDITAR.Clear();
+        }
+
+        private void txtcancelarComparacionEDITAR_Click(object sender, EventArgs e)
+        {
+            cboTipoComparadorEditar.ResetText();
+            cboCampoEditar.ResetText();
+            cbocompwhere.ResetText();
+            txtValorComparacionEDITAR.Clear();
+        }
+
+        private void btnCancelarCONSULTASIMPLE_Click(object sender, EventArgs e)
+        {
+            txtcamposelectoseditar.Clear();
+            cboTablaConsultaSimple.ResetText();
+            cboCamposEDITAR.ResetText();
+            txtNombreAlias.Clear();
+            txtTablaConsulta.Clear();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            txtcamposelectoseditar.Clear();
+            cboTablaConsultaSimple.ResetText();
+            cboCamposEDITAR.ResetText();
+            txtNombreAlias.Clear();
+            txtTablaConsulta.Clear();
+
+            cboOperadorLogicoEDITAR.ResetText();
+            cboCampoConsultaComplejaEditar.ResetText();
+            cbocompand.ResetText();
+            txtvalorConsultaComplejaEDITAR.Clear();
+            cboTipoComparadorEditar.ResetText();
+            cboCampoEditar.ResetText();
+            cbocompwhere.ResetText();
+            txtValorComparacionEDITAR.Clear();
+            cboAgruparEditar.ResetText();
+            cboCampoAgruparEditar.ResetText();
+            txtCadenaGeneradaEDITAR.Clear();
         }
     }
     }
