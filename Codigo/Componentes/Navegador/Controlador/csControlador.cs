@@ -298,7 +298,7 @@ namespace NavegadorControlador
         }
 
       
-        public void delete(TextBox[] textbox, DataGridView tabla)
+        public void delete(TextBox[] textbox, DataGridView tabla, IconButton[] botones)
         {
             try
             {
@@ -310,6 +310,7 @@ namespace NavegadorControlador
 
                     sn.eliminar(clave, campo, tabla.Tag.ToString());
                     MessageBox.Show("Dato Eliminado");
+                    bloquearbotonesGC(botones, true);
                     for (int x = 0; x < textbox.Length; x++)
                     {
                         textbox[x].Enabled = false;
@@ -327,10 +328,10 @@ namespace NavegadorControlador
             
                
         }
-        public void ingresar(TextBox[] textbox, DataGridView tabla)//Crea cadenas de datos para la insercion
+        public void ingresar(TextBox[] textbox, DataGridView tabla, IconButton[] botones)//Crea cadenas de datos para la insercion
         {
             try
-            {
+            {   
                 string autorizazcion = evaluarcampos(textbox);
 
 
@@ -358,6 +359,7 @@ namespace NavegadorControlador
 
                     sn.insertar(dato, tipo, tabla.Tag.ToString());
                     MessageBox.Show("Dato Insertado");
+                    bloquearbotonesGC(botones, true);
                     for (int x = 0; x < textbox.Length; x++)
                     {
                         textbox[x].Enabled = false;
@@ -413,7 +415,7 @@ namespace NavegadorControlador
             
         }
 
-        public void actualizar(TextBox[] textbox, DataGridView tabla)//Crea cadenas de datos para la actualizacion
+        public void actualizar(TextBox[] textbox, DataGridView tabla, IconButton[] botones)//Crea cadenas de datos para la actualizacion
         {
             try
             {
@@ -458,6 +460,7 @@ namespace NavegadorControlador
 
                         sn.actualizar(dato, condicion, tabla.Tag.ToString());
                         MessageBox.Show("Dato actualizado");
+                        bloquearbotonesGC(botones, true);
                         for (int x = 0; x < textbox.Length; x++)
                         {
                             textbox[x].Enabled = false;
@@ -667,7 +670,7 @@ namespace NavegadorControlador
         public void bloqueobtn(IconButton[] boton)//Metodo para evaluar el nombre de la tabla
         {
             string[] seguridad = new string[7];
-            seguridad = sn.buscarseguridad(7,2000);
+            seguridad = sn.buscarseguridad(8,2000);
             int [] evaluacion = new int [7];
             
 

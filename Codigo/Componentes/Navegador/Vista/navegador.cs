@@ -126,12 +126,12 @@ namespace NavegadorVista
            
             if (opcion == 1)
             {
-                cn.ingresar(textbox, tabla);
+                cn.ingresar(textbox, tabla, botongc);
                 //cn.bloquearbotonesGC(botongc, true);
             }
             else if (opcion == 2)
             {
-                cn.actualizar(textbox, tabla);
+                cn.actualizar(textbox, tabla, botongc);
                // cn.bloquearbotonesGC(botongc, true);
             }
             else if(opcion == 3)
@@ -139,7 +139,7 @@ namespace NavegadorVista
                 DialogResult resultado = MessageBox.Show("Desea eliminar el Resgistro", "Eliminar", MessageBoxButtons.YesNo);
                 if(resultado == DialogResult.Yes)
                 {
-                    cn.delete(textbox, tabla);
+                    cn.delete(textbox, tabla, botongc);
                     //cn.bloquearbotonesGC(botongc, true);
                 }
                 else if(resultado == DialogResult.No)
@@ -165,8 +165,9 @@ namespace NavegadorVista
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            cn.moverseIF(tabla, "i");
+
             cn.llenartablainicio(tabla.Tag.ToString(), tabla, textbox);
+            cn.moverseIF(tabla, "i");
         }
 
         private void btnHelp_Click(object sender, EventArgs e)
