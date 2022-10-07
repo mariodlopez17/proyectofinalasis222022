@@ -1,7 +1,7 @@
 ﻿
 namespace ModuloContabilidadd
 {
-    partial class Form_1
+    partial class MantenimientoClasesCuentas
     {
         /// <summary>
         /// Variable del diseñador necesaria.
