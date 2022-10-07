@@ -98,11 +98,17 @@
     <Compile Include="EstadosFinancieros.Designer.cs">
       <DependentUpon>EstadosFinancieros.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_1.cs">
+    <Compile Include="GeneracionPoliza.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_1.Designer.cs">
-      <DependentUpon>Form_1.cs</DependentUpon>
+    <Compile Include="GeneracionPoliza.Designer.cs">
+      <DependentUpon>GeneracionPoliza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoClasesCuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoClasesCuentas.Designer.cs">
+      <DependentUpon>MantenimientoClasesCuentas.cs</DependentUpon>
     </Compile>
     <Compile Include="MantenimientoPolizaContable.cs">
       <SubType>Form</SubType>
@@ -127,6 +133,12 @@
     </Compile>
     <Compile Include="Nuevo Cierre.designer.cs">
       <DependentUpon>Nuevo Cierre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nuevo_MDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nuevo_MDI.designer.cs">
+      <DependentUpon>Nuevo_MDI.cs</DependentUpon>
     </Compile>
     <Compile Include="Polizas_Locales.cs">
       <SubType>Form</SubType>
@@ -166,8 +178,11 @@
     <EmbeddedResource Include="EstadosFinancieros.resx">
       <DependentUpon>EstadosFinancieros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_1.resx">
-      <DependentUpon>Form_1.cs</DependentUpon>
+    <EmbeddedResource Include="GeneracionPoliza.resx">
+      <DependentUpon>GeneracionPoliza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoClasesCuentas.resx">
+      <DependentUpon>MantenimientoClasesCuentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoPolizaContable.resx">
       <DependentUpon>MantenimientoPolizaContable.cs</DependentUpon>
@@ -180,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Nuevo Cierre.resx">
       <DependentUpon>Nuevo Cierre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nuevo_MDI.resx">
+      <DependentUpon>Nuevo_MDI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Polizas_Locales.resx">
       <DependentUpon>Polizas_Locales.cs</DependentUpon>
