@@ -1,8 +1,4 @@
-﻿/*Diana Victores
- 9959-19-1471
- mantenimiento clases de cuentas*/
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,16 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ModuloContabilidadd
-    
 {
-    public partial class Form_1 : Form
+    public partial class GeneracionPoliza : Form
     {
-        public Form_1()
+        public GeneracionPoliza()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
