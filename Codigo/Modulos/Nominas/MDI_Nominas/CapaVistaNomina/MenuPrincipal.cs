@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaVista
+namespace CapaVistaNomina
 {
-    public partial class PuestosTrabajos : Form
+    public partial class MenuPrincipal : Form
     {
-        public PuestosTrabajos()
+        public MenuPrincipal()
         {
             InitializeComponent();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            this.Hide();
         }
     }
 }

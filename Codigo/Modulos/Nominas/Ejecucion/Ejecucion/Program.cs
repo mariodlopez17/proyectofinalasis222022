@@ -16,7 +16,7 @@ namespace Ejecucion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CapaVista.Menu());
+           Application.Run(new CapaVistaNomina.MenuPrincipal());
         }
     }
 }
