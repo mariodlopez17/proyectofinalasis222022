@@ -116,7 +116,10 @@ namespace ModuloContabilidadd
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            //Codigo
+            Activos activos = new Activos();
+            activos.MdiParent = this;
+            activos.StartPosition = FormStartPosition.CenterScreen;
+            activos.Show();
             //Ocultar submenu
             hideSubMenu();
         }
@@ -170,8 +173,10 @@ namespace ModuloContabilidadd
 
         private void btnProveedores_Click(object sender, EventArgs e)
         {
-            //Codigo
-            //Ocultar submenu
+            Presupuesto presp = new Presupuesto();
+            presp.MdiParent = this;
+            presp.StartPosition = FormStartPosition.CenterScreen;
+            presp.Show();
             hideSubMenu();
         }
 
@@ -287,6 +292,15 @@ namespace ModuloContabilidadd
         private void button12_Click(object sender, EventArgs e)
         {
             showSubMenu(panelMant);
+        }
+
+        private void btn_CierrePC_Click(object sender, EventArgs e)
+        {
+            Cierre_Por_Cuentas cxctas = new Cierre_Por_Cuentas();
+            cxctas.MdiParent = this;
+            cxctas.StartPosition = FormStartPosition.CenterScreen;
+            cxctas.Show();
+            hideSubMenu();
         }
     }
 }
