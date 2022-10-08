@@ -10,18 +10,16 @@ using System.Windows.Forms;
 
 namespace ModuloContabilidadd
 {
-    public partial class Presupuestos : Form
+    public partial class Cierre_Por_Cuentas : Form
     {
-        public Presupuestos()
+        public Cierre_Por_Cuentas()
         {
             InitializeComponent();
         }
 
-        private void bnt_menuP_Click(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            this.Hide();
-            ContenedorCF menuP = new ContenedorCF();
-            menuP.Show();
+
         }
     }
 }
