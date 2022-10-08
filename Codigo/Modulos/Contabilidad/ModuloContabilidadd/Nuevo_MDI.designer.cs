@@ -53,7 +53,6 @@ namespace ModuloContabilidadd
             this.btnCompras = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelSideMenu.SuspendLayout();
             this.panelMant.SuspendLayout();
             this.panelEstadosF.SuspendLayout();
@@ -63,13 +62,12 @@ namespace ModuloContabilidadd
             this.panelPolizas.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
             // 
             this.panelSideMenu.AutoScroll = true;
-            this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(255)))), ((int)(((byte)(141)))));
+            this.panelSideMenu.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panelSideMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panelSideMenu.Controls.Add(this.panelMant);
             this.panelSideMenu.Controls.Add(this.button12);
@@ -92,7 +90,7 @@ namespace ModuloContabilidadd
             // 
             // panelMant
             // 
-            this.panelMant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(255)))), ((int)(((byte)(221)))));
+            this.panelMant.BackColor = System.Drawing.Color.LemonChiffon;
             this.panelMant.Controls.Add(this.btn_mantPC);
             this.panelMant.Controls.Add(this.btn_mantTPC);
             this.panelMant.Dock = System.Windows.Forms.DockStyle.Top;
@@ -133,12 +131,13 @@ namespace ModuloContabilidadd
             // 
             // button12
             // 
+            this.button12.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.button12.Cursor = System.Windows.Forms.Cursors.Default;
             this.button12.Dock = System.Windows.Forms.DockStyle.Top;
             this.button12.FlatAppearance.BorderSize = 0;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
+            this.button12.ForeColor = System.Drawing.Color.Black;
             this.button12.Location = new System.Drawing.Point(0, 666);
             this.button12.Name = "button12";
             this.button12.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
@@ -146,12 +145,12 @@ namespace ModuloContabilidadd
             this.button12.TabIndex = 10;
             this.button12.Text = "Mantenimientos";
             this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.UseVisualStyleBackColor = true;
+            this.button12.UseVisualStyleBackColor = false;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // panelEstadosF
             // 
-            this.panelEstadosF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(255)))), ((int)(((byte)(221)))));
+            this.panelEstadosF.BackColor = System.Drawing.Color.LemonChiffon;
             this.panelEstadosF.Controls.Add(this.btn_EFinancieros);
             this.panelEstadosF.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelEstadosF.Location = new System.Drawing.Point(0, 585);
@@ -177,12 +176,13 @@ namespace ModuloContabilidadd
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Cursor = System.Windows.Forms.Cursors.Default;
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
+            this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(0, 546);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
@@ -190,12 +190,12 @@ namespace ModuloContabilidadd
             this.button1.TabIndex = 6;
             this.button1.Text = "Estados Financieros";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panelCierreC
             // 
-            this.panelCierreC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(255)))), ((int)(((byte)(221)))));
+            this.panelCierreC.BackColor = System.Drawing.Color.LemonChiffon;
             this.panelCierreC.Controls.Add(this.btn_CierreG);
             this.panelCierreC.Controls.Add(this.btn_CierrePC);
             this.panelCierreC.Dock = System.Windows.Forms.DockStyle.Top;
@@ -233,15 +233,17 @@ namespace ModuloContabilidadd
             this.btn_CierrePC.Text = "Cierre Por Cuentas";
             this.btn_CierrePC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_CierrePC.UseVisualStyleBackColor = true;
+            this.btn_CierrePC.Click += new System.EventHandler(this.btn_CierrePC_Click);
             // 
             // button6
             // 
+            this.button6.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.button6.Cursor = System.Windows.Forms.Cursors.Default;
             this.button6.Dock = System.Windows.Forms.DockStyle.Top;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
+            this.button6.ForeColor = System.Drawing.Color.Black;
             this.button6.Location = new System.Drawing.Point(0, 410);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
@@ -249,12 +251,12 @@ namespace ModuloContabilidadd
             this.button6.TabIndex = 7;
             this.button6.Text = "Cierre Contable";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // panelPresupuestos
             // 
-            this.panelPresupuestos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(255)))), ((int)(((byte)(221)))));
+            this.panelPresupuestos.BackColor = System.Drawing.Color.LemonChiffon;
             this.panelPresupuestos.Controls.Add(this.btnProveedores);
             this.panelPresupuestos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPresupuestos.Location = new System.Drawing.Point(0, 340);
@@ -281,12 +283,13 @@ namespace ModuloContabilidadd
             // 
             // btnProveedor
             // 
+            this.btnProveedor.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnProveedor.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnProveedor.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnProveedor.FlatAppearance.BorderSize = 0;
             this.btnProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProveedor.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
+            this.btnProveedor.ForeColor = System.Drawing.Color.Black;
             this.btnProveedor.Location = new System.Drawing.Point(0, 301);
             this.btnProveedor.Name = "btnProveedor";
             this.btnProveedor.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
@@ -294,12 +297,12 @@ namespace ModuloContabilidadd
             this.btnProveedor.TabIndex = 4;
             this.btnProveedor.Text = "Presupuestos";
             this.btnProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProveedor.UseVisualStyleBackColor = true;
+            this.btnProveedor.UseVisualStyleBackColor = false;
             this.btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
             // 
             // panelActivos
             // 
-            this.panelActivos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(255)))), ((int)(((byte)(221)))));
+            this.panelActivos.BackColor = System.Drawing.Color.LemonChiffon;
             this.panelActivos.Controls.Add(this.btn_AFijos);
             this.panelActivos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelActivos.Location = new System.Drawing.Point(0, 230);
@@ -325,12 +328,13 @@ namespace ModuloContabilidadd
             // 
             // btnClient
             // 
+            this.btnClient.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnClient.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnClient.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnClient.FlatAppearance.BorderSize = 0;
             this.btnClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClient.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
+            this.btnClient.ForeColor = System.Drawing.Color.Black;
             this.btnClient.Location = new System.Drawing.Point(0, 191);
             this.btnClient.Name = "btnClient";
             this.btnClient.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
@@ -338,12 +342,12 @@ namespace ModuloContabilidadd
             this.btnClient.TabIndex = 2;
             this.btnClient.Text = "Activos Fijos";
             this.btnClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClient.UseVisualStyleBackColor = true;
+            this.btnClient.UseVisualStyleBackColor = false;
             this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
             // 
             // panelPolizas
             // 
-            this.panelPolizas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(255)))), ((int)(((byte)(221)))));
+            this.panelPolizas.BackColor = System.Drawing.Color.LemonChiffon;
             this.panelPolizas.Controls.Add(this.btn_Plocales);
             this.panelPolizas.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPolizas.Location = new System.Drawing.Point(0, 126);
@@ -369,12 +373,13 @@ namespace ModuloContabilidadd
             // 
             // btnCompras
             // 
+            this.btnCompras.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCompras.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnCompras.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCompras.FlatAppearance.BorderSize = 0;
             this.btnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompras.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCompras.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
+            this.btnCompras.ForeColor = System.Drawing.Color.Black;
             this.btnCompras.Location = new System.Drawing.Point(0, 87);
             this.btnCompras.Name = "btnCompras";
             this.btnCompras.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
@@ -382,7 +387,7 @@ namespace ModuloContabilidadd
             this.btnCompras.TabIndex = 0;
             this.btnCompras.Text = "Polizas Locales";
             this.btnCompras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCompras.UseVisualStyleBackColor = true;
+            this.btnCompras.UseVisualStyleBackColor = false;
             this.btnCompras.Click += new System.EventHandler(this.btnCompras_Click);
             // 
             // panelLogo
@@ -406,28 +411,16 @@ namespace ModuloContabilidadd
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Location = new System.Drawing.Point(237, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(647, 561);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // Nuevo_MDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(884, 561);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panelSideMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IsMdiContainer = true;
             this.MinimumSize = new System.Drawing.Size(900, 600);
             this.Name = "Nuevo_MDI";
             this.Text = "Modulo Contabilidad";
@@ -441,7 +434,6 @@ namespace ModuloContabilidadd
             this.panelPolizas.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -463,7 +455,6 @@ namespace ModuloContabilidadd
         private System.Windows.Forms.Panel panelEstadosF;
         private System.Windows.Forms.Button btn_EFinancieros;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel panelCierreC;
         private System.Windows.Forms.Button btn_CierreG;
