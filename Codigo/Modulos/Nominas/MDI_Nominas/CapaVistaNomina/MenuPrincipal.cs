@@ -18,7 +18,6 @@ namespace CapaVistaNomina
             customizeDesing();
         }
 
-
         private void customizeDesing()
         {
             panelCatalogos.Visible = false;
@@ -27,8 +26,6 @@ namespace CapaVistaNomina
             panelSeguridad.Visible = false;
             panelAyuda.Visible = false;
         }
-
-
         private void hideSubMenu()
         {
             if (panelCatalogos.Visible == true)
@@ -42,7 +39,6 @@ namespace CapaVistaNomina
             if (panelAyuda.Visible == true)
                 panelAyuda.Visible = false;
         }
-
 
         private void showSubMenu(Panel subMenu)
         {
@@ -85,7 +81,13 @@ namespace CapaVistaNomina
             TrabajadoresInfo b = new TrabajadoresInfo();
             b.MdiParent = this;
             b.Show();
-            pictureBox1.Visible = false;
+            //pictureBox1.Visible = false;
+            hideSubMenu();
         }
+
+        //private void openChildFrom();  
+
+
+
     }
 }
