@@ -57,7 +57,7 @@ namespace CapaVistaNomina
             this.btnCatalogos = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panelHijo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panelAyuda.SuspendLayout();
             this.panelSeguridad.SuspendLayout();
@@ -66,6 +66,7 @@ namespace CapaVistaNomina
             this.panelCatalogos.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -483,20 +484,22 @@ namespace CapaVistaNomina
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // panelHijo
+            // pictureBox1
             // 
-            this.panelHijo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelHijo.Location = new System.Drawing.Point(220, 0);
-            this.panelHijo.Name = "panelHijo";
-            this.panelHijo.Size = new System.Drawing.Size(474, 471);
-            this.panelHijo.TabIndex = 4;
+            this.pictureBox1.Image = global::CapaVistaNomina.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(224, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(472, 472);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(694, 471);
-            this.Controls.Add(this.panelHijo);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panelMenu);
             this.IsMdiContainer = true;
             this.MinimumSize = new System.Drawing.Size(710, 510);
@@ -511,6 +514,7 @@ namespace CapaVistaNomina
             this.panelCatalogos.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -544,6 +548,6 @@ namespace CapaVistaNomina
         private System.Windows.Forms.Button btnContrato;
         private System.Windows.Forms.Button btnDepto;
         private System.Windows.Forms.Button bntRtrabajador;
-        private System.Windows.Forms.Panel panelHijo;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

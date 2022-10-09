@@ -16,5 +16,6 @@ namespace CapaVistaNomina
         {
             InitializeComponent();
         }
+
     }
 }
