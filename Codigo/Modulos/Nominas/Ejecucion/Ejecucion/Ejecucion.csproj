@@ -36,14 +36,6 @@
     <Reference Include="CapaVistaNomina">
       <HintPath>..\..\MDI_Nominas\CapaVistaNomina\bin\Debug\CapaVistaNomina.dll</HintPath>
     </Reference>
-    <Reference Include="Capa_vista, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Colchoneria\Capa_vista\bin\Debug\Capa_vista.dll</HintPath>
-    </Reference>
-    <Reference Include="Modelo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Colchoneria\Capa_vista\bin\Debug\Modelo.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

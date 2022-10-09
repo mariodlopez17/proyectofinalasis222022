@@ -19,7 +19,7 @@ namespace CapaVistaNomina
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            AgregarTrabajador b = new AgregarTrabajador();
+            AgregarPuesto b = new AgregarPuesto();
             b.Show();
         }
     }

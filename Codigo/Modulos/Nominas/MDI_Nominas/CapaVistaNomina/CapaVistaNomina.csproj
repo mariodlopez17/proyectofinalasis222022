@@ -59,6 +59,12 @@
     <Compile Include="AgregarTrabajador.Designer.cs">
       <DependentUpon>AgregarTrabajador.cs</DependentUpon>
     </Compile>
+    <Compile Include="AsignacionTrabajadoresPlanillas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsignacionTrabajadoresPlanillas.Designer.cs">
+      <DependentUpon>AsignacionTrabajadoresPlanillas.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarTrabajador.resx">
       <DependentUpon>AgregarTrabajador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AsignacionTrabajadoresPlanillas.resx">
+      <DependentUpon>AsignacionTrabajadoresPlanillas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
