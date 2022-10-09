@@ -85,6 +85,15 @@ namespace CapaVistaNomina
             hideSubMenu();
         }
 
+        private void btnAsPlanilla_Click(object sender, EventArgs e)
+        {
+            AsignacionTrabajadoresPlanillas b = new AsignacionTrabajadoresPlanillas();
+            b.MdiParent = this;
+            b.Show();
+            hideSubMenu();
+        }
+
+
         //private void openChildFrom();  
 
 

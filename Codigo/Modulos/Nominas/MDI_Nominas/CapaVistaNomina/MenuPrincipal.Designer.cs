@@ -86,7 +86,7 @@ namespace CapaVistaNomina
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 471);
+            this.panelMenu.Size = new System.Drawing.Size(220, 686);
             this.panelMenu.TabIndex = 2;
             // 
             // panelAyuda
@@ -354,6 +354,7 @@ namespace CapaVistaNomina
             this.btnAsPlanilla.Text = "Asignación Trabajadores Planillas";
             this.btnAsPlanilla.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAsPlanilla.UseVisualStyleBackColor = true;
+            this.btnAsPlanilla.Click += new System.EventHandler(this.btnAsPlanilla_Click);
             // 
             // btnProcesos
             // 
@@ -488,14 +489,14 @@ namespace CapaVistaNomina
             this.panelHijo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelHijo.Location = new System.Drawing.Point(220, 0);
             this.panelHijo.Name = "panelHijo";
-            this.panelHijo.Size = new System.Drawing.Size(474, 471);
+            this.panelHijo.Size = new System.Drawing.Size(862, 686);
             this.panelHijo.TabIndex = 4;
             // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(694, 471);
+            this.ClientSize = new System.Drawing.Size(1082, 686);
             this.Controls.Add(this.panelHijo);
             this.Controls.Add(this.panelMenu);
             this.IsMdiContainer = true;
