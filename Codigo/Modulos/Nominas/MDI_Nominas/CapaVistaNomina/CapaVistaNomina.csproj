@@ -31,7 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CapaControladorNomina">
+    <Reference Include="CapaControladorNomina, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\CapaControladorNomina\bin\Debug\CapaControladorNomina.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -57,6 +58,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TrabajadoresInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrabajadoresInfo.Designer.cs">
+      <DependentUpon>TrabajadoresInfo.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
