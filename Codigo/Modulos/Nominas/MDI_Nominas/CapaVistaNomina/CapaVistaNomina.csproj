@@ -71,17 +71,41 @@
     <Compile Include="AgregarTrabajador.Designer.cs">
       <DependentUpon>AgregarTrabajador.cs</DependentUpon>
     </Compile>
+    <Compile Include="AsignacionHorasExtra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsignacionHorasExtra.Designer.cs">
+      <DependentUpon>AsignacionHorasExtra.cs</DependentUpon>
+    </Compile>
     <Compile Include="AsignacionTrabajadoresPlanillas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AsignacionTrabajadoresPlanillas.Designer.cs">
       <DependentUpon>AsignacionTrabajadoresPlanillas.cs</DependentUpon>
     </Compile>
+    <Compile Include="AsignacionVacaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsignacionVacaciones.Designer.cs">
+      <DependentUpon>AsignacionVacaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Contrato.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Contrato.Designer.cs">
       <DependentUpon>Contrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlBajas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlBajas.Designer.cs">
+      <DependentUpon>ControlBajas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlFaltas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlFaltas.Designer.cs">
+      <DependentUpon>ControlFaltas.cs</DependentUpon>
     </Compile>
     <Compile Include="Departamentos.cs">
       <SubType>Form</SubType>
@@ -127,11 +151,23 @@
     <EmbeddedResource Include="AgregarTrabajador.resx">
       <DependentUpon>AgregarTrabajador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AsignacionHorasExtra.resx">
+      <DependentUpon>AsignacionHorasExtra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AsignacionTrabajadoresPlanillas.resx">
       <DependentUpon>AsignacionTrabajadoresPlanillas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AsignacionVacaciones.resx">
+      <DependentUpon>AsignacionVacaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Contrato.resx">
       <DependentUpon>Contrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlBajas.resx">
+      <DependentUpon>ControlBajas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlFaltas.resx">
+      <DependentUpon>ControlFaltas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Departamentos.resx">
       <DependentUpon>Departamentos.cs</DependentUpon>
