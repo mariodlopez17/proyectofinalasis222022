@@ -142,11 +142,11 @@ namespace DLLEjecucion
             // 
             // navegador1
             // 
-            this.navegador1.Location = new System.Drawing.Point(96, 12);
+            this.navegador1.Location = new System.Drawing.Point(98, 12);
             this.navegador1.Name = "navegador1";
             this.navegador1.Size = new System.Drawing.Size(574, 152);
             this.navegador1.TabIndex = 21;
-            this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
+            this.navegador1.Load += new System.EventHandler(this.navegador1_Load_1);
             // 
             // DLLfinal
             // 
@@ -185,7 +185,7 @@ namespace DLLEjecucion
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private NavegadorVista.Navegador navegador1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private NavegadorVista.Navegador navegador1;
     }
 }

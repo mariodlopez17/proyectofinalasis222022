@@ -15,7 +15,9 @@ namespace NavegadorVista
 {
     public partial class Navegador : UserControl
     {
+        
         csControlador cn = new csControlador();
+        Capa_controlador.Controlador cnseg = new Capa_controlador.Controlador();
         public Navegador()
         {
             InitializeComponent();
@@ -25,23 +27,89 @@ namespace NavegadorVista
         public TextBox[] textbox = { };
         public TextBox[] textboxi = { };
         public DataGridView tabla;
+        public static string idApp;
+
        
 
-        int opcion; 
+        int opcion;
+
+       
         public void cargar(DataGridView dtabla, TextBox[] text, string BD)
         {
-            IconButton[] botongc = {btnInsert, btnModificar, btnDelete, btnConsultar, btnReporte};
+            IconButton[] botongc = {btnInsert, btnModificar, btnDelete, btnUpdate, btnConsultar, btnReporte, btnNext,
+                btnBack,btnStart,btnEnd
+            };
+           
             cn.evaluartabla(dtabla);
             cn.inicializargrid(dtabla);
             cn.llenartablainicio(dtabla.Tag.ToString(), dtabla, text);
             cn.evaluartags(text, dtabla, BD);
             cn.desactivar(actual);
-            cn.bloqueobtn(botongc);
+            bloqStart(botongc);
+            /*cn.bloqueobtn(botongc);*/
             
 
 
         }
-      
+        public void bloqEnd(IconButton[] botongc3)
+        {
+            for (int i = 0; i < botongc3.Length; i++)
+            {
+                botongc3[i].Enabled = false;
+            }
+        }
+        public void bloqStart(IconButton[] botongc)// bloque botones al principio
+        {
+            for (int i = 0; i < botongc.Length; i++)
+            {
+                botongc[i].Enabled = false;
+            }
+            
+            int[] permisos= cnseg.getPermisosAplicaion(idApp);
+            if (permisos[0] == 1)//Guardar
+            {
+                botongc[0].Enabled = true;
+                botongc[3].Enabled = true;
+                botongc[6].Enabled = true;
+                botongc[7].Enabled = true;
+                botongc[8].Enabled = true;
+                botongc[9].Enabled = true;
+            }
+            if (permisos[1] == 1)//Modifcar
+            { 
+                botongc[1].Enabled = true;
+                botongc[3].Enabled = true;
+                botongc[6].Enabled = true;
+                botongc[7].Enabled = true;
+                botongc[8].Enabled = true;
+                botongc[9].Enabled = true;
+            }
+            if (permisos[2] == 1)//Eliminar
+            {
+                botongc[2].Enabled = true;
+                botongc[3].Enabled = true;
+                botongc[6].Enabled = true;
+                botongc[7].Enabled = true;
+                botongc[8].Enabled = true;
+                botongc[9].Enabled = true;
+            }
+            if (permisos[3] == 1)//Consultar
+            {
+                botongc[4].Enabled = true;
+                botongc[3].Enabled = true;
+                botongc[6].Enabled = true;
+                botongc[7].Enabled = true;
+                botongc[8].Enabled = true;
+                botongc[9].Enabled = true;
+            }
+            if (permisos[4] == 1)//Reportes
+            {
+                botongc[5].Enabled = true;
+            }
+
+        }
+       
+
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -85,6 +153,10 @@ namespace NavegadorVista
         private void btnInsert_Click(object sender, EventArgs e)
         {
             IconButton[] botongc = { btnSave, btnCancelar };
+            IconButton[] botongc3 = {btnInsert, btnModificar, btnDelete, btnUpdate, btnConsultar, btnReporte, btnNext,
+                btnBack,btnStart,btnEnd
+            };
+            bloqEnd(botongc3);
             opcion = 1;
             cn.limpiar(actual);
             cn.activar(actual);
@@ -103,6 +175,10 @@ namespace NavegadorVista
             {
                 IconButton[] botongc = { btnSave, btnCancelar };
                 cn.bloquearbotonesGC(botongc, false);
+                IconButton[] botongc3 = {btnInsert, btnModificar, btnDelete, btnUpdate, btnConsultar, btnReporte, btnNext,
+                btnBack,btnStart,btnEnd
+            };
+                bloqEnd(botongc3);
             }
         }
 
@@ -116,6 +192,10 @@ namespace NavegadorVista
                 cn.enfocar(textboxi);
                 IconButton[] botongc = { btnSave, btnCancelar };
                 cn.bloquearbotonesGC(botongc, false);
+                IconButton[] botongc3 = {btnInsert, btnModificar, btnDelete, btnUpdate, btnConsultar, btnReporte, btnNext,
+                btnBack,btnStart,btnEnd
+            };
+                bloqEnd(botongc3);
             }
            
         }
@@ -126,20 +206,33 @@ namespace NavegadorVista
            
             if (opcion == 1)
             {
-                cn.ingresar(textbox, tabla, botongc);
+                cn.ingresar(textbox, tabla, botongc, idApp);
+                IconButton[] botongc2 = {btnInsert, btnModificar, btnDelete, btnUpdate, btnConsultar, btnReporte, btnNext,
+                btnBack,btnStart,btnEnd
+                };
+                bloqStart(botongc2);
+
                 //cn.bloquearbotonesGC(botongc, true);
             }
             else if (opcion == 2)
             {
-                cn.actualizar(textbox, tabla, botongc);
-               // cn.bloquearbotonesGC(botongc, true);
+                cn.actualizar(textbox, tabla, botongc, idApp);
+                IconButton[] botongc2 = {btnInsert, btnModificar, btnDelete, btnUpdate, btnConsultar, btnReporte, btnNext,
+                btnBack,btnStart,btnEnd
+                };
+                bloqStart(botongc2);
+                // cn.bloquearbotonesGC(botongc, true);
             }
             else if(opcion == 3)
             {
                 DialogResult resultado = MessageBox.Show("Desea eliminar el Resgistro", "Eliminar", MessageBoxButtons.YesNo);
                 if(resultado == DialogResult.Yes)
                 {
-                    cn.delete(textbox, tabla, botongc);
+                    cn.delete(textbox, tabla, botongc, idApp);
+                    IconButton[] botongc2 = {btnInsert, btnModificar, btnDelete, btnUpdate, btnConsultar, btnReporte, btnNext,
+                    btnBack,btnStart,btnEnd
+                    };
+                    bloqStart(botongc2);
                     //cn.bloquearbotonesGC(botongc, true);
                 }
                 else if(resultado == DialogResult.No)
@@ -161,6 +254,11 @@ namespace NavegadorVista
             cn.llenartxt(textbox, tabla);
             IconButton[] botongc = { btnSave, btnCancelar };
             cn.bloquearbotonesGC(botongc, true);
+            opcion = 0;
+            IconButton[] botongc2 = {btnInsert, btnModificar, btnDelete, btnUpdate, btnConsultar, btnReporte, btnNext,
+                btnBack,btnStart,btnEnd
+                };
+            bloqStart(botongc2);
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -179,6 +277,7 @@ namespace NavegadorVista
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
+            cnseg.setBtitacora(idApp, "Consulta");
             //Consulta.Vista cv = new Consulta.Vista();
             /*
              * Form 'fcv' = new 'cv.BusquedaAvanzada';
@@ -187,6 +286,7 @@ namespace NavegadorVista
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
+            cnseg.setBtitacora(idApp, "Reportes");
             //Reportes.Vista cr = new Reportes.Vista();
             /*
              * Form 'fcr' = new 'cr.BusquedaAvanzada';

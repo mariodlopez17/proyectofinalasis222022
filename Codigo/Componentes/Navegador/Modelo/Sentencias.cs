@@ -147,7 +147,7 @@ namespace NavegadorModelo
             }
             return dato;
         }
-        public string[] buscarseguridad(int id,int mod)
+        /*public string[] buscarseguridad(int id,int mod)
         {
             string[] save = new string[7];
             string sql1 = "select * from tbl_permisosaplicacionesusuario where fk_id_usuario=" + id + " and fk_id_aplicacion ="+mod+";";
@@ -164,7 +164,7 @@ namespace NavegadorModelo
 
             return save;
            
-        }
+        }*/
 
     }
 }
