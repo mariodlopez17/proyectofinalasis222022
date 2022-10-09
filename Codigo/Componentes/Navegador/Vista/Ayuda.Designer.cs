@@ -172,7 +172,7 @@ namespace Vista
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::Vista.Properties.Resources.agregar;
+            this.pictureBox3.Image = global::NavegadorVista.Properties.Resources.agregar;
             this.pictureBox3.Location = new System.Drawing.Point(73, 26);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(49, 44);
@@ -226,7 +226,7 @@ namespace Vista
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::Vista.Properties.Resources.mod;
+            this.pictureBox4.Image = global::NavegadorVista.Properties.Resources.mod;
             this.pictureBox4.Location = new System.Drawing.Point(73, 26);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(49, 44);
@@ -280,7 +280,7 @@ namespace Vista
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Vista.Properties.Resources.eli;
+            this.pictureBox1.Image = global::NavegadorVista.Properties.Resources.eli;
             this.pictureBox1.Location = new System.Drawing.Point(73, 26);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(49, 44);
@@ -323,7 +323,7 @@ namespace Vista
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Vista.Properties.Resources.actualizar;
+            this.pictureBox2.Image = global::NavegadorVista.Properties.Resources.actualizar;
             this.pictureBox2.Location = new System.Drawing.Point(73, 26);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(49, 44);
@@ -377,7 +377,7 @@ namespace Vista
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::Vista.Properties.Resources.Consultar;
+            this.pictureBox5.Image = global::NavegadorVista.Properties.Resources.Consultar;
             this.pictureBox5.Location = new System.Drawing.Point(73, 26);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(49, 44);
@@ -432,7 +432,7 @@ namespace Vista
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Image = global::Vista.Properties.Resources.siguiente;
+            this.pictureBox8.Image = global::NavegadorVista.Properties.Resources.siguiente;
             this.pictureBox8.Location = new System.Drawing.Point(162, 26);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(49, 44);
@@ -442,7 +442,7 @@ namespace Vista
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Image = global::Vista.Properties.Resources.ant;
+            this.pictureBox7.Image = global::NavegadorVista.Properties.Resources.ant;
             this.pictureBox7.Location = new System.Drawing.Point(97, 26);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(49, 44);
@@ -497,7 +497,7 @@ namespace Vista
             // 
             // pictureBox9
             // 
-            this.pictureBox9.Image = global::Vista.Properties.Resources.fin;
+            this.pictureBox9.Image = global::NavegadorVista.Properties.Resources.fin;
             this.pictureBox9.Location = new System.Drawing.Point(152, 26);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(49, 44);
@@ -507,7 +507,7 @@ namespace Vista
             // 
             // pictureBox10
             // 
-            this.pictureBox10.Image = global::Vista.Properties.Resources.inicio;
+            this.pictureBox10.Image = global::NavegadorVista.Properties.Resources.inicio;
             this.pictureBox10.Location = new System.Drawing.Point(97, 26);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(49, 44);
@@ -562,7 +562,7 @@ namespace Vista
             // 
             // pictureBox12
             // 
-            this.pictureBox12.Image = global::Vista.Properties.Resources.guard;
+            this.pictureBox12.Image = global::  NavegadorVista.Properties.Resources.guard;
             this.pictureBox12.Location = new System.Drawing.Point(73, 25);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(49, 44);
@@ -616,7 +616,7 @@ namespace Vista
             // 
             // pictureBox13
             // 
-            this.pictureBox13.Image = global::Vista.Properties.Resources.cancelar;
+            this.pictureBox13.Image = global::NavegadorVista.Properties.Resources.cancelar;
             this.pictureBox13.Location = new System.Drawing.Point(73, 25);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(49, 44);
@@ -659,7 +659,7 @@ namespace Vista
             // 
             // pictureBox11
             // 
-            this.pictureBox11.Image = global::Vista.Properties.Resources.salir;
+            this.pictureBox11.Image = global::NavegadorVista.Properties.Resources.salir;
             this.pictureBox11.Location = new System.Drawing.Point(73, 26);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(49, 44);

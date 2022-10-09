@@ -228,6 +228,7 @@ namespace NavegadorVista
                 DialogResult resultado = MessageBox.Show("Desea eliminar el Resgistro", "Eliminar", MessageBoxButtons.YesNo);
                 if(resultado == DialogResult.Yes)
                 {
+                    
                     cn.delete(textbox, tabla, botongc, idApp);
                     IconButton[] botongc2 = {btnInsert, btnModificar, btnDelete, btnUpdate, btnConsultar, btnReporte, btnNext,
                     btnBack,btnStart,btnEnd

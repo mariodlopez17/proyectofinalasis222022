@@ -32,16 +32,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Capa_controlador">
-      <HintPath>..\..\Seguridad\Colchoneria\Capa_controlador\bin\Debug\Capa_controlador.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Seguridad\proyectofinalasis222022\Codigo\Componentes\Seguridad\Colchoneria\Capa_controlador\bin\Debug\Capa_controlador.dll</HintPath>
     </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.1.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
     <Reference Include="NavegadorModelo">
       <HintPath>..\Modelo\bin\Debug\NavegadorModelo.dll</HintPath>
-    </Reference>
-    <Reference Include="NavegadorVista">
-      <HintPath>..\..\Seguridad\Colchoneria\Capa_controlador\bin\Debug\NavegadorVista.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
