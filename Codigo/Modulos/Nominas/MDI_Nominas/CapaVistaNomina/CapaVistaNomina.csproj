@@ -47,6 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarContrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarContrato.Designer.cs">
+      <DependentUpon>AgregarContrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarDepto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarDepto.Designer.cs">
+      <DependentUpon>AgregarDepto.cs</DependentUpon>
+    </Compile>
     <Compile Include="AgregarPuesto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +76,18 @@
     </Compile>
     <Compile Include="AsignacionTrabajadoresPlanillas.Designer.cs">
       <DependentUpon>AsignacionTrabajadoresPlanillas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contrato.Designer.cs">
+      <DependentUpon>Contrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Departamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Departamentos.Designer.cs">
+      <DependentUpon>Departamentos.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
@@ -91,6 +115,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AgregarContrato.resx">
+      <DependentUpon>AgregarContrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarDepto.resx">
+      <DependentUpon>AgregarDepto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgregarPuesto.resx">
       <DependentUpon>AgregarPuesto.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,6 +129,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AsignacionTrabajadoresPlanillas.resx">
       <DependentUpon>AsignacionTrabajadoresPlanillas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contrato.resx">
+      <DependentUpon>Contrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Departamentos.resx">
+      <DependentUpon>Departamentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
