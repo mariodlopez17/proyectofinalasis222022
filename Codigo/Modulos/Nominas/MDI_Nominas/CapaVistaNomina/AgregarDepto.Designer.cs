@@ -1,7 +1,7 @@
 ﻿
 namespace CapaVistaNomina
 {
-    partial class AgregarPuesto
+    partial class AgregarDepto
     {
         /// <summary>
         /// Required designer variable.
@@ -51,7 +51,7 @@ namespace CapaVistaNomina
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(357, 100);
-            this.panel1.TabIndex = 2;
+            this.panel1.TabIndex = 3;
             // 
             // label1
             // 
@@ -59,9 +59,9 @@ namespace CapaVistaNomina
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(56, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(237, 20);
+            this.label1.Size = new System.Drawing.Size(205, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "AGREGAR PUESTO DE TRABAJO";
+            this.label1.Text = "AGREGAR DEPARTAMENTO";
             // 
             // panel2
             // 
@@ -79,7 +79,7 @@ namespace CapaVistaNomina
             this.panel2.Location = new System.Drawing.Point(32, 120);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(287, 265);
-            this.panel2.TabIndex = 3;
+            this.panel2.TabIndex = 4;
             // 
             // btnGuardar
             // 
@@ -144,20 +144,20 @@ namespace CapaVistaNomina
             this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.label2.Location = new System.Drawing.Point(24, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.Size = new System.Drawing.Size(95, 13);
             this.label2.TabIndex = 0;
-            this.label2.Text = "ID Puesto";
+            this.label2.Text = "ID Departamento";
             // 
-            // AgregarPuesto
+            // AgregarDepto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(357, 409);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "AgregarPuesto";
+            this.Name = "AgregarDepto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AgregarPuesto";
+            this.Text = "AgregarDepto";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

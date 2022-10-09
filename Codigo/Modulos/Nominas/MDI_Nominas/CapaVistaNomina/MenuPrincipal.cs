@@ -96,17 +96,29 @@ namespace CapaVistaNomina
 
         private void btnPuestos_Click(object sender, EventArgs e)
         {
-
+            PuestosTrabajo b = new PuestosTrabajo();
+            b.MdiParent = this;
+            b.Show();
+            pictureBox1.Visible = false;
+            hideSubMenu();
         }
 
         private void btnDepto_Click(object sender, EventArgs e)
         {
-
+            Departamentos b = new Departamentos();
+            b.MdiParent = this;
+            b.Show();
+            pictureBox1.Visible = false;
+            hideSubMenu();
         }
 
         private void btnContrato_Click(object sender, EventArgs e)
         {
-
+            Contrato b = new Contrato();
+            b.MdiParent = this;
+            b.Show();
+            pictureBox1.Visible = false;
+            hideSubMenu();
         }
 
         private void btnLiquidacion_Click(object sender, EventArgs e)
