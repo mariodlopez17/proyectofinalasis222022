@@ -37,14 +37,10 @@ namespace CapaVistaNomina
             actualizardatagriew();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
-            actualizardatagriew();
-        }
-
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
-        {
-
+            AgregarTrabajador b = new AgregarTrabajador();
+            b.Show();
         }
     }
 }

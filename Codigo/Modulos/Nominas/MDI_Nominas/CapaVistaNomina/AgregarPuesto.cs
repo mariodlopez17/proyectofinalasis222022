@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace CapaVistaNomina
 {
-    public partial class AgregarTrabajador : Form
+    public partial class AgregarPuesto : Form
     {
-        public AgregarTrabajador()
+        public AgregarPuesto()
         {
             InitializeComponent();
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
