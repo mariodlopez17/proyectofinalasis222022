@@ -229,8 +229,10 @@ namespace ModuloContabilidadd
 
         private void btnFactura_Click(object sender, EventArgs e)
         {
-            //Codigo
-            //Ocultar submenu
+            EstadosFinancieros efinancieros = new EstadosFinancieros();
+            efinancieros.MdiParent = this;
+            efinancieros.StartPosition = FormStartPosition.CenterScreen;
+            efinancieros.Show();
             hideSubMenu();
         }
 
@@ -300,6 +302,42 @@ namespace ModuloContabilidadd
             cxctas.MdiParent = this;
             cxctas.StartPosition = FormStartPosition.CenterScreen;
             cxctas.Show();
+            hideSubMenu();
+        }
+
+        private void btn_CierreG_Click(object sender, EventArgs e)
+        {
+            Cierre_General cgeneral = new Cierre_General();
+            cgeneral.MdiParent = this;
+            cgeneral.StartPosition = FormStartPosition.CenterScreen;
+            cgeneral.Show();
+            hideSubMenu();
+        }
+
+        private void btn_mantTPC_Click(object sender, EventArgs e)
+        {
+            MantenimientoTipodeCuentas manctas = new MantenimientoTipodeCuentas();
+            manctas.MdiParent = this;
+            manctas.StartPosition = FormStartPosition.CenterScreen;
+            manctas.Show();
+            hideSubMenu();
+        }
+
+        private void btn_mantPC_Click(object sender, EventArgs e)
+        {
+            MantenimientoPolizaContable mantpol = new MantenimientoPolizaContable();
+            mantpol.MdiParent = this;
+            mantpol.StartPosition = FormStartPosition.CenterScreen;
+            mantpol.Show();
+            hideSubMenu();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            MantenimientoClasesCuentas mantclas = new MantenimientoClasesCuentas();
+            mantclas.MdiParent = this;
+            mantclas.StartPosition = FormStartPosition.CenterScreen;
+            mantclas.Show();
             hideSubMenu();
         }
     }
