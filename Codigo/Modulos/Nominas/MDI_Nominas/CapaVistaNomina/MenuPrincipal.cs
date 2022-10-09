@@ -81,13 +81,9 @@ namespace CapaVistaNomina
             TrabajadoresInfo b = new TrabajadoresInfo();
             b.MdiParent = this;
             b.Show();
-            //pictureBox1.Visible = false;
+            pictureBox1.Visible = false;
             hideSubMenu();
         }
-
-        //private void openChildFrom();  
-
-
 
     }
 }
