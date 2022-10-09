@@ -209,6 +209,7 @@ namespace CapaVistaNomina
             this.Controls.Add(this.panel1);
             this.Name = "AsignacionTrabajadoresPlanillas";
             this.Text = "AsignacionTrabajadoresPlanillas";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AsignacionTrabajadoresPlanillas_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

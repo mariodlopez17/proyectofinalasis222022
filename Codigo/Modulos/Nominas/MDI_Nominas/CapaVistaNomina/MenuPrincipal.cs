@@ -90,6 +90,7 @@ namespace CapaVistaNomina
             AsignacionTrabajadoresPlanillas b = new AsignacionTrabajadoresPlanillas();
             b.MdiParent = this;
             b.Show();
+            pictureBox1.Visible = false;
             hideSubMenu();
         }
 
@@ -134,6 +135,11 @@ namespace CapaVistaNomina
         }
 
         private void btnRplanilla_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBajas_Click(object sender, EventArgs e)
         {
 
         }

@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarPuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarPuesto.Designer.cs">
+      <DependentUpon>AgregarPuesto.cs</DependentUpon>
+    </Compile>
     <Compile Include="AgregarTrabajador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="PuestosTrabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PuestosTrabajo.Designer.cs">
+      <DependentUpon>PuestosTrabajo.cs</DependentUpon>
+    </Compile>
     <Compile Include="TrabajadoresInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +91,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AgregarPuesto.resx">
+      <DependentUpon>AgregarPuesto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgregarTrabajador.resx">
       <DependentUpon>AgregarTrabajador.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,6 +106,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PuestosTrabajo.resx">
+      <DependentUpon>PuestosTrabajo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrabajadoresInfo.resx">
       <DependentUpon>TrabajadoresInfo.cs</DependentUpon>
