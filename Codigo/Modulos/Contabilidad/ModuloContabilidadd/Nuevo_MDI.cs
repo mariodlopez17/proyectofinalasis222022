@@ -62,8 +62,10 @@ namespace ModuloContabilidadd
 
         private void btnCompra_Click(object sender, EventArgs e)
         {
-            //Codigo
-            //Ocultar submenu
+            GeneracionPoliza polizasC = new GeneracionPoliza();
+            polizasC.MdiParent = this;
+            polizasC.StartPosition = FormStartPosition.CenterScreen;
+            polizasC.Show();
             hideSubMenu();
         }
 
