@@ -57,7 +57,7 @@ namespace CapaVistaNomina
             this.btnCatalogos = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panelHijo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panelAyuda.SuspendLayout();
             this.panelSeguridad.SuspendLayout();
@@ -66,6 +66,7 @@ namespace CapaVistaNomina
             this.panelCatalogos.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -86,7 +87,7 @@ namespace CapaVistaNomina
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 686);
+            this.panelMenu.Size = new System.Drawing.Size(220, 471);
             this.panelMenu.TabIndex = 2;
             // 
             // panelAyuda
@@ -231,6 +232,7 @@ namespace CapaVistaNomina
             this.btnRplanilla.Text = "Reporte de Planillas";
             this.btnRplanilla.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRplanilla.UseVisualStyleBackColor = true;
+            this.btnRplanilla.Click += new System.EventHandler(this.btnRplanilla_Click);
             // 
             // btnReportes
             // 
@@ -279,6 +281,7 @@ namespace CapaVistaNomina
             this.btnDeducciones.Text = "Deducciones";
             this.btnDeducciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeducciones.UseVisualStyleBackColor = true;
+            this.btnDeducciones.Click += new System.EventHandler(this.btnDeducciones_Click);
             // 
             // btnPercepciones
             // 
@@ -294,6 +297,7 @@ namespace CapaVistaNomina
             this.btnPercepciones.Text = "Percepciones";
             this.btnPercepciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPercepciones.UseVisualStyleBackColor = true;
+            this.btnPercepciones.Click += new System.EventHandler(this.btnPercepciones_Click);
             // 
             // btnFaltas
             // 
@@ -309,6 +313,7 @@ namespace CapaVistaNomina
             this.btnFaltas.Text = "Control de Faltas";
             this.btnFaltas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFaltas.UseVisualStyleBackColor = true;
+            this.btnFaltas.Click += new System.EventHandler(this.btnFaltas_Click);
             // 
             // btnHoras
             // 
@@ -324,6 +329,7 @@ namespace CapaVistaNomina
             this.btnHoras.Text = "Control de Horas";
             this.btnHoras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHoras.UseVisualStyleBackColor = true;
+            this.btnHoras.Click += new System.EventHandler(this.btnHoras_Click);
             // 
             // btnLiquidacion
             // 
@@ -339,6 +345,7 @@ namespace CapaVistaNomina
             this.btnLiquidacion.Text = "Liquidacion Trabajadores";
             this.btnLiquidacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLiquidacion.UseVisualStyleBackColor = true;
+            this.btnLiquidacion.Click += new System.EventHandler(this.btnLiquidacion_Click);
             // 
             // btnAsPlanilla
             // 
@@ -401,6 +408,7 @@ namespace CapaVistaNomina
             this.btnContrato.Text = "Contrato";
             this.btnContrato.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnContrato.UseVisualStyleBackColor = true;
+            this.btnContrato.Click += new System.EventHandler(this.btnContrato_Click);
             // 
             // btnDepto
             // 
@@ -416,6 +424,7 @@ namespace CapaVistaNomina
             this.btnDepto.Text = "Departamentos";
             this.btnDepto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDepto.UseVisualStyleBackColor = true;
+            this.btnDepto.Click += new System.EventHandler(this.btnDepto_Click);
             // 
             // btnPuestos
             // 
@@ -431,6 +440,7 @@ namespace CapaVistaNomina
             this.btnPuestos.Text = "Puestos de Trabajo";
             this.btnPuestos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPuestos.UseVisualStyleBackColor = true;
+            this.btnPuestos.Click += new System.EventHandler(this.btnPuestos_Click);
             // 
             // btnTrabajadores
             // 
@@ -484,20 +494,22 @@ namespace CapaVistaNomina
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // panelHijo
+            // pictureBox1
             // 
-            this.panelHijo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelHijo.Location = new System.Drawing.Point(220, 0);
-            this.panelHijo.Name = "panelHijo";
-            this.panelHijo.Size = new System.Drawing.Size(862, 686);
-            this.panelHijo.TabIndex = 4;
+            this.pictureBox1.Image = global::CapaVistaNomina.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(224, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(472, 472);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1082, 686);
-            this.Controls.Add(this.panelHijo);
+            this.ClientSize = new System.Drawing.Size(694, 471);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panelMenu);
             this.IsMdiContainer = true;
             this.MinimumSize = new System.Drawing.Size(710, 510);
@@ -512,6 +524,7 @@ namespace CapaVistaNomina
             this.panelCatalogos.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -545,6 +558,6 @@ namespace CapaVistaNomina
         private System.Windows.Forms.Button btnContrato;
         private System.Windows.Forms.Button btnDepto;
         private System.Windows.Forms.Button bntRtrabajador;
-        private System.Windows.Forms.Panel panelHijo;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

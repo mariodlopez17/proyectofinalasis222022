@@ -81,7 +81,7 @@ namespace CapaVistaNomina
             TrabajadoresInfo b = new TrabajadoresInfo();
             b.MdiParent = this;
             b.Show();
-            //pictureBox1.Visible = false;
+            pictureBox1.Visible = false;
             hideSubMenu();
         }
 
@@ -93,10 +93,49 @@ namespace CapaVistaNomina
             hideSubMenu();
         }
 
+        private void btnPuestos_Click(object sender, EventArgs e)
+        {
 
-        //private void openChildFrom();  
+        }
 
+        private void btnDepto_Click(object sender, EventArgs e)
+        {
 
+        }
 
+        private void btnContrato_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLiquidacion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHoras_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFaltas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPercepciones_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDeducciones_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRplanilla_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

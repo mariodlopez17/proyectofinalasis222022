@@ -19,14 +19,27 @@ namespace CapaVistaNomina
 
         private void AsignacionTrabajadoresPlanillas_Load(object sender, EventArgs e)
         {
-            //1034; 547
-            Size = new Size(1034, 547);
+            //591; 547
+            Size = new Size(591, 547);
+            ListaDatos.Visible = false;
+            txtDato.Visible = false;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //718; 547
-            Size = new Size(718, 547);
+            //927; 547
+
+            if (ListaDatos.Visible == false)
+            {
+                ListaDatos.Visible = true;
+                Size = new Size(927, 547);
+            }
+            else
+            {
+                ListaDatos.Visible = false;
+                Size = new Size(591, 547);
+            }
+            
         }
     }
 }
