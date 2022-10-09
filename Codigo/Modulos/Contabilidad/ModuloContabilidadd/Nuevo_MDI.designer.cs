@@ -53,6 +53,7 @@ namespace ModuloContabilidadd
             this.btnCompras = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.mantClasCtas = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelMant.SuspendLayout();
             this.panelEstadosF.SuspendLayout();
@@ -91,12 +92,13 @@ namespace ModuloContabilidadd
             // panelMant
             // 
             this.panelMant.BackColor = System.Drawing.Color.LemonChiffon;
+            this.panelMant.Controls.Add(this.mantClasCtas);
             this.panelMant.Controls.Add(this.btn_mantPC);
             this.panelMant.Controls.Add(this.btn_mantTPC);
             this.panelMant.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMant.Location = new System.Drawing.Point(0, 705);
             this.panelMant.Name = "panelMant";
-            this.panelMant.Size = new System.Drawing.Size(220, 101);
+            this.panelMant.Size = new System.Drawing.Size(220, 131);
             this.panelMant.TabIndex = 11;
             // 
             // btn_mantPC
@@ -113,6 +115,7 @@ namespace ModuloContabilidadd
             this.btn_mantPC.Text = "Mantenimiento Poliza Contable";
             this.btn_mantPC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_mantPC.UseVisualStyleBackColor = true;
+            this.btn_mantPC.Click += new System.EventHandler(this.btn_mantPC_Click);
             // 
             // btn_mantTPC
             // 
@@ -128,6 +131,7 @@ namespace ModuloContabilidadd
             this.btn_mantTPC.Text = "Mantenimiento Tipo De Cuentas";
             this.btn_mantTPC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_mantTPC.UseVisualStyleBackColor = true;
+            this.btn_mantTPC.Click += new System.EventHandler(this.btn_mantTPC_Click);
             // 
             // button12
             // 
@@ -218,6 +222,7 @@ namespace ModuloContabilidadd
             this.btn_CierreG.Text = "Cierre General";
             this.btn_CierreG.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_CierreG.UseVisualStyleBackColor = true;
+            this.btn_CierreG.Click += new System.EventHandler(this.btn_CierreG_Click);
             // 
             // btn_CierrePC
             // 
@@ -411,6 +416,22 @@ namespace ModuloContabilidadd
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // mantClasCtas
+            // 
+            this.mantClasCtas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.mantClasCtas.FlatAppearance.BorderSize = 0;
+            this.mantClasCtas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mantClasCtas.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.mantClasCtas.Location = new System.Drawing.Point(0, 70);
+            this.mantClasCtas.Name = "mantClasCtas";
+            this.mantClasCtas.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.mantClasCtas.Size = new System.Drawing.Size(220, 35);
+            this.mantClasCtas.TabIndex = 2;
+            this.mantClasCtas.Text = "Mantenimiento Clases Cuentas";
+            this.mantClasCtas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.mantClasCtas.UseVisualStyleBackColor = true;
+            this.mantClasCtas.Click += new System.EventHandler(this.button2_Click_1);
+            // 
             // Nuevo_MDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -463,5 +484,6 @@ namespace ModuloContabilidadd
         private System.Windows.Forms.Button btn_mantPC;
         private System.Windows.Forms.Button btn_mantTPC;
         private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button mantClasCtas;
     }
 }
