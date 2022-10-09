@@ -79,5 +79,13 @@ namespace CapaVistaNomina
         {
             showSubMenu(panelAyuda);
         }
+
+        private void btnTrabajadores_Click(object sender, EventArgs e)
+        {
+            TrabajadoresInfo b = new TrabajadoresInfo();
+            b.MdiParent = this;
+            b.Show();
+            pictureBox1.Visible = false;
+        }
     }
 }
