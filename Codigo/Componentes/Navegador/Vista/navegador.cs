@@ -29,7 +29,23 @@ namespace NavegadorVista
         public DataGridView tabla;
         public static string idApp;
 
+        public void consulta()
+        {
+            string tablan2 = tabla.Tag.ToString();
+            Capa_VistaConsultas.Busqueda_Simple bs = new Capa_VistaConsultas.Busqueda_Simple();
+
+            bs.tableN1 = tablan2;
+            Console.WriteLine(tablan2);
+            bs.BuscarT();
+            bs.Show();
+           
+            Console.WriteLine(bs.tableN1);
+            
+            
+        }
        
+
+
 
         int opcion;
 
@@ -278,16 +294,19 @@ namespace NavegadorVista
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
+            consulta();
             cnseg.setBtitacora(idApp, "Consulta");
-            //Consulta.Vista cv = new Consulta.Vista();
-            /*
-             * Form 'fcv' = new 'cv.BusquedaAvanzada';
-             */
+            
+
+
+
         }
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
             cnseg.setBtitacora(idApp, "Reportes");
+            CapaVista.Consulta rp = new CapaVista.Consulta();
+            rp.Show();
             //Reportes.Vista cr = new Reportes.Vista();
             /*
              * Form 'fcr' = new 'cr.BusquedaAvanzada';
