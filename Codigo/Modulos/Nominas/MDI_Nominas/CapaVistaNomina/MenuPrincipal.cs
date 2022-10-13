@@ -114,17 +114,32 @@ namespace CapaVistaNomina
 
         private void btnPres_Click(object sender, EventArgs e)
         {
+            PrestacionesDeducciones b = new PrestacionesDeducciones();
+            b.MdiParent = this;
+            b.Show();
+            pictureBox1.Visible = false;
             hideSubMenu();
+          
         }
 
         private void btnHorasX_Click(object sender, EventArgs e)
         {
+            HorasExtra b = new HorasExtra();
+            b.MdiParent = this;
+            b.Show();
+            pictureBox1.Visible = false;
             hideSubMenu();
+            
         }
 
         private void btnFaltas_Click_1(object sender, EventArgs e)
         {
+            ControlFaltas b = new ControlFaltas();
+            b.MdiParent = this;
+            b.Show();
+            pictureBox1.Visible = false;
             hideSubMenu();
+            
         }
 
         private void btnAsPuestoDepto_Click(object sender, EventArgs e)
