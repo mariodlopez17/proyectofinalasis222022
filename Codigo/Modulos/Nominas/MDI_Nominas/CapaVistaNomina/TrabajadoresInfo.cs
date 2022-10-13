@@ -42,5 +42,7 @@ namespace CapaVistaNomina
             AgregarTrabajador b = new AgregarTrabajador();
             b.Show();
         }
+
+        
     }
 }
