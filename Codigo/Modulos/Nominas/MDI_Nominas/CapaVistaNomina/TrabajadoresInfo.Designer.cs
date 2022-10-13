@@ -32,7 +32,9 @@ namespace CapaVistaNomina
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtestado = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.txtfechaAlta = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txttelefono = new System.Windows.Forms.TextBox();
@@ -45,9 +47,7 @@ namespace CapaVistaNomina
             this.label3 = new System.Windows.Forms.Label();
             this.txtIDtrabajador = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.txtestado = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -100,28 +100,34 @@ namespace CapaVistaNomina
             this.panel2.Size = new System.Drawing.Size(720, 348);
             this.panel2.TabIndex = 0;
             // 
-            // dataGridView1
+            // txtestado
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(240, 16);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView1.ShowEditingIcon = false;
-            this.dataGridView1.Size = new System.Drawing.Size(464, 324);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.Tag = "tbl_trabajador";
+            this.txtestado.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.txtestado.Location = new System.Drawing.Point(128, 304);
+            this.txtestado.Name = "txtestado";
+            this.txtestado.Size = new System.Drawing.Size(80, 22);
+            this.txtestado.TabIndex = 18;
+            this.txtestado.Tag = "estado_trabajador";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(64, 304);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(56, 17);
+            this.checkBox1.TabIndex = 17;
+            this.checkBox1.Text = "Activo";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.label8.Location = new System.Drawing.Point(16, 304);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(42, 13);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Estado";
             // 
             // txtfechaAlta
             // 
@@ -240,34 +246,28 @@ namespace CapaVistaNomina
             this.label2.TabIndex = 4;
             this.label2.Text = "ID Trabajador";
             // 
-            // label8
+            // dataGridView1
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.label8.Location = new System.Drawing.Point(16, 304);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 13);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Estado";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(64, 304);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(56, 17);
-            this.checkBox1.TabIndex = 17;
-            this.checkBox1.Text = "Activo";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // txtestado
-            // 
-            this.txtestado.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.txtestado.Location = new System.Drawing.Point(128, 304);
-            this.txtestado.Name = "txtestado";
-            this.txtestado.Size = new System.Drawing.Size(80, 22);
-            this.txtestado.TabIndex = 18;
-            this.txtestado.Tag = "estado_trabajador";
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(240, 16);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridView1.ShowEditingIcon = false;
+            this.dataGridView1.Size = new System.Drawing.Size(464, 324);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.Tag = "tbl_trabajador";
             // 
             // TrabajadoresInfo
             // 
@@ -277,7 +277,6 @@ namespace CapaVistaNomina
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "TrabajadoresInfo";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TrabajadoresInfo";
             this.Load += new System.EventHandler(this.TrabajadoresInfo_Load);
             this.panel1.ResumeLayout(false);

@@ -43,6 +43,6 @@ namespace CapaVistaNomina
             b.Show();
         }
 
-        
+   
     }
 }
