@@ -85,15 +85,6 @@ namespace CapaVistaNomina
             hideSubMenu();
         }
 
-        private void btnAsPlanilla_Click(object sender, EventArgs e)
-        {
-            AsignacionTrabajadoresPlanillas b = new AsignacionTrabajadoresPlanillas();
-            b.MdiParent = this;
-            b.Show();
-            pictureBox1.Visible = false;
-            hideSubMenu();
-        }
-
         private void btnPuestos_Click(object sender, EventArgs e)
         {
             PuestosTrabajo b = new PuestosTrabajo();
@@ -121,50 +112,89 @@ namespace CapaVistaNomina
             hideSubMenu();
         }
 
-        private void btnLiquidacion_Click(object sender, EventArgs e)
+        private void btnPres_Click(object sender, EventArgs e)
         {
-
+            hideSubMenu();
         }
 
-        private void btnHoras_Click(object sender, EventArgs e)
+        private void btnHorasX_Click(object sender, EventArgs e)
         {
-            AsignacionHorasExtra b = new AsignacionHorasExtra();
+            hideSubMenu();
+        }
+
+        private void btnFaltas_Click_1(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnAsPuestoDepto_Click(object sender, EventArgs e)
+        {
+            AsignacionPuestoDepto b = new AsignacionPuestoDepto();
             b.MdiParent = this;
             b.Show();
             pictureBox1.Visible = false;
             hideSubMenu();
         }
 
-        private void btnFaltas_Click(object sender, EventArgs e)
+        private void btnAsPuestoTrab_Click(object sender, EventArgs e)
         {
-            ControlFaltas b = new ControlFaltas();
+            AsignacionPuestoTrabajador b = new AsignacionPuestoTrabajador();
             b.MdiParent = this;
             b.Show();
             pictureBox1.Visible = false;
             hideSubMenu();
         }
 
-        private void btnPercepciones_Click(object sender, EventArgs e)
+        private void btnAsContratoTrab_Click(object sender, EventArgs e)
         {
-
+            AsignacionContratoTrabajador b = new AsignacionContratoTrabajador();
+            b.MdiParent = this;
+            b.Show();
+            pictureBox1.Visible = false;
+            hideSubMenu();
         }
 
-        private void btnDeducciones_Click(object sender, EventArgs e)
+        private void btnAsContratoPres_Click(object sender, EventArgs e)
         {
+            AsignacionContratoPestaciones b = new AsignacionContratoPestaciones();
+            b.MdiParent = this;
+            b.Show();
+            pictureBox1.Visible = false;
+            hideSubMenu();
+        }
 
+        private void btnPercyDeduc_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnNomina_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
         }
 
         private void btnRplanilla_Click(object sender, EventArgs e)
         {
-
+            hideSubMenu();
         }
 
-        private void btnBajas_Click(object sender, EventArgs e)
+        private void btnRcontrato_Click(object sender, EventArgs e)
         {
-            ControlBajas b = new ControlBajas();
-            b.MdiParent = this;
-            b.Show();
-            pictureBox1.Visible = false;
+            hideSubMenu();
+        }
+
+        private void bntRtrabajador_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnSegNomina_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
             hideSubMenu();
         }
     }

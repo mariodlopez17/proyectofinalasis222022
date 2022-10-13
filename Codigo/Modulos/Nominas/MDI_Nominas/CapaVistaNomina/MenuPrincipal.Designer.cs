@@ -31,10 +31,10 @@ namespace CapaVistaNomina
         {
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelAyuda = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnInfo = new System.Windows.Forms.Button();
             this.btnAyuda = new System.Windows.Forms.Button();
             this.panelSeguridad = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnSegNomina = new System.Windows.Forms.Button();
             this.btnSeguridad = new System.Windows.Forms.Button();
             this.panelReportes = new System.Windows.Forms.Panel();
             this.bntRtrabajador = new System.Windows.Forms.Button();
@@ -42,12 +42,17 @@ namespace CapaVistaNomina
             this.btnRplanilla = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
             this.panelProcesos = new System.Windows.Forms.Panel();
-            this.btnFaltas = new System.Windows.Forms.Button();
-            this.btnHoras = new System.Windows.Forms.Button();
-            this.btnLiquidacion = new System.Windows.Forms.Button();
-            this.btnAsPlanilla = new System.Windows.Forms.Button();
+            this.btnNomina = new System.Windows.Forms.Button();
+            this.btnPercyDeduc = new System.Windows.Forms.Button();
+            this.btnAsContratoPres = new System.Windows.Forms.Button();
+            this.btnAsContratoTrab = new System.Windows.Forms.Button();
+            this.btnAsPuestoTrab = new System.Windows.Forms.Button();
+            this.btnAsPuestoDepto = new System.Windows.Forms.Button();
             this.btnProcesos = new System.Windows.Forms.Button();
             this.panelCatalogos = new System.Windows.Forms.Panel();
+            this.btnFaltas = new System.Windows.Forms.Button();
+            this.btnHorasX = new System.Windows.Forms.Button();
+            this.btnPres = new System.Windows.Forms.Button();
             this.btnContrato = new System.Windows.Forms.Button();
             this.btnDepto = new System.Windows.Forms.Button();
             this.btnPuestos = new System.Windows.Forms.Button();
@@ -56,10 +61,6 @@ namespace CapaVistaNomina
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnDeducciones = new System.Windows.Forms.Button();
-            this.btnPercepciones = new System.Windows.Forms.Button();
-            this.btnBajas = new System.Windows.Forms.Button();
-            this.btnAnticipos = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelAyuda.SuspendLayout();
             this.panelSeguridad.SuspendLayout();
@@ -95,27 +96,28 @@ namespace CapaVistaNomina
             // panelAyuda
             // 
             this.panelAyuda.BackColor = System.Drawing.Color.Salmon;
-            this.panelAyuda.Controls.Add(this.button2);
+            this.panelAyuda.Controls.Add(this.btnInfo);
             this.panelAyuda.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAyuda.Location = new System.Drawing.Point(0, 880);
+            this.panelAyuda.Location = new System.Drawing.Point(0, 924);
             this.panelAyuda.Name = "panelAyuda";
             this.panelAyuda.Size = new System.Drawing.Size(203, 43);
             this.panelAyuda.TabIndex = 9;
             // 
-            // button2
+            // btnInfo
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(203, 35);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Información";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInfo.FlatAppearance.BorderSize = 0;
+            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfo.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnInfo.Location = new System.Drawing.Point(0, 0);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnInfo.Size = new System.Drawing.Size(203, 35);
+            this.btnInfo.TabIndex = 1;
+            this.btnInfo.Text = "Información";
+            this.btnInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInfo.UseVisualStyleBackColor = true;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
             // 
             // btnAyuda
             // 
@@ -125,7 +127,7 @@ namespace CapaVistaNomina
             this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAyuda.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnAyuda.ForeColor = System.Drawing.Color.Black;
-            this.btnAyuda.Location = new System.Drawing.Point(0, 841);
+            this.btnAyuda.Location = new System.Drawing.Point(0, 885);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
             this.btnAyuda.Size = new System.Drawing.Size(203, 39);
@@ -138,27 +140,28 @@ namespace CapaVistaNomina
             // panelSeguridad
             // 
             this.panelSeguridad.BackColor = System.Drawing.Color.Salmon;
-            this.panelSeguridad.Controls.Add(this.button8);
+            this.panelSeguridad.Controls.Add(this.btnSegNomina);
             this.panelSeguridad.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSeguridad.Location = new System.Drawing.Point(0, 795);
+            this.panelSeguridad.Location = new System.Drawing.Point(0, 839);
             this.panelSeguridad.Name = "panelSeguridad";
             this.panelSeguridad.Size = new System.Drawing.Size(203, 46);
             this.panelSeguridad.TabIndex = 7;
             // 
-            // button8
+            // btnSegNomina
             // 
-            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.button8.Location = new System.Drawing.Point(0, 0);
-            this.button8.Name = "button8";
-            this.button8.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(203, 35);
-            this.button8.TabIndex = 1;
-            this.button8.Text = "Seguridad Nomina";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnSegNomina.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSegNomina.FlatAppearance.BorderSize = 0;
+            this.btnSegNomina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSegNomina.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnSegNomina.Location = new System.Drawing.Point(0, 0);
+            this.btnSegNomina.Name = "btnSegNomina";
+            this.btnSegNomina.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnSegNomina.Size = new System.Drawing.Size(203, 35);
+            this.btnSegNomina.TabIndex = 1;
+            this.btnSegNomina.Text = "Seguridad Nomina";
+            this.btnSegNomina.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSegNomina.UseVisualStyleBackColor = true;
+            this.btnSegNomina.Click += new System.EventHandler(this.btnSegNomina_Click);
             // 
             // btnSeguridad
             // 
@@ -168,7 +171,7 @@ namespace CapaVistaNomina
             this.btnSeguridad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeguridad.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnSeguridad.ForeColor = System.Drawing.Color.Black;
-            this.btnSeguridad.Location = new System.Drawing.Point(0, 756);
+            this.btnSeguridad.Location = new System.Drawing.Point(0, 800);
             this.btnSeguridad.Name = "btnSeguridad";
             this.btnSeguridad.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
             this.btnSeguridad.Size = new System.Drawing.Size(203, 39);
@@ -185,7 +188,7 @@ namespace CapaVistaNomina
             this.panelReportes.Controls.Add(this.btnRcontrato);
             this.panelReportes.Controls.Add(this.btnRplanilla);
             this.panelReportes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelReportes.Location = new System.Drawing.Point(0, 639);
+            this.panelReportes.Location = new System.Drawing.Point(0, 683);
             this.panelReportes.Name = "panelReportes";
             this.panelReportes.Size = new System.Drawing.Size(203, 117);
             this.panelReportes.TabIndex = 5;
@@ -204,6 +207,7 @@ namespace CapaVistaNomina
             this.bntRtrabajador.Text = "Reporte de Bajas";
             this.bntRtrabajador.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bntRtrabajador.UseVisualStyleBackColor = true;
+            this.bntRtrabajador.Click += new System.EventHandler(this.bntRtrabajador_Click);
             // 
             // btnRcontrato
             // 
@@ -219,6 +223,7 @@ namespace CapaVistaNomina
             this.btnRcontrato.Text = "Reporte de Contratos";
             this.btnRcontrato.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRcontrato.UseVisualStyleBackColor = true;
+            this.btnRcontrato.Click += new System.EventHandler(this.btnRcontrato_Click);
             // 
             // btnRplanilla
             // 
@@ -244,7 +249,7 @@ namespace CapaVistaNomina
             this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReportes.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnReportes.ForeColor = System.Drawing.Color.Black;
-            this.btnReportes.Location = new System.Drawing.Point(0, 600);
+            this.btnReportes.Location = new System.Drawing.Point(0, 644);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
             this.btnReportes.Size = new System.Drawing.Size(203, 39);
@@ -257,83 +262,113 @@ namespace CapaVistaNomina
             // panelProcesos
             // 
             this.panelProcesos.BackColor = System.Drawing.Color.Salmon;
-            this.panelProcesos.Controls.Add(this.btnAnticipos);
-            this.panelProcesos.Controls.Add(this.btnDeducciones);
-            this.panelProcesos.Controls.Add(this.btnPercepciones);
-            this.panelProcesos.Controls.Add(this.btnBajas);
-            this.panelProcesos.Controls.Add(this.btnFaltas);
-            this.panelProcesos.Controls.Add(this.btnHoras);
-            this.panelProcesos.Controls.Add(this.btnLiquidacion);
-            this.panelProcesos.Controls.Add(this.btnAsPlanilla);
+            this.panelProcesos.Controls.Add(this.btnNomina);
+            this.panelProcesos.Controls.Add(this.btnPercyDeduc);
+            this.panelProcesos.Controls.Add(this.btnAsContratoPres);
+            this.panelProcesos.Controls.Add(this.btnAsContratoTrab);
+            this.panelProcesos.Controls.Add(this.btnAsPuestoTrab);
+            this.panelProcesos.Controls.Add(this.btnAsPuestoDepto);
             this.panelProcesos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelProcesos.Location = new System.Drawing.Point(0, 317);
+            this.panelProcesos.Location = new System.Drawing.Point(0, 423);
             this.panelProcesos.Name = "panelProcesos";
-            this.panelProcesos.Size = new System.Drawing.Size(203, 283);
+            this.panelProcesos.Size = new System.Drawing.Size(203, 221);
             this.panelProcesos.TabIndex = 3;
             // 
-            // btnFaltas
+            // btnNomina
             // 
-            this.btnFaltas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFaltas.FlatAppearance.BorderSize = 0;
-            this.btnFaltas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFaltas.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btnFaltas.Location = new System.Drawing.Point(0, 105);
-            this.btnFaltas.Name = "btnFaltas";
-            this.btnFaltas.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btnFaltas.Size = new System.Drawing.Size(203, 35);
-            this.btnFaltas.TabIndex = 6;
-            this.btnFaltas.Text = "Control de Faltas";
-            this.btnFaltas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFaltas.UseVisualStyleBackColor = true;
-            this.btnFaltas.Click += new System.EventHandler(this.btnFaltas_Click);
+            this.btnNomina.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNomina.FlatAppearance.BorderSize = 0;
+            this.btnNomina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNomina.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnNomina.Location = new System.Drawing.Point(0, 175);
+            this.btnNomina.Name = "btnNomina";
+            this.btnNomina.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnNomina.Size = new System.Drawing.Size(203, 35);
+            this.btnNomina.TabIndex = 15;
+            this.btnNomina.Text = "Nomina";
+            this.btnNomina.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNomina.UseVisualStyleBackColor = true;
+            this.btnNomina.Click += new System.EventHandler(this.btnNomina_Click);
             // 
-            // btnHoras
+            // btnPercyDeduc
             // 
-            this.btnHoras.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHoras.FlatAppearance.BorderSize = 0;
-            this.btnHoras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHoras.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btnHoras.Location = new System.Drawing.Point(0, 70);
-            this.btnHoras.Name = "btnHoras";
-            this.btnHoras.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btnHoras.Size = new System.Drawing.Size(203, 35);
-            this.btnHoras.TabIndex = 3;
-            this.btnHoras.Text = "Control de Horas";
-            this.btnHoras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHoras.UseVisualStyleBackColor = true;
-            this.btnHoras.Click += new System.EventHandler(this.btnHoras_Click);
+            this.btnPercyDeduc.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPercyDeduc.FlatAppearance.BorderSize = 0;
+            this.btnPercyDeduc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPercyDeduc.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnPercyDeduc.Location = new System.Drawing.Point(0, 140);
+            this.btnPercyDeduc.Name = "btnPercyDeduc";
+            this.btnPercyDeduc.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnPercyDeduc.Size = new System.Drawing.Size(203, 35);
+            this.btnPercyDeduc.TabIndex = 14;
+            this.btnPercyDeduc.Text = "Percepciones y Deduciones";
+            this.btnPercyDeduc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPercyDeduc.UseVisualStyleBackColor = true;
+            this.btnPercyDeduc.Click += new System.EventHandler(this.btnPercyDeduc_Click);
             // 
-            // btnLiquidacion
+            // btnAsContratoPres
             // 
-            this.btnLiquidacion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLiquidacion.FlatAppearance.BorderSize = 0;
-            this.btnLiquidacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLiquidacion.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btnLiquidacion.Location = new System.Drawing.Point(0, 35);
-            this.btnLiquidacion.Name = "btnLiquidacion";
-            this.btnLiquidacion.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btnLiquidacion.Size = new System.Drawing.Size(203, 35);
-            this.btnLiquidacion.TabIndex = 2;
-            this.btnLiquidacion.Text = "Liquidacion Trabajadores";
-            this.btnLiquidacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLiquidacion.UseVisualStyleBackColor = true;
-            this.btnLiquidacion.Click += new System.EventHandler(this.btnLiquidacion_Click);
+            this.btnAsContratoPres.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAsContratoPres.FlatAppearance.BorderSize = 0;
+            this.btnAsContratoPres.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAsContratoPres.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnAsContratoPres.Location = new System.Drawing.Point(0, 105);
+            this.btnAsContratoPres.Name = "btnAsContratoPres";
+            this.btnAsContratoPres.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnAsContratoPres.Size = new System.Drawing.Size(203, 35);
+            this.btnAsContratoPres.TabIndex = 13;
+            this.btnAsContratoPres.Text = "Asignación Contrato Prestaciones";
+            this.btnAsContratoPres.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAsContratoPres.UseVisualStyleBackColor = true;
+            this.btnAsContratoPres.Click += new System.EventHandler(this.btnAsContratoPres_Click);
             // 
-            // btnAsPlanilla
+            // btnAsContratoTrab
             // 
-            this.btnAsPlanilla.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAsPlanilla.FlatAppearance.BorderSize = 0;
-            this.btnAsPlanilla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAsPlanilla.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btnAsPlanilla.Location = new System.Drawing.Point(0, 0);
-            this.btnAsPlanilla.Name = "btnAsPlanilla";
-            this.btnAsPlanilla.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btnAsPlanilla.Size = new System.Drawing.Size(203, 35);
-            this.btnAsPlanilla.TabIndex = 1;
-            this.btnAsPlanilla.Text = "Asignación Trabajadores Planillas";
-            this.btnAsPlanilla.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAsPlanilla.UseVisualStyleBackColor = true;
-            this.btnAsPlanilla.Click += new System.EventHandler(this.btnAsPlanilla_Click);
+            this.btnAsContratoTrab.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAsContratoTrab.FlatAppearance.BorderSize = 0;
+            this.btnAsContratoTrab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAsContratoTrab.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnAsContratoTrab.Location = new System.Drawing.Point(0, 70);
+            this.btnAsContratoTrab.Name = "btnAsContratoTrab";
+            this.btnAsContratoTrab.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnAsContratoTrab.Size = new System.Drawing.Size(203, 35);
+            this.btnAsContratoTrab.TabIndex = 12;
+            this.btnAsContratoTrab.Text = "Asignación Contrato Trabajador";
+            this.btnAsContratoTrab.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAsContratoTrab.UseVisualStyleBackColor = true;
+            this.btnAsContratoTrab.Click += new System.EventHandler(this.btnAsContratoTrab_Click);
+            // 
+            // btnAsPuestoTrab
+            // 
+            this.btnAsPuestoTrab.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAsPuestoTrab.FlatAppearance.BorderSize = 0;
+            this.btnAsPuestoTrab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAsPuestoTrab.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnAsPuestoTrab.Location = new System.Drawing.Point(0, 35);
+            this.btnAsPuestoTrab.Name = "btnAsPuestoTrab";
+            this.btnAsPuestoTrab.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnAsPuestoTrab.Size = new System.Drawing.Size(203, 35);
+            this.btnAsPuestoTrab.TabIndex = 2;
+            this.btnAsPuestoTrab.Text = "Asignación Puesto Trabajador";
+            this.btnAsPuestoTrab.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAsPuestoTrab.UseVisualStyleBackColor = true;
+            this.btnAsPuestoTrab.Click += new System.EventHandler(this.btnAsPuestoTrab_Click);
+            // 
+            // btnAsPuestoDepto
+            // 
+            this.btnAsPuestoDepto.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAsPuestoDepto.FlatAppearance.BorderSize = 0;
+            this.btnAsPuestoDepto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAsPuestoDepto.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnAsPuestoDepto.Location = new System.Drawing.Point(0, 0);
+            this.btnAsPuestoDepto.Name = "btnAsPuestoDepto";
+            this.btnAsPuestoDepto.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnAsPuestoDepto.Size = new System.Drawing.Size(203, 35);
+            this.btnAsPuestoDepto.TabIndex = 1;
+            this.btnAsPuestoDepto.Text = "Asignación Puesto Departamento";
+            this.btnAsPuestoDepto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAsPuestoDepto.UseVisualStyleBackColor = true;
+            this.btnAsPuestoDepto.Click += new System.EventHandler(this.btnAsPuestoDepto_Click);
             // 
             // btnProcesos
             // 
@@ -343,7 +378,7 @@ namespace CapaVistaNomina
             this.btnProcesos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProcesos.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnProcesos.ForeColor = System.Drawing.Color.Black;
-            this.btnProcesos.Location = new System.Drawing.Point(0, 278);
+            this.btnProcesos.Location = new System.Drawing.Point(0, 384);
             this.btnProcesos.Name = "btnProcesos";
             this.btnProcesos.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
             this.btnProcesos.Size = new System.Drawing.Size(203, 39);
@@ -356,6 +391,9 @@ namespace CapaVistaNomina
             // panelCatalogos
             // 
             this.panelCatalogos.BackColor = System.Drawing.Color.Salmon;
+            this.panelCatalogos.Controls.Add(this.btnFaltas);
+            this.panelCatalogos.Controls.Add(this.btnHorasX);
+            this.panelCatalogos.Controls.Add(this.btnPres);
             this.panelCatalogos.Controls.Add(this.btnContrato);
             this.panelCatalogos.Controls.Add(this.btnDepto);
             this.panelCatalogos.Controls.Add(this.btnPuestos);
@@ -363,8 +401,56 @@ namespace CapaVistaNomina
             this.panelCatalogos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCatalogos.Location = new System.Drawing.Point(0, 126);
             this.panelCatalogos.Name = "panelCatalogos";
-            this.panelCatalogos.Size = new System.Drawing.Size(203, 152);
+            this.panelCatalogos.Size = new System.Drawing.Size(203, 258);
             this.panelCatalogos.TabIndex = 1;
+            // 
+            // btnFaltas
+            // 
+            this.btnFaltas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFaltas.FlatAppearance.BorderSize = 0;
+            this.btnFaltas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFaltas.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnFaltas.Location = new System.Drawing.Point(0, 210);
+            this.btnFaltas.Name = "btnFaltas";
+            this.btnFaltas.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnFaltas.Size = new System.Drawing.Size(203, 35);
+            this.btnFaltas.TabIndex = 7;
+            this.btnFaltas.Text = "Control de Faltas";
+            this.btnFaltas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFaltas.UseVisualStyleBackColor = true;
+            this.btnFaltas.Click += new System.EventHandler(this.btnFaltas_Click_1);
+            // 
+            // btnHorasX
+            // 
+            this.btnHorasX.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHorasX.FlatAppearance.BorderSize = 0;
+            this.btnHorasX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHorasX.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnHorasX.Location = new System.Drawing.Point(0, 175);
+            this.btnHorasX.Name = "btnHorasX";
+            this.btnHorasX.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnHorasX.Size = new System.Drawing.Size(203, 35);
+            this.btnHorasX.TabIndex = 6;
+            this.btnHorasX.Text = "Horas Extra";
+            this.btnHorasX.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHorasX.UseVisualStyleBackColor = true;
+            this.btnHorasX.Click += new System.EventHandler(this.btnHorasX_Click);
+            // 
+            // btnPres
+            // 
+            this.btnPres.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPres.FlatAppearance.BorderSize = 0;
+            this.btnPres.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPres.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnPres.Location = new System.Drawing.Point(0, 140);
+            this.btnPres.Name = "btnPres";
+            this.btnPres.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnPres.Size = new System.Drawing.Size(203, 35);
+            this.btnPres.TabIndex = 5;
+            this.btnPres.Text = "Prestaciones y Deducciones";
+            this.btnPres.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPres.UseVisualStyleBackColor = true;
+            this.btnPres.Click += new System.EventHandler(this.btnPres_Click);
             // 
             // btnContrato
             // 
@@ -477,67 +563,6 @@ namespace CapaVistaNomina
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // btnDeducciones
-            // 
-            this.btnDeducciones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDeducciones.FlatAppearance.BorderSize = 0;
-            this.btnDeducciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeducciones.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btnDeducciones.Location = new System.Drawing.Point(0, 210);
-            this.btnDeducciones.Name = "btnDeducciones";
-            this.btnDeducciones.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btnDeducciones.Size = new System.Drawing.Size(203, 35);
-            this.btnDeducciones.TabIndex = 11;
-            this.btnDeducciones.Text = "Deducciones";
-            this.btnDeducciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeducciones.UseVisualStyleBackColor = true;
-            // 
-            // btnPercepciones
-            // 
-            this.btnPercepciones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPercepciones.FlatAppearance.BorderSize = 0;
-            this.btnPercepciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPercepciones.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btnPercepciones.Location = new System.Drawing.Point(0, 175);
-            this.btnPercepciones.Name = "btnPercepciones";
-            this.btnPercepciones.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btnPercepciones.Size = new System.Drawing.Size(203, 35);
-            this.btnPercepciones.TabIndex = 10;
-            this.btnPercepciones.Text = "Percepciones";
-            this.btnPercepciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPercepciones.UseVisualStyleBackColor = true;
-            // 
-            // btnBajas
-            // 
-            this.btnBajas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBajas.FlatAppearance.BorderSize = 0;
-            this.btnBajas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBajas.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btnBajas.Location = new System.Drawing.Point(0, 140);
-            this.btnBajas.Name = "btnBajas";
-            this.btnBajas.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btnBajas.Size = new System.Drawing.Size(203, 35);
-            this.btnBajas.TabIndex = 9;
-            this.btnBajas.Text = "Control de Bajas";
-            this.btnBajas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBajas.UseVisualStyleBackColor = true;
-            this.btnBajas.Click += new System.EventHandler(this.btnBajas_Click);
-            // 
-            // btnAnticipos
-            // 
-            this.btnAnticipos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAnticipos.FlatAppearance.BorderSize = 0;
-            this.btnAnticipos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnticipos.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btnAnticipos.Location = new System.Drawing.Point(0, 245);
-            this.btnAnticipos.Name = "btnAnticipos";
-            this.btnAnticipos.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btnAnticipos.Size = new System.Drawing.Size(203, 35);
-            this.btnAnticipos.TabIndex = 12;
-            this.btnAnticipos.Text = "Anticipos";
-            this.btnAnticipos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAnticipos.UseVisualStyleBackColor = true;
-            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -572,29 +597,30 @@ namespace CapaVistaNomina
         private System.Windows.Forms.Button btnCatalogos;
         private System.Windows.Forms.Button btnAyuda;
         private System.Windows.Forms.Panel panelSeguridad;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnSegNomina;
         private System.Windows.Forms.Button btnSeguridad;
         private System.Windows.Forms.Panel panelReportes;
         private System.Windows.Forms.Button btnRcontrato;
         private System.Windows.Forms.Button btnRplanilla;
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Panel panelProcesos;
-        private System.Windows.Forms.Button btnHoras;
-        private System.Windows.Forms.Button btnLiquidacion;
-        private System.Windows.Forms.Button btnAsPlanilla;
+        private System.Windows.Forms.Button btnAsPuestoTrab;
+        private System.Windows.Forms.Button btnAsPuestoDepto;
         private System.Windows.Forms.Button btnProcesos;
         private System.Windows.Forms.Panel panelAyuda;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnInfo;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button btnFaltas;
         private System.Windows.Forms.Button btnContrato;
         private System.Windows.Forms.Button btnDepto;
         private System.Windows.Forms.Button bntRtrabajador;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnDeducciones;
-        private System.Windows.Forms.Button btnPercepciones;
-        private System.Windows.Forms.Button btnBajas;
-        private System.Windows.Forms.Button btnAnticipos;
+        private System.Windows.Forms.Button btnHorasX;
+        private System.Windows.Forms.Button btnPres;
+        private System.Windows.Forms.Button btnFaltas;
+        private System.Windows.Forms.Button btnNomina;
+        private System.Windows.Forms.Button btnPercyDeduc;
+        private System.Windows.Forms.Button btnAsContratoPres;
+        private System.Windows.Forms.Button btnAsContratoTrab;
     }
 }
