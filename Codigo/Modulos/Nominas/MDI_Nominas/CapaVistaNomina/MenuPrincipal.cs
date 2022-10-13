@@ -128,12 +128,20 @@ namespace CapaVistaNomina
 
         private void btnHoras_Click(object sender, EventArgs e)
         {
-
+            AsignacionHorasExtra b = new AsignacionHorasExtra();
+            b.MdiParent = this;
+            b.Show();
+            pictureBox1.Visible = false;
+            hideSubMenu();
         }
 
         private void btnFaltas_Click(object sender, EventArgs e)
         {
-
+            ControlFaltas b = new ControlFaltas();
+            b.MdiParent = this;
+            b.Show();
+            pictureBox1.Visible = false;
+            hideSubMenu();
         }
 
         private void btnPercepciones_Click(object sender, EventArgs e)
@@ -153,7 +161,11 @@ namespace CapaVistaNomina
 
         private void btnBajas_Click(object sender, EventArgs e)
         {
-
+            ControlBajas b = new ControlBajas();
+            b.MdiParent = this;
+            b.Show();
+            pictureBox1.Visible = false;
+            hideSubMenu();
         }
     }
 }
