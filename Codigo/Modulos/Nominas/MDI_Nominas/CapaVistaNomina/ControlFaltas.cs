@@ -37,7 +37,7 @@ namespace CapaVistaNomina
         private void ControlFaltas_Load(object sender, EventArgs e)
         {
             Size = new Size(560, 528);
-            txtDato.Visible = false;
+            //txtDato.Visible = false;
         }
     }
 }
