@@ -119,12 +119,6 @@
     <Compile Include="Contrato.Designer.cs">
       <DependentUpon>Contrato.cs</DependentUpon>
     </Compile>
-    <Compile Include="ControlBajas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ControlBajas.Designer.cs">
-      <DependentUpon>ControlBajas.cs</DependentUpon>
-    </Compile>
     <Compile Include="ControlFaltas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,9 +192,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Contrato.resx">
       <DependentUpon>Contrato.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ControlBajas.resx">
-      <DependentUpon>ControlBajas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ControlFaltas.resx">
       <DependentUpon>ControlFaltas.cs</DependentUpon>
