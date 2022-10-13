@@ -131,6 +131,12 @@
     <Compile Include="Departamentos.Designer.cs">
       <DependentUpon>Departamentos.cs</DependentUpon>
     </Compile>
+    <Compile Include="HorasExtra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HorasExtra.Designer.cs">
+      <DependentUpon>HorasExtra.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Departamentos.resx">
       <DependentUpon>Departamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HorasExtra.resx">
+      <DependentUpon>HorasExtra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
