@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Capa_controlador;
+using Seguridad_Controlador;
 
 
-namespace Capa_vista
+namespace Vista_Seguridad
 {
     public partial class Cambio : Form
     {
@@ -32,7 +32,7 @@ namespace Capa_vista
         private void button1_Click(object sender, EventArgs e)
         {
             TextBox[] textbox = { txtcontraseña };
-            txtcontraseña.Text = Capa_controlador.Controlador.SetHash(txtcontraseña.Text);
+            txtcontraseña.Text = Seguridad_Controlador.Controlador.SetHash(txtcontraseña.Text);
             string valor1 = txtBusqueda.Text;
             string campo = "username_usuario = ";
             cn.actualizarcontra(textbox, table, campo, valor1);

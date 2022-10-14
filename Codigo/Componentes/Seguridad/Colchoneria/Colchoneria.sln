@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32802.440
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capa_vista", "Capa_vista\Capa_vista.csproj", "{658EB388-5D42-4CF5-A8AF-5E074861088A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vista_Seguridad", "Capa_vista\Vista_Seguridad.csproj", "{658EB388-5D42-4CF5-A8AF-5E074861088A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capa_controlador", "Capa_controlador\Capa_controlador.csproj", "{A4D75E74-48C1-44B6-A078-2DBEA0B01F71}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seguridad_Controlador", "Capa_controlador\Seguridad_Controlador.csproj", "{A4D75E74-48C1-44B6-A078-2DBEA0B01F71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelo", "Modelo\Modelo.csproj", "{4786EB0D-2CC7-4F95-91C0-25D7095018B4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelo_Seguridad", "Modelo\Modelo_Seguridad.csproj", "{4786EB0D-2CC7-4F95-91C0-25D7095018B4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

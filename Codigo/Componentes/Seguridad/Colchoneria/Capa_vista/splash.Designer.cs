@@ -1,5 +1,5 @@
 ﻿
-namespace Capa_vista
+namespace Vista_Seguridad
 {
     partial class splash
     {
@@ -64,7 +64,7 @@ namespace Capa_vista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Capa_vista.Properties.Resources.rabit;
+            this.BackgroundImage = global::Vista_Seguridad.Properties.Resources.rabit;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(736, 444);
             this.Controls.Add(this.label1);

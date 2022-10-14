@@ -1,5 +1,5 @@
 ﻿
-namespace Capa_vista
+namespace Vista_Seguridad
 {
     partial class Login
     {
@@ -141,7 +141,7 @@ namespace Capa_vista
             // pictureBox4
             // 
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Image = global::Capa_vista.Properties.Resources.ic_cancel_97589;
+            this.pictureBox4.Image = global::Vista_Seguridad.Properties.Resources.ic_cancel_97589;
             this.pictureBox4.Location = new System.Drawing.Point(396, 4);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
@@ -154,7 +154,7 @@ namespace Capa_vista
             // pictureBox3
             // 
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Image = global::Capa_vista.Properties.Resources.bloquear;
+            this.pictureBox3.Image = global::Vista_Seguridad.Properties.Resources.bloquear;
             this.pictureBox3.Location = new System.Drawing.Point(75, 257);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
@@ -166,7 +166,7 @@ namespace Capa_vista
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Image = global::Capa_vista.Properties.Resources.user;
+            this.pictureBox2.Image = global::Vista_Seguridad.Properties.Resources.user;
             this.pictureBox2.Location = new System.Drawing.Point(76, 192);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
@@ -178,7 +178,7 @@ namespace Capa_vista
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Image = global::Capa_vista.Properties.Resources.Imagen3;
+            this.pictureBox1.Image = global::Vista_Seguridad.Properties.Resources.Imagen3;
             this.pictureBox1.Location = new System.Drawing.Point(139, 26);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";

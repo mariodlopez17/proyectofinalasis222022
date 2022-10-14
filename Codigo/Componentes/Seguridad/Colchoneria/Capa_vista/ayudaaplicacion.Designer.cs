@@ -1,5 +1,5 @@
 ﻿
-namespace Capa_vista
+namespace Vista_Seguridad
 {
     partial class ayudaaplicacion
     {
@@ -35,7 +35,7 @@ namespace Capa_vista
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Capa_vista.Properties.Resources.Aplicacion;
+            this.pictureBox1.Image = global::Vista_Seguridad.Properties.Resources.Aplicacion;
             this.pictureBox1.Location = new System.Drawing.Point(3, 1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(650, 660);

@@ -5,13 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.Odbc;
-using Modelo;
+using Modelo_Seguridad;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using System.Net;
 
 
-namespace Capa_controlador
+namespace Seguridad_Controlador
 {
     public class Controlador
     {

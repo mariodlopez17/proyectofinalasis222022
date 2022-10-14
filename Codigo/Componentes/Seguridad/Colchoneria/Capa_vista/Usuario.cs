@@ -8,9 +8,9 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Capa_controlador;
+using Seguridad_Controlador;
 
-namespace Capa_vista
+namespace Vista_Seguridad
 {
     public partial class Usuario : Form
     {
@@ -39,8 +39,8 @@ namespace Capa_vista
                 checks();
                 checkbox();
                 TextBox[] textbox = { txtnombre, txtapellido, txtcontraseña, txtusername, txtemail, txtestado, TxtPAA, TxtPA };
-                txtcontraseña.Text = Capa_controlador.Controlador.SetHash(txtcontraseña.Text);
-                TxtPA.Text = Capa_controlador.Controlador.SetHash(TxtPA.Text);
+                txtcontraseña.Text = Seguridad_Controlador.Controlador.SetHash(txtcontraseña.Text);
+                TxtPA.Text = Seguridad_Controlador.Controlador.SetHash(TxtPA.Text);
                 cn.ingresar(textbox, table);
                 cn.setBtitacora("1001", "Crea Nuevo Usuario");
                 string message = "Registro Guardado";
@@ -67,7 +67,7 @@ namespace Capa_vista
                 checks();
                 checkbox();
                 TextBox[] textbox = { txtnombre, txtapellido, txtcontraseña, txtusername, txtemail, txtestado, TxtPAA, TxtPA };
-                txtcontraseña.Text = Capa_controlador.Controlador.SetHash(txtcontraseña.Text);
+                txtcontraseña.Text = Seguridad_Controlador.Controlador.SetHash(txtcontraseña.Text);
                 int valor1 = int.Parse(txtBusqueda.Text);
                 string campo = "pk_id_usuario = ";
                 cn.actualizar(textbox, table, campo, valor1);

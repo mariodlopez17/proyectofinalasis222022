@@ -1,5 +1,5 @@
 ﻿
-namespace Capa_vista
+namespace Vista_Seguridad
 {
     partial class Cambio
     {

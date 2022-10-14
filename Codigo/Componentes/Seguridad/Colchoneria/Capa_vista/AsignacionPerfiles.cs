@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Capa_controlador;
+using Seguridad_Controlador;
 
-namespace Capa_vista
+namespace Vista_Seguridad
 {
     public partial class AsignacionPerfiles : Form
     {

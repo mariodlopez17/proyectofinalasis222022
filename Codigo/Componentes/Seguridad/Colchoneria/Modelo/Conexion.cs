@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Odbc;
 
-namespace Modelo
+namespace Modelo_Seguridad
 {
     class Conexion
     {

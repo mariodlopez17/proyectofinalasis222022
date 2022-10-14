@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Capa_vista
+namespace Vista_Seguridad
 {
     public partial class prueba : Form
     {
