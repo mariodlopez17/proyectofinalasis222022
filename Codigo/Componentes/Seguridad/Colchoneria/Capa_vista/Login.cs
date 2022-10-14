@@ -105,6 +105,9 @@ namespace Vista_Seguridad
                     this.Hide();
                     cn.setBtitacora("8000", "Contabilidad");
                 };*/
+            }else
+            {
+                MessageBox.Show("Contraseña o Usuario Incorrecta");
             }
         }
 

@@ -8,17 +8,12 @@ namespace Ejecucion
 {
     static class Program
     {
-        /// <summary>
-        /// Punto de entrada principal para la aplicación.
-        /// </summary>
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Vista_Seguridad.splash());
-            //Application.Run(new Capa_vista.Navegador_seg());
-           // Application.Run(new Capa_vista.MenuSeguridad());
         }   
     }
 }
