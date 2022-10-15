@@ -13,46 +13,11 @@ namespace Capa_ControladorConsultas
     {
         Sentencias sn = new Sentencias();
         //rellena tabla controlador
-        public DataTable llenartb1(string tabla)
-        {
-            OdbcDataAdapter dt = sn.llenartb1(tabla);
-            DataTable table = new DataTable();
-            dt.Fill(table);
-            return table;
-        }
-        public OdbcDataReader llenarcbodatabase()
-        {
-            string sql = "show full tables from Colchoneria;";
-            return sn.llenarcbotabla(sql);
-        }
-        public OdbcDataReader llenarcbodatabase2(string tabla)
-        {
-            string sql = "show columns from " + tabla + ";";
-            return sn.llenarcbotabla(sql);
-        }
-
-        //consultas almacenadas
-        public OdbcDataReader llenarcboq(string tabla)
-        {
-            string sql = "select Nombre, Tabla from " + tabla + ";";
-            return sn.llenarcbotabla(sql);
-        }
-        //guardamos consultas
-        public void ingresarconsulta(string nombre, string tabla)
-        {
-            string sql = "insert into consultainteligente (nombre,tabla) values ( '" + nombre + "', '" + tabla + "') ;";
-            Console.WriteLine(sql);
-            sn.insertarconsulta(sql);
-        }
-        public OdbcDataReader llenarinsert(string sql)
-        {
-            return sn.validarconsulta(sql);
-        }
 
         //datagread
         public DataTable llenartb2()
         {
-            string consulta = "select * from consultainteligente";
+            string consulta = "select * from tbl_consultainteligente";
             OdbcDataAdapter dt = sn.llenartb2(consulta);
             DataTable table = new DataTable();
             dt.Fill(table);
@@ -60,7 +25,7 @@ namespace Capa_ControladorConsultas
         }
         public DataTable llenartb3(string condicion)
         {
-            string consulta = "select * from consultainteligente where nombre= " + '"' + condicion + '"';
+            string consulta = "select * from tbl_consultainteligente where nombre= " + '"' + condicion + '"';
             OdbcDataAdapter dt = sn.llenartb2(consulta);
             DataTable table = new DataTable();
             dt.Fill(table);
@@ -68,18 +33,14 @@ namespace Capa_ControladorConsultas
         }
         public void ejecutarconsulta(string condicion)
         {
-            string sql = "DELETE FROM consultainteligente where nombre = " + '"' + condicion + '"' + ";";
+            string sql = "DELETE FROM tbl_consultainteligente where nombre = " + '"' + condicion + '"' + ";";
             Console.WriteLine(sql);
             sn.insertarconsulta(sql);
         }
-        public OdbcDataReader llenarcbonombreconsulta()
-        {
-            string sql = "select Campos from consultainteligente;";
-            return sn.llenarcbotabla(sql);
-        }
+
         public void editarconsulta(string nombre, string campos)
         {
-            string sql = "update consultainteligente set campos ='" + campos + "'" + "where nombre = '" + nombre + "' ;";
+            string sql = "update tbl_consultainteligente set campos ='" + campos + "'" + "where nombre = '" + nombre + "' ;";
             Console.WriteLine(sql);
             sn.insertarconsulta(sql);
         }
@@ -94,16 +55,16 @@ namespace Capa_ControladorConsultas
                 cmd.Connection = con;
 
                 #region Query
-                String query = @"INSERT INTO consultainteligente(Nombre,Tabla,Campos,Alias, ID) VALUE(?,?,?,?,?);";
+                String query = @"INSERT INTO tbl_consultainteligente(nombre_consulta,tabla_consulta,campos_consultas,alias_consultas, PkId) VALUE(?,?,?,?,?);";
                 #endregion
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = query;
 
-                cmd.Parameters.Add("@Nombre", OdbcType.VarChar).Value = _nomb;
-                cmd.Parameters.Add("@Tabla", OdbcType.VarChar).Value = _cons;
-                cmd.Parameters.Add("@Campos", OdbcType.VarChar).Value = _area;
-                cmd.Parameters.Add("@Alias", OdbcType.VarChar).Value = _camp;
-                cmd.Parameters.Add("@ID", OdbcType.Int).Value = _IDE;
+                cmd.Parameters.Add("@nombre_consulta", OdbcType.VarChar).Value = _nomb;
+                cmd.Parameters.Add("@tabla_consulta", OdbcType.VarChar).Value = _cons;
+                cmd.Parameters.Add("@campos_consultas", OdbcType.VarChar).Value = _area;
+                cmd.Parameters.Add("@alias_consultas", OdbcType.VarChar).Value = _camp;
+                cmd.Parameters.Add("@PkId", OdbcType.Int).Value = _IDE;
 
                 cmd.ExecuteNonQuery();
                 con.Close();
@@ -122,15 +83,15 @@ namespace Capa_ControladorConsultas
                 #region Query
 
 
-                String query = @"INSERT INTO consultainteligente1 (operador,campos,valor,ID) VALUE(?,?,?,?);";
+                String query = @"INSERT INTO tbl_consultainteligente1 (operador_consulta,campos_consulta,valor_consultas,PkId) VALUE(?,?,?,?);";
 
                 #endregion
                 cmda.CommandType = CommandType.Text;
                 cmda.CommandText = query;
-                cmda.Parameters.Add("@operador", OdbcType.VarChar).Value = _ope;
-                cmda.Parameters.Add("@campos", OdbcType.VarChar).Value = _camp;
-                cmda.Parameters.Add("@valor", OdbcType.VarChar).Value = _valo;
-                cmda.Parameters.Add("@ID", OdbcType.Int).Value = _IDE;
+                cmda.Parameters.Add("@operador_consulta", OdbcType.VarChar).Value = _ope;
+                cmda.Parameters.Add("@campos_consulta", OdbcType.VarChar).Value = _camp;
+                cmda.Parameters.Add("@valor_consultas", OdbcType.VarChar).Value = _valo;
+                cmda.Parameters.Add("@PkId", OdbcType.Int).Value = _IDE;
 
 
                 cmda.ExecuteNonQuery();
@@ -147,13 +108,13 @@ namespace Capa_ControladorConsultas
                 cmd.Connection = con;
 
                 #region Query
-                String query = @"INSERT INTO consultainteligente2 (ordenar,campo, ID) VALUE(?,?,?);";
+                String query = @"INSERT INTO tbl_consultainteligente2 (PkId,ordenar_consulta, campo_consulta) VALUE(?,?,?);";
                 #endregion
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = query;
-                cmd.Parameters.Add("@ordenar", OdbcType.VarChar).Value = _ope;
-                cmd.Parameters.Add("@campo", OdbcType.VarChar).Value = _camp;
-                cmd.Parameters.Add("@ID", OdbcType.Int).Value = _IDE;
+                cmd.Parameters.Add("@PkId", OdbcType.VarChar).Value = _ope;
+                cmd.Parameters.Add("@ordenar_consulta", OdbcType.VarChar).Value = _camp;
+                cmd.Parameters.Add("@campo_consulta", OdbcType.Int).Value = _IDE;
 
 
                 cmd.ExecuteNonQuery();
