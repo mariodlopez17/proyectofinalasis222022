@@ -15,7 +15,8 @@ namespace NavegadorControlador
     public class csControlador
     {
         Sentencias sn = new Sentencias();
-        Capa_controlador.Controlador cnseg = new Capa_controlador.Controlador();
+        
+        Seguridad_Controlador.Controlador cnseg = new Seguridad_Controlador.Controlador();
 
         int next, mov;
 
