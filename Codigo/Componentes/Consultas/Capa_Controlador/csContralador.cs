@@ -38,12 +38,39 @@ namespace Capa_ControladorConsultas
             sn.insertarconsulta(sql);
         }
 
-        public void editarconsulta(string nombre, string campos)
+        public void editarconsulta(string nombre_consulta, string tabla_consulta, string campos_consulta, string alias_consulta)
         {
-            string sql = "update tbl_consultainteligente set campos ='" + campos + "'" + "where nombre = '" + nombre + "' ;";
+            string sql = "update" +
+                " tbl_consultainteligente set tabla ='" + tabla_consulta + "'" + "'campos ='"+ campos_consulta + "'alias ='" + alias_consulta + "where nombre = '" + nombre_consulta + "'";
             Console.WriteLine(sql);
             sn.insertarconsulta(sql);
         }
+
+        public void editarconsulta1(string operador_consulta, string campos_consultas, string valor_consultas, string PkId)
+        {
+            string sql = "update" +
+                " tbl_consultainteligente1 set operador ='" + operador_consulta + "'" + "'campos ='" + campos_consultas + "'valor ='" + valor_consultas + "where id = '" + PkId + "'";
+            Console.WriteLine(sql);
+            sn.insertarconsulta(sql);
+        }
+
+        public void editarconsulta2(string ordernar_consulta, string campo_consulta)
+        {
+            string sql = "update" +
+                " tbl_consultainteligente2 set ordernar ='" + ordernar_consulta + "'" + "'campos ='" + campo_consulta;           
+            Console.WriteLine(sql);
+            sn.insertarconsulta(sql);
+        }
+
+        public void editarconsulta3(string campoeditar_consulta, string valoreditar_consulta)
+        {
+            string sql = "update" +
+                " tbl_consultainteligente3 set campo ='" + campoeditar_consulta + "'" + "'valor ='" + valoreditar_consulta; 
+            Console.WriteLine(sql);
+            sn.insertarconsulta(sql);
+        }
+
+
         //jonathan Xuya 
         OdbcConnection con = new OdbcConnection("FIL=MS Acces;DSN=Colchoneria");
         public bool InsertBusqueda(string _nomb, string _cons, string _area, string _camp, string _IDE)
@@ -122,6 +149,7 @@ namespace Capa_ControladorConsultas
             }
             return true;
         }
+
     }
 }
 

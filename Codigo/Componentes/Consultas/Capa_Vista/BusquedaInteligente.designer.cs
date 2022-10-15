@@ -1364,7 +1364,7 @@ namespace Capa_VistaConsultas
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Location = new System.Drawing.Point(3, 46);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(764, 238);
+            this.groupBox2.Size = new System.Drawing.Size(742, 238);
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "General/Consulta Simple";
@@ -1567,7 +1567,7 @@ namespace Capa_VistaConsultas
             this.iconButton13.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
             this.iconButton13.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton13.IconSize = 60;
-            this.iconButton13.Location = new System.Drawing.Point(773, 3);
+            this.iconButton13.Location = new System.Drawing.Point(755, 3);
             this.iconButton13.Name = "iconButton13";
             this.iconButton13.Size = new System.Drawing.Size(64, 68);
             this.iconButton13.TabIndex = 29;
