@@ -1,4 +1,3 @@
-USE `colchoneria`;
 INSERT INTO `tbl_modulos` VALUES
 ('1000', 'SEGURIDAD', 'Seguridad', 1),
 ('2000', 'LOGISTICA', 'Logistica', 1),
@@ -49,4 +48,5 @@ INSERT INTO `tbl_permisosAplicacionPerfil` VALUES
 -- -----ASIGNACIÓN DE PERFIL A USUARIO
 INSERT INTO `tbl_asignacionesPerfilsUsuario` VALUES
 ('1', '1'); 
+
 
