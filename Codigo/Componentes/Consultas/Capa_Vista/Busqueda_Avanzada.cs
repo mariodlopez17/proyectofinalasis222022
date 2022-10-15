@@ -53,6 +53,7 @@ namespace Capa_VistaConsultas
 
         private void btn_BuscarBA_Click(object sender, EventArgs e)
         {
+            tableN = cbo_buscaren.Text;
             DataTable dt = new DataTable();
             try
             {

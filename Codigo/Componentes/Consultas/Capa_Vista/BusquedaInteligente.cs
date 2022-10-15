@@ -654,7 +654,14 @@ namespace Capa_VistaConsultas
 
         private void btneditar_Click(object sender, EventArgs e)
         {
-            //Diana Victores - Joselyne Rivera
+            //Diana Victores 9959-19-1471
+            //Boton Editar
+
+            cn.editarconsulta(cboTablaConsultaSimple.Text, cboCamposEDITAR.Text, txtNombreAlias.Text, txtcamposelectoseditar.Text);
+            cn.editarconsulta1(cboOperadorLogicoEDITAR.Text, cboCampoConsultaComplejaEditar.Text, txtvalorConsultaComplejaEDITAR.Text, cbocompand.Text);
+            cn.editarconsulta2(cboAgruparEditar.Text, cboCampoAgruparEditar.Text);
+            cn.editarconsulta3(cboCamposEDITAR.Text, txtvalorConsultaComplejaEDITAR.Text);
+            
 
         }
 
