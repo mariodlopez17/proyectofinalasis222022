@@ -12,10 +12,39 @@ namespace CapaVistaNomina
 {
     public partial class MenuPrincipal : Form
     {
+        Seguridad_Controlador.Controlador cnseg = new Seguridad_Controlador.Controlador();
         public MenuPrincipal()
         {
             InitializeComponent();
             customizeDesing();
+
+            Button[] apps = { btnTrabajadores, btnPuestos, btnDepto, btnContrato, btnPres, btnHorasX,
+                btnFaltas, btnAsPuestoDepto, btnAsPuestoTrab, btnAsContratoTrab, btnAsContratoPres, btnPercyDeduc,
+                btnNomina,btnRplanilla,btnRcontrato,bntRtrabajador,btnSegNomina,btnInfo};
+            cnseg.deshabilitarApps(apps);
+
+            cnseg.getAccesoApp(6001, apps[0]);
+            cnseg.getAccesoApp(6002, apps[1]);
+            cnseg.getAccesoApp(6003, apps[2]);
+            cnseg.getAccesoApp(6004, apps[3]);
+            cnseg.getAccesoApp(6005, apps[4]);
+            cnseg.getAccesoApp(6006, apps[5]);
+            cnseg.getAccesoApp(6007, apps[6]);
+
+            cnseg.getAccesoApp(6101, apps[7]);
+            cnseg.getAccesoApp(6102, apps[8]);
+            cnseg.getAccesoApp(6103, apps[9]);
+            cnseg.getAccesoApp(6104, apps[10]);
+            cnseg.getAccesoApp(6105, apps[11]);
+            cnseg.getAccesoApp(6106, apps[12]);
+
+            cnseg.getAccesoApp(6201, apps[13]);
+            cnseg.getAccesoApp(6202, apps[14]);
+            cnseg.getAccesoApp(6203, apps[15]);
+
+            cnseg.getAccesoApp(6301, apps[16]);
+            cnseg.getAccesoApp(6401, apps[17]);
+
         }
 
         private void customizeDesing()
