@@ -10,18 +10,16 @@ using System.Windows.Forms;
 
 namespace ModuloContabilidadd
 {
-    public partial class Polizas_Locales : Form
+    public partial class GeneracionPoliza : Form
     {
-        public Polizas_Locales()
+        public GeneracionPoliza()
         {
             InitializeComponent();
         }
 
-        private void bnt_menuP_Click(object sender, EventArgs e)
+        private void label4_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            ContenedorCF menuP = new ContenedorCF();
-            menuP.Show();
+
         }
     }
 }

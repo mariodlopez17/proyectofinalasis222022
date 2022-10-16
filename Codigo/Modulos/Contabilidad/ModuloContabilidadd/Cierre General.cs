@@ -10,18 +10,16 @@ using System.Windows.Forms;
 
 namespace ModuloContabilidadd
 {
-    public partial class Mantenimientos : Form
+    public partial class Cierre_General : Form
     {
-        public Mantenimientos()
+        public Cierre_General()
         {
             InitializeComponent();
         }
 
-        private void bnt_menuP_Click(object sender, EventArgs e)
+        private void Cierre_General_Load(object sender, EventArgs e)
         {
-            this.Hide();
-            ContenedorCF menuP = new ContenedorCF();
-            menuP.Show();
+
         }
     }
 }

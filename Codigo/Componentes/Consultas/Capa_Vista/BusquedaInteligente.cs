@@ -16,7 +16,7 @@ namespace Capa_VistaConsultas
     public partial class Busqueda : Form
     {
 
-        clscontrolador cn = new clscontrolador();
+        csControldor cn = new csControldor();
         OdbcConnection con = new OdbcConnection("Dsn=Colchoneria");
         String tablabusqueda;
         public Busqueda()
@@ -44,7 +44,8 @@ namespace Capa_VistaConsultas
         {
             // Jonathan Xuyá 0901-19-
             //boton agregar de creacion de consulta
-            Capa_ControladorConsultas.clscontrolador crud = new Capa_ControladorConsultas.clscontrolador();
+
+            Capa_ControladorConsultas.csControldor crud = new Capa_ControladorConsultas.csControldor();
             bool resultado = crud.InsertBusqueda(txtNombreConsulta.Text, cboTabla.Text, comboBox11.Text, textBox11.Text, null);
 
             if (resultado)
@@ -76,7 +77,7 @@ namespace Capa_VistaConsultas
         {
             // Jonathan Xuyá 0901-19-
             //boton agregar de creacion de consulta
-            Capa_ControladorConsultas.clscontrolador crud = new Capa_ControladorConsultas.clscontrolador();
+            Capa_ControladorConsultas.csControldor crud = new Capa_ControladorConsultas.csControldor();
             bool resultado = crud.InsertBusquedaCompleja(comboBox13.Text, comboBox12.Text, textBox16.Text, null);
             if (resultado)
             {
@@ -98,7 +99,7 @@ namespace Capa_VistaConsultas
         {
             // Jonathan Xuyá 0901-19-
             //boton agregar de creacion de consulta
-            Capa_ControladorConsultas.clscontrolador crud = new Capa_ControladorConsultas.clscontrolador();
+            Capa_ControladorConsultas.csControldor crud = new Capa_ControladorConsultas.csControldor();
             bool resultado = crud.InsertBusquedaCompleja(comboBox14.Text, comboBox15.Text, textBox9.Text, null);
             if (resultado)
             {
@@ -120,7 +121,7 @@ namespace Capa_VistaConsultas
         {
             // Jonathan Xuyá 0901-19-
             //boton agregar de creacion de consulta
-            Capa_ControladorConsultas.clscontrolador crud = new Capa_ControladorConsultas.clscontrolador();
+            Capa_ControladorConsultas.csControldor crud = new Capa_ControladorConsultas.csControldor();
             bool resultado = crud.InsertBusquedaCompleja1(comboBox16.Text, comboBox17.Text, null);
             if (resultado)
             {
@@ -247,7 +248,7 @@ namespace Capa_VistaConsultas
         {
             //Joselyne Rivera 0901-17-05
             //boton Agregar Editar
-            Capa_ControladorConsultas.clscontrolador crud = new Capa_ControladorConsultas.clscontrolador();
+            Capa_ControladorConsultas.csControldor crud = new Capa_ControladorConsultas.csControldor();
             bool resultado = crud.InsertBusquedaCompleja1(cboAgruparEditar.Text, cboCampoAgruparEditar.Text, null);
             if (resultado)
             {
@@ -259,7 +260,7 @@ namespace Capa_VistaConsultas
         {
             //Diana Victores 9959-19-1471
             //boton agregar de Editar
-            Capa_ControladorConsultas.clscontrolador crud = new Capa_ControladorConsultas.clscontrolador();
+            Capa_ControladorConsultas.csControldor crud = new Capa_ControladorConsultas.csControldor();
             bool resultado = crud.InsertBusquedaCompleja(cboTipoComparadorEditar.Text, cboCampoEditar.Text, txtValorComparacionEDITAR.Text, null);
             if (resultado)
             {
@@ -271,7 +272,7 @@ namespace Capa_VistaConsultas
         {
             // Joselyne Rivera 0901-18-
             //boton agregar de Editar 
-            Capa_ControladorConsultas.clscontrolador crud = new Capa_ControladorConsultas.clscontrolador();
+            Capa_ControladorConsultas.csControldor crud = new Capa_ControladorConsultas.csControldor();
             bool resultado = crud.InsertBusquedaCompleja(cboOperadorLogicoEDITAR.Text, cboCampoConsultaComplejaEditar.Text, txtvalorConsultaComplejaEDITAR.Text, null);
             if (resultado)
             {
@@ -301,7 +302,7 @@ namespace Capa_VistaConsultas
         {
             // Diana Victores 9959-19-1471
             //boton agregar de Editar
-            Capa_ControladorConsultas.clscontrolador crud = new Capa_ControladorConsultas.clscontrolador();
+            Capa_ControladorConsultas.csControldor crud = new Capa_ControladorConsultas.csControldor();
             bool resultado = crud.InsertBusqueda(txtNombreConsulta.Text, cboTabla.Text, comboBox11.Text, textBox11.Text, null);
 
             if (resultado)
@@ -371,7 +372,7 @@ namespace Capa_VistaConsultas
         {
             // Jonathan Xuyá 0901-19-
             //boton agregar de creacion de consulta
-            Capa_ControladorConsultas.clscontrolador crud = new Capa_ControladorConsultas.clscontrolador();
+            Capa_ControladorConsultas.csControldor crud = new Capa_ControladorConsultas.csControldor();
             textBox8.Text = "SELECT FROM" + "*" + "_" + "WHERE" + query + "_" + "INSERTED" + "";
         }
 

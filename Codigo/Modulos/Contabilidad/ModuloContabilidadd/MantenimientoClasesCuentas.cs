@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*Diana Victores
+ 9959-19-1471
+ mantenimiento clases de cuentas*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,19 +13,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ModuloContabilidadd
+    
 {
-    public partial class Estados_Financieros : Form
+    public partial class MantenimientoClasesCuentas : Form
     {
-        public Estados_Financieros()
+        public MantenimientoClasesCuentas()
         {
             InitializeComponent();
         }
 
-        private void bnt_menuP_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            this.Hide();
-            ContenedorCF menuP = new ContenedorCF();
-            menuP.Show();
+
         }
     }
 }

@@ -9,7 +9,7 @@ using System.Data;
 
 namespace Capa_ControladorConsultas 
 {
-    public class clscontrolador
+    public class csControldor
     {
         Sentencias sn = new Sentencias();
         //rellena tabla controlador
@@ -72,7 +72,7 @@ namespace Capa_ControladorConsultas
 
 
         //jonathan Xuya 
-        OdbcConnection con = new OdbcConnection("FIL=MS Acces;DSN=Colchoneria");
+        OdbcConnection con = new OdbcConnection("FIL=MS Acces;DSN=colchoneria");
         public bool InsertBusqueda(string _nomb, string _cons, string _area, string _camp, string _IDE)
         {
             using (con)
@@ -82,7 +82,7 @@ namespace Capa_ControladorConsultas
                 cmd.Connection = con;
 
                 #region Query
-                String query = @"INSERT INTO tbl_consultainteligente(nombre_consulta,tabla_consulta,campos_consultas,alias_consultas, PkId) VALUE(?,?,?,?,?);";
+                String query = @"INSERT INTO tbl_consultainteligente(nombre_consulta,tabla_consulta,campos_consultas,alias_consultas, Pk_Id) VALUE(?,?,?,?,?);";
                 #endregion
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = query;
@@ -91,7 +91,7 @@ namespace Capa_ControladorConsultas
                 cmd.Parameters.Add("@tabla_consulta", OdbcType.VarChar).Value = _cons;
                 cmd.Parameters.Add("@campos_consultas", OdbcType.VarChar).Value = _area;
                 cmd.Parameters.Add("@alias_consultas", OdbcType.VarChar).Value = _camp;
-                cmd.Parameters.Add("@PkId", OdbcType.Int).Value = _IDE;
+                cmd.Parameters.Add("@Pk_Id", OdbcType.Int).Value = _IDE;
 
                 cmd.ExecuteNonQuery();
                 con.Close();
@@ -126,7 +126,7 @@ namespace Capa_ControladorConsultas
             }
             return true;
         }
-        public bool InsertBusquedaCompleja1(string _ope, string _camp, string _IDE)
+        public bool InsertBusquedaCompleja1(string _camp, string _IDE ,string _ope )
         {
             using (con)
             {
@@ -135,15 +135,13 @@ namespace Capa_ControladorConsultas
                 cmd.Connection = con;
 
                 #region Query
-                String query = @"INSERT INTO tbl_consultainteligente2 (PkId,ordenar_consulta, campo_consulta) VALUE(?,?,?);";
+                String query = @"INSERT INTO tbl_consultainteligente2 (ordenar_consulta, campo_consulta,PkId) VALUE(?,?,?);";
                 #endregion
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = query;
-                cmd.Parameters.Add("@PkId", OdbcType.VarChar).Value = _ope;
+                cmd.CommandText = query;                
                 cmd.Parameters.Add("@ordenar_consulta", OdbcType.VarChar).Value = _camp;
-                cmd.Parameters.Add("@campo_consulta", OdbcType.Int).Value = _IDE;
-
-
+                cmd.Parameters.Add("@campo_consulta", OdbcType.VarChar).Value = _IDE;
+                cmd.Parameters.Add("@PkId", OdbcType.Int).Value = _ope;
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
