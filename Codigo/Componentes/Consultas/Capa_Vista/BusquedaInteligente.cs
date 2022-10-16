@@ -171,11 +171,14 @@ namespace Capa_VistaConsultas
             // textBox1.Text = txtNombreConsulta.Text+ cboTabla.Text+ comboBox11.Text+ textBox11.Text;
         }
 
-        //se necesita actualizaciones para terminar boton eliminar
+       
         //Diana Victores 9959-19-1471
         public void actualizaconsultas()
         {
-
+            //metodo actualizaconsultas para boton consultas de Buscar/Eliminar
+            //Diana Victores 9959-19-1471
+            DataTable dt = cn.llenartb2();
+            dgvBUSCARyELIMINAR.DataSource = dt;
         }
 
         //boton eliminar de la forma Buscar/Eliminar - Diana Victores 9959-19-1471
@@ -219,7 +222,7 @@ namespace Capa_VistaConsultas
         }
 
         string query = "registro_consultas";
-
+        
         private void iconButton28_Click(object sender, EventArgs e)
         {
             //Joselyne Rivera 0901-17-05
@@ -310,7 +313,7 @@ namespace Capa_VistaConsultas
             // Diana Victores 9959-19-1471
             //boton agregar de Editar
             Capa_ControladorConsultas.csControldor crud = new Capa_ControladorConsultas.csControldor();
-            bool resultado = crud.InsertBusqueda(txtNombreConsulta.Text, cboTabla.Text, comboBox11.Text, textBox11.Text, null);
+            bool resultado = crud.InsertBusqueda(txtcamposelectoseditar.Text, cboTablaConsultaSimple.Text, cboCamposEDITAR.Text, txtNombreAlias.Text, null);
 
             if (resultado)
 
@@ -356,8 +359,8 @@ namespace Capa_VistaConsultas
             cbonombrebuscar.Text = transfiere;
             txtTablaConsulta.Text = transfiere;
             groupBox2.Enabled = true;
-            tbpBE.Hide();
-            tbpEditar.Show();
+            tbpBuscarEliminar.Show();
+            tbpEditar.Hide();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -681,7 +684,30 @@ namespace Capa_VistaConsultas
             cn.editarconsulta1(cboOperadorLogicoEDITAR.Text, cboCampoConsultaComplejaEditar.Text, txtvalorConsultaComplejaEDITAR.Text, cbocompand.Text);
             cn.editarconsulta2(cboAgruparEditar.Text, cboCampoAgruparEditar.Text);
             cn.editarconsulta3(cboCamposEDITAR.Text, txtvalorConsultaComplejaEDITAR.Text);
+
+            //insert cadena
+            Capa_ControladorConsultas.csControldor crud2 = new Capa_ControladorConsultas.csControldor();
+            txtCadenaGeneradaEDITAR.Text = "SELECT FROM" + "*" + "_" + "WHERE" + query + "_" + "INSERTED" + "";
             
+            
+            //clear
+            //txtcamposelectoseditar.Clear();
+            //cboTablaConsultaSimple.ResetText();
+            //cboCamposEDITAR.ResetText();
+            //txtNombreAlias.Clear();
+            //txtTablaConsulta.Clear();
+
+            //cboOperadorLogicoEDITAR.ResetText();
+            //cboCampoConsultaComplejaEditar.ResetText();
+            //cbocompand.ResetText();
+            //txtvalorConsultaComplejaEDITAR.Clear();
+            //cboTipoComparadorEditar.ResetText();
+            //cboCampoEditar.ResetText();
+            //cbocompwhere.ResetText();
+            //txtValorComparacionEDITAR.Clear();
+            //cboAgruparEditar.ResetText();
+            //cboCampoAgruparEditar.ResetText();
+            //txtCadenaGeneradaEDITAR.Clear();
 
 
         }
