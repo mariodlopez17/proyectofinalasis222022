@@ -154,6 +154,8 @@ namespace Capa_VistaConsultas
             comboBox14.ResetText();
             comboBox15.ResetText();
             textBox9.Clear();
+            textBox8.Clear();
+            textBox1.Clear();
 
         }
 
@@ -182,9 +184,14 @@ namespace Capa_VistaConsultas
             //Diana Victores 9959-19-1471
             //boton eliminar de Buscar/Eliminar
             cn.ejecutarconsulta(txtNombreConsultaBusquedaElimar.Text);
+            if (MessageBox.Show("Desea eliminar el registro", "Desea eliminar el registro", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                
+            
             MessageBox.Show("Las consultas con nombre " + txtNombreConsultaBusquedaElimar.Text + " Han sido eliminadas");
             actualizaconsultas();
             txtNombreConsultaBusquedaElimar.Text = "";
+        }
         }
         public void actualizaconsultas2(string condicion)
         {
@@ -208,7 +215,7 @@ namespace Capa_VistaConsultas
         private void cboTablaConsultaSimple_SelectedIndexChanged(object sender, EventArgs e)
         {
             //txttablaeditar.Text = cboTablaConsultaSimple.SelectedItem.ToString();
-            chkSelectTodosConsultaSimple.Enabled = true;
+            //chkSelectTodosConsultaSimple.Enabled = true;
         }
 
         string query = "registro_consultas";
@@ -318,21 +325,21 @@ namespace Capa_VistaConsultas
 
         private void chkSelectTodosConsultaSimple_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkSelectTodosConsultaSimple.Checked == true)
-            {
-                txtNombreAlias.Text = "";
-                txtNombreAlias.Enabled = false;
-                cboCamposEDITAR.Text = "";
-                cboCamposEDITAR.Enabled = false;
-                txtcamposelectoseditar.Text = "";
-            }
-            else
-            {
-                txtNombreAlias.Text = "";
-                txtNombreAlias.Enabled = true;
-                cboCamposEDITAR.Text = "";
-                cboCamposEDITAR.Enabled = true;
-            }
+            //if (chkSelectTodosConsultaSimple.Checked == true)
+            //{
+            //    txtNombreAlias.Text = "";
+            //    txtNombreAlias.Enabled = false;
+            //    cboCamposEDITAR.Text = "";
+            //    cboCamposEDITAR.Enabled = false;
+            //    txtcamposelectoseditar.Text = "";
+            //}
+            //else
+            //{
+            //    txtNombreAlias.Text = "";
+            //    txtNombreAlias.Enabled = true;
+            //    cboCamposEDITAR.Text = "";
+            //    cboCamposEDITAR.Enabled = true;
+            //}
         }
 
         private void iconButton25_Click(object sender, EventArgs e)
@@ -374,6 +381,18 @@ namespace Capa_VistaConsultas
             //boton agregar de creacion de consulta
             Capa_ControladorConsultas.csControldor crud = new Capa_ControladorConsultas.csControldor();
             textBox8.Text = "SELECT FROM" + "*" + "_" + "WHERE" + query + "_" + "INSERTED" + "";
+            txtNombreConsulta.Clear();
+            cboTabla.ResetText();
+            comboBox11.ResetText();
+            textBox11.Clear();
+            comboBox16.ResetText();
+            comboBox17.ResetText();
+            comboBox13.ResetText();
+            comboBox12.ResetText();
+            textBox16.Clear();
+            comboBox14.ResetText();
+            comboBox15.ResetText();
+            textBox9.Clear();
         }
 
         private void textBox8_TextChanged(object sender, EventArgs e)
@@ -664,6 +683,7 @@ namespace Capa_VistaConsultas
             cn.editarconsulta3(cboCamposEDITAR.Text, txtvalorConsultaComplejaEDITAR.Text);
             
 
+
         }
 
         private void iconButton27_Click(object sender, EventArgs e)
@@ -673,6 +693,11 @@ namespace Capa_VistaConsultas
         }
 
         private void btnagregarcamposeditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void x(object sender, EventArgs e)
         {
 
         }

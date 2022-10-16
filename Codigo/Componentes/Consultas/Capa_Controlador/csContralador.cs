@@ -25,7 +25,7 @@ namespace Capa_ControladorConsultas
         }
         public DataTable llenartb3(string condicion)
         {
-            string consulta = "select * from tbl_consultainteligente where nombre= " + '"' + condicion + '"';
+            string consulta = "select * from tbl_consultainteligente where nombre_consulta= " + '"' + condicion + '"';
             OdbcDataAdapter dt = sn.llenartb2(consulta);
             DataTable table = new DataTable();
             dt.Fill(table);
@@ -33,7 +33,7 @@ namespace Capa_ControladorConsultas
         }
         public void ejecutarconsulta(string condicion)
         {
-            string sql = "DELETE FROM tbl_consultainteligente where nombre = " + '"' + condicion + '"' + ";";
+            string sql = "DELETE FROM tbl_consultainteligente where nombre_consulta = " + '"' + condicion + '"' + ";";
             Console.WriteLine(sql);
             sn.insertarconsulta(sql);
         }
