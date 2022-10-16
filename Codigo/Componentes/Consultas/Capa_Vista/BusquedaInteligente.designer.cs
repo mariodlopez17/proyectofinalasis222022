@@ -148,7 +148,7 @@ namespace Capa_VistaConsultas
             this.label15 = new System.Windows.Forms.Label();
             this.iconButton13 = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbpBE = new System.Windows.Forms.TabPage();
+            this.tbpBuscarEliminar = new System.Windows.Forms.TabPage();
             this.panel20 = new System.Windows.Forms.Panel();
             this.iconButton12 = new FontAwesome.Sharp.IconButton();
             this.iconButton28 = new FontAwesome.Sharp.IconButton();
@@ -179,7 +179,7 @@ namespace Capa_VistaConsultas
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.tbpBE.SuspendLayout();
+            this.tbpBuscarEliminar.SuspendLayout();
             this.panel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBUSCARyELIMINAR)).BeginInit();
             this.SuspendLayout();
@@ -605,7 +605,7 @@ namespace Capa_VistaConsultas
             this.panel18.Controls.Add(this.dgv_prueba);
             this.panel18.Location = new System.Drawing.Point(18, 19);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(962, 209);
+            this.panel18.Size = new System.Drawing.Size(962, 189);
             this.panel18.TabIndex = 0;
             this.panel18.Paint += new System.Windows.Forms.PaintEventHandler(this.panel18_Paint);
             // 
@@ -648,7 +648,7 @@ namespace Capa_VistaConsultas
             this.iconButton7.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
             this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton7.IconSize = 60;
-            this.iconButton7.Location = new System.Drawing.Point(318, 110);
+            this.iconButton7.Location = new System.Drawing.Point(318, 89);
             this.iconButton7.Name = "iconButton7";
             this.iconButton7.Size = new System.Drawing.Size(64, 68);
             this.iconButton7.TabIndex = 27;
@@ -664,7 +664,7 @@ namespace Capa_VistaConsultas
             this.btnNuevo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNuevo.IconSize = 60;
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnNuevo.Location = new System.Drawing.Point(318, 36);
+            this.btnNuevo.Location = new System.Drawing.Point(318, 15);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(64, 68);
             this.btnNuevo.TabIndex = 25;
@@ -747,7 +747,7 @@ namespace Capa_VistaConsultas
             this.tbcBusqueda.Controls.Add(this.tbpCreacion);
             this.tbcBusqueda.Controls.Add(this.tbpConsultas);
             this.tbcBusqueda.Controls.Add(this.tbpEditar);
-            this.tbcBusqueda.Controls.Add(this.tbpBE);
+            this.tbcBusqueda.Controls.Add(this.tbpBuscarEliminar);
             this.tbcBusqueda.Location = new System.Drawing.Point(10, 11);
             this.tbcBusqueda.Name = "tbcBusqueda";
             this.tbcBusqueda.SelectedIndex = 0;
@@ -1565,16 +1565,16 @@ namespace Capa_VistaConsultas
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre Consulta :";
             // 
-            // tbpBE
+            // tbpBuscarEliminar
             // 
-            this.tbpBE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
-            this.tbpBE.Controls.Add(this.panel20);
-            this.tbpBE.Location = new System.Drawing.Point(4, 22);
-            this.tbpBE.Name = "tbpBE";
-            this.tbpBE.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpBE.Size = new System.Drawing.Size(1005, 802);
-            this.tbpBE.TabIndex = 3;
-            this.tbpBE.Text = "Buscar/Eliminar";
+            this.tbpBuscarEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
+            this.tbpBuscarEliminar.Controls.Add(this.panel20);
+            this.tbpBuscarEliminar.Location = new System.Drawing.Point(4, 22);
+            this.tbpBuscarEliminar.Name = "tbpBuscarEliminar";
+            this.tbpBuscarEliminar.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpBuscarEliminar.Size = new System.Drawing.Size(1005, 802);
+            this.tbpBuscarEliminar.TabIndex = 3;
+            this.tbpBuscarEliminar.Text = "Buscar/Eliminar";
             // 
             // panel20
             // 
@@ -1722,7 +1722,7 @@ namespace Capa_VistaConsultas
             this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.tbpBE.ResumeLayout(false);
+            this.tbpBuscarEliminar.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBUSCARyELIMINAR)).EndInit();
@@ -1773,7 +1773,7 @@ namespace Capa_VistaConsultas
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabPage tbpBE;
+        private System.Windows.Forms.TabPage tbpBuscarEliminar;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.DataGridView dgvBUSCARyELIMINAR;
