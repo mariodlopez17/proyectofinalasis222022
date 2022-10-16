@@ -71,7 +71,6 @@ namespace Capa_VistaConsultas
             this.iconButton7 = new FontAwesome.Sharp.IconButton();
             this.btnNuevo = new FontAwesome.Sharp.IconButton();
             this.label27 = new System.Windows.Forms.Label();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.txtNombreConsulta = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
@@ -136,7 +135,6 @@ namespace Capa_VistaConsultas
             this.cboTablaConsultaSimple = new System.Windows.Forms.ComboBox();
             this.cboCamposEDITAR = new System.Windows.Forms.ComboBox();
             this.txtTablaConsulta = new System.Windows.Forms.TextBox();
-            this.chkSelectTodosConsultaSimple = new System.Windows.Forms.CheckBox();
             this.btnCancelarCONSULTASIMPLE = new FontAwesome.Sharp.IconButton();
             this.btnAgregarCONSULTASIMPLE = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
@@ -199,7 +197,7 @@ namespace Capa_VistaConsultas
             this.panel12.Controls.Add(this.panel18);
             this.panel12.Location = new System.Drawing.Point(6, 3);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(1103, 688);
+            this.panel12.Size = new System.Drawing.Size(1103, 711);
             this.panel12.TabIndex = 1;
             this.panel12.Paint += new System.Windows.Forms.PaintEventHandler(this.panel12_Paint);
             // 
@@ -263,6 +261,7 @@ namespace Capa_VistaConsultas
             // 
             // panel13
             // 
+            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel13.Controls.Add(this.comboBox16);
             this.panel13.Controls.Add(this.iconButton10);
             this.panel13.Controls.Add(this.comboBox17);
@@ -329,6 +328,7 @@ namespace Capa_VistaConsultas
             // 
             // panel14
             // 
+            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel14.Controls.Add(this.radioButton3);
             this.panel14.Controls.Add(this.radioButton4);
             this.panel14.Location = new System.Drawing.Point(240, 25);
@@ -378,15 +378,17 @@ namespace Capa_VistaConsultas
             // 
             // panel15
             // 
+            this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel15.Controls.Add(this.panel16);
             this.panel15.Controls.Add(this.panel17);
-            this.panel15.Location = new System.Drawing.Point(18, 265);
+            this.panel15.Location = new System.Drawing.Point(18, 257);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(1075, 182);
             this.panel15.TabIndex = 1;
             // 
             // panel16
             // 
+            this.panel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel16.Controls.Add(this.comboBox15);
             this.panel16.Controls.Add(this.comboBox14);
             this.panel16.Controls.Add(this.iconButton9);
@@ -485,6 +487,7 @@ namespace Capa_VistaConsultas
             // 
             // panel17
             // 
+            this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel17.Controls.Add(this.comboBox13);
             this.panel17.Controls.Add(this.comboBox12);
             this.panel17.Controls.Add(this.textBox16);
@@ -586,13 +589,13 @@ namespace Capa_VistaConsultas
             // 
             // panel18
             // 
+            this.panel18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel18.Controls.Add(this.textBox1);
             this.panel18.Controls.Add(this.comboBox11);
             this.panel18.Controls.Add(this.cboTabla);
             this.panel18.Controls.Add(this.iconButton7);
             this.panel18.Controls.Add(this.btnNuevo);
             this.panel18.Controls.Add(this.label27);
-            this.panel18.Controls.Add(this.checkBox4);
             this.panel18.Controls.Add(this.textBox11);
             this.panel18.Controls.Add(this.txtNombreConsulta);
             this.panel18.Controls.Add(this.label28);
@@ -611,7 +614,7 @@ namespace Capa_VistaConsultas
             this.textBox1.Location = new System.Drawing.Point(425, 72);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 20);
+            this.textBox1.Size = new System.Drawing.Size(200, 20);
             this.textBox1.TabIndex = 30;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -679,19 +682,9 @@ namespace Capa_VistaConsultas
             this.label27.TabIndex = 13;
             this.label27.Text = "Campos Seleccionados";
             // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(194, 130);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(112, 17);
-            this.checkBox4.TabIndex = 8;
-            this.checkBox4.Text = "Todos los campos";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(157, 172);
+            this.textBox11.Location = new System.Drawing.Point(157, 111);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(135, 20);
             this.textBox11.TabIndex = 7;
@@ -706,7 +699,7 @@ namespace Capa_VistaConsultas
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(21, 175);
+            this.label28.Location = new System.Drawing.Point(115, 114);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(29, 13);
             this.label28.TabIndex = 3;
@@ -715,7 +708,7 @@ namespace Capa_VistaConsultas
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(29, 92);
+            this.label29.Location = new System.Drawing.Point(99, 87);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(45, 13);
             this.label29.TabIndex = 2;
@@ -724,7 +717,7 @@ namespace Capa_VistaConsultas
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(21, 51);
+            this.label30.Location = new System.Drawing.Point(110, 51);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(34, 13);
             this.label30.TabIndex = 1;
@@ -733,7 +726,7 @@ namespace Capa_VistaConsultas
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(21, 15);
+            this.label31.Location = new System.Drawing.Point(56, 15);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(88, 13);
             this.label31.TabIndex = 0;
@@ -788,18 +781,19 @@ namespace Capa_VistaConsultas
             // 
             this.panel9.Controls.Add(this.dataGridView2);
             this.panel9.Controls.Add(this.groupBox1);
-            this.panel9.Location = new System.Drawing.Point(25, 16);
+            this.panel9.Location = new System.Drawing.Point(3, 6);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(1079, 673);
             this.panel9.TabIndex = 1;
+            this.panel9.BackColorChanged += new System.EventHandler(this.x);
             // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(25, 182);
+            this.dataGridView2.Location = new System.Drawing.Point(22, 217);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(750, 150);
+            this.dataGridView2.Size = new System.Drawing.Size(777, 269);
             this.dataGridView2.TabIndex = 14;
             // 
             // groupBox1
@@ -812,7 +806,7 @@ namespace Capa_VistaConsultas
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Location = new System.Drawing.Point(22, 15);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(753, 141);
+            this.groupBox1.Size = new System.Drawing.Size(810, 147);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
@@ -821,7 +815,7 @@ namespace Capa_VistaConsultas
             // cbosubquery
             // 
             this.cbosubquery.FormattingEnabled = true;
-            this.cbosubquery.Location = new System.Drawing.Point(173, 46);
+            this.cbosubquery.Location = new System.Drawing.Point(201, 46);
             this.cbosubquery.Name = "cbosubquery";
             this.cbosubquery.Size = new System.Drawing.Size(21, 21);
             this.cbosubquery.TabIndex = 31;
@@ -833,7 +827,7 @@ namespace Capa_VistaConsultas
             this.iconButton27.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
             this.iconButton27.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton27.IconSize = 60;
-            this.iconButton27.Location = new System.Drawing.Point(643, 19);
+            this.iconButton27.Location = new System.Drawing.Point(713, 19);
             this.iconButton27.Name = "iconButton27";
             this.iconButton27.Size = new System.Drawing.Size(64, 68);
             this.iconButton27.TabIndex = 30;
@@ -845,7 +839,7 @@ namespace Capa_VistaConsultas
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(62, 16);
+            this.label17.Location = new System.Drawing.Point(87, 16);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(35, 13);
             this.label17.TabIndex = 0;
@@ -853,7 +847,7 @@ namespace Capa_VistaConsultas
             // 
             // txtCadenaGeneradaConsulta
             // 
-            this.txtCadenaGeneradaConsulta.Location = new System.Drawing.Point(200, 47);
+            this.txtCadenaGeneradaConsulta.Location = new System.Drawing.Point(270, 47);
             this.txtCadenaGeneradaConsulta.Name = "txtCadenaGeneradaConsulta";
             this.txtCadenaGeneradaConsulta.Size = new System.Drawing.Size(437, 20);
             this.txtCadenaGeneradaConsulta.TabIndex = 3;
@@ -861,7 +855,7 @@ namespace Capa_VistaConsultas
             // cboQueryy
             // 
             this.cboQueryy.FormattingEnabled = true;
-            this.cboQueryy.Location = new System.Drawing.Point(1, 46);
+            this.cboQueryy.Location = new System.Drawing.Point(29, 46);
             this.cboQueryy.Name = "cboQueryy";
             this.cboQueryy.Size = new System.Drawing.Size(166, 21);
             this.cboQueryy.TabIndex = 1;
@@ -870,7 +864,7 @@ namespace Capa_VistaConsultas
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(346, 19);
+            this.label16.Location = new System.Drawing.Point(468, 19);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(92, 13);
             this.label16.TabIndex = 2;
@@ -912,9 +906,9 @@ namespace Capa_VistaConsultas
             // 
             this.cbonombrebuscar.BackColor = System.Drawing.Color.White;
             this.cbonombrebuscar.FormattingEnabled = true;
-            this.cbonombrebuscar.Location = new System.Drawing.Point(293, 9);
+            this.cbonombrebuscar.Location = new System.Drawing.Point(218, 22);
             this.cbonombrebuscar.Name = "cbonombrebuscar";
-            this.cbonombrebuscar.Size = new System.Drawing.Size(443, 21);
+            this.cbonombrebuscar.Size = new System.Drawing.Size(271, 21);
             this.cbonombrebuscar.TabIndex = 39;
             this.cbonombrebuscar.SelectedIndexChanged += new System.EventHandler(this.cbonombreconsulta_SelectedIndexChanged_1);
             // 
@@ -1354,7 +1348,6 @@ namespace Capa_VistaConsultas
             this.groupBox2.Controls.Add(this.cboTablaConsultaSimple);
             this.groupBox2.Controls.Add(this.cboCamposEDITAR);
             this.groupBox2.Controls.Add(this.txtTablaConsulta);
-            this.groupBox2.Controls.Add(this.chkSelectTodosConsultaSimple);
             this.groupBox2.Controls.Add(this.btnCancelarCONSULTASIMPLE);
             this.groupBox2.Controls.Add(this.btnAgregarCONSULTASIMPLE);
             this.groupBox2.Controls.Add(this.label2);
@@ -1362,9 +1355,9 @@ namespace Capa_VistaConsultas
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Location = new System.Drawing.Point(3, 46);
+            this.groupBox2.Location = new System.Drawing.Point(5, 64);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(742, 238);
+            this.groupBox2.Size = new System.Drawing.Size(910, 209);
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "General/Consulta Simple";
@@ -1382,7 +1375,7 @@ namespace Capa_VistaConsultas
             // txtNombreAlias
             // 
             this.txtNombreAlias.BackColor = System.Drawing.Color.White;
-            this.txtNombreAlias.Location = new System.Drawing.Point(171, 192);
+            this.txtNombreAlias.Location = new System.Drawing.Point(171, 150);
             this.txtNombreAlias.Name = "txtNombreAlias";
             this.txtNombreAlias.Size = new System.Drawing.Size(100, 20);
             this.txtNombreAlias.TabIndex = 52;
@@ -1422,22 +1415,9 @@ namespace Capa_VistaConsultas
             this.txtTablaConsulta.Multiline = true;
             this.txtTablaConsulta.Name = "txtTablaConsulta";
             this.txtTablaConsulta.ReadOnly = true;
-            this.txtTablaConsulta.Size = new System.Drawing.Size(200, 56);
+            this.txtTablaConsulta.Size = new System.Drawing.Size(215, 78);
             this.txtTablaConsulta.TabIndex = 49;
             this.txtTablaConsulta.TextChanged += new System.EventHandler(this.txtTablaConsulta_TextChanged);
-            // 
-            // chkSelectTodosConsultaSimple
-            // 
-            this.chkSelectTodosConsultaSimple.AutoSize = true;
-            this.chkSelectTodosConsultaSimple.BackColor = System.Drawing.Color.Transparent;
-            this.chkSelectTodosConsultaSimple.Enabled = false;
-            this.chkSelectTodosConsultaSimple.Location = new System.Drawing.Point(113, 151);
-            this.chkSelectTodosConsultaSimple.Name = "chkSelectTodosConsultaSimple";
-            this.chkSelectTodosConsultaSimple.Size = new System.Drawing.Size(111, 17);
-            this.chkSelectTodosConsultaSimple.TabIndex = 48;
-            this.chkSelectTodosConsultaSimple.Text = "Seleccionar todos";
-            this.chkSelectTodosConsultaSimple.UseVisualStyleBackColor = false;
-            this.chkSelectTodosConsultaSimple.CheckedChanged += new System.EventHandler(this.chkSelectTodosConsultaSimple_CheckedChanged);
             // 
             // btnCancelarCONSULTASIMPLE
             // 
@@ -1445,7 +1425,7 @@ namespace Capa_VistaConsultas
             this.btnCancelarCONSULTASIMPLE.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
             this.btnCancelarCONSULTASIMPLE.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelarCONSULTASIMPLE.IconSize = 60;
-            this.btnCancelarCONSULTASIMPLE.Location = new System.Drawing.Point(336, 131);
+            this.btnCancelarCONSULTASIMPLE.Location = new System.Drawing.Point(336, 102);
             this.btnCancelarCONSULTASIMPLE.Name = "btnCancelarCONSULTASIMPLE";
             this.btnCancelarCONSULTASIMPLE.Size = new System.Drawing.Size(64, 68);
             this.btnCancelarCONSULTASIMPLE.TabIndex = 41;
@@ -1461,7 +1441,7 @@ namespace Capa_VistaConsultas
             this.btnAgregarCONSULTASIMPLE.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAgregarCONSULTASIMPLE.IconSize = 60;
             this.btnAgregarCONSULTASIMPLE.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAgregarCONSULTASIMPLE.Location = new System.Drawing.Point(336, 57);
+            this.btnAgregarCONSULTASIMPLE.Location = new System.Drawing.Point(336, 26);
             this.btnAgregarCONSULTASIMPLE.Name = "btnAgregarCONSULTASIMPLE";
             this.btnAgregarCONSULTASIMPLE.Size = new System.Drawing.Size(64, 68);
             this.btnAgregarCONSULTASIMPLE.TabIndex = 39;
@@ -1473,7 +1453,7 @@ namespace Capa_VistaConsultas
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(438, 45);
+            this.label2.Location = new System.Drawing.Point(499, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 13);
             this.label2.TabIndex = 38;
@@ -1482,7 +1462,7 @@ namespace Capa_VistaConsultas
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(106, 195);
+            this.label3.Location = new System.Drawing.Point(106, 153);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 13);
             this.label3.TabIndex = 34;
@@ -1567,9 +1547,9 @@ namespace Capa_VistaConsultas
             this.iconButton13.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
             this.iconButton13.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton13.IconSize = 60;
-            this.iconButton13.Location = new System.Drawing.Point(755, 3);
+            this.iconButton13.Location = new System.Drawing.Point(495, 3);
             this.iconButton13.Name = "iconButton13";
-            this.iconButton13.Size = new System.Drawing.Size(64, 68);
+            this.iconButton13.Size = new System.Drawing.Size(64, 58);
             this.iconButton13.TabIndex = 29;
             this.iconButton13.Text = "Buscar";
             this.iconButton13.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1579,7 +1559,7 @@ namespace Capa_VistaConsultas
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(171, 9);
+            this.label1.Location = new System.Drawing.Point(115, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 13);
             this.label1.TabIndex = 0;
@@ -1607,7 +1587,7 @@ namespace Capa_VistaConsultas
             this.panel20.Controls.Add(this.txtNombreConsultaBusquedaElimar);
             this.panel20.Location = new System.Drawing.Point(23, 7);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(954, 379);
+            this.panel20.Size = new System.Drawing.Size(976, 697);
             this.panel20.TabIndex = 18;
             // 
             // iconButton12
@@ -1774,7 +1754,6 @@ namespace Capa_VistaConsultas
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TextBox txtNombreConsulta;
         private System.Windows.Forms.Label label28;
@@ -1865,7 +1844,6 @@ namespace Capa_VistaConsultas
         private System.Windows.Forms.ComboBox cboTablaConsultaSimple;
         private System.Windows.Forms.ComboBox cboCamposEDITAR;
         private System.Windows.Forms.TextBox txtTablaConsulta;
-        private System.Windows.Forms.CheckBox chkSelectTodosConsultaSimple;
         private System.Windows.Forms.TextBox txtCadenaGeneradaEDITAR;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.ComboBox cboAgruparEditar;
