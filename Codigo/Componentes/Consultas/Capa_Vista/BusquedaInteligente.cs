@@ -10,12 +10,13 @@ using System.Windows.Forms;
 using Capa_ControladorConsultas;
 using System.Data.Odbc;
 
+
 namespace Capa_VistaConsultas
 {
-
+  
     public partial class Busqueda : Form
     {
-
+       
         csControldor cn = new csControldor();
         OdbcConnection con = new OdbcConnection("Dsn=Colchoneria");
         String tablabusqueda;
@@ -46,7 +47,7 @@ namespace Capa_VistaConsultas
             //boton agregar de creacion de consulta
 
             Capa_ControladorConsultas.csControldor crud = new Capa_ControladorConsultas.csControldor();
-            bool resultado = crud.InsertBusqueda(txtNombreConsulta.Text, cboTabla.Text, comboBox11.Text, textBox11.Text, null);
+            bool resultado = crud.InsertBusqueda(txtNombreConsulta.Text, cboTabla.Text, comboBox11.Text, textBox11.Text, textBox8.Text, null);
 
             if (resultado)
 
@@ -54,7 +55,7 @@ namespace Capa_VistaConsultas
                 MessageBox.Show("Datos guardados");
             }
 
-            textBox1.Text = (txtNombreConsulta.Text + "+" + cboTabla.Text + "+" + comboBox11.Text + "+" + textBox11.Text);
+            textBox1.Text = (txtNombreConsulta.Text + "+" + cboTabla.Text + "+" + comboBox11.Text + "+" + textBox11.Text + "+"+ textBox8.Text);
             string columnasbd = comboBox11.Text;
             //CargarColumnas(columnasbd, comboBox11);
         }
@@ -313,7 +314,7 @@ namespace Capa_VistaConsultas
             // Diana Victores 9959-19-1471
             //boton agregar de Editar
             Capa_ControladorConsultas.csControldor crud = new Capa_ControladorConsultas.csControldor();
-            bool resultado = crud.InsertBusqueda(txtcamposelectoseditar.Text, cboTablaConsultaSimple.Text, cboCamposEDITAR.Text, txtNombreAlias.Text, null);
+            bool resultado = crud.InsertBusqueda(txtcamposelectoseditar.Text, cboTablaConsultaSimple.Text, cboCamposEDITAR.Text, txtNombreAlias.Text, txtCadenaGeneradaEDITAR.Text, null);
 
             if (resultado)
 
@@ -321,7 +322,7 @@ namespace Capa_VistaConsultas
                 MessageBox.Show("Datos guardados");
             }
 
-            txtTablaConsulta.Text = (txtcamposelectoseditar.Text + "+" + cboTablaConsultaSimple.Text + "+" + cboCamposEDITAR.Text + "+" + txtNombreAlias.Text);
+            txtTablaConsulta.Text = (txtcamposelectoseditar.Text + "+" + cboTablaConsultaSimple.Text + "+" + cboCamposEDITAR.Text + "+" + txtNombreAlias.Text +"+"+ txtCadenaGeneradaEDITAR.Text);
             string columnasbd = comboBox11.Text;
             //CargarColumnas(columnasbd, comboBox11);
         }
@@ -627,7 +628,7 @@ namespace Capa_VistaConsultas
             //boton cancelar Editar
             cboOperadorLogicoEDITAR.ResetText();
             cboCampoConsultaComplejaEditar.ResetText();
-            cbocompand.ResetText();
+//cbocompand.ResetText();
             txtvalorConsultaComplejaEDITAR.Clear();
         }
 
@@ -637,7 +638,7 @@ namespace Capa_VistaConsultas
             //boton cancelar Editar
             cboTipoComparadorEditar.ResetText();
             cboCampoEditar.ResetText();
-            cbocompwhere.ResetText();
+         //   cbocompwhere.ResetText();
             txtValorComparacionEDITAR.Clear();
         }
 
@@ -664,11 +665,11 @@ namespace Capa_VistaConsultas
 
             cboOperadorLogicoEDITAR.ResetText();
             cboCampoConsultaComplejaEditar.ResetText();
-            cbocompand.ResetText();
+         //   cbocompand.ResetText();
             txtvalorConsultaComplejaEDITAR.Clear();
             cboTipoComparadorEditar.ResetText();
             cboCampoEditar.ResetText();
-            cbocompwhere.ResetText();
+         //   cbocompwhere.ResetText();
             txtValorComparacionEDITAR.Clear();
             cboAgruparEditar.ResetText();
             cboCampoAgruparEditar.ResetText();
@@ -711,11 +712,28 @@ namespace Capa_VistaConsultas
 
 
         }
-
+        String datobuscar = "";
+        String buscaren = "";
         private void iconButton27_Click(object sender, EventArgs e)
         {
-            // Joselyne Rivera 0901-18-
+            // Joselyne Rivera 0901-18-  - No se realizo
+            // Diana Victores 9959-19-1471 -- llamada al text
+            //Josue Amaya 0901-19-12421   --llamada del comboBox
             //boton buscar de Consultas
+            
+            //Diana Victores
+            datobuscar = txtCadenaGeneradaConsulta.Text;
+            buscaren = cboQueryy.Text;
+
+            //Cargarconsultas(cboQueryy);
+            //Cargarconsultas(cboQueryy);
+
+            Capa_ControladorConsultas.csControldor crudbuscar = new Capa_ControladorConsultas.csControldor();
+            txtCadenaGeneradaConsulta.Text = "SELECT FROM" + "*" + "_" + "WHERE" + query + "_" + "INSERTED" + "";
+            
+            //Josue Amaya
+
+
         }
 
         private void btnagregarcamposeditar_Click(object sender, EventArgs e)
@@ -725,6 +743,17 @@ namespace Capa_VistaConsultas
 
         private void x(object sender, EventArgs e)
         {
+
+        }
+
+        private void btn_Ayuda_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tbpCreacion_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+           // Help.ShowHelp(this, "AyudaConsulta.chm", "ConsultaAvanzada.html");
 
         }
     }
