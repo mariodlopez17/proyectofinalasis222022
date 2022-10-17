@@ -203,9 +203,9 @@ namespace Capa_VistaConsultas
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(275, 21);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(157, 20);
+            this.label4.Size = new System.Drawing.Size(138, 20);
             this.label4.TabIndex = 33;
-            this.label4.Text = "Busqueda Avanzada";
+            this.label4.Text = "Busqueda Simple ";
             // 
             // btn_BuscarBA
             // 

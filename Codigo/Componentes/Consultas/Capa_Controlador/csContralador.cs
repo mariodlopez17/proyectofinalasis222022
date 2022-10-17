@@ -73,7 +73,7 @@ namespace Capa_ControladorConsultas
 
         //jonathan Xuya 
         OdbcConnection con = new OdbcConnection("FIL=MS Acces;DSN=colchoneria");
-        public bool InsertBusqueda(string _nomb, string _cons, string _area, string _camp, string _IDE)
+        public bool InsertBusqueda(string _nomb, string _cons, string _area, string _camp, string _cadena, string _IDE)
         {
             using (con)
             {
@@ -82,7 +82,8 @@ namespace Capa_ControladorConsultas
                 cmd.Connection = con;
 
                 #region Query
-                String query = @"INSERT INTO tbl_consultainteligente(nombre_consulta,tabla_consulta,campos_consultas,alias_consultas, Pk_Id) VALUE(?,?,?,?,?);";
+                String query = @"INSERT INTO tbl_consultainteligente
+                (nombre_consulta,tabla_consulta,campos_consultas,alias_consultas, cadena_consultas, Pk_Id) VALUE(?,?,?,?,?,?);";
                 #endregion
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = query;
@@ -91,7 +92,9 @@ namespace Capa_ControladorConsultas
                 cmd.Parameters.Add("@tabla_consulta", OdbcType.VarChar).Value = _cons;
                 cmd.Parameters.Add("@campos_consultas", OdbcType.VarChar).Value = _area;
                 cmd.Parameters.Add("@alias_consultas", OdbcType.VarChar).Value = _camp;
+                cmd.Parameters.Add("@cadena_consultas", OdbcType.VarChar).Value = _cadena;
                 cmd.Parameters.Add("@Pk_Id", OdbcType.Int).Value = _IDE;
+
 
                 cmd.ExecuteNonQuery();
                 con.Close();
