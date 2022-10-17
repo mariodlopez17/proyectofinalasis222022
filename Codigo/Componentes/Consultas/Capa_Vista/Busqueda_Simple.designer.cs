@@ -68,9 +68,9 @@ namespace Capa_VistaConsultas
             this.panelResultado.Controls.Add(this.btn_SalirBA);
             this.panelResultado.Controls.Add(this.label3);
             this.panelResultado.Controls.Add(this.dgvDato);
-            this.panelResultado.Location = new System.Drawing.Point(1, 0);
+            this.panelResultado.Location = new System.Drawing.Point(12, 12);
             this.panelResultado.Name = "panelResultado";
-            this.panelResultado.Size = new System.Drawing.Size(669, 325);
+            this.panelResultado.Size = new System.Drawing.Size(670, 321);
             this.panelResultado.TabIndex = 11;
             this.panelResultado.Visible = false;
             this.panelResultado.Paint += new System.Windows.Forms.PaintEventHandler(this.panelResultado_Paint);
@@ -169,7 +169,7 @@ namespace Capa_VistaConsultas
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(669, 323);
+            this.ClientSize = new System.Drawing.Size(695, 346);
             this.Controls.Add(this.panelResultado);
             this.Name = "Busqueda_Simple";
             this.Text = "Consulta Usuario Simple";

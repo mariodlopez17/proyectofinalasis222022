@@ -30,6 +30,7 @@ namespace Capa_VistaConsultas
         private void InitializeComponent()
         {
             this.panel12 = new System.Windows.Forms.Panel();
+            this.btn_Ayuda = new FontAwesome.Sharp.IconButton();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.btn_AgregarCadenaCreacion = new FontAwesome.Sharp.IconButton();
@@ -82,6 +83,7 @@ namespace Capa_VistaConsultas
             this.tbpCreacion = new System.Windows.Forms.TabPage();
             this.tbpConsultas = new System.Windows.Forms.TabPage();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.iconButton27 = new FontAwesome.Sharp.IconButton();
@@ -91,6 +93,7 @@ namespace Capa_VistaConsultas
             this.label16 = new System.Windows.Forms.Label();
             this.tbpEditar = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.iconButton11 = new FontAwesome.Sharp.IconButton();
             this.cbonombrebuscar = new System.Windows.Forms.ComboBox();
             this.txtCadenaGeneradaEDITAR = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
@@ -145,10 +148,10 @@ namespace Capa_VistaConsultas
             this.btneditar = new FontAwesome.Sharp.IconButton();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.iconButton13 = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.tbpBuscarEliminar = new System.Windows.Forms.TabPage();
             this.panel20 = new System.Windows.Forms.Panel();
+            this.iconButton14 = new FontAwesome.Sharp.IconButton();
             this.iconButton12 = new FontAwesome.Sharp.IconButton();
             this.iconButton28 = new FontAwesome.Sharp.IconButton();
             this.btnActualizar = new FontAwesome.Sharp.IconButton();
@@ -156,10 +159,6 @@ namespace Capa_VistaConsultas
             this.label32 = new System.Windows.Forms.Label();
             this.dgvBUSCARyELIMINAR = new System.Windows.Forms.DataGridView();
             this.txtNombreConsultaBusquedaElimar = new System.Windows.Forms.TextBox();
-            this.btn_Ayuda = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton11 = new FontAwesome.Sharp.IconButton();
-            this.iconButton14 = new FontAwesome.Sharp.IconButton();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -204,6 +203,20 @@ namespace Capa_VistaConsultas
             this.panel12.Size = new System.Drawing.Size(1103, 711);
             this.panel12.TabIndex = 1;
             this.panel12.Paint += new System.Windows.Forms.PaintEventHandler(this.panel12_Paint);
+            // 
+            // btn_Ayuda
+            // 
+            this.btn_Ayuda.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btn_Ayuda.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
+            this.btn_Ayuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_Ayuda.Location = new System.Drawing.Point(915, -3);
+            this.btn_Ayuda.Name = "btn_Ayuda";
+            this.btn_Ayuda.Size = new System.Drawing.Size(64, 68);
+            this.btn_Ayuda.TabIndex = 12;
+            this.btn_Ayuda.Text = "Ayuda";
+            this.btn_Ayuda.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Ayuda.UseVisualStyleBackColor = true;
+            this.btn_Ayuda.Click += new System.EventHandler(this.btn_Ayuda_Click);
             // 
             // btnEliminar
             // 
@@ -793,6 +806,19 @@ namespace Capa_VistaConsultas
             this.panel9.TabIndex = 1;
             this.panel9.BackColorChanged += new System.EventHandler(this.x);
             // 
+            // iconButton2
+            // 
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.iconButton2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.Location = new System.Drawing.Point(923, 3);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(64, 68);
+            this.iconButton2.TabIndex = 31;
+            this.iconButton2.Text = "Ayuda";
+            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconButton2.UseVisualStyleBackColor = true;
+            // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -850,6 +876,7 @@ namespace Capa_VistaConsultas
             // 
             // cboQueryy
             // 
+            this.cboQueryy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboQueryy.FormattingEnabled = true;
             this.cboQueryy.Location = new System.Drawing.Point(29, 46);
             this.cboQueryy.Name = "cboQueryy";
@@ -891,7 +918,6 @@ namespace Capa_VistaConsultas
             this.panel1.Controls.Add(this.btneditar);
             this.panel1.Controls.Add(this.textBox6);
             this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.iconButton13);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(6, 6);
             this.panel1.Name = "panel1";
@@ -899,9 +925,23 @@ namespace Capa_VistaConsultas
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // iconButton11
+            // 
+            this.iconButton11.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.iconButton11.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
+            this.iconButton11.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton11.Location = new System.Drawing.Point(876, 0);
+            this.iconButton11.Name = "iconButton11";
+            this.iconButton11.Size = new System.Drawing.Size(64, 68);
+            this.iconButton11.TabIndex = 40;
+            this.iconButton11.Text = "Ayuda";
+            this.iconButton11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconButton11.UseVisualStyleBackColor = true;
+            // 
             // cbonombrebuscar
             // 
             this.cbonombrebuscar.BackColor = System.Drawing.Color.White;
+            this.cbonombrebuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbonombrebuscar.FormattingEnabled = true;
             this.cbonombrebuscar.Location = new System.Drawing.Point(218, 22);
             this.cbonombrebuscar.Name = "cbonombrebuscar";
@@ -1538,21 +1578,6 @@ namespace Capa_VistaConsultas
             this.label15.TabIndex = 11;
             this.label15.Text = "Cadena generar";
             // 
-            // iconButton13
-            // 
-            this.iconButton13.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iconButton13.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
-            this.iconButton13.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton13.IconSize = 60;
-            this.iconButton13.Location = new System.Drawing.Point(495, 3);
-            this.iconButton13.Name = "iconButton13";
-            this.iconButton13.Size = new System.Drawing.Size(64, 58);
-            this.iconButton13.TabIndex = 29;
-            this.iconButton13.Text = "Buscar";
-            this.iconButton13.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton13.UseVisualStyleBackColor = true;
-            this.iconButton13.Click += new System.EventHandler(this.iconButton13_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -1587,6 +1612,19 @@ namespace Capa_VistaConsultas
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(976, 697);
             this.panel20.TabIndex = 18;
+            // 
+            // iconButton14
+            // 
+            this.iconButton14.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.iconButton14.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
+            this.iconButton14.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton14.Location = new System.Drawing.Point(779, 11);
+            this.iconButton14.Name = "iconButton14";
+            this.iconButton14.Size = new System.Drawing.Size(64, 68);
+            this.iconButton14.TabIndex = 23;
+            this.iconButton14.Text = "Ayuda";
+            this.iconButton14.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconButton14.UseVisualStyleBackColor = true;
             // 
             // iconButton12
             // 
@@ -1673,59 +1711,6 @@ namespace Capa_VistaConsultas
             this.txtNombreConsultaBusquedaElimar.Name = "txtNombreConsultaBusquedaElimar";
             this.txtNombreConsultaBusquedaElimar.Size = new System.Drawing.Size(300, 20);
             this.txtNombreConsultaBusquedaElimar.TabIndex = 9;
-            // 
-            // btn_Ayuda
-            // 
-            this.btn_Ayuda.IconChar = FontAwesome.Sharp.IconChar.Question;
-            this.btn_Ayuda.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
-            this.btn_Ayuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Ayuda.Location = new System.Drawing.Point(915, -3);
-            this.btn_Ayuda.Name = "btn_Ayuda";
-            this.btn_Ayuda.Size = new System.Drawing.Size(64, 68);
-            this.btn_Ayuda.TabIndex = 12;
-            this.btn_Ayuda.Text = "Ayuda";
-            this.btn_Ayuda.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Ayuda.UseVisualStyleBackColor = true;
-            this.btn_Ayuda.Click += new System.EventHandler(this.btn_Ayuda_Click);
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Question;
-            this.iconButton2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(923, 3);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(64, 68);
-            this.iconButton2.TabIndex = 31;
-            this.iconButton2.Text = "Ayuda";
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton2.UseVisualStyleBackColor = true;
-            // 
-            // iconButton11
-            // 
-            this.iconButton11.IconChar = FontAwesome.Sharp.IconChar.Question;
-            this.iconButton11.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
-            this.iconButton11.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton11.Location = new System.Drawing.Point(876, 0);
-            this.iconButton11.Name = "iconButton11";
-            this.iconButton11.Size = new System.Drawing.Size(64, 68);
-            this.iconButton11.TabIndex = 40;
-            this.iconButton11.Text = "Ayuda";
-            this.iconButton11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton11.UseVisualStyleBackColor = true;
-            // 
-            // iconButton14
-            // 
-            this.iconButton14.IconChar = FontAwesome.Sharp.IconChar.Question;
-            this.iconButton14.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
-            this.iconButton14.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton14.Location = new System.Drawing.Point(779, 11);
-            this.iconButton14.Name = "iconButton14";
-            this.iconButton14.Size = new System.Drawing.Size(64, 68);
-            this.iconButton14.TabIndex = 23;
-            this.iconButton14.Text = "Ayuda";
-            this.iconButton14.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton14.UseVisualStyleBackColor = true;
             // 
             // Busqueda
             // 
@@ -1841,7 +1826,6 @@ namespace Capa_VistaConsultas
         private FontAwesome.Sharp.IconButton btnNuevo;
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton btneditar;
-        private FontAwesome.Sharp.IconButton iconButton13;
         private FontAwesome.Sharp.IconButton iconButton12;
         private FontAwesome.Sharp.IconButton iconButton28;
         private FontAwesome.Sharp.IconButton btnActualizar;

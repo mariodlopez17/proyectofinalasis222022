@@ -49,6 +49,8 @@ namespace Capa_VistaConsultas
             panelResultado.Visible = false;
             btn_BuscarBA.Enabled = true;
             cbox_columnas.Items.Clear();
+            lbl_cadena.Text = "";
+            btn_BuscarBA.Enabled = true;
         }
 
         private void btn_BuscarBA_Click(object sender, EventArgs e)
@@ -92,6 +94,7 @@ namespace Capa_VistaConsultas
 
         public void CargarColumnas(ComboBox cbox_columnas, String tableN)
         {
+            cbox_columnas.Items.Clear();
             int ndgv = dgvDato.Columns.Count;
 
             for (int i = 0; i < ndgv; i++)
@@ -152,6 +155,21 @@ namespace Capa_VistaConsultas
             datobuscar = "";
             buscaren = "";
             txt_BuscaPor.Text = "";
+        }
+
+        private void btn_HelpmeBS_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "../../../../Ayuda/Componentes/Consultas/Ayuda_Busqueda_Avanzada/BsimpleHelp.chm", "Bavanzada.html");
+        }
+
+        private void Busqueda_Avanzada_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelResultado_Paint(object sender, PaintEventArgs e)
+        {
+            btn_BuscarBA.Enabled = false;
         }
     }
 }

@@ -174,12 +174,12 @@ namespace Capa_VistaConsultas
 
        
         //Diana Victores 9959-19-1471
-        public void actualizaconsultas()
+        public void actualizaconsultas(DataGridView dataGridView)
         {
             //metodo actualizaconsultas para boton consultas de Buscar/Eliminar
             //Diana Victores 9959-19-1471
             DataTable dt = cn.llenartb2();
-            dgvBUSCARyELIMINAR.DataSource = dt;
+            dataGridView.DataSource = dt;
         }
 
         //boton eliminar de la forma Buscar/Eliminar - Diana Victores 9959-19-1471
@@ -193,7 +193,7 @@ namespace Capa_VistaConsultas
                 
             
             MessageBox.Show("Las consultas con nombre " + txtNombreConsultaBusquedaElimar.Text + " Han sido eliminadas");
-            actualizaconsultas();
+            actualizaconsultas(dgvBUSCARyELIMINAR);
             txtNombreConsultaBusquedaElimar.Text = "";
         }
         }
@@ -228,12 +228,13 @@ namespace Capa_VistaConsultas
         {
             //Joselyne Rivera 0901-17-05
             //boton Agregar Editar
-            actualizaconsultas();
+            actualizaconsultas(dgvBUSCARyELIMINAR);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            CargarConsultas(cboQueryy);
+            CargarConsultas(cbonombrebuscar);
         }
 
         private void cboCampoAgruparEDITAR_SelectedIndexChanged(object sender, EventArgs e)
@@ -716,6 +717,7 @@ namespace Capa_VistaConsultas
         String buscaren = "";
         private void iconButton27_Click(object sender, EventArgs e)
         {
+            actualizaconsultas(dataGridView2);
             // Joselyne Rivera 0901-18-  - No se realizo
             // Diana Victores 9959-19-1471 -- llamada al text
             //Josue Amaya 0901-19-12421   --llamada del comboBox
@@ -724,6 +726,7 @@ namespace Capa_VistaConsultas
             //Diana Victores
             datobuscar = txtCadenaGeneradaConsulta.Text;
             buscaren = cboQueryy.Text;
+            actualizaconsultas2(txtCadenaGeneradaConsulta.Text);
 
             //Cargarconsultas(cboQueryy);
             //Cargarconsultas(cboQueryy);
@@ -755,6 +758,24 @@ namespace Capa_VistaConsultas
         {
            // Help.ShowHelp(this, "AyudaConsulta.chm", "ConsultaAvanzada.html");
 
+        }
+
+        public void CargarConsultas(ComboBox cboQueryy)
+        {
+            con.Open();
+            DataTable dt2 = new DataTable();
+            //cn.Nconsultas(dt2);
+            OdbcCommand comand = new OdbcCommand();
+            comand.Connection = con;
+            comand.CommandType = CommandType.Text;
+            string cadena = "SELECT nombre_consulta FROM tbl_consultainteligente";
+            comand.CommandText = cadena;
+            OdbcDataAdapter datos = new OdbcDataAdapter(comand);
+            datos.Fill(dt2);
+            cboQueryy.DataSource = dt2;
+            cboQueryy.DisplayMember = "tbl_consultainteligente";
+            cboQueryy.ValueMember = "nombre_consulta";
+            con.Close();
         }
     }
  }
