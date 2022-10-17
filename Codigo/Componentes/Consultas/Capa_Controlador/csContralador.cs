@@ -150,6 +150,27 @@ namespace Capa_ControladorConsultas
             }
             return true;
         }
+        public DataTable Nconsultas(DataTable dt2)
+        {
+            OdbcConnection conx = new OdbcConnection("Dsn = Colchoneria");
+            try
+            {
+                conx.Open();
+                OdbcCommand comand = new OdbcCommand();
+                comand.Connection = conx;
+                comand.CommandType = CommandType.Text;
+                string cadena = "SELECT nombre_consulta FROM tbl_consultainteligente";
+                comand.CommandText = cadena;
+                OdbcDataAdapter datos = new OdbcDataAdapter(comand);
+                datos.Fill(dt2);
+                conx.Close();
+            }
+            catch
+            {
+
+            }
+            return (dt2);
+        }
 
     }
 }
