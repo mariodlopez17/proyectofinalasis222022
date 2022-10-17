@@ -45,6 +45,7 @@ namespace Capa_VistaConsultas
             this.btn_BuscarBA = new FontAwesome.Sharp.IconButton();
             this.cbo_buscaren = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_HelpmeBS = new FontAwesome.Sharp.IconButton();
             this.panelResultado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDato)).BeginInit();
             this.pnl_BuscarBA.SuspendLayout();
@@ -63,11 +64,12 @@ namespace Capa_VistaConsultas
             this.panelResultado.Controls.Add(this.bnt_nuevaBA);
             this.panelResultado.Controls.Add(this.label3);
             this.panelResultado.Controls.Add(this.dgvDato);
-            this.panelResultado.Location = new System.Drawing.Point(0, 148);
+            this.panelResultado.Location = new System.Drawing.Point(12, 157);
             this.panelResultado.Name = "panelResultado";
             this.panelResultado.Size = new System.Drawing.Size(669, 325);
             this.panelResultado.TabIndex = 13;
             this.panelResultado.Visible = false;
+            this.panelResultado.Paint += new System.Windows.Forms.PaintEventHandler(this.panelResultado_Paint);
             // 
             // lbl_cadena
             // 
@@ -187,11 +189,12 @@ namespace Capa_VistaConsultas
             // pnl_BuscarBA
             // 
             this.pnl_BuscarBA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
+            this.pnl_BuscarBA.Controls.Add(this.btn_HelpmeBS);
             this.pnl_BuscarBA.Controls.Add(this.label4);
             this.pnl_BuscarBA.Controls.Add(this.btn_BuscarBA);
             this.pnl_BuscarBA.Controls.Add(this.cbo_buscaren);
             this.pnl_BuscarBA.Controls.Add(this.label2);
-            this.pnl_BuscarBA.Location = new System.Drawing.Point(0, 0);
+            this.pnl_BuscarBA.Location = new System.Drawing.Point(12, 9);
             this.pnl_BuscarBA.Name = "pnl_BuscarBA";
             this.pnl_BuscarBA.Size = new System.Drawing.Size(669, 142);
             this.pnl_BuscarBA.TabIndex = 12;
@@ -242,15 +245,31 @@ namespace Capa_VistaConsultas
             this.label2.TabIndex = 5;
             this.label2.Text = "Seleccione Tabla :";
             // 
+            // btn_HelpmeBS
+            // 
+            this.btn_HelpmeBS.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btn_HelpmeBS.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
+            this.btn_HelpmeBS.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_HelpmeBS.Location = new System.Drawing.Point(12, 12);
+            this.btn_HelpmeBS.Name = "btn_HelpmeBS";
+            this.btn_HelpmeBS.Size = new System.Drawing.Size(64, 68);
+            this.btn_HelpmeBS.TabIndex = 41;
+            this.btn_HelpmeBS.Text = "Ayuda";
+            this.btn_HelpmeBS.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_HelpmeBS.UseVisualStyleBackColor = true;
+            this.btn_HelpmeBS.Click += new System.EventHandler(this.btn_HelpmeBS_Click);
+            // 
             // Busqueda_Avanzada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(667, 472);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(691, 494);
             this.Controls.Add(this.panelResultado);
             this.Controls.Add(this.pnl_BuscarBA);
             this.Name = "Busqueda_Avanzada";
             this.Text = "Busqueda Simple";
+            this.Load += new System.EventHandler(this.Busqueda_Avanzada_Load);
             this.panelResultado.ResumeLayout(false);
             this.panelResultado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDato)).EndInit();
@@ -278,5 +297,6 @@ namespace Capa_VistaConsultas
         private FontAwesome.Sharp.IconButton btn_BuscarBA;
         private System.Windows.Forms.ComboBox cbo_buscaren;
         private System.Windows.Forms.Label label2;
+        private FontAwesome.Sharp.IconButton btn_HelpmeBS;
     }
 }
