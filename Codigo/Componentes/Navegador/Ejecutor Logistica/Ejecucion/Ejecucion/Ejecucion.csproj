@@ -48,7 +48,7 @@
       <HintPath>..\..\Logistica\VistaLogistica\bin\Debug\VistaLogistica.dll</HintPath>
     </Reference>
     <Reference Include="Vista_Seguridad">
-      <HintPath>..\..\..\..\..\..\..\..\Proyecto\proyectofinalasis222022\Codigo\Componentes\Seguridad\Colchoneria\Capa_vista\bin\Debug\Vista_Seguridad.dll</HintPath>
+      <HintPath>..\..\..\..\Seguridad\Colchoneria\Capa_vista\bin\Debug\Vista_Seguridad.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

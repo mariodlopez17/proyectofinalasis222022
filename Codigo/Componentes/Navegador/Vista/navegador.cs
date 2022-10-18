@@ -305,9 +305,9 @@ namespace NavegadorVista
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
-            cnseg.setBtitacora(idApp, "Reportes");
-            CapaVista.Consulta rp = new CapaVista.Consulta();
-            rp.Show();
+            //cnseg.setBtitacora(idApp, "Reportes");
+            //CapaVista.Consulta rp = new CapaVista.Consulta();
+            //rp.Show();
             //Reportes.Vista cr = new Reportes.Vista();
             /*
              * Form 'fcr' = new 'cr.BusquedaAvanzada';
