@@ -31,9 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CapaVista">
-      <HintPath>..\..\..\..\..\..\Nueva carpeta\proyectofinalasis222022\Codigo\Componentes\Reporteador\CapaVista\bin\Debug\CapaVista.dll</HintPath>
-    </Reference>
     <Reference Include="Capa_VistaConsultas, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Consultas2\proyectofinalasis222022\Codigo\Componentes\Consultas\Capa_Vista\bin\Debug\Capa_VistaConsultas.dll</HintPath>

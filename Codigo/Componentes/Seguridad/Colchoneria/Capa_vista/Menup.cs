@@ -43,14 +43,15 @@ namespace Vista_Seguridad
 
         public void btlogistica_Click(object sender, EventArgs e)
         {
-            /*  VistaLogistica.Menu b = new VistaLogistica.Menu();
+            VistaLogistica.Menu b = new VistaLogistica.Menu();
               b.Show();
-            cn.setBtitacora("2000", "Ingreso Logistica");*/
+            cn.setBtitacora("2000", "Ingreso Logistica");
         }
 
         private void btnLogout_Click_1(object sender, EventArgs e)
         {
             Login b = new Login();
+            cn.setBtitacora("999", "Cerro Sesion");
             b.Show();
             this.Close();
         }
