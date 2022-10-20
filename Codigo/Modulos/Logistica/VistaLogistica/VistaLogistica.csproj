@@ -139,6 +139,12 @@
     <Compile Include="Ruta.Designer.cs">
       <DependentUpon>Ruta.cs</DependentUpon>
     </Compile>
+    <Compile Include="TipoTransporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TipoTransporte.Designer.cs">
+      <DependentUpon>TipoTransporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transporte.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ruta.resx">
       <DependentUpon>Ruta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TipoTransporte.resx">
+      <DependentUpon>TipoTransporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transporte.resx">
       <DependentUpon>Transporte.cs</DependentUpon>
