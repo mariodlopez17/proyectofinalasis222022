@@ -28,14 +28,54 @@ namespace VistaLogistica
             }
         }
 
-        private void Bodega_Load(object sender, EventArgs e)
+        public void txtcheck()
         {
-            this.txtact.Visible = false;
+            if (txtact.Text=="1")
+            {
+                checkBox1.Checked = true;
+            }
+            else
+            {
+                checkBox1.Checked = false;
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void navegador1_Load(object sender, EventArgs e)
+        {
+            
+            NavegadorVista.Navegador.idApp = "2003";
+            TextBox[] Grupotextbox = { txtBuscar, txtnombre, txtact };
+            TextBox[] Idtextbox = { txtBuscar, txtnombre,txtact };
+            navegador1.textbox = Grupotextbox;
+            navegador1.tabla = dtgBodega;
+            navegador1.textboxi = Idtextbox;
+            navegador1.actual = this;
+            navegador1.cargar(dtgBodega, Grupotextbox, "bd_logistica");
+        }
+
+        private void navegador1_Click(object sender, EventArgs e)
+        {
+            checkbox();
+        }
+
+        private void navegador1_MouseClick(object sender, MouseEventArgs e)
+        {
+            checkbox();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            checkbox();
+        }
+
+        private void txtact_TextChanged(object sender, EventArgs e)
+        {
+            txtcheck();
         }
     }
 }

@@ -38,11 +38,10 @@
       <HintPath>..\ControladorLogistica\bin\Debug\ControladorLogistica.dll</HintPath>
     </Reference>
     <Reference Include="NavegadorVista">
-      <HintPath>..\..\..\proyectofinalasis222022\Codigo\Componentes\Navegador\Vista\bin\Debug\NavegadorVista.dll</HintPath>
+      <HintPath>..\..\..\Componentes\Navegador\Vista\bin\Debug\NavegadorVista.dll</HintPath>
     </Reference>
-    <Reference Include="Seguridad_Controlador, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\proyectofinalasis222022\Codigo\Componentes\Seguridad\Colchoneria\Capa_controlador\bin\Debug\Seguridad_Controlador.dll</HintPath>
+    <Reference Include="Seguridad_Controlador">
+      <HintPath>..\..\..\Componentes\Seguridad\Colchoneria\Capa_controlador\bin\Debug\Seguridad_Controlador.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

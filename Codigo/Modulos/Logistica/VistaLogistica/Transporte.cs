@@ -26,5 +26,22 @@ namespace VistaLogistica
         {
             this.Close();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void navegador1_Load(object sender, EventArgs e)
+        {
+            NavegadorVista.Navegador.idApp = "2005";
+            TextBox[] Grupotextbox = { txtBuscar, txtMarca, txtPeso,txtTipo, txtact };
+            TextBox[] Idtextbox = { txtBuscar, txtMarca, txtPeso, txtTipo, txtact };
+            navegador1.textbox = Grupotextbox;
+            navegador1.tabla = dtgBodega;
+            navegador1.textboxi = Idtextbox;
+            navegador1.actual = this;
+            navegador1.cargar(dtgBodega, Grupotextbox, "bd_logistica");
+        }
     }
 }

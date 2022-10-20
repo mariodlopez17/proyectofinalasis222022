@@ -32,9 +32,9 @@ namespace VistaLogistica
             this.dtgLinea = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtLinea = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.navegador1 = new NavegadorVista.Navegador();
             ((System.ComponentModel.ISupportInitialize)(this.dtgLinea)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -43,12 +43,12 @@ namespace VistaLogistica
             // dtgLinea
             // 
             this.dtgLinea.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgLinea.Location = new System.Drawing.Point(12, 330);
-            this.dtgLinea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtgLinea.Location = new System.Drawing.Point(9, 268);
+            this.dtgLinea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtgLinea.Name = "dtgLinea";
             this.dtgLinea.RowHeadersWidth = 51;
             this.dtgLinea.RowTemplate.Height = 24;
-            this.dtgLinea.Size = new System.Drawing.Size(753, 245);
+            this.dtgLinea.Size = new System.Drawing.Size(565, 199);
             this.dtgLinea.TabIndex = 48;
             this.dtgLinea.Tag = "tbl_linea";
             // 
@@ -58,71 +58,64 @@ namespace VistaLogistica
             this.groupBox2.Controls.Add(this.txtBuscar);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(136, 200);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Location = new System.Drawing.Point(102, 162);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(544, 111);
+            this.groupBox2.Size = new System.Drawing.Size(408, 90);
             this.groupBox2.TabIndex = 47;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos";
             // 
             // txtLinea
             // 
-            this.txtLinea.Location = new System.Drawing.Point(214, 81);
-            this.txtLinea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLinea.Location = new System.Drawing.Point(160, 66);
             this.txtLinea.Name = "txtLinea";
-            this.txtLinea.Size = new System.Drawing.Size(235, 22);
+            this.txtLinea.Size = new System.Drawing.Size(177, 20);
             this.txtLinea.TabIndex = 1;
             this.txtLinea.Tag = "nombre_linea";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(50, 84);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 17);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Nombre de la Linea";
-            // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(214, 41);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBuscar.Location = new System.Drawing.Point(160, 33);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(235, 22);
+            this.txtBuscar.Size = new System.Drawing.Size(177, 20);
             this.txtBuscar.TabIndex = 1;
             this.txtBuscar.Tag = "pk_codigo_linea";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(56, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(42, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 17);
+            this.label1.Size = new System.Drawing.Size(95, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo de la Linea";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(38, 68);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Nombre de la Linea";
+            // 
             // navegador1
             // 
-            this.navegador1.Location = new System.Drawing.Point(0, 5);
-            this.navegador1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.navegador1.Location = new System.Drawing.Point(0, 4);
             this.navegador1.Name = "navegador1";
-            this.navegador1.Size = new System.Drawing.Size(765, 187);
+            this.navegador1.Size = new System.Drawing.Size(574, 152);
             this.navegador1.TabIndex = 49;
+            this.navegador1.Tag = "";
             this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
             // 
             // Linea
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(777, 586);
+            this.ClientSize = new System.Drawing.Size(583, 476);
             this.Controls.Add(this.navegador1);
             this.Controls.Add(this.dtgLinea);
             this.Controls.Add(this.groupBox2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Linea";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Linea";
