@@ -19,6 +19,7 @@ namespace CapaVistaNomina
 
         private void navegador1_Load(object sender, EventArgs e)
         {
+            //anio - mes - dia orden para ingresar la fecha
             NavegadorVista.Navegador.idApp = "6007";
             TextBox[] Grupotextbox = { txtIdHorasExtra, txtIdTrabajador, txtFechaHrs, txtCantidadhrsExtra };
             TextBox[] Idtextbox = { txtIdHorasExtra, txtIdTrabajador, txtFechaHrs, txtCantidadhrsExtra };
