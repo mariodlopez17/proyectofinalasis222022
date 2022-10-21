@@ -30,17 +30,17 @@ namespace VistaLogistica
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtact = new System.Windows.Forms.TextBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.txtPeso = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtTipo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtact = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.dtgBodega = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.navegador1 = new NavegadorVista.Navegador();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgBodega)).BeginInit();
@@ -66,21 +66,60 @@ namespace VistaLogistica
             this.groupBox1.Text = "Datos";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // txtact
+            // 
+            this.txtact.Location = new System.Drawing.Point(356, 104);
+            this.txtact.Name = "txtact";
+            this.txtact.Size = new System.Drawing.Size(17, 20);
+            this.txtact.TabIndex = 2;
+            this.txtact.Tag = "estado";
+            this.txtact.Visible = false;
+            this.txtact.TextChanged += new System.EventHandler(this.txtact_TextChanged);
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(129, 13);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(216, 20);
+            this.txtBuscar.TabIndex = 1;
+            this.txtBuscar.Tag = "pk_codigo_transporte";
+            // 
             // txtPeso
             // 
             this.txtPeso.Location = new System.Drawing.Point(129, 114);
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(212, 20);
             this.txtPeso.TabIndex = 5;
+            this.txtPeso.Tag = "peso";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(111, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Codigo del Transporte";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(356, 81);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(56, 17);
+            this.checkBox1.TabIndex = 1;
+            this.checkBox1.Text = "Activo";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(6, 117);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 13);
+            this.label4.Size = new System.Drawing.Size(48, 13);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Peso del Transporte";
+            this.label4.Text = "Tonelaje";
             // 
             // txtTipo
             // 
@@ -88,6 +127,7 @@ namespace VistaLogistica
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(212, 20);
             this.txtTipo.TabIndex = 3;
+            this.txtTipo.Tag = "fk_tipo";
             // 
             // label3
             // 
@@ -104,6 +144,7 @@ namespace VistaLogistica
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(212, 20);
             this.txtMarca.TabIndex = 1;
+            this.txtMarca.Tag = "marca";
             // 
             // label2
             // 
@@ -113,25 +154,6 @@ namespace VistaLogistica
             this.label2.Size = new System.Drawing.Size(108, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Marca del Transporte";
-            // 
-            // txtact
-            // 
-            this.txtact.Location = new System.Drawing.Point(356, 104);
-            this.txtact.Name = "txtact";
-            this.txtact.Size = new System.Drawing.Size(17, 20);
-            this.txtact.TabIndex = 2;
-            this.txtact.Tag = "estado_aplicacion";
-            this.txtact.Visible = false;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(356, 81);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(56, 17);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "Activo";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // dtgBodega
             // 
@@ -143,22 +165,7 @@ namespace VistaLogistica
             this.dtgBodega.RowTemplate.Height = 24;
             this.dtgBodega.Size = new System.Drawing.Size(562, 276);
             this.dtgBodega.TabIndex = 65;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Codigo del Transporte";
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Location = new System.Drawing.Point(129, 13);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(216, 20);
-            this.txtBuscar.TabIndex = 1;
+            this.dtgBodega.Tag = "tbl_transporte";
             // 
             // navegador1
             // 

@@ -24,7 +24,7 @@ namespace VistaLogistica
             InitializeComponent();
             customizeDesing();
 
-            Button[] apps = { btnMarca, btnLinea, btnBodegas, btnProductos, btntrans_porte, btnRuta, btnConductor, btnExistenciaBodegas, btnLotes, btnEnvios, btnMovimientos, btnInventario, btseguridadsegundo, btrayuda };
+            Button[] apps = { btnMarca, btnLinea, btnBodegas, btnProductos, btntrans_porte, btnRuta, btnConductor, Btntipotransporte, btnExistenciaBodegas, btnLotes, btnEnvios, BtnTraslados, btnMovimientos, btnInventario, btseguridadsegundo, btrayuda };
             cnseg.deshabilitarApps(apps);
 
             cnseg.getAccesoApp(2001, apps[0]);
@@ -34,18 +34,20 @@ namespace VistaLogistica
             cnseg.getAccesoApp(2005, apps[4]);
             cnseg.getAccesoApp(2006, apps[5]);
             cnseg.getAccesoApp(2007, apps[6]);
+            cnseg.getAccesoApp(2008, apps[7]);
 
 
-            cnseg.getAccesoApp(2101, apps[7]);
-            cnseg.getAccesoApp(2102, apps[8]);
-            cnseg.getAccesoApp(2103, apps[9]);
+            cnseg.getAccesoApp(2101, apps[8]);
+            cnseg.getAccesoApp(2102, apps[9]);
+            cnseg.getAccesoApp(2103, apps[10]);
+            cnseg.getAccesoApp(2104, apps[11]);
 
-            cnseg.getAccesoApp(2201, apps[10]);
-            cnseg.getAccesoApp(2202, apps[11]);
+            cnseg.getAccesoApp(2201, apps[12]);
+            cnseg.getAccesoApp(2202, apps[13]);
 
-            cnseg.getAccesoApp(2301, apps[12]);
+            cnseg.getAccesoApp(2301, apps[14]);
 
-            cnseg.getAccesoApp(2401, apps[13]);
+            cnseg.getAccesoApp(2401, apps[15]);
 
         }
         private void customizeDesing()
@@ -274,6 +276,24 @@ namespace VistaLogistica
         private void btnSalida_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TipoTransporte b = new TipoTransporte();
+            b.MdiParent = this;
+            b.Show();
+            hideSubMenu();
+            pictureBox2.Visible = false;
+        }
+
+        private void BtnTraslados_Click_1(object sender, EventArgs e)
+        {
+            Traslados b = new Traslados();
+            b.MdiParent = this;
+            b.Show();
+            hideSubMenu();
+            pictureBox2.Visible = false;
         }
     }
 }

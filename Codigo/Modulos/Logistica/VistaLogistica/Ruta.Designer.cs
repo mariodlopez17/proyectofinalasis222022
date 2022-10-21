@@ -29,60 +29,33 @@ namespace VistaLogistica
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtPeso = new System.Windows.Forms.TextBox();
+            this.TxtDesc = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtTipo = new System.Windows.Forms.TextBox();
+            this.TxtCiudad = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtMarca = new System.Windows.Forms.TextBox();
+            this.TxtZona = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnLimpiar = new System.Windows.Forms.Button();
-            this.dtgBodega = new System.Windows.Forms.DataGridView();
-            this.groupBox2.SuspendLayout();
+            this.dtgRuta = new System.Windows.Forms.DataGridView();
+            this.navegador1 = new NavegadorVista.Navegador();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgBodega)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgRuta)).BeginInit();
             this.SuspendLayout();
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btnBuscar);
-            this.groupBox2.Controls.Add(this.txtBuscar);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(409, 71);
-            this.groupBox2.TabIndex = 58;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Modificar";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(322, 31);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 2;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(100, 33);
+            this.txtBuscar.Location = new System.Drawing.Point(124, 19);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(216, 20);
             this.txtBuscar.TabIndex = 1;
+            this.txtBuscar.Tag = "pk_codigo_ruta";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(2, 36);
+            this.label1.Location = new System.Drawing.Point(23, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 13);
             this.label1.TabIndex = 0;
@@ -90,167 +63,122 @@ namespace VistaLogistica
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtPeso);
+            this.groupBox1.Controls.Add(this.TxtDesc);
+            this.groupBox1.Controls.Add(this.txtBuscar);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtTipo);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.TxtCiudad);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtMarca);
+            this.groupBox1.Controls.Add(this.TxtZona);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 89);
+            this.groupBox1.Location = new System.Drawing.Point(74, 161);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(409, 126);
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
             // 
-            // txtPeso
+            // TxtDesc
             // 
-            this.txtPeso.Location = new System.Drawing.Point(124, 90);
-            this.txtPeso.Name = "txtPeso";
-            this.txtPeso.Size = new System.Drawing.Size(212, 20);
-            this.txtPeso.TabIndex = 5;
+            this.TxtDesc.Location = new System.Drawing.Point(124, 100);
+            this.TxtDesc.Name = "TxtDesc";
+            this.TxtDesc.Size = new System.Drawing.Size(212, 20);
+            this.TxtDesc.TabIndex = 5;
+            this.TxtDesc.Tag = "descripcion";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(52, 93);
+            this.label4.Location = new System.Drawing.Point(23, 103);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 13);
             this.label4.TabIndex = 4;
             this.label4.Text = "Descripcion";
             // 
-            // txtTipo
+            // TxtCiudad
             // 
-            this.txtTipo.Location = new System.Drawing.Point(124, 55);
-            this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(212, 20);
-            this.txtTipo.TabIndex = 3;
+            this.TxtCiudad.Location = new System.Drawing.Point(124, 74);
+            this.TxtCiudad.Name = "TxtCiudad";
+            this.TxtCiudad.Size = new System.Drawing.Size(212, 20);
+            this.TxtCiudad.TabIndex = 3;
+            this.TxtCiudad.Tag = "ciudad";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(52, 58);
+            this.label3.Location = new System.Drawing.Point(23, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Ciudad";
             // 
-            // txtMarca
+            // TxtZona
             // 
-            this.txtMarca.Location = new System.Drawing.Point(124, 19);
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(212, 20);
-            this.txtMarca.TabIndex = 1;
+            this.TxtZona.Location = new System.Drawing.Point(124, 48);
+            this.TxtZona.Name = "TxtZona";
+            this.TxtZona.Size = new System.Drawing.Size(212, 20);
+            this.TxtZona.TabIndex = 1;
+            this.TxtZona.Tag = "zona";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(52, 22);
+            this.label2.Location = new System.Drawing.Point(23, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Zona";
             // 
-            // btnEliminar
+            // dtgRuta
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(261, 221);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(77, 35);
-            this.btnEliminar.TabIndex = 69;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.dtgRuta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgRuta.Location = new System.Drawing.Point(12, 292);
+            this.dtgRuta.Margin = new System.Windows.Forms.Padding(2);
+            this.dtgRuta.Name = "dtgRuta";
+            this.dtgRuta.RowHeadersWidth = 51;
+            this.dtgRuta.RowTemplate.Height = 24;
+            this.dtgRuta.Size = new System.Drawing.Size(564, 217);
+            this.dtgRuta.TabIndex = 70;
+            this.dtgRuta.Tag = "tbl_ruta";
             // 
-            // btnSalir
+            // navegador1
             // 
-            this.btnSalir.Location = new System.Drawing.Point(344, 221);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(77, 35);
-            this.btnSalir.TabIndex = 68;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Location = new System.Drawing.Point(177, 221);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(77, 35);
-            this.btnModificar.TabIndex = 67;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Location = new System.Drawing.Point(95, 221);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(77, 35);
-            this.btnGuardar.TabIndex = 66;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Location = new System.Drawing.Point(12, 221);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(77, 35);
-            this.btnLimpiar.TabIndex = 65;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            // 
-            // dtgBodega
-            // 
-            this.dtgBodega.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgBodega.Location = new System.Drawing.Point(12, 261);
-            this.dtgBodega.Margin = new System.Windows.Forms.Padding(2);
-            this.dtgBodega.Name = "dtgBodega";
-            this.dtgBodega.RowHeadersWidth = 51;
-            this.dtgBodega.RowTemplate.Height = 24;
-            this.dtgBodega.Size = new System.Drawing.Size(409, 317);
-            this.dtgBodega.TabIndex = 70;
+            this.navegador1.Location = new System.Drawing.Point(2, 7);
+            this.navegador1.Name = "navegador1";
+            this.navegador1.Size = new System.Drawing.Size(574, 152);
+            this.navegador1.TabIndex = 71;
+            this.navegador1.Tag = "";
+            this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
             // 
             // Ruta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(433, 587);
-            this.Controls.Add(this.dtgBodega);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.btnLimpiar);
+            this.ClientSize = new System.Drawing.Size(587, 513);
+            this.Controls.Add(this.navegador1);
+            this.Controls.Add(this.dtgRuta);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.groupBox2);
             this.Name = "Ruta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ruta";
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgBodega)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgRuta)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtPeso;
+        private System.Windows.Forms.TextBox TxtDesc;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtTipo;
+        private System.Windows.Forms.TextBox TxtCiudad;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtMarca;
+        private System.Windows.Forms.TextBox TxtZona;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnLimpiar;
-        private System.Windows.Forms.DataGridView dtgBodega;
+        private System.Windows.Forms.DataGridView dtgRuta;
+        private NavegadorVista.Navegador navegador1;
     }
 }

@@ -10,28 +10,23 @@ using System.Windows.Forms;
 
 namespace VistaLogistica
 {
-    public partial class Ruta : Form
+    public partial class Traslados : Form
     {
-        public Ruta()
+        public Traslados()
         {
             InitializeComponent();
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
-
         private void navegador1_Load(object sender, EventArgs e)
         {
-            NavegadorVista.Navegador.idApp = "2006";
-            TextBox[] Grupotextbox = { txtBuscar, TxtZona, TxtCiudad, TxtDesc };
-            TextBox[] Idtextbox = { txtBuscar, TxtZona, TxtCiudad, TxtDesc };
+            NavegadorVista.Navegador.idApp = "2104";
+            TextBox[] Grupotextbox = { TxtCodigo, TxtBodegaE, TxtBodegaS, TxtProd, TxtCantidad };
+            TextBox[] Idtextbox = { TxtCodigo, TxtBodegaE, TxtBodegaS, TxtProd, TxtCantidad };
             navegador1.textbox = Grupotextbox;
-            navegador1.tabla = dtgRuta;
+            navegador1.tabla = DtgTraslados;
             navegador1.textboxi = Idtextbox;
             navegador1.actual = this;
-            navegador1.cargar(dtgRuta, Grupotextbox, "bd_logistica");
+            navegador1.cargar(DtgTraslados, Grupotextbox, "bd_logistica");
         }
     }
 }

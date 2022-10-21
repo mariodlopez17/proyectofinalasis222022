@@ -35,19 +35,13 @@ namespace VistaLogistica
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.txtIdProducto = new System.Windows.Forms.TextBox();
-            this.txtIdAplicacion = new System.Windows.Forms.TextBox();
             this.txtIdBodega = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dtgExisBodega = new System.Windows.Forms.DataGridView();
-            this.dtgBodega_Producto = new System.Windows.Forms.DataGridView();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.navegador1 = new NavegadorVista.Navegador();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgExisBodega)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgBodega_Producto)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -57,29 +51,29 @@ namespace VistaLogistica
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.txtIdProducto);
-            this.groupBox1.Controls.Add(this.txtIdAplicacion);
             this.groupBox1.Controls.Add(this.txtIdBodega);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(46, 170);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(462, 110);
+            this.groupBox1.Size = new System.Drawing.Size(462, 127);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
             // 
             // txtExistencia
             // 
-            this.txtExistencia.Location = new System.Drawing.Point(190, 79);
+            this.txtExistencia.Location = new System.Drawing.Point(127, 91);
             this.txtExistencia.Name = "txtExistencia";
             this.txtExistencia.Size = new System.Drawing.Size(177, 20);
             this.txtExistencia.TabIndex = 46;
+            this.txtExistencia.Tag = "existencia";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label3.Location = new System.Drawing.Point(109, 78);
+            this.label3.Location = new System.Drawing.Point(46, 93);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 18);
             this.label3.TabIndex = 45;
@@ -96,7 +90,7 @@ namespace VistaLogistica
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(230, 45);
+            this.button2.Location = new System.Drawing.Point(224, 42);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(25, 24);
             this.button2.TabIndex = 43;
@@ -105,19 +99,11 @@ namespace VistaLogistica
             // 
             // txtIdProducto
             // 
-            this.txtIdProducto.Location = new System.Drawing.Point(258, 46);
+            this.txtIdProducto.Location = new System.Drawing.Point(255, 46);
             this.txtIdProducto.Name = "txtIdProducto";
             this.txtIdProducto.Size = new System.Drawing.Size(174, 20);
             this.txtIdProducto.TabIndex = 42;
-            this.txtIdProducto.Tag = "";
-            // 
-            // txtIdAplicacion
-            // 
-            this.txtIdAplicacion.Location = new System.Drawing.Point(435, 46);
-            this.txtIdAplicacion.Name = "txtIdAplicacion";
-            this.txtIdAplicacion.Size = new System.Drawing.Size(24, 20);
-            this.txtIdAplicacion.TabIndex = 40;
-            this.txtIdAplicacion.Tag = "fk_id_aplicacion";
+            this.txtIdProducto.Tag = "fk_codigo_producto";
             // 
             // txtIdBodega
             // 
@@ -125,7 +111,7 @@ namespace VistaLogistica
             this.txtIdBodega.Name = "txtIdBodega";
             this.txtIdBodega.Size = new System.Drawing.Size(170, 20);
             this.txtIdBodega.TabIndex = 39;
-            this.txtIdBodega.Tag = "";
+            this.txtIdBodega.Tag = "fk_codigo_bodega";
             // 
             // label4
             // 
@@ -150,71 +136,30 @@ namespace VistaLogistica
             // dtgExisBodega
             // 
             this.dtgExisBodega.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgExisBodega.Location = new System.Drawing.Point(12, 173);
+            this.dtgExisBodega.Location = new System.Drawing.Point(12, 302);
             this.dtgExisBodega.Margin = new System.Windows.Forms.Padding(2);
             this.dtgExisBodega.Name = "dtgExisBodega";
             this.dtgExisBodega.RowHeadersWidth = 51;
             this.dtgExisBodega.RowTemplate.Height = 24;
-            this.dtgExisBodega.Size = new System.Drawing.Size(459, 199);
+            this.dtgExisBodega.Size = new System.Drawing.Size(570, 213);
             this.dtgExisBodega.TabIndex = 62;
+            this.dtgExisBodega.Tag = "tbl_exisbodega";
             // 
-            // dtgBodega_Producto
+            // navegador1
             // 
-            this.dtgBodega_Producto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgBodega_Producto.Location = new System.Drawing.Point(480, 19);
-            this.dtgBodega_Producto.Name = "dtgBodega_Producto";
-            this.dtgBodega_Producto.RowHeadersWidth = 51;
-            this.dtgBodega_Producto.Size = new System.Drawing.Size(350, 353);
-            this.dtgBodega_Producto.TabIndex = 63;
-            this.dtgBodega_Producto.Tag = "";
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(248, 128);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(77, 35);
-            this.btnEliminar.TabIndex = 68;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(331, 128);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(77, 35);
-            this.btnSalir.TabIndex = 67;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Location = new System.Drawing.Point(165, 128);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(77, 35);
-            this.btnGuardar.TabIndex = 65;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Location = new System.Drawing.Point(82, 128);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(77, 35);
-            this.btnLimpiar.TabIndex = 64;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.navegador1.Location = new System.Drawing.Point(12, 12);
+            this.navegador1.Name = "navegador1";
+            this.navegador1.Size = new System.Drawing.Size(574, 152);
+            this.navegador1.TabIndex = 63;
+            this.navegador1.Tag = "";
+            this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
             // 
             // ExistenciaBodega
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(837, 378);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.btnLimpiar);
-            this.Controls.Add(this.dtgBodega_Producto);
+            this.ClientSize = new System.Drawing.Size(593, 526);
+            this.Controls.Add(this.navegador1);
             this.Controls.Add(this.dtgExisBodega);
             this.Controls.Add(this.groupBox1);
             this.Name = "ExistenciaBodega";
@@ -224,7 +169,6 @@ namespace VistaLogistica
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgExisBodega)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgBodega_Producto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -235,17 +179,12 @@ namespace VistaLogistica
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtIdProducto;
-        private System.Windows.Forms.TextBox txtIdAplicacion;
         private System.Windows.Forms.TextBox txtIdBodega;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtExistencia;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dtgExisBodega;
-        private System.Windows.Forms.DataGridView dtgBodega_Producto;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnLimpiar;
+        private NavegadorVista.Navegador navegador1;
     }
 }
