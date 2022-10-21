@@ -45,10 +45,11 @@ namespace CapaVistaNomina
             this.label3 = new System.Windows.Forms.Label();
             this.txtIDprestaciones = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridPer = new System.Windows.Forms.DataGridView();
+            this.navegador1 = new NavegadorVista.Navegador();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridPer)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -59,14 +60,14 @@ namespace CapaVistaNomina
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1045, 246);
+            this.panel1.Size = new System.Drawing.Size(1045, 54);
             this.panel1.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Black", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 20);
+            this.label1.Location = new System.Drawing.Point(4, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(426, 41);
@@ -92,11 +93,11 @@ namespace CapaVistaNomina
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.txtIDprestaciones);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Location = new System.Drawing.Point(41, 254);
+            this.panel2.Controls.Add(this.dataGridPer);
+            this.panel2.Location = new System.Drawing.Point(46, 257);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(960, 428);
+            this.panel2.Size = new System.Drawing.Size(960, 458);
             this.panel2.TabIndex = 2;
             // 
             // txtestado
@@ -239,36 +240,46 @@ namespace CapaVistaNomina
             this.label2.TabIndex = 4;
             this.label2.Text = "ID Prestaciones Y Deducciones";
             // 
-            // dataGridView1
+            // dataGridPer
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridPer.AllowUserToAddRows = false;
+            this.dataGridPer.AllowUserToDeleteRows = false;
+            this.dataGridPer.AllowUserToResizeColumns = false;
+            this.dataGridPer.AllowUserToResizeRows = false;
+            this.dataGridPer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(320, 20);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView1.ShowEditingIcon = false;
-            this.dataGridView1.Size = new System.Drawing.Size(619, 399);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.Tag = "tbl_prestacionesydeducciones";
+            this.dataGridPer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridPer.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridPer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridPer.Location = new System.Drawing.Point(320, 20);
+            this.dataGridPer.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridPer.MultiSelect = false;
+            this.dataGridPer.Name = "dataGridPer";
+            this.dataGridPer.ReadOnly = true;
+            this.dataGridPer.RowHeadersVisible = false;
+            this.dataGridPer.RowHeadersWidth = 51;
+            this.dataGridPer.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridPer.ShowEditingIcon = false;
+            this.dataGridPer.Size = new System.Drawing.Size(619, 429);
+            this.dataGridPer.TabIndex = 0;
+            this.dataGridPer.Tag = "tbl_prestacionesydeducciones";
+            // 
+            // navegador1
+            // 
+            this.navegador1.Location = new System.Drawing.Point(131, 62);
+            this.navegador1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.navegador1.Name = "navegador1";
+            this.navegador1.Size = new System.Drawing.Size(765, 187);
+            this.navegador1.TabIndex = 3;
+            this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
             // 
             // PrestacionesDeducciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1045, 703);
+            this.ClientSize = new System.Drawing.Size(1045, 728);
+            this.Controls.Add(this.navegador1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "PrestacionesDeducciones";
@@ -277,7 +288,7 @@ namespace CapaVistaNomina
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridPer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -300,6 +311,7 @@ namespace CapaVistaNomina
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtIDprestaciones;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridPer;
+        private NavegadorVista.Navegador navegador1;
     }
 }

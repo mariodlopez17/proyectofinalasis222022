@@ -40,12 +40,13 @@ namespace CapaVistaNomina
             this.label3 = new System.Windows.Forms.Label();
             this.txtIdHorasExtra = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridHrsExtra = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.ListaDatos = new System.Windows.Forms.DataGridView();
+            this.navegador1 = new NavegadorVista.Navegador();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridHrsExtra)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ListaDatos)).BeginInit();
             this.SuspendLayout();
@@ -58,14 +59,14 @@ namespace CapaVistaNomina
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1163, 246);
+            this.panel1.Size = new System.Drawing.Size(1163, 54);
             this.panel1.TabIndex = 14;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Black", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 20);
+            this.label1.Location = new System.Drawing.Point(4, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(233, 41);
@@ -86,7 +87,7 @@ namespace CapaVistaNomina
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.txtIdHorasExtra);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.dataGridHrsExtra);
             this.panel2.Location = new System.Drawing.Point(13, 254);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
@@ -179,30 +180,30 @@ namespace CapaVistaNomina
             this.label2.TabIndex = 4;
             this.label2.Text = "ID Horas Extra";
             // 
-            // dataGridView1
+            // dataGridHrsExtra
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridHrsExtra.AllowUserToAddRows = false;
+            this.dataGridHrsExtra.AllowUserToDeleteRows = false;
+            this.dataGridHrsExtra.AllowUserToResizeColumns = false;
+            this.dataGridHrsExtra.AllowUserToResizeRows = false;
+            this.dataGridHrsExtra.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(284, 20);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView1.ShowEditingIcon = false;
-            this.dataGridView1.Size = new System.Drawing.Size(418, 400);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.Tag = "tbl_horasextras";
+            this.dataGridHrsExtra.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridHrsExtra.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridHrsExtra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridHrsExtra.Location = new System.Drawing.Point(284, 20);
+            this.dataGridHrsExtra.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridHrsExtra.MultiSelect = false;
+            this.dataGridHrsExtra.Name = "dataGridHrsExtra";
+            this.dataGridHrsExtra.ReadOnly = true;
+            this.dataGridHrsExtra.RowHeadersVisible = false;
+            this.dataGridHrsExtra.RowHeadersWidth = 51;
+            this.dataGridHrsExtra.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridHrsExtra.ShowEditingIcon = false;
+            this.dataGridHrsExtra.Size = new System.Drawing.Size(418, 400);
+            this.dataGridHrsExtra.TabIndex = 0;
+            this.dataGridHrsExtra.Tag = "tbl_horasextras";
             // 
             // panel3
             // 
@@ -241,11 +242,21 @@ namespace CapaVistaNomina
             this.ListaDatos.TabIndex = 0;
             this.ListaDatos.Tag = "tbl_trabajador";
             // 
+            // navegador1
+            // 
+            this.navegador1.Location = new System.Drawing.Point(225, 58);
+            this.navegador1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.navegador1.Name = "navegador1";
+            this.navegador1.Size = new System.Drawing.Size(765, 187);
+            this.navegador1.TabIndex = 17;
+            this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
+            // 
             // HorasExtra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1163, 703);
+            this.Controls.Add(this.navegador1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -255,7 +266,7 @@ namespace CapaVistaNomina
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridHrsExtra)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ListaDatos)).EndInit();
             this.ResumeLayout(false);
@@ -275,8 +286,9 @@ namespace CapaVistaNomina
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtIdHorasExtra;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridHrsExtra;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView ListaDatos;
+        private NavegadorVista.Navegador navegador1;
     }
 }
