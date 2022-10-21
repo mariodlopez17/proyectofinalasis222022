@@ -39,5 +39,17 @@ namespace CapaVistaNomina
             Size = new Size(560, 528);
             //txtDato.Visible = false;
         }
+
+        private void navegador1_Load(object sender, EventArgs e)
+        {
+            NavegadorVista.Navegador.idApp = "6007";
+            TextBox[] Grupotextbox = { txtIdFaltas, txtIdEmpleado, txtFechaAlta, txtmesalta, txtjustificacion };
+            TextBox[] Idtextbox = { txtIdFaltas, txtIdEmpleado, txtFechaAlta, txtmesalta, txtjustificacion };
+            navegador1.textbox = Grupotextbox;
+            navegador1.tabla = dataGridFaltas;
+            navegador1.textboxi = Idtextbox;
+            navegador1.actual = this;
+            navegador1.cargar(dataGridFaltas, Grupotextbox, "modulo_Nominas");
+        }
     }
 }
