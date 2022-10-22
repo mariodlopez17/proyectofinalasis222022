@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CapaVistaReporteria">
-      <HintPath>..\..\ProyectoReporteria\CapaVistaReporteria\bin\Debug\CapaVistaReporteria.dll</HintPath>
+      <HintPath>..\..\CapaVistaReporteria\bin\Debug\CapaVistaReporteria.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
