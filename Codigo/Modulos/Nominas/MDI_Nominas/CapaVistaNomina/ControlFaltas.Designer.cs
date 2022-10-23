@@ -45,8 +45,8 @@ namespace CapaVistaNomina
             this.txtIdFaltas = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridFaltas = new System.Windows.Forms.DataGridView();
-            this.navegador1 = new NavegadorVista.Navegador();
             this.txtFechaAlta = new System.Windows.Forms.TextBox();
+            this.navegador1 = new NavegadorVista.Navegador();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ListaDatos)).BeginInit();
             this.panel1.SuspendLayout();
@@ -60,9 +60,9 @@ namespace CapaVistaNomina
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.ListaDatos);
-            this.panel3.Location = new System.Drawing.Point(558, 240);
+            this.panel3.Location = new System.Drawing.Point(576, 240);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(314, 344);
+            this.panel3.Size = new System.Drawing.Size(330, 399);
             this.panel3.TabIndex = 10;
             // 
             // ListaDatos
@@ -77,7 +77,7 @@ namespace CapaVistaNomina
             this.ListaDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ListaDatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ListaDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ListaDatos.Location = new System.Drawing.Point(16, 19);
+            this.ListaDatos.Location = new System.Drawing.Point(16, 16);
             this.ListaDatos.MultiSelect = false;
             this.ListaDatos.Name = "ListaDatos";
             this.ListaDatos.ReadOnly = true;
@@ -85,7 +85,7 @@ namespace CapaVistaNomina
             this.ListaDatos.RowHeadersWidth = 51;
             this.ListaDatos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.ListaDatos.ShowEditingIcon = false;
-            this.ListaDatos.Size = new System.Drawing.Size(281, 306);
+            this.ListaDatos.Size = new System.Drawing.Size(296, 360);
             this.ListaDatos.TabIndex = 0;
             this.ListaDatos.Tag = "tbl_trabajador";
             // 
@@ -96,24 +96,23 @@ namespace CapaVistaNomina
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(872, 64);
+            this.panel1.Size = new System.Drawing.Size(911, 56);
             this.panel1.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.label1.Location = new System.Drawing.Point(16, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(237, 37);
+            this.label1.Size = new System.Drawing.Size(215, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Control De Faltas";
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.txtFechaAlta);
             this.panel2.Controls.Add(this.dateTimePicker1);
@@ -129,7 +128,7 @@ namespace CapaVistaNomina
             this.panel2.Controls.Add(this.dataGridFaltas);
             this.panel2.Location = new System.Drawing.Point(10, 240);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(542, 343);
+            this.panel2.Size = new System.Drawing.Size(549, 398);
             this.panel2.TabIndex = 11;
             // 
             // dateTimePicker1
@@ -176,10 +175,10 @@ namespace CapaVistaNomina
             this.label5.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.label5.Location = new System.Drawing.Point(16, 176);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 13);
+            this.label5.Size = new System.Drawing.Size(73, 13);
             this.label5.TabIndex = 8;
             this.label5.Tag = "";
-            this.label5.Text = "Mes De Alta";
+            this.label5.Text = "Mes De Falta";
             // 
             // label4
             // 
@@ -187,10 +186,10 @@ namespace CapaVistaNomina
             this.label4.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.label4.Location = new System.Drawing.Point(16, 104);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 13);
+            this.label4.Size = new System.Drawing.Size(82, 13);
             this.label4.TabIndex = 9;
             this.label4.Tag = "";
-            this.label4.Text = "Fecha De Alta";
+            this.label4.Text = "Fecha De Falta";
             // 
             // txtIdEmpleado
             // 
@@ -236,9 +235,8 @@ namespace CapaVistaNomina
             this.dataGridFaltas.AllowUserToDeleteRows = false;
             this.dataGridFaltas.AllowUserToResizeColumns = false;
             this.dataGridFaltas.AllowUserToResizeRows = false;
-            this.dataGridFaltas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridFaltas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.dataGridFaltas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridFaltas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridFaltas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -250,17 +248,9 @@ namespace CapaVistaNomina
             this.dataGridFaltas.RowHeadersWidth = 51;
             this.dataGridFaltas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridFaltas.ShowEditingIcon = false;
-            this.dataGridFaltas.Size = new System.Drawing.Size(314, 307);
+            this.dataGridFaltas.Size = new System.Drawing.Size(321, 362);
             this.dataGridFaltas.TabIndex = 0;
             this.dataGridFaltas.Tag = "tbl_controlfaltas";
-            // 
-            // navegador1
-            // 
-            this.navegador1.Location = new System.Drawing.Point(120, 80);
-            this.navegador1.Name = "navegador1";
-            this.navegador1.Size = new System.Drawing.Size(574, 152);
-            this.navegador1.TabIndex = 12;
-            this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
             // 
             // txtFechaAlta
             // 
@@ -270,11 +260,19 @@ namespace CapaVistaNomina
             this.txtFechaAlta.TabIndex = 20;
             this.txtFechaAlta.Tag = "fecha_falta";
             // 
+            // navegador1
+            // 
+            this.navegador1.Location = new System.Drawing.Point(160, 72);
+            this.navegador1.Name = "navegador1";
+            this.navegador1.Size = new System.Drawing.Size(574, 152);
+            this.navegador1.TabIndex = 12;
+            this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
+            // 
             // ControlFaltas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(872, 586);
+            this.ClientSize = new System.Drawing.Size(911, 641);
             this.Controls.Add(this.navegador1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
