@@ -241,5 +241,10 @@ namespace CapaVistaNomina
         {
             hideSubMenu();
         }
+
+        private void MenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
     }
 }

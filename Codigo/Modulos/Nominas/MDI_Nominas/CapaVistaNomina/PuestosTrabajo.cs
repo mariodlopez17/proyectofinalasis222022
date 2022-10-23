@@ -27,5 +27,17 @@ namespace CapaVistaNomina
         {
 
         }
+
+        private void navegador1_Load(object sender, EventArgs e)
+        {
+            NavegadorVista.Navegador.idApp = "6002";
+            TextBox[] Grupotextbox = { txtidpuesto, txtnombrepuesto, txtestado };
+            TextBox[] Idtextbox = { txtidpuesto, txtnombrepuesto };
+            navegador1.textbox = Grupotextbox;
+            navegador1.tabla = dataGridPuestosTrabajo;
+            navegador1.textboxi = Idtextbox;
+            navegador1.actual = this;
+            navegador1.cargar(dataGridPuestosTrabajo, Grupotextbox, "colchoneria");
+        }
     }
 }
