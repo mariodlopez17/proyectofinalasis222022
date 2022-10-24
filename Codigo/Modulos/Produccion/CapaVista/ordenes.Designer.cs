@@ -1,5 +1,5 @@
 ﻿
-namespace CapaVista
+namespace CapaVistaProduccion
 {
     partial class ordenes
     {
@@ -43,7 +43,6 @@ namespace CapaVista
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -164,16 +163,6 @@ namespace CapaVista
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker2.TabIndex = 13;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(519, 64);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 76);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Ver ordenes";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(501, 415);
@@ -199,7 +188,6 @@ namespace CapaVista
             this.ClientSize = new System.Drawing.Size(669, 450);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBox4);
@@ -237,7 +225,6 @@ namespace CapaVista
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
     }
