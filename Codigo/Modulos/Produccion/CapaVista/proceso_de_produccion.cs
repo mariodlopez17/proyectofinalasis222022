@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaVista
+namespace CapaVistaProduccion
 {
     public partial class proceso_de_produccion : Form
     {

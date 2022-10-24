@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaVista
+namespace CapaVistaProduccion
 {
     public partial class Recetas : Form
     {
@@ -19,8 +19,17 @@ namespace CapaVista
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ver_receta rep = new ver_receta();
-            rep.Show();
+ 
+        }
+
+        private void Recetas_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

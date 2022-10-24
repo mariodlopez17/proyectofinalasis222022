@@ -7,8 +7,8 @@
     <ProjectGuid>{9FF1534D-A1D4-4B40-890F-74F1449951C3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CapaVista</RootNamespace>
-    <AssemblyName>CapaVista</AssemblyName>
+    <RootNamespace>CapaVistaProduccion</RootNamespace>
+    <AssemblyName>CapaVistaProduccion</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,12 +31,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CapaControlador">
-      <HintPath>..\CapaControlador\bin\Debug\CapaControlador.dll</HintPath>
+    <Reference Include="CapaControladorProduccion">
+      <HintPath>..\CapaControlador\bin\Debug\CapaControladorProduccion.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Installer for Windows\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -65,29 +74,16 @@
       <DependentUpon>proceso_de_produccion.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Recetas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Recetas.Designer.cs">
       <DependentUpon>Recetas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="reportes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="reportes.Designer.cs">
-      <DependentUpon>reportes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="verreporteordenes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="verreporteordenes.Designer.cs">
-      <DependentUpon>verreporteordenes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="verreporteprodter.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="verreporteprodter.Designer.cs">
-      <DependentUpon>verreporteprodter.cs</DependentUpon>
     </Compile>
     <Compile Include="ver_ordenes.cs">
       <SubType>Form</SubType>
@@ -112,17 +108,12 @@
     <EmbeddedResource Include="proceso_de_produccion.resx">
       <DependentUpon>proceso_de_produccion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Recetas.resx">
       <DependentUpon>Recetas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="reportes.resx">
-      <DependentUpon>reportes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="verreporteordenes.resx">
-      <DependentUpon>verreporteordenes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="verreporteprodter.resx">
-      <DependentUpon>verreporteprodter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ver_ordenes.resx">
       <DependentUpon>ver_ordenes.cs</DependentUpon>
@@ -130,6 +121,12 @@
     <EmbeddedResource Include="ver_receta.resx">
       <DependentUpon>ver_receta.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

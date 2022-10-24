@@ -1,5 +1,5 @@
 ﻿
-namespace CapaVista
+namespace CapaVistaProduccion
 {
     partial class ver_receta
     {
