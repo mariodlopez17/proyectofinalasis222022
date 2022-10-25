@@ -726,8 +726,8 @@ namespace NavegadorControlador
                 ubicacion1 = sn.reporteestado1(id1);
             if (estado1 == "Visible")
             {
-               /* CapaVistaReporteria.visualizar b = new CapaVistaReporteria.visualizar(ubicacion1);
-                b.Show();*/
+               CapaVistaReporteria.visualizar b = new CapaVistaReporteria.visualizar(ubicacion1);
+                b.Show();
             }
             else if(ubicacion1=="") {
                 MessageBox.Show("No se encuentra guardado el reporte de la aplicación =  " + id1);

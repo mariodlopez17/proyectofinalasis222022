@@ -169,7 +169,7 @@ namespace NavegadorModelo
         {
            
             string estado = "";
-            string sql1 = "select * from registro where aplicacion=" + id + ";";
+            string sql1 = "select * from tbl_regreporteria where aplicacion=" + id + ";";
             OdbcCommand cmd = new OdbcCommand(sql1, con.conexion());
             OdbcDataReader s = cmd.ExecuteReader();
             while (s.Read())
@@ -192,7 +192,7 @@ namespace NavegadorModelo
         {
 
             string ubicacion = "";
-            string sql1 = "select * from registro where aplicacion=" + id + ";";
+            string sql1 = "select * from tbl_regreporteria where aplicacion=" + id + ";";
             OdbcCommand cmd = new OdbcCommand(sql1, con.conexion());
             OdbcDataReader s = cmd.ExecuteReader();
             while (s.Read())

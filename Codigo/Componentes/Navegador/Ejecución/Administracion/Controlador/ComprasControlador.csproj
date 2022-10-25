@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F03DE0C1-B8F2-40EF-9782-E8E6FEF71D14}</ProjectGuid>
+    <ProjectGuid>{3994CDEA-C28E-4DF3-A7F5-C267CF7D7621}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Controlador</RootNamespace>
-    <AssemblyName>NavegadorControlador</AssemblyName>
+    <RootNamespace>ComprasControlador</RootNamespace>
+    <AssemblyName>ComprasControlador</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,21 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CapaVistaReporteria">
-      <HintPath>..\..\Reporteador\CapaVistaReporteria\bin\Debug\CapaVistaReporteria.dll</HintPath>
+    <Reference Include="ComprasModelo">
+      <HintPath>..\Modelo\bin\Debug\ComprasModelo.dll</HintPath>
     </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.1.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
-    <Reference Include="NavegadorModelo">
-      <HintPath>..\Modelo\bin\Debug\NavegadorModelo.dll</HintPath>
-    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="Seguridad_Controlador, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Nueva carpeta (3)\proyectofinalasis222022\Codigo\Componentes\Seguridad\Colchoneria\Capa_controlador\bin\Debug\Seguridad_Controlador.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms" />
@@ -59,7 +52,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="csControlador.cs" />
+    <Compile Include="csContralador.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

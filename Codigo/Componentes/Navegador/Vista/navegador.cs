@@ -29,7 +29,7 @@ namespace NavegadorVista
         public TextBox[] textboxi = { };
         public DataGridView tabla;
         public static string idApp;
-        /* Consultas Boton descomentar Linea 297 
+
         public void consulta()
         {
             string tablan2 = tabla.Tag.ToString();
@@ -44,7 +44,7 @@ namespace NavegadorVista
             
             
         }
-        */
+        
 
 
 
@@ -295,7 +295,7 @@ namespace NavegadorVista
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            //consulta();
+            consulta();
             cnseg.setBtitacora(idApp, "Consulta");
             
 
