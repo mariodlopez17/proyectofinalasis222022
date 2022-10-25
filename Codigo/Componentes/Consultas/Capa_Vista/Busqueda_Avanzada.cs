@@ -78,7 +78,6 @@ namespace Capa_VistaConsultas
 
         private void pnl_BuscarBA_Paint(object sender, PaintEventArgs e)
         {
-            btn_BuscarBA.Enabled = true;
             CargarColumnas(cbox_columnas, tableN);
         }
 
