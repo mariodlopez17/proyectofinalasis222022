@@ -15,7 +15,7 @@ nombre_linea varchar(100)
 create table tbl_bodega (
 pk_codigo_bodega int not null primary key auto_increment,
 nombre_bodega varchar(100),
-estatus_bodega varchar(1)
+estado_bodega varchar(1)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
 create table tbl_producto(
@@ -28,7 +28,7 @@ fk_marca int not null,
 existencia float (100,2),
 costo_compra int,
 precio_venta int,
-estatus_producto varchar(1),
+estado_producto varchar(1),
 ultima_entrada datetime,
 ultima_Salida datetime,
 foreign key (fk_marca) references tbl_marca (pk_codigo_marca),

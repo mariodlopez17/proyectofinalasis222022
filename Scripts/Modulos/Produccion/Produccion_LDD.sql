@@ -30,5 +30,5 @@ CREATE TABLE `colchoneria`.`_tbl_procesoprod` (
   `cantidad_fabricar_tbl_procesoprod` VARCHAR(60) NULL,
   `fecha_entrega_tbl_procesoprod` VARCHAR(20) NULL,
   `proceso_pro_tbl_procesoprod` VARCHAR(10) NULL,
-  `estado_orden_tbl_procesoprod` VARCHAR(1) NULL,
+  `estado_orden_tbl_procesoprod` TINYINT DEFAULT 0,
   PRIMARY KEY (`pk_codigo_proceso`));

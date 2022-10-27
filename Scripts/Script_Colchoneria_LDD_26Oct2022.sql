@@ -104,16 +104,9 @@ CREATE TABLE IF NOT EXISTS `tbl_bitacoraDeEventos` (
   FOREIGN KEY (`fk_id_usuario`) REFERENCES `tbl_usuarios` (`pk_id_usuario`),
   FOREIGN KEY (`fk_id_aplicacion`) REFERENCES `tbl_aplicaciones` (`pk_id_aplicacion`)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
-/********************REPORTEADOR********************/
-CREATE TABLE tbl_regreporteria (
-  idregistro int NOT NULL AUTO_INCREMENT,
-  ruta varchar(500) NOT NULL,
-  nombre_archivo varchar(45) NOT NULL,
-  aplicacion varchar(45) NOT NULL,
-  estado varchar(45) NOT NULL,
-  PRIMARY KEY (`idregistro`)
-) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
-/********************CONSULTA INTELIGENTE********************/
+
+/********************CONSULTAS INTELIGENTES********************/
+DROP TABLE IF EXISTS tbl_consultainteligente;
 CREATE TABLE IF NOT EXISTS tbl_consultainteligente (
 	nombre_consulta varchar(50) not null,
     tabla_consulta varchar(50) not null,
@@ -123,7 +116,8 @@ CREATE TABLE IF NOT EXISTS tbl_consultainteligente (
     PkId INT NOT NULL,
     PRIMARY KEY (`PkId`)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
- 
+
+DROP TABLE IF EXISTS tbl_consultainteligente1; 
 CREATE TABLE IF NOT EXISTS tbl_consultainteligente1 (
  operador_consulta varchar(50) not null,
     campos_consulta varchar(50) not null,
@@ -133,6 +127,7 @@ CREATE TABLE IF NOT EXISTS tbl_consultainteligente1 (
     PRIMARY KEY (`PkId`)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
+DROP TABLE IF EXISTS tbl_consultainteligente2;
 CREATE TABLE IF NOT EXISTS tbl_consultainteligente2 (
     PkId INT NOT NULL,
     ordenar_consulta varchar(50) not null,
@@ -141,8 +136,7 @@ CREATE TABLE IF NOT EXISTS tbl_consultainteligente2 (
     PRIMARY KEY (`PkId`)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
-
-/********************MODULOS********************/
+/********************MODULOS*******************/
 /********************LOGISTICA********************/
 create table tbl_marca (
 pk_codigo_marca int not null primary key auto_increment,
@@ -157,7 +151,7 @@ nombre_linea varchar(100)
 create table tbl_bodega (
 pk_codigo_bodega int not null primary key auto_increment,
 nombre_bodega varchar(100),
-estatus_bodega varchar(1)
+estado_bodega varchar(1)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
 create table tbl_producto(
@@ -170,10 +164,23 @@ fk_marca int not null,
 existencia float (100,2),
 costo_compra int,
 precio_venta int,
-estatus_producto varchar(1),
+estado_producto varchar(1),
+ultima_entrada datetime,
+ultima_Salida datetime,
 foreign key (fk_marca) references tbl_marca (pk_codigo_marca),
 foreign key (fk_linea_inventario) references tbl_linea (pk_codigo_linea)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
+
+create table tbl_traslados(
+pk_codigo_traslado int not null primary key,
+fk_bodega_entrada int not null,
+fk_bodega_salida int not null,
+fk_codigo_producto int not null,
+cantidad int,
+foreign key (fk_bodega_entrada) references tbl_bodega (pk_codigo_bodega),
+foreign key (fk_bodega_salida) references tbl_bodega (pk_codigo_bodega),
+foreign key (fk_codigo_producto) references tbl_producto (pk_codigo_producto)
+);
 
 create table tbl_exisbodega (
 fk_codigo_bodega int not null,
@@ -185,7 +192,7 @@ primary key (fk_codigo_bodega, fk_codigo_producto)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
 create table tbl_movimientos(
-pk_kardex int not null primary key auto_increment,
+pk_movimientos int not null primary key auto_increment,
 fecha date,
 detalle varchar(100),
 fk_producto int not null,
@@ -200,12 +207,18 @@ cantidad int not null,
 foreign key (fk_codigo_producto) references tbl_producto (pk_codigo_producto)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
+create table tbl_tipotransporte (
+pk_codigo_tipot int not null primary key auto_increment,
+descripscion varchar(100)
+);
+
 create table tbl_transporte(
 pk_codigo_transporte int not null primary key auto_increment,
 marca varchar(100),
-tipo varchar(100),
+fk_tipo int not null,
 peso int not null,
-estado bool
+estado bool,
+foreign key (fk_tipo) references tbl_tipotransporte (pk_codigo_tipot)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
 create table tbl_ruta(
@@ -215,17 +228,24 @@ ciudad varchar(100),
 descripcion varchar(100)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
-create table tbl_conductor(
-pk_conductor int not null primary key auto_increment,
+create table tbl_trabajador (
+pk_trabajador int not null primary key auto_increment,
+nombre varchar(100)
+);
+
+create table tbl_transportista(
+fk_transportista int not null,
 nombre varchar(100),
-estado bool
+estado bool,
+foreign key (fk_transportista) references tbl_trabajador (pk_trabajador),
+primary key (fk_transportista)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
 create table tbl_envio(
-pk_envio int not null primary key auto_increment,
+pk_envio int not null,
 fk_transporte int not null,
 fk_ruta int not null,
-fk_conductor int not null,
+fk_transportista int not null,
 tiempo_estimado varchar(100),
 fecha_entrega datetime,
 fk_lote int not null,
@@ -235,13 +255,16 @@ observaciones varchar(100),
 destino varchar(100),
 foreign key (fk_transporte) references tbl_transporte (pk_codigo_transporte),
 foreign key (fk_ruta) references tbl_ruta (pk_codigo_ruta),
-foreign key (fk_conductor) references tbl_conductor (pk_conductor),
+foreign key (fk_transportista) references tbl_transportista (fk_transportista),
 foreign key (fk_lote) references tbl_lote (pk_codigo_lote),
 foreign key (fk_bodega) references tbl_bodega (pk_codigo_bodega)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
 create table tbl_ventap (
 pk_venta int not null primary key auto_increment,
+serie_fact varchar(100),
+num_fact int not null,
+cliente varchar(100),
 fk_producto int not null,
 cantidad int,
 foreign key (fk_producto) references tbl_producto (pk_codigo_producto)
@@ -249,12 +272,15 @@ foreign key (fk_producto) references tbl_producto (pk_codigo_producto)
 
 create table tbl_comprap (
 pk_compra int not null primary key auto_increment,
+serie_fact varchar(100),
+num_fact int not null,
+proveedor varchar(100),
 fk_producto int not null,
 cantidad int,
 foreign key (fk_producto) references tbl_producto (pk_codigo_producto)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
-/********************COMPRASYVENTAS********************/
+/********************COMPRAS********************/
 create table tblBodega(
 PkId_Bodega int not null,
 Direccion_Bodega varchar(30) not null,
@@ -652,8 +678,7 @@ foreign key (FkId_Empleados) references tblEmpleados(PkId_Empleados),
 foreign key (FkId_VentasEncabezado) references tblVentasEncabezado(PkId_VentasEncabezado)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-
-/*PRODUCCION*/
+/********************PRODUCCION********************/
 CREATE TABLE `colchoneria`.`tbl_recetas` (
   `pk_idrecetas_tbl_recetas` INT NOT NULL AUTO_INCREMENT,
   `producto_tbl_recetas` VARCHAR(45) NOT NULL,
@@ -684,12 +709,12 @@ CREATE TABLE `colchoneria`.`_tbl_procesoprod` (
   `cantidad_fabricar_tbl_procesoprod` VARCHAR(60) NULL,
   `fecha_entrega_tbl_procesoprod` VARCHAR(20) NULL,
   `proceso_pro_tbl_procesoprod` VARCHAR(10) NULL,
-  `estado_orden_tbl_procesoprod` VARCHAR(1) NULL,
+  `estado_orden_tbl_procesoprod` TINYINT DEFAULT 0,
   PRIMARY KEY (`pk_codigo_proceso`));
-/*NOMINAS*/
+/********************NOMINAS********************/
 CREATE TABLE IF NOT EXISTS `tbl_departamentos` (
 	pk_id_departamento  INT AUTO_INCREMENT NOT NULL,
-    nombre_departamento VARCHAR(25) NOT NULL,
+    nombre_departamento VARCHAR(40) NOT NULL,
     descripcion_departamento  VARCHAR(75) NOT NULL,
     estado_departamento TINYINT DEFAULT 0,
     primary key (`pk_id_departamento`)
@@ -698,7 +723,7 @@ CREATE TABLE IF NOT EXISTS `tbl_departamentos` (
 DROP TABLE IF EXISTS `tbl_puestosdetrabajo`; -- LEONEL DOMINGUEZ
 CREATE TABLE IF NOT EXISTS `tbl_puestosdetrabajo` (
 	pk_id_puesto INT AUTO_INCREMENT NOT NULL,
-    nombre_puesto VARCHAR(25) NOT NULL,
+    nombre_puesto VARCHAR(50) NOT NULL,
     estado_puesto  TINYINT DEFAULT 0,
     primary key (`pk_id_puesto`)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
@@ -714,10 +739,10 @@ CREATE TABLE IF NOT EXISTS `tbl_contrato` (
     primary key (`pk_id_contrato`)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
-DROP TABLE IF EXISTS `tbl_prestacionesydeducciones`;
-CREATE TABLE IF NOT EXISTS `tbl_prestacionesydeducciones` (
+DROP TABLE IF EXISTS `tbl_percepciones`;
+CREATE TABLE IF NOT EXISTS `tbl_percepciones` (
 	pk_id_prestdeduc INT AUTO_INCREMENT NOT NULL,
-    nombre_prestdeduc VARCHAR(25) NOT NULL,
+    nombre_prestdeduc VARCHAR(40) NOT NULL,
     tipo_prestdeduc  TINYINT NOT NULL,
     porcentaje_prestdeduc FLOAT DEFAULT 0,
     valorFijo_prestdeduc FLOAT DEFAULT 0,
@@ -739,11 +764,10 @@ CREATE TABLE IF NOT EXISTS `tbl_trabajador` (
 
 DROP TABLE IF EXISTS `tbl_horasextras`;
 CREATE TABLE IF NOT EXISTS `tbl_horasextras` (
-	pk_id_horasextras INT AUTO_INCREMENT NOT NULL,
 	fk_id_trabajador  INT NOT NULL,
     fecha_horasextras DATE NOT NULL,
     cantidadHorasr_horasextras FLOAT NOT NULL,
-    primary key (`pk_id_horasextras`),
+    primary key (`fk_id_trabajador`,`fecha_horasextras`),
     FOREIGN KEY (`fk_id_trabajador`) REFERENCES `tbl_trabajador` (`pk_id_trabajador`)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
@@ -753,13 +777,13 @@ CREATE TABLE IF NOT EXISTS `tbl_controlfaltas` (
     fk_clave_empleado INT NOT NULL, 
     fecha_falta DATE NOT NULL,
     mes_falta INT NOT NULL,
-    justificacion_falta VARCHAR(50),
+    justificacion_falta VARCHAR(100),
     primary key (`pk_id_faltas`),
     FOREIGN KEY (`fk_clave_empleado`) REFERENCES `tbl_trabajador` (`pk_id_trabajador`)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
-DROP TABLE IF EXISTS `tbl_asignacionpuestodepartamento`;
-CREATE TABLE IF NOT EXISTS `tbl_asignacionpuestodepartamento` (
+DROP TABLE IF EXISTS `tbl_asignacion_puestodepartamento`;
+CREATE TABLE IF NOT EXISTS `tbl_asignacion_puestodepartamento` (
 	fk_id_puesto INT NOT NULL,
 	fk_id_departamento  INT NOT NULL,
     primary key (`fk_id_puesto`, `fk_id_departamento`),
@@ -767,8 +791,8 @@ CREATE TABLE IF NOT EXISTS `tbl_asignacionpuestodepartamento` (
     FOREIGN KEY (`fk_id_departamento`) REFERENCES `tbl_departamentos` (`pk_id_departamento`)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
-DROP TABLE IF EXISTS `tbl_asignacionpuestotrabajador`;
-CREATE TABLE IF NOT EXISTS `tbl_asignacionpuestotrabajador` (
+DROP TABLE IF EXISTS `tbl_asignacion_puestotrabajador`;
+CREATE TABLE IF NOT EXISTS `tbl_asignacion_puestotrabajador` (
 	fk_id_puesto INT NOT NULL,
 	fk_id_trabajador  INT NOT NULL,
     primary key (`fk_id_puesto`, `fk_id_trabajador`),
@@ -776,17 +800,17 @@ CREATE TABLE IF NOT EXISTS `tbl_asignacionpuestotrabajador` (
     FOREIGN KEY (`fk_id_trabajador`) REFERENCES `tbl_trabajador` (`pk_id_trabajador`)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
-DROP TABLE IF EXISTS `tbl_asignacioncontratoprestdeduc`;
-CREATE TABLE IF NOT EXISTS `tbl_asignacioncontratoprestdeduc` (
+DROP TABLE IF EXISTS `tbl_asignacion_contratopercepciones`;
+CREATE TABLE IF NOT EXISTS `tbl_asignacion_contratopercepciones` (
 	fk_id_contrato INT NOT NULL,
 	fk_id_prestdeduc  INT NOT NULL,
     primary key (`fk_id_contrato`, `fk_id_prestdeduc`),
 	FOREIGN KEY (`fk_id_contrato`) REFERENCES `tbl_contrato` (`pk_id_contrato`),
-    FOREIGN KEY (`fk_id_prestdeduc`) REFERENCES `tbl_prestacionesydeducciones` (`pk_id_prestdeduc`)
+    FOREIGN KEY (`fk_id_prestdeduc`) REFERENCES `tbl_percepciones` (`pk_id_prestdeduc`)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
-DROP TABLE IF EXISTS `tbl_asignacioncontratotrabajador`;
-CREATE TABLE IF NOT EXISTS `tbl_asignacioncontratotrabajador` (
+DROP TABLE IF EXISTS `tbl_asignacion_contratotrabajador`;
+CREATE TABLE IF NOT EXISTS `tbl_asignacion_contratotrabajador` (
 	fk_id_contrato INT NOT NULL,
 	fk_id_trabajador  INT NOT NULL,
     primary key (`fk_id_contrato`, `fk_id_trabajador`),
@@ -794,8 +818,8 @@ CREATE TABLE IF NOT EXISTS `tbl_asignacioncontratotrabajador` (
     FOREIGN KEY (`fk_id_trabajador`) REFERENCES `tbl_trabajador` (`pk_id_trabajador`)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
-DROP TABLE IF EXISTS `tbl_percydeducindividuales`;
-CREATE TABLE IF NOT EXISTS `tbl_percydeducindividuales` (
+DROP TABLE IF EXISTS `tbl_prestacionesindividuales`;
+CREATE TABLE IF NOT EXISTS `tbl_prestacionesindividuales` (
 	pk_id_prestdeducext INT AUTO_INCREMENT NOT NULL,
 	fk_id_prestdeduc INT NOT NULL,
 	fk_id_trabajador  INT NOT NULL,
@@ -803,24 +827,32 @@ CREATE TABLE IF NOT EXISTS `tbl_percydeducindividuales` (
     cantidad_prestdeducext FLOAT DEFAULT 0,
     primary key (`pk_id_prestdeducext`),
     FOREIGN KEY (`fk_id_trabajador`) REFERENCES `tbl_trabajador` (`pk_id_trabajador`),
-    FOREIGN KEY (`fk_id_prestdeduc`) REFERENCES `tbl_prestacionesydeducciones` (`pk_id_prestdeduc`)
+    FOREIGN KEY (`fk_id_prestdeduc`) REFERENCES `tbl_percepciones` (`pk_id_prestdeduc`)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
-DROP TABLE IF EXISTS `tbl_nominas`;
-CREATE TABLE IF NOT EXISTS `tbl_nominas` (
-	pk_id_correlativo INT AUTO_INCREMENT NOT NULL,
-	fk_id_trabajador  INT NOT NULL,
-    fechaGenerado_nomina DATE NOT NULL,
-    mesPagado_nomina INT NOT NULL,
+DROP TABLE IF EXISTS `tbl_encabezadoNominas`;
+CREATE TABLE IF NOT EXISTS `tbl_encabezadoNominas` (
+	pk_id_nomina INT NOT NULL,
+    fechaPago_nomina DATE NOT NULL,
+    tipoPago_nomina TINYINT NOT NULL,
+    mesPagado_nomina VARCHAR(50) NOT NULL,
+    anioPagado_nomina VARCHAR(50) NOT NULL,
+    total_nomina FLOAT DEFAULT 0,
+    primary key (`pk_id_nomina`)
+)ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
+
+DROP TABLE IF EXISTS `tbl_detalleNominas`;
+CREATE TABLE IF NOT EXISTS `tbl_detalleNominas` (
+	pk_id_nomina INT NOT NULL,
+    fk_id_trabajador INT NOT NULL,
     salario_nomina FLOAT NOT NULL,
     totalHorasExtras_nomina FLOAT NOT NULL,
     totalPercepciones_nomina FLOAT DEFAULT 0,
     totalDeducciones_nomina FLOAT DEFAULT 0,
     liquidez_nomina FLOAT NOT NULL,
-    primary key (`pk_id_correlativo`),
+    primary key (`pk_id_nomina`,`fk_id_trabajador`),
     FOREIGN KEY (`fk_id_trabajador`) REFERENCES `tbl_trabajador` (`pk_id_trabajador`)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
-
 /********************BANCOS********************/
 CREATE TABLE IF NOT EXISTS `Tbl_bancos` (
   `Pk_idbancos` INT NOT NULL,
@@ -828,8 +860,27 @@ CREATE TABLE IF NOT EXISTS `Tbl_bancos` (
   `direccion_banco` VARCHAR(45) NULL,
   `contacto_banco` VARCHAR(45) NULL,
   `Saldo_banco` FLOAT NOT NULL,
+  `estado_banco` TINYINT DEFAULT 0,
   PRIMARY KEY (`Pk_idbancos`)
   )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  
+CREATE TABLE IF NOT EXISTS `Tbl_ConceptosBancario` (
+  `Pk_idConcepto` INT NOT NULL,
+  `Nombre_cbancario` VARCHAR(50) NOT NULL,
+  `PorcentajeIva` float null,
+  `Clasificacion` VARCHAR(5) NOT NULL,
+  `Estado` TINYINT DEFAULT 0,
+  PRIMARY KEY (`Pk_idConcepto`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `Tbl_Reg_tipoCambio` (
+   `Pk_regTipoCambio` INT NOT NULL,
+  `fecha_RtCambio` DATE NOT NULL,
+  `compra_RtCambio` FLOAT NULL,
+  `venta_RtCambio` FLOAT NULL,
+  `Moneda_RtCambio` VARCHAR(20) NULL,
+  PRIMARY KEY (`Pk_regTipoCambio`)
+    )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `Tbl_Reportes` (
   `Pk_idReportes` INT NOT NULL,
@@ -840,15 +891,6 @@ CREATE TABLE IF NOT EXISTS `Tbl_Reportes` (
   `Banco_Reportes` INT NULL,
   PRIMARY KEY (`Pk_idReportes`),
   FOREIGN KEY (`Banco_Reportes`) REFERENCES  `Tbl_bancos` (`Pk_idbancos`)
-    )ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-CREATE TABLE IF NOT EXISTS `Tbl_Reg_tipoCambio` (
-   `Pk_regTipoCambio` INT NOT NULL,
-  `fecha_RtCambio` DATE NOT NULL,
-  `compra_RtCambio` FLOAT NULL,
-  `venta_RtCambio` FLOAT NULL,
-  `Moneda_RtCambio` VARCHAR(20) NULL,
-  PRIMARY KEY (`Pk_regTipoCambio`)
     )ENGINE=InnoDB DEFAULT CHARSET=utf8;
     
 CREATE TABLE IF NOT EXISTS `Tbl_Cuentas` (
@@ -864,15 +906,6 @@ CREATE TABLE IF NOT EXISTS `Tbl_tiposPagos` (
   `Concepto_Tipo` VARCHAR(25) NULL,
   PRIMARY KEY (`Pk_idTipoPagos`)
   )ENGINE=InnoDB DEFAULT CHARSET=utf8;
-  
-  CREATE TABLE IF NOT EXISTS `Tbl_ConceptosBancario` (
-  `Pk_idConcepto` INT NOT NULL,
-  `Nombre_cbancario` VARCHAR(50) NOT NULL,
-  `PorcentajeIva` float null,
-  `Clasificacion` VARCHAR(5) NOT NULL,
-  `Estado` TINYINT DEFAULT 0,
-  PRIMARY KEY (`Pk_idConcepto`)
-)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `Tbl_Movimientos_bancos` (
   `Pk_idMovimientos` INT NOT NULL,
@@ -926,20 +959,7 @@ CREATE TABLE IF NOT EXISTS `Tbl_Disponibilidad` (
   PRIMARY KEY (`Pk_idDispo`),
 FOREIGN KEY (`cuentaDispo`) REFERENCES `Tbl_Cuentas` (`Pk_idCuentas`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 /********************CONTABILIDAD********************/
-CREATE TABLE IF NOT EXISTS `tbl_PolizasLocales` (
-	pk_PolizasLocales INT NOT NULL,
-    emision_poliza varchar(40) not null,
-    concepto_poliza varchar(15) not null,
-    detalle_poliza varchar(40) not null,
-    totalcargo_poliza varchar(15) not null,
-    totalbono_poliza varchar(15) not null,
-    diferencia_poliza varchar(15) not null,
-    primary key (pk_PolizasLocales)
-)ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
-
-DROP TABLE IF EXISTS `tbl_ActivosFijos`;
 CREATE TABLE IF NOT EXISTS `tbl_ActivosFijos` (
 	pk_ActivosFijos INT AUTO_INCREMENT NOT NULL,
     Edificaiones varchar(45) NOT NULL,
@@ -951,59 +971,91 @@ CREATE TABLE IF NOT EXISTS `tbl_ActivosFijos` (
     primary key (pk_ActivosFijos)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
-DROP TABLE IF EXISTS `tbl_Presupuesto`;
-CREATE TABLE IF NOT EXISTS `tbl_Presupuesto` (
-  pk_Presupuesto INT AUTO_INCREMENT NOT NULL,
-  ombre_presupuesto varchar(50) not null,
-  año_presupuesto date,
-  mes_presupuesto date,
-  ingresos_presupuesto varchar(30) not null,
-  gastos_presupuesto varchar(30) not null,
-  totalpresu_presupuesto varchar(30) not null,
-  estado varchar(30) not null,
-  Salarios varchar(45) NOT NULL,
-  Prestaciones varchar(45) NOT NULL,
-  CApacitaciones varchar(45) NOT NULL,
-  Papeleria varchar(45) NOT NULL,
-  Agua varchar(45) NOT NULL,
-  luz varchar(45) NOT NULL,
-  telefono varchar(45) NOT NULL,
-  PRIMARY KEY (`pk_Presupuesto`)
-)ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
+/*TABLAS CUENTAS - DIANA VICTORES 9959-19-1471*/
+create table tbl_encabezadoclasecuenta(
+pkid_encabezadocuenta int not null, 
+nombre_tipocuenta varchar(50) not null,
+estatus_clasecuenta TINYINT NOT NULL, 
+primary key (pkid_encabezadocuenta) 
+)ENGINE = InnoDB DEFAULT CHARACTER SET = utf8mb4;
 
-create table tbl_TipoCuenta(
-pkid_tipocuenta int auto_increment,
-codigo_tipocuenta varchar(50) not null,
-serie_tipocuenta varchar(2) not null,
-control_tipocuenta varchar(30) not null,
-sincontrol_tipocuenta varchar(30) not null,
-afecta_tipocuenta varchar(30) not null,
-noafecta_tipocuenta varchar(30) not null,
-estatus varchar(30) not null,
-fkid_presupuesto int not null,
-primary key(pkid_tipocuenta, fkid_presupuesto),
-FOREIGN KEY (`fkid_presupuesto`) REFERENCES `tbl_presupuesto` (`pk_Presupuesto`)
-)ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
+/* DIANA VICTORES 9959-19-1471*/
+create table tbl_tipocuenta(
+pkid_tipocuenta int not null, 
+nombre_tipocuenta varchar(50) not null,
+serie_tipocuenta varchar(50) not null,
+estatus_tipocuenta TINYINT NOT NULL, 
+primary key (pkid_tipocuenta ) 
+)ENGINE = InnoDB DEFAULT CHARACTER SET = utf8mb4;
 
-DROP TABLE IF EXISTS `tbl_CierreContable`;
-CREATE TABLE IF NOT EXISTS `tbl_CierreContable` (
-	pk_CierreContable INT AUTO_INCREMENT NOT NULL,
-    primary key (pk_CierreContable)
-)ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
+/*DIANA VICTORES 9959-19-1471*/
+create table tbl_cuentas(
+pkid_cuenta int not null, 
+pkid_tipocuenta int not null, 
+pkid_encabezadocuenta int not null,
+nombre_cuenta varchar(50) not null,
+cargo_cuenta float default 0,
+abono_cuenta float default 0,
+saldo_cuenta float default 0,
+status_cuenta TINYINT NOT NULL, 
+pkid_cuentaa int not null, 
+primary key (
+pkid_cuenta,  
+pkid_tipocuenta,
+pkid_cuentaa,
+pkid_encabezadocuenta) ,
 
-DROP TABLE IF EXISTS `tbl_EstadosFinancieros`;
-CREATE TABLE IF NOT EXISTS `tbl_EstadosFinancieros` (
-  pk_EstadosFinancieros INT NOT NULL, 
-  descripcion_estadofiancniero varchar(50) not null,
-  primary key (pk_EstadosFinancieros)
-) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
+FOREIGN KEY (`pkid_tipocuenta`) REFERENCES `tbl_tipocuenta` (`pkid_tipocuenta`),
+FOREIGN KEY (`pkid_cuentaa`) REFERENCES `tbl_cuentas` (`pkid_cuenta`),
+FOREIGN KEY (`pkid_encabezadocuenta`) REFERENCES `tbl_encabezadoclasecuenta` (`pkid_encabezadocuenta`)
+)ENGINE = InnoDB DEFAULT CHARACTER SET = utf8mb4;
 
-DROP TABLE IF EXISTS `tbl_Mantenimiento`;
-CREATE TABLE IF NOT EXISTS `tbl_Mantenimiento` (
-  fk_Mantenimientos INT NOT NULL, 
-  PRIMARY KEY (`fk_Mantenimientos`)
-) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
+/*TABLAS POLIZA - DIANA VICTORES */
+create table tbl_tipoPoliza(
+	Pk_TipoPoliza int not null, 
+	descripcion varchar(65),
+	status_tipoPoliza TINYINT NOT NULL, 
+	primary key (Pk_TipoPoliza)
+) ENGINE = InnoDB DEFAULT CHARSET=latin1;
 
+/* DIANA VICTORES 9959-19-1471*/
+create table tbl_polizaEncabezado(
+	Pk_PolizaEncabezado int not null, 
+	fechaPoliza date,
+	Pk_TipoPoliza int not null, 
+	primary key(Pk_PolizaEncabezado,
+    Pk_TipoPoliza),
+    foreign key (Pk_TipoPoliza) references tbl_tipoPoliza (Pk_TipoPoliza)
+) ENGINE = InnoDB DEFAULT CHARSET=latin1;
+
+/* DIANA VICTORES 9959-19-1471*/
+create table tbl_tipoOperacion(
+	Pk_TipoOperacion int not null,
+	nombre varchar(65), 
+	status_tipoOperacion TINYINT NOT NULL, 
+	primary key (Pk_TipoOperacion)
+) ENGINE = InnoDB DEFAULT CHARSET=latin1;
+
+/*DIANA VICTORES 9959-19-1471*/
+create table tbl_polizaDetalle(
+	Pk_PolizaEncabezado int not null,
+    Pk_TipoPoliza int not null,
+    pkid_cuenta int not null ,
+    fechaPoliza date,
+	tbl_cuentas int not null,
+	saldo float,
+	Pk_TipoOperacion int not null, -- debe/haber
+	concepto varchar(65),
+	
+	primary key(Pk_PolizaEncabezado, 
+    Pk_TipoPoliza, 
+    pkid_cuenta),
+    
+    foreign key (Pk_PolizaEncabezado) references tbl_polizaEncabezado (Pk_PolizaEncabezado),
+	foreign key (pkid_cuenta) references tbl_cuentas (pkid_cuenta),
+	foreign key (Pk_TipoOperacion) references tbl_tipoOperacion (Pk_TipoOperacion)
+	
+) ENGINE = InnoDB DEFAULT CHARSET=latin1;
 -- vistas ------------------------------------------------------------------------
 CREATE 
 VIEW `colchoneria`.`vista_aplicacion_perfil` AS 

@@ -151,18 +151,6 @@ primary key(PkId_PagoClientes),
 foreign key (FkId_VentasEncabezado) references tblVentasEncabezado(PkId_VentasEncabezado)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-
-
-/*-----Jason Ortega 0901-19-22658--------*/
-/*create table tblAsociacion(
-PkId_Asociacion int not null,
-FkId_Vendedores int not null,
-FkId_Clientes int not null,
-primary key(PkId_Asociacion),
-foreign key(FkId_Vendedores) references tblVendedores(PkId_Vendedores),
-foreign key(FkId_Clientes) references tblClientes(PkId_Clientes)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8; */
-
 /*Cristian Jocol 0901-19-17747*/
 create table tblFacturaClientes(
 PkId_FacturaClientes int not null, 

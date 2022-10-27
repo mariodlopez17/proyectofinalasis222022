@@ -1,18 +1,6 @@
-CREATE DATABASE IF NOT EXISTS `colchoneria`;
-USE `colchoneria`;
-
-CREATE TABLE IF NOT EXISTS `tbl_PolizasLocales` (
-	pk_PolizasLocales INT NOT NULL,
-    emision_poliza varchar(40) not null,
-    concepto_poliza varchar(15) not null,
-    detalle_poliza varchar(40) not null,
-    totalcargo_poliza varchar(15) not null,
-    totalbono_poliza varchar(15) not null,
-    diferencia_poliza varchar(15) not null,
-    primary key (pk_PolizasLocales)
-)ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
-
-DROP TABLE IF EXISTS `tbl_ActivosFijos`;
+use colchoneria;
+/*Tabla Activos - Jonathan Xuyá 0901-18-11371*/
+DROP TABLE IF EXISTS `tbl_ActivosFijos`;  
 CREATE TABLE IF NOT EXISTS `tbl_ActivosFijos` (
 	pk_ActivosFijos INT AUTO_INCREMENT NOT NULL,
     Edificaiones varchar(45) NOT NULL,
@@ -24,55 +12,88 @@ CREATE TABLE IF NOT EXISTS `tbl_ActivosFijos` (
     primary key (pk_ActivosFijos)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
-DROP TABLE IF EXISTS `tbl_Presupuesto`;
-CREATE TABLE IF NOT EXISTS `tbl_Presupuesto` (
-  pk_Presupuesto INT AUTO_INCREMENT NOT NULL,
-  ombre_presupuesto varchar(50) not null,
-  año_presupuesto date,
-  mes_presupuesto date,
-  ingresos_presupuesto varchar(30) not null,
-  gastos_presupuesto varchar(30) not null,
-  totalpresu_presupuesto varchar(30) not null,
-  estado varchar(30) not null,
-  Salarios varchar(45) NOT NULL,
-  Prestaciones varchar(45) NOT NULL,
-  CApacitaciones varchar(45) NOT NULL,
-  Papeleria varchar(45) NOT NULL,
-  Agua varchar(45) NOT NULL,
-  luz varchar(45) NOT NULL,
-  telefono varchar(45) NOT NULL,
-  PRIMARY KEY (`pk_Presupuesto`)
-)ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
+/*TABLAS CUENTAS - DIANA VICTORES 9959-19-1471*/
+create table tbl_encabezadoclasecuenta(
+pkid_encabezadocuenta int not null, 
+nombre_tipocuenta varchar(50) not null,
+estatus_clasecuenta TINYINT NOT NULL, 
+primary key (pkid_encabezadocuenta) 
+)ENGINE = InnoDB DEFAULT CHARACTER SET = utf8mb4;
 
-create table tbl_TipoCuenta(
-pkid_tipocuenta int auto_increment,
-codigo_tipocuenta varchar(50) not null,
-serie_tipocuenta varchar(2) not null,
-control_tipocuenta varchar(30) not null,
-sincontrol_tipocuenta varchar(30) not null,
-afecta_tipocuenta varchar(30) not null,
-noafecta_tipocuenta varchar(30) not null,
-estatus varchar(30) not null,
-fkid_presupuesto int not null,
-primary key(pkid_tipocuenta, fkid_presupuesto),
-FOREIGN KEY (`fkid_presupuesto`) REFERENCES `tbl_presupuesto` (`pk_Presupuesto`)
-)ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
+/* DIANA VICTORES 9959-19-1471*/
+create table tbl_tipocuenta(
+pkid_tipocuenta int not null, 
+nombre_tipocuenta varchar(50) not null,
+serie_tipocuenta varchar(50) not null,
+estatus_tipocuenta TINYINT NOT NULL, 
+primary key (pkid_tipocuenta ) 
+)ENGINE = InnoDB DEFAULT CHARACTER SET = utf8mb4;
 
-DROP TABLE IF EXISTS `tbl_CierreContable`;
-CREATE TABLE IF NOT EXISTS `tbl_CierreContable` (
-	pk_CierreContable INT AUTO_INCREMENT NOT NULL,
-    primary key (pk_CierreContable)
-)ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
+/*DIANA VICTORES 9959-19-1471*/
+create table tbl_cuentas(
+pkid_cuenta int not null, 
+pkid_tipocuenta int not null, 
+pkid_encabezadocuenta int not null,
+nombre_cuenta varchar(50) not null,
+cargo_cuenta float default 0,
+abono_cuenta float default 0,
+saldo_cuenta float default 0,
+status_cuenta TINYINT NOT NULL, 
+pkid_cuentaa int not null, 
+primary key (
+pkid_cuenta,  
+pkid_tipocuenta,
+pkid_cuentaa,
+pkid_encabezadocuenta) ,
 
-DROP TABLE IF EXISTS `tbl_EstadosFinancieros`;
-CREATE TABLE IF NOT EXISTS `tbl_EstadosFinancieros` (
-  pk_EstadosFinancieros INT NOT NULL, 
-  descripcion_estadofiancniero varchar(50) not null,
-  primary key (pk_EstadosFinancieros)
-) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
+FOREIGN KEY (`pkid_tipocuenta`) REFERENCES `tbl_tipocuenta` (`pkid_tipocuenta`),
+FOREIGN KEY (`pkid_cuentaa`) REFERENCES `tbl_cuentas` (`pkid_cuenta`),
+FOREIGN KEY (`pkid_encabezadocuenta`) REFERENCES `tbl_encabezadoclasecuenta` (`pkid_encabezadocuenta`)
+)ENGINE = InnoDB DEFAULT CHARACTER SET = utf8mb4;
 
-DROP TABLE IF EXISTS `tbl_Mantenimiento`;
-CREATE TABLE IF NOT EXISTS `tbl_Mantenimiento` (
-  fk_Mantenimientos INT NOT NULL, 
-  PRIMARY KEY (`fk_Mantenimientos`)
-) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
+/*TABLAS POLIZA - DIANA VICTORES */
+create table tbl_tipoPoliza(
+	Pk_TipoPoliza int not null, 
+	descripcion varchar(65),
+	status_tipoPoliza TINYINT NOT NULL, 
+	primary key (Pk_TipoPoliza)
+) ENGINE = InnoDB DEFAULT CHARSET=latin1;
+
+/* DIANA VICTORES 9959-19-1471*/
+create table tbl_polizaEncabezado(
+	Pk_PolizaEncabezado int not null, 
+	fechaPoliza date,
+	Pk_TipoPoliza int not null, 
+	primary key(Pk_PolizaEncabezado,
+    Pk_TipoPoliza),
+    foreign key (Pk_TipoPoliza) references tbl_tipoPoliza (Pk_TipoPoliza)
+) ENGINE = InnoDB DEFAULT CHARSET=latin1;
+
+/* DIANA VICTORES 9959-19-1471*/
+create table tbl_tipoOperacion(
+	Pk_TipoOperacion int not null,
+	nombre varchar(65), 
+	status_tipoOperacion TINYINT NOT NULL, 
+	primary key (Pk_TipoOperacion)
+) ENGINE = InnoDB DEFAULT CHARSET=latin1;
+
+/*DIANA VICTORES 9959-19-1471*/
+create table tbl_polizaDetalle(
+	Pk_PolizaEncabezado int not null,
+    Pk_TipoPoliza int not null,
+    pkid_cuenta int not null ,
+    fechaPoliza date,
+	tbl_cuentas int not null,
+	saldo float,
+	Pk_TipoOperacion int not null, -- debe/haber
+	concepto varchar(65),
+	
+	primary key(Pk_PolizaEncabezado, 
+    Pk_TipoPoliza, 
+    pkid_cuenta),
+    
+    foreign key (Pk_PolizaEncabezado) references tbl_polizaEncabezado (Pk_PolizaEncabezado),
+	foreign key (pkid_cuenta) references tbl_cuentas (pkid_cuenta),
+	foreign key (Pk_TipoOperacion) references tbl_tipoOperacion (Pk_TipoOperacion)
+	
+) ENGINE = InnoDB DEFAULT CHARSET=latin1;
