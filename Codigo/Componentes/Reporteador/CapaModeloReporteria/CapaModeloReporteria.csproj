@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{705FAA58-0C98-4F43-BEA3-E0E7D141E162}</ProjectGuid>
+    <ProjectGuid>{63129E86-8D64-4262-BA62-E000125F4941}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CapaModelo</RootNamespace>
-    <AssemblyName>CapaModelo</AssemblyName>
+    <RootNamespace>CapaModeloReporteria</RootNamespace>
+    <AssemblyName>CapaModeloReporteria</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

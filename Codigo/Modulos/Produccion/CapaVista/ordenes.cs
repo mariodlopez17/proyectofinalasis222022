@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaVista
+namespace CapaVistaProduccion
 {
     public partial class ordenes : Form
     {
@@ -19,8 +19,9 @@ namespace CapaVista
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ver_ordenes rep = new ver_ordenes();
-            rep.Show();
+          
+            
+
         }
     }
 }
