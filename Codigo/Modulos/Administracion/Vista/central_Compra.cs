@@ -12,17 +12,17 @@ namespace ComprasVista
 {
     public partial class central_Compra : Form
     {
-        Seguridad_Controlador.Controlador cnseg = new Seguridad_Controlador.Controlador();
+        /*Seguridad_Controlador.Controlador cnseg = new Seguridad_Controlador.Controlador();*/
         public central_Compra()
         {
             InitializeComponent();
             customizeDesing();
 
             Button [] apps = { btnCliente, btnProveedores };
-            cnseg.deshabilitarApps(apps);
+           /* cnseg.deshabilitarApps(apps);
 
             cnseg.getAccesoApp(3001, apps[0]);
-            cnseg.getAccesoApp(3002, apps[1]);
+            cnseg.getAccesoApp(3002, apps[1]);*/
         }
         private void customizeDesing()
         {
