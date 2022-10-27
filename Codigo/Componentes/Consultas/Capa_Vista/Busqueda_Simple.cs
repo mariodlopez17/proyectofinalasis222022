@@ -18,7 +18,7 @@ namespace Capa_VistaConsultas
     public partial class Busqueda_Simple : Form
     {
         //Conexion cn = new Conexion();
-        OdbcConnection cn = new OdbcConnection("Dsn=Colchoneria");
+        OdbcConnection cn = new OdbcConnection("Dsn=Colchoneria2");
 
 
         public String tableN1 ="";
