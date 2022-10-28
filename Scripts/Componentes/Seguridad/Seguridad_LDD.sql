@@ -1,6 +1,7 @@
 DROP DATABASE  IF EXISTS `colchoneria`;
 CREATE DATABASE IF NOT EXISTS `colchoneria`;
 USE `colchoneria`;
+
 DROP TABLE IF EXISTS `tbl_modulos`;
 CREATE TABLE IF NOT EXISTS `tbl_modulos` (
 	pk_id_modulos INT NOT NULL,
@@ -12,13 +13,12 @@ CREATE TABLE IF NOT EXISTS `tbl_modulos` (
 
 DROP TABLE IF EXISTS `tbl_aplicaciones`;
 CREATE TABLE IF NOT EXISTS `tbl_aplicaciones` (
-	pk_id_aplicacion INT AUTO_INCREMENT NOT NULL,
+	pk_id_aplicacion INT NOT NULL,
     nombre_aplicacion VARCHAR(50) NOT NULL,
     descripcion_aplicacion VARCHAR(150) NOT NULL,
     estado_aplicacion TINYINT DEFAULT 0,
     primary key (`pk_id_aplicacion`)
 );
-
 
 DROP TABLE IF EXISTS `tbl_AsignacionModuloAplicacion`;
 CREATE TABLE IF NOT EXISTS `tbl_AsignacionModuloAplicacion` (
@@ -39,6 +39,8 @@ CREATE TABLE IF NOT EXISTS `tbl_usuarios` (
   email_usuario VARCHAR(50) NOT NULL,
   ultima_conexion_usuario DATETIME NULL DEFAULT NULL,
   estado_usuario TINYINT DEFAULT 0 NOT NULL,
+  pregunta varchar(50) not null,
+  respuesta varchar(50) not null,
   PRIMARY KEY (`pk_id_usuario`)
 );
 
@@ -97,7 +99,7 @@ CREATE TABLE IF NOT EXISTS `tbl_bitacoraDeEventos` (
   hora_bitacora TIME NOT NULL,
   host_bitacora VARCHAR(45) NOT NULL,
   ip_bitacora VARCHAR(100) NOT NULL,
-  accion_bitacora VARCHAR(10) NOT NULL,
+  accion_bitacora VARCHAR(50) NOT NULL,
   PRIMARY KEY (`pk_id_bitacora`),
   FOREIGN KEY (`fk_id_usuario`) REFERENCES `tbl_usuarios` (`pk_id_usuario`),
   FOREIGN KEY (`fk_id_aplicacion`) REFERENCES `tbl_aplicaciones` (`pk_id_aplicacion`)
@@ -105,12 +107,12 @@ CREATE TABLE IF NOT EXISTS `tbl_bitacoraDeEventos` (
 
 -- vistas ------------------------------------------------------------------------
 CREATE 
-VIEW `colchoneria`.`vista_aplicacion_perfil` AS
+VIEW `colchoneria`.`vista_aplicacion_perfil` AS 
     SELECT 
         `b`.`fk_id_perfil` AS `ID`,
         `a`.`nombre_perfil` AS `Perfil`,
         `b`.`fk_id_aplicacion` AS `Aplicacion`,
-        `b`.`guardar_permiso` AS `Guardar`,
+        `b`.`guardar_permiso` AS `Insertar`,
         `b`.`modificar_permiso` AS `Modificar`,
         `b`.`eliminar_permiso` AS `Eliminar`,
         `b`.`buscar_permiso` AS `Buscar`,
@@ -125,7 +127,7 @@ VIEW `colchoneria`.`vista_aplicacionusuario` AS
         `b`.`fk_id_aplicacion` AS `Aplicacion`,
         `b`.`fk_id_usuario` AS `ID`,
         `a`.`nombre_usuario` AS `Usuario`,
-        `b`.`guardar_permiso` AS `Guardar`,
+        `b`.`guardar_permiso` AS `Insertar`,
         `b`.`modificar_permiso` AS `Editar`,
         `b`.`eliminar_permiso` AS `Eliminar`,
         `b`.`buscar_permiso` AS `Buscar`,
@@ -160,9 +162,6 @@ VIEW `colchoneria`.`vista_perfil_usuario` AS
         JOIN `colchoneria`.`tbl_usuarios` `a` ON ((`a`.`pk_id_usuario` = `b`.`fk_id_usuario`)))
         JOIN `colchoneria`.`tbl_perfiles` `c` ON ((`c`.`pk_id_perfil` = `b`.`fk_id_perfil`)));
         
-
-
-
 
 
 
