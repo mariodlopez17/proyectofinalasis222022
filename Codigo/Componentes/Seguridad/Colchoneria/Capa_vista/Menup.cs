@@ -72,9 +72,9 @@ namespace Vista_Seguridad
 
         private void btnnominas_Click(object sender, EventArgs e)
         {
-            /*VistaLogistica.Menu b = new VistaLogistica.Menu();
-           b.Show();
-            cn.setBtitacora("6000", "Ingreso Nominas");*/
+            CapaVistaNomina.MenuPrincipal b = new CapaVistaNomina.MenuPrincipal();
+            b.Show();
+            cn.setBtitacora("6000", "Ingreso Nominas");
         }
 
         private void btnBancos_Click(object sender, EventArgs e)
