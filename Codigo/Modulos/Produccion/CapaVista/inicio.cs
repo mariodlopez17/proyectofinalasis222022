@@ -23,6 +23,11 @@ namespace CapaVistaProduccion
             panel2.Visible = false;
             panel3.Visible = false;
             panel4.Visible = false;
+            panel6.Visible = false;
+            panel7.Visible = false;
+            panel8.Visible = false;
+            panel9.Visible = false;
+
 
         }
 
@@ -34,6 +39,14 @@ namespace CapaVistaProduccion
                 panel3.Visible = false;
             if (panel4.Visible == true)
                 panel4.Visible = false;
+            if (panel6.Visible == true)
+                panel6.Visible = false;
+            if (panel7.Visible == true)
+                panel7.Visible = false;
+            if (panel8.Visible == true)
+                panel8.Visible = false;
+            if (panel9.Visible == true)
+                panel9.Visible = false;
         }
 
         private void showSubMenu(Panel subMenu)
@@ -51,20 +64,20 @@ namespace CapaVistaProduccion
         private void button2_Click(object sender, EventArgs e)
         {
             showSubMenu(panel3);
-            prueba = 2;
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
             showSubMenu(panel2);
-            prueba = 1;
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             showSubMenu(panel4);
-            prueba = 3;
+            
 
 
         }
@@ -107,7 +120,6 @@ namespace CapaVistaProduccion
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-            
 
             hideSubMenu();
         }
@@ -121,18 +133,68 @@ namespace CapaVistaProduccion
 
         private void button7_Click(object sender, EventArgs e)
         {
-            
+            hideSubMenu();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            hideSubMenu();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             
             hideSubMenu();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panel6);
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panel7);
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panel8);
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panel9);
         }
     }
 }
