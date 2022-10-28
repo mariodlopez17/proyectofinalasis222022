@@ -44,6 +44,7 @@ namespace ComprasVista
             this.txtDpi = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.TxtNit = new System.Windows.Forms.TextBox();
+            this.navegador1 = new NavegadorVista.Navegador();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -175,11 +176,20 @@ namespace ComprasVista
             this.TxtNit.TabIndex = 25;
             this.TxtNit.Tag = "Nit_Clientes";
             // 
+            // navegador1
+            // 
+            this.navegador1.Location = new System.Drawing.Point(169, 12);
+            this.navegador1.Name = "navegador1";
+            this.navegador1.Size = new System.Drawing.Size(574, 152);
+            this.navegador1.TabIndex = 26;
+            this.navegador1.Load += new System.EventHandler(this.navegador1_Load_1);
+            // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.navegador1);
             this.Controls.Add(this.TxtNit);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtDpi);
@@ -220,5 +230,6 @@ namespace ComprasVista
         private System.Windows.Forms.TextBox txtDpi;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox TxtNit;
+        private NavegadorVista.Navegador navegador1;
     }
 }
