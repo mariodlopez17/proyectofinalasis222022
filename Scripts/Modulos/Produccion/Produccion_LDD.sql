@@ -1,27 +1,30 @@
-CREATE DATABASE IF NOT EXISTS `colchoneria`;
 USE `colchoneria`;
-CREATE TABLE `colchoneria`.`tbl_recetas` (
-  `pk_idrecetas_tbl_recetas` INT NOT NULL AUTO_INCREMENT,
-  `producto_tbl_recetas` VARCHAR(45) NOT NULL,
-  `nombre_material_tbl_recetas` VARCHAR(100) NOT NULL,
-  `cantidad_tbl_recetas` VARCHAR(100) NOT NULL,
-  PRIMARY KEY (`pk_idrecetas_tbl_recetas`));
-
-CREATE TABLE `colchoneria`.`tbl_ordenes` (
-  `idordenes_tbl_ordenes` INT NOT NULL AUTO_INCREMENT,
-  `idreceta_tbl_ordenes` INT NOT NULL,
-  `prioridad_tbl_ordenes` VARCHAR(45) NOT NULL,
-  `producto_fabricar_tbl_ordenes` VARCHAR(45) NOT NULL,
-  `cantidad` INT NOT NULL,
-  `fechaini_tbl_ordenes` VARCHAR(25) NOT NULL,
-  `fechaent` VARCHAR(25) NOT NULL,
-  PRIMARY KEY (`idordenes_tbl_ordenes`),
-  INDEX `pkidreceta_idx` (`idreceta_tbl_ordenes` ASC) VISIBLE,
-  CONSTRAINT `pkidreceta`
-    FOREIGN KEY (`idreceta_tbl_ordenes`)
-    REFERENCES `colchoneria`.`tbl_recetas` (`pk_idrecetas_tbl_recetas`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+-- Tabla de tbl_ordenes
+DROP TABLE IF EXISTS `tbl_ordenes`;
+CREATE TABLE `tbl_ordenes` (
+  `pk_idordenes_tbl_ordenes` int NOT NULL AUTO_INCREMENT,
+  `fk_idrecetas_tbl_recetas` int NOT NULL,
+  `prioridad_tbl_ordenes` varchar(45) NOT NULL,
+  `producto_fabricar_tbl_ordenes` varchar(45) NOT NULL,
+  `cantidad_tbl_ordenes` int NOT NULL,
+  `fechaini_tbl_ordenes` varchar(25) NOT NULL,
+  `fechaentrega_tbl_ordenes` varchar(25) NOT NULL,
+  `fechacreacion_orden_tbl_ordenes` varchar(45) NOT NULL,
+  `detalle_tbl_ordenes` varchar(300) DEFAULT NULL,
+  PRIMARY KEY (`pk_idordenes_tbl_ordenes`),
+  KEY `fk_idproducto_tbl_recetas_idx` (`fk_idrecetas_tbl_recetas`),
+  CONSTRAINT `fk_idrecetas_tbl_recetas` FOREIGN KEY (`fk_idrecetas_tbl_recetas`) REFERENCES `tbl_recetas` (`pk_idrecetas_tbl_recetas`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+-- Tabla de tbl_recetas
+DROP TABLE IF EXISTS `tbl_recetas`;
+CREATE TABLE `tbl_recetas` (
+  `pk_idrecetas_tbl_recetas` int NOT NULL AUTO_INCREMENT,
+  `producto_tbl_recetas` varchar(45) NOT NULL,
+  `nombre_material_tbl_recetas` varchar(100) NOT NULL,
+  `cantidad_tbl_recetas` varchar(100) NOT NULL,
+  `medida_tbl_recetas` varchar(45) NOT NULL,
+  PRIMARY KEY (`pk_idrecetas_tbl_recetas`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 CREATE TABLE `colchoneria`.`_tbl_procesoprod` (
   `pk_codigo_proceso` INT NOT NULL,
