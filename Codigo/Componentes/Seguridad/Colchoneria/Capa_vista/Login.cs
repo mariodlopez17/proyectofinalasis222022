@@ -39,70 +39,43 @@ namespace Vista_Seguridad
 
                 
                 Menup b = new Menup();
+                cn.setBtitacora("1", "Ingreso Login");
                 b.Show();
                 this.Hide();
 
-                /*if (cn.getAccesoModulos(1000))
+               /* if (cn.getAccesoModulos(1000))
                 {
-                    
 
-                   b.btnseguridad.Enabled = true;
-                   
-                    this.Hide();
                     cn.setBtitacora("1000", "Seguridad");
                 };
                  if (cn.getAccesoModulos(2000))
                 {
-                   
 
-                    b.btlogistica.Enabled = true;
-
-                    this.Hide();
                     cn.setBtitacora("2000", "Logistica");
                 };
                 if (cn.getAccesoModulos(3000))
                 {
-                    
 
-                    b.btncompras.Enabled = true;
-
-                    this.Hide();
                     cn.setBtitacora("3000", "Compra y Venta");
                 };
                 if (cn.getAccesoModulos(5000))
                 {
-                    
 
-                    b.btnProduccion.Enabled = true;
-
-                    this.Hide();
                     cn.setBtitacora("5000", "Produccion");
                 };
                 if (cn.getAccesoModulos(6000))
                 {
-                    
 
-                    b.btnnominas.Enabled = true;
-
-                    this.Hide();
                     cn.setBtitacora("6000", "Nominas");
                 };
                 if (cn.getAccesoModulos(7000))
                 {
-                    
 
-                    b.btnBancos.Enabled = true;
-
-                    this.Hide();
                     cn.setBtitacora("7000", "Bancos");
                 };
                 if (cn.getAccesoModulos(8000))
                 {
-                    
 
-                    b.btnContabilidad.Enabled = true;
-
-                    this.Hide();
                     cn.setBtitacora("8000", "Contabilidad");
                 };*/
             }else
