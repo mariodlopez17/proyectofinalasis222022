@@ -22,7 +22,6 @@ namespace CapaVistaProduccion
         {
             panel2.Visible = false;
             panel3.Visible = false;
-            panel4.Visible = false;
             panel6.Visible = false;
             panel7.Visible = false;
             panel8.Visible = false;
@@ -37,8 +36,6 @@ namespace CapaVistaProduccion
                 panel2.Visible = false;
             if (panel3.Visible == true)
                 panel3.Visible = false;
-            if (panel4.Visible == true)
-                panel4.Visible = false;
             if (panel6.Visible == true)
                 panel6.Visible = false;
             if (panel7.Visible == true)
@@ -76,7 +73,7 @@ namespace CapaVistaProduccion
 
         private void button3_Click(object sender, EventArgs e)
         {
-            showSubMenu(panel4);
+           
             
 
 
@@ -195,6 +192,11 @@ namespace CapaVistaProduccion
         private void button17_Click(object sender, EventArgs e)
         {
             showSubMenu(panel9);
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
