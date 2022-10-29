@@ -3,20 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//Libreria--------
 using System.Data.Odbc;
 
-namespace NavegadorModelo
+namespace ModeloLogistica
 {
     class Conexion
     {
-        //Clase de conexion --------------
         public OdbcConnection conexion()
         {
-            //creacion de la conexion via ODBC
 
-            OdbcConnection conn = new OdbcConnection("Dsn=colchoneria");
-
+            OdbcConnection conn = new OdbcConnection("Dsn=prueba");
             try
             {
                 conn.Open();
@@ -28,7 +24,7 @@ namespace NavegadorModelo
             return conn;
         }
 
-        //metodo para cerrar la conexion
+
         public void desconexion(OdbcConnection conn)
         {
             try
