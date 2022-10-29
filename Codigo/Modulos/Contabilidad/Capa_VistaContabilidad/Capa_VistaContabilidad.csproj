@@ -110,7 +110,6 @@
     <Compile Include="Cierre Por Cuentas.designer.cs">
       <DependentUpon>Cierre Por Cuentas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
     <Compile Include="Confirmar Cierre Por Cuentas.cs">
       <SubType>Form</SubType>
     </Compile>
