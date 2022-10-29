@@ -159,12 +159,6 @@
     <Compile Include="MantenimientoDetallePolizaContable.designer.cs">
       <DependentUpon>MantenimientoDetallePolizaContable.cs</DependentUpon>
     </Compile>
-    <Compile Include="MantenimientoEstadosFinancieros - Copia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MantenimientoEstadosFinancieros.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="MantenimientoTipodeCuentas.cs">
       <SubType>Form</SubType>
     </Compile>
