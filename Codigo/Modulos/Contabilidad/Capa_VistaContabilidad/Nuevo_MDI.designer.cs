@@ -44,25 +44,23 @@ namespace Capa_VistaContabilidad
             this.btn_ReportesConta = new System.Windows.Forms.Button();
             this.btnProveedor = new System.Windows.Forms.Button();
             this.panelActivos = new System.Windows.Forms.Panel();
-            this.btn_MantTCuenta = new System.Windows.Forms.Button();
-            this.bnt_MantAct = new System.Windows.Forms.Button();
-            this.btn_MantEFinancieros = new System.Windows.Forms.Button();
-            this.btn_MantPresp = new System.Windows.Forms.Button();
+            this.btn_MantTEFinanc = new System.Windows.Forms.Button();
+            this.bnt_MantActF = new System.Windows.Forms.Button();
+            this.btn_MantDetPol = new System.Windows.Forms.Button();
+            this.btn_MantTipoPol = new System.Windows.Forms.Button();
             this.btn_mantPolizaD = new System.Windows.Forms.Button();
-            this.btn_mantPolizaC = new System.Windows.Forms.Button();
-            this.btn_mantClaseCtas = new System.Windows.Forms.Button();
+            this.btn_manTctas = new System.Windows.Forms.Button();
+            this.btn_mantEnbCtas = new System.Windows.Forms.Button();
             this.btnClient = new System.Windows.Forms.Button();
             this.panelPolizas = new System.Windows.Forms.Panel();
             this.btn_EFinancieros = new System.Windows.Forms.Button();
             this.btn_CierreG = new System.Windows.Forms.Button();
             this.btn_CierrePC = new System.Windows.Forms.Button();
-            this.btnProveedores = new System.Windows.Forms.Button();
-            this.btn_AFijos = new System.Windows.Forms.Button();
-            this.btn_Plocales = new System.Windows.Forms.Button();
+            this.btn_RevPresp = new System.Windows.Forms.Button();
+            this.btn_modPresp = new System.Windows.Forms.Button();
             this.btnCompras = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelMant.SuspendLayout();
             this.panelEstadosF.SuspendLayout();
@@ -279,83 +277,82 @@ namespace Capa_VistaContabilidad
             // panelActivos
             // 
             this.panelActivos.BackColor = System.Drawing.Color.LemonChiffon;
-            this.panelActivos.Controls.Add(this.button2);
-            this.panelActivos.Controls.Add(this.btn_MantTCuenta);
-            this.panelActivos.Controls.Add(this.bnt_MantAct);
-            this.panelActivos.Controls.Add(this.btn_MantEFinancieros);
-            this.panelActivos.Controls.Add(this.btn_MantPresp);
+            this.panelActivos.Controls.Add(this.btn_MantTEFinanc);
+            this.panelActivos.Controls.Add(this.bnt_MantActF);
+            this.panelActivos.Controls.Add(this.btn_MantDetPol);
+            this.panelActivos.Controls.Add(this.btn_MantTipoPol);
             this.panelActivos.Controls.Add(this.btn_mantPolizaD);
-            this.panelActivos.Controls.Add(this.btn_mantPolizaC);
-            this.panelActivos.Controls.Add(this.btn_mantClaseCtas);
+            this.panelActivos.Controls.Add(this.btn_manTctas);
+            this.panelActivos.Controls.Add(this.btn_mantEnbCtas);
             this.panelActivos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelActivos.Location = new System.Drawing.Point(0, 435);
             this.panelActivos.Name = "panelActivos";
             this.panelActivos.Size = new System.Drawing.Size(220, 316);
             this.panelActivos.TabIndex = 3;
             // 
-            // btn_MantTCuenta
+            // btn_MantTEFinanc
             // 
-            this.btn_MantTCuenta.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_MantTCuenta.FlatAppearance.BorderSize = 0;
-            this.btn_MantTCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_MantTCuenta.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btn_MantTCuenta.Location = new System.Drawing.Point(0, 210);
-            this.btn_MantTCuenta.Name = "btn_MantTCuenta";
-            this.btn_MantTCuenta.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btn_MantTCuenta.Size = new System.Drawing.Size(220, 35);
-            this.btn_MantTCuenta.TabIndex = 9;
-            this.btn_MantTCuenta.Text = "Mantenimiento Tipo Cuenta";
-            this.btn_MantTCuenta.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btn_MantTCuenta.UseVisualStyleBackColor = true;
-            this.btn_MantTCuenta.Click += new System.EventHandler(this.btn_MantTCuenta_Click);
+            this.btn_MantTEFinanc.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_MantTEFinanc.FlatAppearance.BorderSize = 0;
+            this.btn_MantTEFinanc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_MantTEFinanc.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btn_MantTEFinanc.Location = new System.Drawing.Point(0, 210);
+            this.btn_MantTEFinanc.Name = "btn_MantTEFinanc";
+            this.btn_MantTEFinanc.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btn_MantTEFinanc.Size = new System.Drawing.Size(220, 35);
+            this.btn_MantTEFinanc.TabIndex = 9;
+            this.btn_MantTEFinanc.Text = "Mantenimiento Estados Financieros";
+            this.btn_MantTEFinanc.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn_MantTEFinanc.UseVisualStyleBackColor = true;
+            this.btn_MantTEFinanc.Click += new System.EventHandler(this.btn_MantTCuenta_Click);
             // 
-            // bnt_MantAct
+            // bnt_MantActF
             // 
-            this.bnt_MantAct.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bnt_MantAct.FlatAppearance.BorderSize = 0;
-            this.bnt_MantAct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bnt_MantAct.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.bnt_MantAct.Location = new System.Drawing.Point(0, 175);
-            this.bnt_MantAct.Name = "bnt_MantAct";
-            this.bnt_MantAct.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.bnt_MantAct.Size = new System.Drawing.Size(220, 35);
-            this.bnt_MantAct.TabIndex = 8;
-            this.bnt_MantAct.Text = "Mantenimiento Activos";
-            this.bnt_MantAct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bnt_MantAct.UseVisualStyleBackColor = true;
-            this.bnt_MantAct.Click += new System.EventHandler(this.bnt_MantAct_Click);
+            this.bnt_MantActF.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bnt_MantActF.FlatAppearance.BorderSize = 0;
+            this.bnt_MantActF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bnt_MantActF.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.bnt_MantActF.Location = new System.Drawing.Point(0, 175);
+            this.bnt_MantActF.Name = "bnt_MantActF";
+            this.bnt_MantActF.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.bnt_MantActF.Size = new System.Drawing.Size(220, 35);
+            this.bnt_MantActF.TabIndex = 8;
+            this.bnt_MantActF.Text = "Mantenimiento Activos Fijos";
+            this.bnt_MantActF.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bnt_MantActF.UseVisualStyleBackColor = true;
+            this.bnt_MantActF.Click += new System.EventHandler(this.bnt_MantAct_Click);
             // 
-            // btn_MantEFinancieros
+            // btn_MantDetPol
             // 
-            this.btn_MantEFinancieros.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_MantEFinancieros.FlatAppearance.BorderSize = 0;
-            this.btn_MantEFinancieros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_MantEFinancieros.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btn_MantEFinancieros.Location = new System.Drawing.Point(0, 140);
-            this.btn_MantEFinancieros.Name = "btn_MantEFinancieros";
-            this.btn_MantEFinancieros.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btn_MantEFinancieros.Size = new System.Drawing.Size(220, 35);
-            this.btn_MantEFinancieros.TabIndex = 6;
-            this.btn_MantEFinancieros.Text = "Mantenimiento Estados Financieros";
-            this.btn_MantEFinancieros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_MantEFinancieros.UseVisualStyleBackColor = true;
-            this.btn_MantEFinancieros.Click += new System.EventHandler(this.btn_MantEFinancieros_Click);
+            this.btn_MantDetPol.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_MantDetPol.FlatAppearance.BorderSize = 0;
+            this.btn_MantDetPol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_MantDetPol.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btn_MantDetPol.Location = new System.Drawing.Point(0, 140);
+            this.btn_MantDetPol.Name = "btn_MantDetPol";
+            this.btn_MantDetPol.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btn_MantDetPol.Size = new System.Drawing.Size(220, 35);
+            this.btn_MantDetPol.TabIndex = 6;
+            this.btn_MantDetPol.Text = "Mantenimiento Detalle Poliza";
+            this.btn_MantDetPol.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_MantDetPol.UseVisualStyleBackColor = true;
+            this.btn_MantDetPol.Click += new System.EventHandler(this.btn_MantEFinancieros_Click);
             // 
-            // btn_MantPresp
+            // btn_MantTipoPol
             // 
-            this.btn_MantPresp.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_MantPresp.FlatAppearance.BorderSize = 0;
-            this.btn_MantPresp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_MantPresp.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btn_MantPresp.Location = new System.Drawing.Point(0, 105);
-            this.btn_MantPresp.Name = "btn_MantPresp";
-            this.btn_MantPresp.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btn_MantPresp.Size = new System.Drawing.Size(220, 35);
-            this.btn_MantPresp.TabIndex = 7;
-            this.btn_MantPresp.Text = "Mantenimiento Presupuestos";
-            this.btn_MantPresp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_MantPresp.UseVisualStyleBackColor = true;
-            this.btn_MantPresp.Click += new System.EventHandler(this.button3_Click);
+            this.btn_MantTipoPol.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_MantTipoPol.FlatAppearance.BorderSize = 0;
+            this.btn_MantTipoPol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_MantTipoPol.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btn_MantTipoPol.Location = new System.Drawing.Point(0, 105);
+            this.btn_MantTipoPol.Name = "btn_MantTipoPol";
+            this.btn_MantTipoPol.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btn_MantTipoPol.Size = new System.Drawing.Size(220, 35);
+            this.btn_MantTipoPol.TabIndex = 7;
+            this.btn_MantTipoPol.Text = "Mantenimiento Tipo Polizas";
+            this.btn_MantTipoPol.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_MantTipoPol.UseVisualStyleBackColor = true;
+            this.btn_MantTipoPol.Click += new System.EventHandler(this.button3_Click);
             // 
             // btn_mantPolizaD
             // 
@@ -368,42 +365,42 @@ namespace Capa_VistaContabilidad
             this.btn_mantPolizaD.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
             this.btn_mantPolizaD.Size = new System.Drawing.Size(220, 35);
             this.btn_mantPolizaD.TabIndex = 1;
-            this.btn_mantPolizaD.Text = "Mantenimiento Poliza Detalle";
+            this.btn_mantPolizaD.Text = "Mantenimiento Cuentas";
             this.btn_mantPolizaD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_mantPolizaD.UseVisualStyleBackColor = true;
             this.btn_mantPolizaD.Click += new System.EventHandler(this.btn_mantTPC_Click);
             // 
-            // btn_mantPolizaC
+            // btn_manTctas
             // 
-            this.btn_mantPolizaC.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_mantPolizaC.FlatAppearance.BorderSize = 0;
-            this.btn_mantPolizaC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_mantPolizaC.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btn_mantPolizaC.Location = new System.Drawing.Point(0, 35);
-            this.btn_mantPolizaC.Name = "btn_mantPolizaC";
-            this.btn_mantPolizaC.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btn_mantPolizaC.Size = new System.Drawing.Size(220, 35);
-            this.btn_mantPolizaC.TabIndex = 2;
-            this.btn_mantPolizaC.Text = "Mantenimiento Poliza Contable";
-            this.btn_mantPolizaC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_mantPolizaC.UseVisualStyleBackColor = true;
-            this.btn_mantPolizaC.Click += new System.EventHandler(this.btn_mantPC_Click);
+            this.btn_manTctas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_manTctas.FlatAppearance.BorderSize = 0;
+            this.btn_manTctas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_manTctas.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btn_manTctas.Location = new System.Drawing.Point(0, 35);
+            this.btn_manTctas.Name = "btn_manTctas";
+            this.btn_manTctas.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btn_manTctas.Size = new System.Drawing.Size(220, 35);
+            this.btn_manTctas.TabIndex = 2;
+            this.btn_manTctas.Text = "Mantenimiento Tipo Cuentas";
+            this.btn_manTctas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_manTctas.UseVisualStyleBackColor = true;
+            this.btn_manTctas.Click += new System.EventHandler(this.btn_mantPC_Click);
             // 
-            // btn_mantClaseCtas
+            // btn_mantEnbCtas
             // 
-            this.btn_mantClaseCtas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_mantClaseCtas.FlatAppearance.BorderSize = 0;
-            this.btn_mantClaseCtas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_mantClaseCtas.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btn_mantClaseCtas.Location = new System.Drawing.Point(0, 0);
-            this.btn_mantClaseCtas.Name = "btn_mantClaseCtas";
-            this.btn_mantClaseCtas.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btn_mantClaseCtas.Size = new System.Drawing.Size(220, 35);
-            this.btn_mantClaseCtas.TabIndex = 0;
-            this.btn_mantClaseCtas.Text = "Mantenimiento Clase Cuentas";
-            this.btn_mantClaseCtas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_mantClaseCtas.UseVisualStyleBackColor = true;
-            this.btn_mantClaseCtas.Click += new System.EventHandler(this.button2_Click_1);
+            this.btn_mantEnbCtas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_mantEnbCtas.FlatAppearance.BorderSize = 0;
+            this.btn_mantEnbCtas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_mantEnbCtas.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btn_mantEnbCtas.Location = new System.Drawing.Point(0, 0);
+            this.btn_mantEnbCtas.Name = "btn_mantEnbCtas";
+            this.btn_mantEnbCtas.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btn_mantEnbCtas.Size = new System.Drawing.Size(220, 35);
+            this.btn_mantEnbCtas.TabIndex = 0;
+            this.btn_mantEnbCtas.Text = "Mantenimiento Encabezado Cuentas";
+            this.btn_mantEnbCtas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_mantEnbCtas.UseVisualStyleBackColor = true;
+            this.btn_mantEnbCtas.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // btnClient
             // 
@@ -430,9 +427,8 @@ namespace Capa_VistaContabilidad
             this.panelPolizas.Controls.Add(this.btn_EFinancieros);
             this.panelPolizas.Controls.Add(this.btn_CierreG);
             this.panelPolizas.Controls.Add(this.btn_CierrePC);
-            this.panelPolizas.Controls.Add(this.btnProveedores);
-            this.panelPolizas.Controls.Add(this.btn_AFijos);
-            this.panelPolizas.Controls.Add(this.btn_Plocales);
+            this.panelPolizas.Controls.Add(this.btn_RevPresp);
+            this.panelPolizas.Controls.Add(this.btn_modPresp);
             this.panelPolizas.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPolizas.Location = new System.Drawing.Point(0, 126);
             this.panelPolizas.Name = "panelPolizas";
@@ -445,7 +441,7 @@ namespace Capa_VistaContabilidad
             this.btn_EFinancieros.FlatAppearance.BorderSize = 0;
             this.btn_EFinancieros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_EFinancieros.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btn_EFinancieros.Location = new System.Drawing.Point(0, 175);
+            this.btn_EFinancieros.Location = new System.Drawing.Point(0, 140);
             this.btn_EFinancieros.Name = "btn_EFinancieros";
             this.btn_EFinancieros.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
             this.btn_EFinancieros.Size = new System.Drawing.Size(220, 35);
@@ -461,7 +457,7 @@ namespace Capa_VistaContabilidad
             this.btn_CierreG.FlatAppearance.BorderSize = 0;
             this.btn_CierreG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_CierreG.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btn_CierreG.Location = new System.Drawing.Point(0, 140);
+            this.btn_CierreG.Location = new System.Drawing.Point(0, 105);
             this.btn_CierreG.Name = "btn_CierreG";
             this.btn_CierreG.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
             this.btn_CierreG.Size = new System.Drawing.Size(220, 35);
@@ -477,7 +473,7 @@ namespace Capa_VistaContabilidad
             this.btn_CierrePC.FlatAppearance.BorderSize = 0;
             this.btn_CierrePC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_CierrePC.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btn_CierrePC.Location = new System.Drawing.Point(0, 105);
+            this.btn_CierrePC.Location = new System.Drawing.Point(0, 70);
             this.btn_CierrePC.Name = "btn_CierrePC";
             this.btn_CierrePC.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
             this.btn_CierrePC.Size = new System.Drawing.Size(220, 35);
@@ -487,53 +483,37 @@ namespace Capa_VistaContabilidad
             this.btn_CierrePC.UseVisualStyleBackColor = true;
             this.btn_CierrePC.Click += new System.EventHandler(this.btn_CierrePC_Click);
             // 
-            // btnProveedores
+            // btn_RevPresp
             // 
-            this.btnProveedores.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProveedores.FlatAppearance.BorderSize = 0;
-            this.btnProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProveedores.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btnProveedores.Location = new System.Drawing.Point(0, 70);
-            this.btnProveedores.Name = "btnProveedores";
-            this.btnProveedores.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btnProveedores.Size = new System.Drawing.Size(220, 35);
-            this.btnProveedores.TabIndex = 0;
-            this.btnProveedores.Text = "Presupuestos";
-            this.btnProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProveedores.UseVisualStyleBackColor = true;
-            this.btnProveedores.Click += new System.EventHandler(this.btnProveedores_Click);
+            this.btn_RevPresp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_RevPresp.FlatAppearance.BorderSize = 0;
+            this.btn_RevPresp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_RevPresp.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btn_RevPresp.Location = new System.Drawing.Point(0, 35);
+            this.btn_RevPresp.Name = "btn_RevPresp";
+            this.btn_RevPresp.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btn_RevPresp.Size = new System.Drawing.Size(220, 35);
+            this.btn_RevPresp.TabIndex = 0;
+            this.btn_RevPresp.Text = "Revision Presupuestos";
+            this.btn_RevPresp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_RevPresp.UseVisualStyleBackColor = true;
+            this.btn_RevPresp.Click += new System.EventHandler(this.btnClientes_Click);
             // 
-            // btn_AFijos
+            // btn_modPresp
             // 
-            this.btn_AFijos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_AFijos.FlatAppearance.BorderSize = 0;
-            this.btn_AFijos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AFijos.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btn_AFijos.Location = new System.Drawing.Point(0, 35);
-            this.btn_AFijos.Name = "btn_AFijos";
-            this.btn_AFijos.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btn_AFijos.Size = new System.Drawing.Size(220, 35);
-            this.btn_AFijos.TabIndex = 0;
-            this.btn_AFijos.Text = "Acivos Fijos";
-            this.btn_AFijos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_AFijos.UseVisualStyleBackColor = true;
-            this.btn_AFijos.Click += new System.EventHandler(this.btnClientes_Click);
-            // 
-            // btn_Plocales
-            // 
-            this.btn_Plocales.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Plocales.FlatAppearance.BorderSize = 0;
-            this.btn_Plocales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Plocales.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btn_Plocales.Location = new System.Drawing.Point(0, 0);
-            this.btn_Plocales.Name = "btn_Plocales";
-            this.btn_Plocales.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btn_Plocales.Size = new System.Drawing.Size(220, 35);
-            this.btn_Plocales.TabIndex = 0;
-            this.btn_Plocales.Text = "Polizas Locales";
-            this.btn_Plocales.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Plocales.UseVisualStyleBackColor = true;
-            this.btn_Plocales.Click += new System.EventHandler(this.btnCompra_Click);
+            this.btn_modPresp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_modPresp.FlatAppearance.BorderSize = 0;
+            this.btn_modPresp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_modPresp.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btn_modPresp.Location = new System.Drawing.Point(0, 0);
+            this.btn_modPresp.Name = "btn_modPresp";
+            this.btn_modPresp.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btn_modPresp.Size = new System.Drawing.Size(220, 35);
+            this.btn_modPresp.TabIndex = 0;
+            this.btn_modPresp.Text = "Modificacion Presupuestos";
+            this.btn_modPresp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_modPresp.UseVisualStyleBackColor = true;
+            this.btn_modPresp.Click += new System.EventHandler(this.btnCompra_Click);
             // 
             // btnCompras
             // 
@@ -575,22 +555,6 @@ namespace Capa_VistaContabilidad
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.button2.Location = new System.Drawing.Point(0, 245);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(220, 35);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "MantenimientoDetallePoliza";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_2);
-            // 
             // Nuevo_MDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -622,15 +586,14 @@ namespace Capa_VistaContabilidad
 
         private System.Windows.Forms.Panel panelSideMenu;
         private System.Windows.Forms.Panel panelActivos;
-        private System.Windows.Forms.Button btn_AFijos;
+        private System.Windows.Forms.Button btn_RevPresp;
         private System.Windows.Forms.Button btnClient;
         private System.Windows.Forms.Panel panelPolizas;
-        private System.Windows.Forms.Button btn_Plocales;
+        private System.Windows.Forms.Button btn_modPresp;
         private System.Windows.Forms.Button btnCompras;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelPresupuestos;
-        private System.Windows.Forms.Button btnProveedores;
         private System.Windows.Forms.Button btnProveedor;
         private System.Windows.Forms.Panel panelEstadosF;
         private System.Windows.Forms.Button btn_EFinancieros;
@@ -640,18 +603,17 @@ namespace Capa_VistaContabilidad
         private System.Windows.Forms.Button btn_CierreG;
         private System.Windows.Forms.Button btn_CierrePC;
         private System.Windows.Forms.Panel panelMant;
-        private System.Windows.Forms.Button btn_mantPolizaC;
+        private System.Windows.Forms.Button btn_manTctas;
         private System.Windows.Forms.Button btn_mantPolizaD;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button btn_mantClaseCtas;
-        private System.Windows.Forms.Button btn_MantEFinancieros;
-        private System.Windows.Forms.Button btn_MantPresp;
-        private System.Windows.Forms.Button bnt_MantAct;
-        private System.Windows.Forms.Button btn_MantTCuenta;
+        private System.Windows.Forms.Button btn_mantEnbCtas;
+        private System.Windows.Forms.Button btn_MantDetPol;
+        private System.Windows.Forms.Button btn_MantTipoPol;
+        private System.Windows.Forms.Button bnt_MantActF;
+        private System.Windows.Forms.Button btn_MantTEFinanc;
         private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.Button btn_ConsultaInt;
         private System.Windows.Forms.Button btn_Security;
         private System.Windows.Forms.Button btn_ReportesConta;
-        private System.Windows.Forms.Button button2;
     }
 }
