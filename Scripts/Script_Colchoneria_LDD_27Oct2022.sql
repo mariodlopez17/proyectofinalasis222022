@@ -232,10 +232,10 @@ ciudad varchar(100),
 descripcion_ruta varchar(100)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
-create table tbl_trabajador (
+/*create table tbl_trabajador (
 pk_trabajador int not null primary key auto_increment,
 nombre varchar(100)
-);
+);*/
 
 create table tbl_transportista(
 pk_transportista int not null,
@@ -357,19 +357,19 @@ primary key(PkId_CertificacionFacturacion)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*tablas de logistica*//*cambios-------------------------------------------------------------*/
-create table tbl_marcacom (
+/*create table tbl_marca (
 pk_codigo_marca int not null primary key auto_increment,
 nombre_marca varchar(100)
-)ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
+)ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;*/
 
 /*tablas de logistica*//*cambios-------------------------------------------------------------*/
-create table tbl_lineaCom (
+/*create table tbl_linea (
 pk_codigo_linea int not null primary key auto_increment,
 nombre_linea varchar(100)
-)ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
+)ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;*/
 
-/*-----Jason Ortega 0901-19-22658--------*//*cambios-----------------------------------------------------------------------*/
-create table tbl_producto(
+/*-----Jason Ortega 0901-19-22658--------*//*COMPARTIDA CON LOGISTICA */
+/*create table tbl_producto(
 pk_codigo_producto int not null primary key auto_increment,
 codigo_referencia varchar(100),
 descripcion varchar(100),
@@ -383,9 +383,9 @@ estado_producto varchar(1),
 ultima_entrada datetime,
 ultima_Salida datetime,
 medidas varchar(25),
-foreign key (fk_marca) references tbl_marcacom (pk_codigo_marca),
-foreign key (fk_linea_inventario) references tbl_lineaCom (pk_codigo_linea)
-)ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
+foreign key (fk_marca) references tbl_marca (pk_codigo_marca),
+foreign key (fk_linea_inventario) references tbl_linea (pk_codigo_linea)
+)ENGINE = InnoDB DEFAULT CHARACTER SET = utf8; */
 
 /*George Mayén 0901-19-11383*/
 create table tblEncabezadoOrdenCompra(
@@ -701,14 +701,14 @@ CREATE TABLE IF NOT EXISTS `tbl_departamentos` (
     estado_departamento TINYINT DEFAULT 0,
     primary key (`pk_id_departamento`)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
-
-DROP TABLE IF EXISTS `tbl_puestosdetrabajo`; -- LEONEL DOMINGUEZ
+-- TABLA UTILIZADA EN COMPRAS
+/*DROP TABLE IF EXISTS `tbl_puestosdetrabajo`; -- LEONEL DOMINGUEZ 
 CREATE TABLE IF NOT EXISTS `tbl_puestosdetrabajo` (
 	pk_id_puesto INT AUTO_INCREMENT NOT NULL,
     nombre_puesto VARCHAR(50) NOT NULL,
     estado_puesto  TINYINT DEFAULT 0,
     primary key (`pk_id_puesto`)
-)ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
+)ENGINE = InnoDB DEFAULT CHARACTER SET = utf8; */
 
 DROP TABLE IF EXISTS `tbl_contrato`;
 CREATE TABLE IF NOT EXISTS `tbl_contrato` (
@@ -732,7 +732,7 @@ CREATE TABLE IF NOT EXISTS `tbl_percepciones` (
     primary key (`pk_id_prestdeduc`)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
-DROP TABLE IF EXISTS `tbl_trabajador`;-- LUIS LEE
+/*DROP TABLE IF EXISTS `tbl_trabajador`;-- LUIS LEE
 CREATE TABLE IF NOT EXISTS `tbl_trabajador` (
 	pk_id_trabajador INT AUTO_INCREMENT NOT NULL,
     fechaAlta_departamento DATE NOT NULL,
@@ -742,7 +742,7 @@ CREATE TABLE IF NOT EXISTS `tbl_trabajador` (
     telefono_trabajador INT(8) NOT NULL,
     estado_trabajador TINYINT DEFAULT 0,
     primary key (`pk_id_trabajador`)
-)ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
+)ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;*/
 
 DROP TABLE IF EXISTS `tbl_horasextras`;
 CREATE TABLE IF NOT EXISTS `tbl_horasextras` (
