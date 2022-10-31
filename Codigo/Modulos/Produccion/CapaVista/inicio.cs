@@ -117,13 +117,44 @@ namespace CapaVistaProduccion
 
         private void button4_Click_1(object sender, EventArgs e)
         {
+            bool abierto = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "ordenes")
+                {
+                    abierto = true;
+                    f.Focus();
+                    break;
+                }
+            }
+            if (abierto == false)
+            {
+                ordenes rep = new ordenes();
+                rep.MdiParent = this;
+                rep.Show();
+            }
 
             hideSubMenu();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-          
+            bool abierto = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "ver_ordenes")
+                {
+                    abierto = true;
+                    f.Focus();
+                    break;
+                }
+            }
+            if (abierto == false)
+            {
+                ver_ordenes rep = new ver_ordenes();
+                rep.MdiParent = this;
+                rep.Show();
+            }
             hideSubMenu();
 
         }
