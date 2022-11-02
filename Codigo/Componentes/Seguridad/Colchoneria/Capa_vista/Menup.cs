@@ -43,15 +43,9 @@ namespace Vista_Seguridad
 
         public void btlogistica_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             VistaLogistica.Menu b = new VistaLogistica.Menu();
               b.Show();
             cn.setBtitacora("2000", "Ingreso Logistica");
-=======
-            /*VistaLogistica.Menu b = new VistaLogistica.Menu();
-              b.Show();
-            cn.setBtitacora("2000", "Ingreso Logistica");*/
->>>>>>> PR_93
         }
 
         private void btnLogout_Click_1(object sender, EventArgs e)
@@ -64,15 +58,9 @@ namespace Vista_Seguridad
 
         private void btncompras_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            /*VistaLogistica.Menu b = new VistaLogistica.Menu();
-            b.Show();
-            cn.setBtitacora("3000", "Ingreso Compras");*/
-=======
             ComprasVista.central_Compra b = new ComprasVista.central_Compra();
             b.Show();
             cn.setBtitacora("3000", "Ingreso Compras");
->>>>>>> PR_93
         }
 
         private void btnProduccion_Click(object sender, EventArgs e)
@@ -84,15 +72,10 @@ namespace Vista_Seguridad
 
         private void btnnominas_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             CapaVistaNomina.MenuPrincipal b = new CapaVistaNomina.MenuPrincipal();
             b.Show();
             cn.setBtitacora("6000", "Ingreso Nominas");
-=======
-            /*CapaVistaNomina.MenuPrincipal b = new CapaVistaNomina.MenuPrincipal();
-            b.Show();
-            cn.setBtitacora("6000", "Ingreso Nominas");*/
->>>>>>> PR_93
+
         }
 
         private void btnBancos_Click(object sender, EventArgs e)
