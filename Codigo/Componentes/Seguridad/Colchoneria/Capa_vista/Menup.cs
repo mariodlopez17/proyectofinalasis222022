@@ -43,7 +43,7 @@ namespace Vista_Seguridad
 
         public void btlogistica_Click(object sender, EventArgs e)
         {
-            /*  VistaLogistica.Menu b = new VistaLogistica.Menu();
+            /*VistaLogistica.Menu b = new VistaLogistica.Menu();
               b.Show();
             cn.setBtitacora("2000", "Ingreso Logistica");*/
         }
@@ -51,15 +51,16 @@ namespace Vista_Seguridad
         private void btnLogout_Click_1(object sender, EventArgs e)
         {
             Login b = new Login();
+            cn.setBtitacora("999", "Cerro Sesion");
             b.Show();
             this.Close();
         }
 
         private void btncompras_Click(object sender, EventArgs e)
         {
-            /*VistaLogistica.Menu b = new VistaLogistica.Menu();
+            ComprasVista.central_Compra b = new ComprasVista.central_Compra();
             b.Show();
-            cn.setBtitacora("3000", "Ingreso Compras");*/
+            cn.setBtitacora("3000", "Ingreso Compras");
         }
 
         private void btnProduccion_Click(object sender, EventArgs e)
@@ -71,8 +72,8 @@ namespace Vista_Seguridad
 
         private void btnnominas_Click(object sender, EventArgs e)
         {
-            /*VistaLogistica.Menu b = new VistaLogistica.Menu();
-           b.Show();
+            /*CapaVistaNomina.MenuPrincipal b = new CapaVistaNomina.MenuPrincipal();
+            b.Show();
             cn.setBtitacora("6000", "Ingreso Nominas");*/
         }
 
