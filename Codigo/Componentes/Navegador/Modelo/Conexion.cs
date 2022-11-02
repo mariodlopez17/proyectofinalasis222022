@@ -14,13 +14,7 @@ namespace NavegadorModelo
         public OdbcConnection conexion()
         {
             //creacion de la conexion via ODBC
-<<<<<<< HEAD
-
-            OdbcConnection conn = new OdbcConnection("Dsn=colchoneria");
-
-=======
             OdbcConnection conn = new OdbcConnection("Dsn=Colchoneria");
->>>>>>> PR_93
             try
             {
                 conn.Open();
