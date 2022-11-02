@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Odbc;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//Libreria--------
-using System.Data.Odbc;
 
-namespace NavegadorModelo
+namespace ComprasModelo
 {
     class Conexion
     {
@@ -14,13 +13,7 @@ namespace NavegadorModelo
         public OdbcConnection conexion()
         {
             //creacion de la conexion via ODBC
-<<<<<<< HEAD
-
             OdbcConnection conn = new OdbcConnection("Dsn=colchoneria");
-
-=======
-            OdbcConnection conn = new OdbcConnection("Dsn=Colchoneria");
->>>>>>> PR_93
             try
             {
                 conn.Open();
