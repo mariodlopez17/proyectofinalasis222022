@@ -35,9 +35,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Modulos\Nominas\MDI_Nominas\CapaVistaNomina\bin\Debug\CapaVistaNomina.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
+=======
     <Reference Include="ComprasVista">
       <HintPath>..\..\..\..\Modulos\Administracion\Vista\bin\Debug\ComprasVista.dll</HintPath>
     </Reference>
+>>>>>>> PR_93
     <Reference Include="eCryptography, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Eramake.eCryptography.1.1.6\lib\net45\eCryptography.dll</HintPath>
     </Reference>
