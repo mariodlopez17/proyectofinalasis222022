@@ -60,6 +60,9 @@
     <Reference Include="VistaLogistica">
       <HintPath>..\..\..\..\Modulos\Logistica\VistaLogistica\bin\Debug\VistaLogistica.dll</HintPath>
     </Reference>
+    <Reference Include="Vista_Bancos">
+      <HintPath>..\..\..\..\Modulos\Bancos\Vista_Bancos\bin\Debug\Vista_Bancos.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Aplicacion.cs">

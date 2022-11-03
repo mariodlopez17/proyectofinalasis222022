@@ -79,9 +79,9 @@ namespace Vista_Seguridad
 
         private void btnBancos_Click(object sender, EventArgs e)
         {
-            /*VistaLogistica.Menu b = new VistaLogistica.Menu();
+           Vista_Bancos.Banco_Form b = new Vista_Bancos.Banco_Form();
            b.Show();
-            cn.setBtitacora("7000", "Ingreso Bancos");*/
+           cn.setBtitacora("7000", "Ingreso Bancos");
         }
 
         private void btnContabilidad_Click(object sender, EventArgs e)
