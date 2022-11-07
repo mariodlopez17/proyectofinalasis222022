@@ -151,7 +151,7 @@
     <Compile Include="ListadoPrecios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListadoPrecios.Designer.cs">
+    <Compile Include="ListadoPrecios.designer.cs">
       <DependentUpon>ListadoPrecios.cs</DependentUpon>
     </Compile>
     <Compile Include="MovimientosClientes.cs">

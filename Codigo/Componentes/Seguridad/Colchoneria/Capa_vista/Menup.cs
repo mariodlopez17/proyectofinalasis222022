@@ -60,7 +60,7 @@ namespace Vista_Seguridad
         {
            ComprasVista.central_Compra b = new ComprasVista.central_Compra();
             b.Show();
-            cn.setBtitacora("3000", "Ingreso Compras");
+            cn.setBtitacora("3000", "Ingreso Compras"); 
         }
 
         private void btnProduccion_Click(object sender, EventArgs e)

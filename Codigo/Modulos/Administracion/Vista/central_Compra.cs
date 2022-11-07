@@ -145,12 +145,15 @@ namespace ComprasVista
         private void btnClientes_Click(object sender, EventArgs e)
         {
             //Codigo
-          
+            ListadoPrecios p = new ListadoPrecios();
+            p.MdiParent = this;
+            p.Show();
+            pictureBox2.Visible = false;
             //Ocultar submenu
             hideSubMenu();
-        }
 
-        private void btnContactoClientes_Click(object sender, EventArgs e)
+        }
+            private void btnContactoClientes_Click(object sender, EventArgs e)
         {
             //Codigo
             Caja_Clientes p = new Caja_Clientes();
