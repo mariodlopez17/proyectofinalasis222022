@@ -270,6 +270,7 @@ namespace ComprasVista
             this.btnCompra.Text = "Compras";
             this.btnCompra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompra.UseVisualStyleBackColor = true;
+            this.btnCompra.Click += new System.EventHandler(this.btnCompra_Click_1);
             // 
             // btnCompraOrden
             // 

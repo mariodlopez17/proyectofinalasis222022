@@ -36,7 +36,7 @@ namespace ComprasControlador
                 string consultaenpedido_campos = "PkId_EncabezadoOrdenCompra, FkId_Proveedores, FechaEntrega_EncabezadoOrdenCompra, FechaVencimiento_EncabezadoOrdenCompra, Estatus_EncabezadoOrdenCompra, Total_EncabezadoOrdenCompra";
                 sn.insertar(consultaenpedido, consultaenpedido_campos, "tblencabezadoordencompra");
                 string mensaje = "Orden Exitoso, tiene hasta: " + dtp.Value.ToString("dd-MM-YY") + " para recibir el producto por la cantidad de: Q" + textbox[2].Text;
-                MessageBox.Show(mensaje, " Pedido Exitoso  ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(mensaje, " Orden de Compra Exitoso  ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
                 
@@ -48,6 +48,56 @@ namespace ComprasControlador
 
 
 
+        }
+        // insertar Compra 
+        public void insertardbencabezado2(TextBox[] textbox, DateTimePicker dtp, GroupBox groupBox)
+        {
+
+            bool permiso = Verificarcamposvacios(groupBox);
+            if (permiso == true)
+            {
+
+
+
+                string consultaenpedido = "'"+textbox[0].Text + "', '" + textbox[1].Text + "', '"+textbox[2].Text+"', '" + dtp.Value.ToString("yyyyMMdd") + "', '" + textbox[3].Text + "' ";
+                string consultaenpedido_campos = "PkId_ComprasEncabezado, FkId_EncabezadoOrdenCompra, FkId_Proveedores, FechaCompra_ComprasEncabezado, Total_ComprasEncabezado";
+                sn.insertar(consultaenpedido, consultaenpedido_campos, "tblcomprasencabezado");
+                string mensaje = "Compra Exitoso para recibir el producto es por la cantidad de: Q" + textbox[3].Text;
+                MessageBox.Show(mensaje, " Compra Exitosa  ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+
+
+                textbox[3].Clear();
+            }
+
+
+
+
+
+        }
+        //Detalle2
+        public void insertarbddetalle2(DataGridView tabla, string id, string orden)
+        {
+
+            if (tabla.Rows.Count > 1)
+            {
+                string idpedidoo = tabla.Rows[0].Cells[0].Value.ToString();
+                for (int x = 0; x < tabla.Rows.Count - 1; x++)
+                {
+                    string idpedido = id;
+                    string idorden = orden;
+                    string idproducto = tabla.Rows[x].Cells[0].Value.ToString();
+                    string cantidad = tabla.Rows[x].Cells[1].Value.ToString();
+                    string precio = tabla.Rows[x].Cells[2].Value.ToString();
+                    string costo = tabla.Rows[x].Cells[3].Value.ToString();
+                    string total = tabla.Rows[x].Cells[4].Value.ToString();
+
+                    string consultadetallepe = "'" + idpedido + "', '"+ idproducto + "','" + idorden + "', '" +  precio + "', '" + cantidad + "', '" + costo + "', '" + total + "'";
+                    string consultadetallepe_campos = "PkId_ComprasEncabezado, FkId_Producto, FkId_EncabezadoOrdenCompra, Precio_DetalleCompra, Cantidad_DetalleCompra, Costo_DetalleCompra, Total_DetalleCompra";
+                    sn.insertar(consultadetallepe, consultadetallepe_campos, "tbldetallecompra");
+                }
+            }
         }
 
         //Detalle
@@ -110,6 +160,28 @@ namespace ComprasControlador
 
             //crearid(id, "tbl_Producto","p");
             crearid(id, "tblencabezadoordencompra", " ", "PkId_EncabezadoOrdenCompra");
+
+
+        }
+        //Inicio Compras
+        public void inicio2( TextBox id, TextBox precio, TextBox costo, TextBox total)
+        {
+
+            precio.Enabled = false;
+            costo.Enabled = false;
+            total.Enabled = false;
+           /* vencimineto.Value = fechavencimineto();
+
+            vencimineto.Enabled = false;
+            entrega.Value = fechavencimineto();
+
+            entrega.Enabled = false;*/
+
+
+            id.Enabled = false;
+
+            //crearid(id, "tbl_Producto","p");
+            crearid(id, "tblcomprasencabezado", " ", "PkId_ComprasEncabezado");
 
 
         }

@@ -268,9 +268,6 @@ namespace ComprasVista
 
         private void btnFactura_Click(object sender, EventArgs e)
         {
-            //Codigo
-            
-            //Ocultar submenu
             hideSubMenu();
         }
 
@@ -350,6 +347,16 @@ namespace ComprasVista
         private void btnCompraOrden_Click(object sender, EventArgs e)
         {
             OrdenesCompras lp = new OrdenesCompras();
+            lp.MdiParent = this;
+            lp.Show();
+            pictureBox2.Visible = false;
+            //Ocultar submenu
+            hideSubMenu();
+        }
+
+        private void btnCompra_Click_1(object sender, EventArgs e)
+        {
+            Compras lp = new Compras();
             lp.MdiParent = this;
             lp.Show();
             pictureBox2.Visible = false;
