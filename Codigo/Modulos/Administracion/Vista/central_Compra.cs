@@ -18,11 +18,17 @@ namespace ComprasVista
             InitializeComponent();
             customizeDesing();
 
-            Button [] apps = { btnCliente, btnProveedores };
+            Button [] apps = { btnCliente, btnProveedores, btnPedidos,btnVentas, btnFactura, btnComisiones, btnCompraOrden, btnCompra };
             cnseg.deshabilitarApps(apps);
 
             cnseg.getAccesoApp(3001, apps[0]);
             cnseg.getAccesoApp(3002, apps[1]);
+            cnseg.getAccesoApp(3111, apps[2]);
+            cnseg.getAccesoApp(3108, apps[3]);
+            cnseg.getAccesoApp(3107, apps[4]);
+            cnseg.getAccesoApp(3106, apps[5]);
+            cnseg.getAccesoApp(3109, apps[6]);
+            cnseg.getAccesoApp(3110, apps[7]);
         }
         private void customizeDesing()
         {
@@ -184,8 +190,10 @@ namespace ComprasVista
         private void btnMovimientosCLientes_Click(object sender, EventArgs e)
         {
             //Codigo
-            Form formMovClientes = new MovimientosClientes();
-            formMovClientes.ShowDialog();
+            Pedidos lp = new Pedidos();
+            lp.MdiParent = this;
+            lp.Show();
+            pictureBox2.Visible = false;
             //Ocultar submenu
             hideSubMenu();
         }
@@ -193,6 +201,10 @@ namespace ComprasVista
         private void btnCajaClientes_Click(object sender, EventArgs e)
         {
             //Codigo
+            FacturaVentas lp = new FacturaVentas();
+            lp.MdiParent = this;
+            lp.Show();
+            pictureBox2.Visible = false;
             //Ocultar submenu
             hideSubMenu();
         }
@@ -357,6 +369,16 @@ namespace ComprasVista
         private void btnCompra_Click_1(object sender, EventArgs e)
         {
             Compras lp = new Compras();
+            lp.MdiParent = this;
+            lp.Show();
+            pictureBox2.Visible = false;
+            //Ocultar submenu
+            hideSubMenu();
+        }
+
+        private void btnVentas_Click_1(object sender, EventArgs e)
+        {
+            Ventas lp = new Ventas();
             lp.MdiParent = this;
             lp.Show();
             pictureBox2.Visible = false;

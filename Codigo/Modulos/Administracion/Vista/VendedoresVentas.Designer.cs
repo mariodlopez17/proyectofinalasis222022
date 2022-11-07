@@ -238,6 +238,7 @@ namespace ComprasVista
             this.txtIdVendedor.Size = new System.Drawing.Size(100, 20);
             this.txtIdVendedor.TabIndex = 115;
             this.txtIdVendedor.Tag = "fk_id_trabajador";
+            this.txtIdVendedor.Visible = false;
             // 
             // txtCodVenta
             // 
@@ -246,6 +247,7 @@ namespace ComprasVista
             this.txtCodVenta.Size = new System.Drawing.Size(100, 20);
             this.txtCodVenta.TabIndex = 116;
             this.txtCodVenta.Tag = "FkId_VentasEncabezado";
+            this.txtCodVenta.Visible = false;
             this.txtCodVenta.TextChanged += new System.EventHandler(this.txtCodVenta_TextChanged);
             // 
             // btnCalcular
@@ -280,6 +282,7 @@ namespace ComprasVista
             this.txtIdPuesto.Name = "txtIdPuesto";
             this.txtIdPuesto.Size = new System.Drawing.Size(100, 20);
             this.txtIdPuesto.TabIndex = 137;
+            this.txtIdPuesto.Visible = false;
             // 
             // cbxPuesto
             // 

@@ -284,9 +284,6 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReporteFactura.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="VendedoresVentas.resx">
-      <DependentUpon>VendedoresVentas.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Ventas.resx">
       <DependentUpon>Ventas.cs</DependentUpon>
     </EmbeddedResource>

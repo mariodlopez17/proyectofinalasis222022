@@ -43,8 +43,7 @@ namespace ComprasVista
             this.btnComisiones = new System.Windows.Forms.Button();
             this.btnCompra = new System.Windows.Forms.Button();
             this.btnCompraOrden = new System.Windows.Forms.Button();
-            this.btnFacturaProveedores = new System.Windows.Forms.Button();
-            this.btnFacturaCliente = new System.Windows.Forms.Button();
+            this.btnFactura = new System.Windows.Forms.Button();
             this.btnPedidos = new System.Windows.Forms.Button();
             this.btnCotizaciones = new System.Windows.Forms.Button();
             this.btnProveedorCaja = new System.Windows.Forms.Button();
@@ -58,6 +57,7 @@ namespace ComprasVista
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnVentas = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelClientes.SuspendLayout();
@@ -224,11 +224,11 @@ namespace ComprasVista
             // panelClientes
             // 
             this.panelClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(215)))), ((int)(((byte)(249)))));
+            this.panelClientes.Controls.Add(this.btnVentas);
             this.panelClientes.Controls.Add(this.btnComisiones);
             this.panelClientes.Controls.Add(this.btnCompra);
             this.panelClientes.Controls.Add(this.btnCompraOrden);
-            this.panelClientes.Controls.Add(this.btnFacturaProveedores);
-            this.panelClientes.Controls.Add(this.btnFacturaCliente);
+            this.panelClientes.Controls.Add(this.btnFactura);
             this.panelClientes.Controls.Add(this.btnPedidos);
             this.panelClientes.Controls.Add(this.btnCotizaciones);
             this.panelClientes.Controls.Add(this.btnProveedorCaja);
@@ -246,7 +246,7 @@ namespace ComprasVista
             this.btnComisiones.FlatAppearance.BorderSize = 0;
             this.btnComisiones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnComisiones.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btnComisiones.Location = new System.Drawing.Point(0, 315);
+            this.btnComisiones.Location = new System.Drawing.Point(0, 280);
             this.btnComisiones.Name = "btnComisiones";
             this.btnComisiones.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
             this.btnComisiones.Size = new System.Drawing.Size(220, 35);
@@ -262,7 +262,7 @@ namespace ComprasVista
             this.btnCompra.FlatAppearance.BorderSize = 0;
             this.btnCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompra.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btnCompra.Location = new System.Drawing.Point(0, 280);
+            this.btnCompra.Location = new System.Drawing.Point(0, 245);
             this.btnCompra.Name = "btnCompra";
             this.btnCompra.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
             this.btnCompra.Size = new System.Drawing.Size(220, 35);
@@ -278,7 +278,7 @@ namespace ComprasVista
             this.btnCompraOrden.FlatAppearance.BorderSize = 0;
             this.btnCompraOrden.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraOrden.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btnCompraOrden.Location = new System.Drawing.Point(0, 245);
+            this.btnCompraOrden.Location = new System.Drawing.Point(0, 210);
             this.btnCompraOrden.Name = "btnCompraOrden";
             this.btnCompraOrden.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
             this.btnCompraOrden.Size = new System.Drawing.Size(220, 35);
@@ -288,36 +288,21 @@ namespace ComprasVista
             this.btnCompraOrden.UseVisualStyleBackColor = true;
             this.btnCompraOrden.Click += new System.EventHandler(this.btnCompraOrden_Click);
             // 
-            // btnFacturaProveedores
+            // btnFactura
             // 
-            this.btnFacturaProveedores.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFacturaProveedores.FlatAppearance.BorderSize = 0;
-            this.btnFacturaProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFacturaProveedores.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btnFacturaProveedores.Location = new System.Drawing.Point(0, 210);
-            this.btnFacturaProveedores.Name = "btnFacturaProveedores";
-            this.btnFacturaProveedores.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btnFacturaProveedores.Size = new System.Drawing.Size(220, 35);
-            this.btnFacturaProveedores.TabIndex = 24;
-            this.btnFacturaProveedores.Text = "Facturas Proveedores";
-            this.btnFacturaProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFacturaProveedores.UseVisualStyleBackColor = true;
-            // 
-            // btnFacturaCliente
-            // 
-            this.btnFacturaCliente.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFacturaCliente.FlatAppearance.BorderSize = 0;
-            this.btnFacturaCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFacturaCliente.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btnFacturaCliente.Location = new System.Drawing.Point(0, 175);
-            this.btnFacturaCliente.Name = "btnFacturaCliente";
-            this.btnFacturaCliente.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btnFacturaCliente.Size = new System.Drawing.Size(220, 35);
-            this.btnFacturaCliente.TabIndex = 23;
-            this.btnFacturaCliente.Text = "Facturas Clientes";
-            this.btnFacturaCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFacturaCliente.UseVisualStyleBackColor = true;
-            this.btnFacturaCliente.Click += new System.EventHandler(this.btnCajaClientes_Click);
+            this.btnFactura.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFactura.FlatAppearance.BorderSize = 0;
+            this.btnFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFactura.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnFactura.Location = new System.Drawing.Point(0, 175);
+            this.btnFactura.Name = "btnFactura";
+            this.btnFactura.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnFactura.Size = new System.Drawing.Size(220, 35);
+            this.btnFactura.TabIndex = 23;
+            this.btnFactura.Text = "Facturas ";
+            this.btnFactura.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFactura.UseVisualStyleBackColor = true;
+            this.btnFactura.Click += new System.EventHandler(this.btnCajaClientes_Click);
             // 
             // btnPedidos
             // 
@@ -507,6 +492,22 @@ namespace ComprasVista
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
+            // btnVentas
+            // 
+            this.btnVentas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVentas.FlatAppearance.BorderSize = 0;
+            this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVentas.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnVentas.Location = new System.Drawing.Point(0, 315);
+            this.btnVentas.Name = "btnVentas";
+            this.btnVentas.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnVentas.Size = new System.Drawing.Size(220, 35);
+            this.btnVentas.TabIndex = 28;
+            this.btnVentas.Text = "Ventas";
+            this.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVentas.UseVisualStyleBackColor = true;
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click_1);
+            // 
             // central_Compra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -552,13 +553,13 @@ namespace ComprasVista
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnSeguridad;
-        private System.Windows.Forms.Button btnFacturaCliente;
+        private System.Windows.Forms.Button btnFactura;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnAyuda;
         private System.Windows.Forms.Button btnCompraOrden;
-        private System.Windows.Forms.Button btnFacturaProveedores;
         private System.Windows.Forms.Button btnCompra;
         private System.Windows.Forms.Button btnComisiones;
+        private System.Windows.Forms.Button btnVentas;
     }
 }
