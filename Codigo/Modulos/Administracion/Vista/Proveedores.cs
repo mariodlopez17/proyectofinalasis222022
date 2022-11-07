@@ -10,23 +10,26 @@ using System.Windows.Forms;
 
 namespace ComprasVista
 {
-    public partial class Clientes : Form
+    public partial class Proveedores : Form
     {
-        public Clientes()
+        public Proveedores()
         {
             InitializeComponent();
-            
         }
         public string activo = "";
         public string inactivo = "";
         public string inter = "";
-
         private void navegador1_Load(object sender, EventArgs e)
         {
-            NavegadorVista.Navegador.idApp = "3001";
-            TextBox[] Grupotextbox = { txtid,txtDpi,TxtNit,txtnombre,txtdomicilio,
-            txttelefono,txtcorreo, TxtEstado};
-            TextBox[] Idtextbox = { txtid,txtDpi };
+            
+        }
+
+        private void navegador1_Load_1(object sender, EventArgs e)
+        {
+            NavegadorVista.Navegador.idApp = "3002";
+            TextBox[] Grupotextbox = { txtid,txtnombre,txtnit,txttelefono,txtdomicilio,
+            txtcorreo,txtRubro, TxtEstado};
+            TextBox[] Idtextbox = { txtid, txtnombre };
             navegador1.textbox = Grupotextbox;
             navegador1.tabla = dataGridView1;
             navegador1.textboxi = Idtextbox;
@@ -36,21 +39,22 @@ namespace ComprasVista
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            inter = Convert.ToString( comboBox1.SelectedItem);
+            inter = Convert.ToString(comboBox1.SelectedItem);
             if (inter == "Activo")
             {
                 activo = "1";
                 TxtEstado.Text = activo;
             }
-            else 
+            else
             {
                 inactivo = "0";
                 TxtEstado.Text = inactivo;
             }
-            /*TxtEstado.Text = Convert.ToString(comboBox1.SelectedItem);*/
+        }
 
-            
+        private void TxtEstado_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
