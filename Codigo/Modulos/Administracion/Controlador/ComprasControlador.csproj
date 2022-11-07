@@ -55,6 +55,7 @@
     <Compile Include="csContralador.cs" />
     <Compile Include="csControladorF.cs" />
     <Compile Include="csControladorJ.cs" />
+    <Compile Include="csControladort.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
