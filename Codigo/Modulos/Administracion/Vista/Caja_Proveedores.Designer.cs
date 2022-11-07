@@ -30,16 +30,11 @@ namespace ComprasVista
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txtIdCajaProveedores = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Dgv_CajaProveedores = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_CajaProveedores)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -51,79 +46,39 @@ namespace ComprasVista
             this.panel1.Size = new System.Drawing.Size(884, 139);
             this.panel1.TabIndex = 2;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 353);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(884, 208);
-            this.dataGridView1.TabIndex = 3;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 184);
+            this.label1.Location = new System.Drawing.Point(36, 263);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.Size = new System.Drawing.Size(103, 13);
             this.label1.TabIndex = 4;
-            this.label1.Text = "No_Compra";
+            this.label1.Text = "Id Caja Proveedores";
             // 
-            // textBox1
+            // txtIdCajaProveedores
             // 
-            this.textBox1.Location = new System.Drawing.Point(114, 181);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
+            this.txtIdCajaProveedores.Location = new System.Drawing.Point(145, 260);
+            this.txtIdCajaProveedores.Name = "txtIdCajaProveedores";
+            this.txtIdCajaProveedores.Size = new System.Drawing.Size(100, 20);
+            this.txtIdCajaProveedores.TabIndex = 5;
             // 
-            // label2
+            // button1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(244, 184);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Total Debitado";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.button1.Location = new System.Drawing.Point(145, 323);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(111, 34);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Mostrar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox2
+            // Dgv_CajaProveedores
             // 
-            this.textBox2.Location = new System.Drawing.Point(327, 181);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 7;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(433, 184);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Comprobante";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(509, 181);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 9;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(615, 184);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 13);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Fecha";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(658, 181);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 11;
+            this.Dgv_CajaProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgv_CajaProveedores.Location = new System.Drawing.Point(435, 211);
+            this.Dgv_CajaProveedores.Name = "Dgv_CajaProveedores";
+            this.Dgv_CajaProveedores.Size = new System.Drawing.Size(413, 263);
+            this.Dgv_CajaProveedores.TabIndex = 13;
             // 
             // Caja_Proveedores
             // 
@@ -131,20 +86,15 @@ namespace ComprasVista
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
             this.ClientSize = new System.Drawing.Size(884, 561);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Dgv_CajaProveedores);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtIdCajaProveedores);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Name = "Caja_Proveedores";
             this.Text = "Caja_Proveedores";
             this.Load += new System.EventHandler(this.Caja_Proveedores_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_CajaProveedores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,14 +103,9 @@ namespace ComprasVista
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtIdCajaProveedores;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView Dgv_CajaProveedores;
     }
 }
