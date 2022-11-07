@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="csContralador.cs" />
+    <Compile Include="csContraladorC.cs" />
     <Compile Include="csControladorF.cs" />
     <Compile Include="csControladorJ.cs" />
     <Compile Include="csControladort.cs" />

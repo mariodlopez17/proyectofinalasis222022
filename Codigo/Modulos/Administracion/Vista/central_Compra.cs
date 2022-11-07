@@ -167,8 +167,10 @@ namespace ComprasVista
         private void btnDay_Click(object sender, EventArgs e)
         {
             //Codigo
-            Form formCobrosDia = new CobrosDeDiaClientes();
-            formCobrosDia.ShowDialog();
+            Caja_Proveedores p = new Caja_Proveedores();
+            p.MdiParent = this;
+            p.Show();
+            pictureBox2.Visible = false;
             //Ocultar submenu
             hideSubMenu();
         }
