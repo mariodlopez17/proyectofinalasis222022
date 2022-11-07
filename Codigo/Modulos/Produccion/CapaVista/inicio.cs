@@ -117,24 +117,87 @@ namespace CapaVistaProduccion
 
         private void button4_Click_1(object sender, EventArgs e)
         {
+            bool abierto = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "ordenes")
+                {
+                    abierto = true;
+                    f.Focus();
+                    break;
+                }
+            }
+            if (abierto == false)
+            {
+                ordenes rep = new ordenes();
+                rep.MdiParent = this;
+                rep.Show();
+            }
 
             hideSubMenu();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-          
+            bool abierto = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "ver_ordenes")
+                {
+                    abierto = true;
+                    f.Focus();
+                    break;
+                }
+            }
+            if (abierto == false)
+            {
+                ver_ordenes rep = new ver_ordenes();
+                rep.MdiParent = this;
+                rep.Show();
+            }
             hideSubMenu();
 
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
+            bool abierto = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Recetas")
+                {
+                    abierto = true;
+                    f.Focus();
+                    break;
+                }
+            }
+            if (abierto == false)
+            {
+                Recetas rep = new Recetas();
+                rep.MdiParent = this;
+                rep.Show();
+            }
             hideSubMenu();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
+            bool abierto = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Recetas")
+                {
+                    abierto = true;
+                    f.Focus();
+                    break;
+                }
+            }
+            if (abierto == false)
+            {
+                ver_receta rep = new ver_receta();
+                rep.MdiParent = this;
+                rep.Show();
+            }
             hideSubMenu();
         }
 
@@ -197,6 +260,11 @@ namespace CapaVistaProduccion
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            hideSubMenu();
         }
     }
 }
