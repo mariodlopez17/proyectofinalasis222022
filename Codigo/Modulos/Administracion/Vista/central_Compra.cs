@@ -305,7 +305,7 @@ namespace ComprasVista
         private void btnCotizaciones_Click(object sender, EventArgs e)
         {
             //Codigo
-            Form formCotizacionesVentas = new CotizacionesVentas();
+            Form formCotizacionesVentas = new Form();
             formCotizacionesVentas.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
