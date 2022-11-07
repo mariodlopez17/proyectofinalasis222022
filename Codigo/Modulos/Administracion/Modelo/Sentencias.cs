@@ -18,14 +18,14 @@ namespace ComprasModelo
         public OdbcDataAdapter llenarTbl(string tabla)// metodo  que obtinene el contenio de una tabla
         {
             //string para almacenar los campos de OBTENERCAMPOS y utilizar el 1ro
-            string sql = "SELECT PkId_Cotizaciones as IdCotizaciones ,fk_codigo_producto as IdProducto,FkId_Vendedores as IdVendedores,FkId_Clientes as IdClientes, Descripcion_Cotizaciones as Descripcion,FechaEmision_Cotizaciones as FechaEmision,FechaVencimiento_Cotizaciones  as FechaVencimiento,Cuotas_Cotizaciones as Cuota,Total_Cotizaciones as Total FROM " + tabla + "  ;";
+            string sql = "select PkId_Cotizaciones as IdCotizaciones ,fk_codigo_producto as IdProducto,tbl_producto.descripcion as Producto, tbl_producto.tipo as Tipo, tbl_producto.fk_marca as Marca,tbl_producto.estado_producto as Estado, Descripcion_Cotizaciones as DescripcionCotizacion,FechaEmision_Cotizaciones as FechaEmision,FechaVencimiento_Cotizaciones  as FechaVencimiento, tbl_producto.precio_venta as Precio, Cuotas_Cotizaciones as Cuota,Total_Cotizaciones as Total from " + tabla + " inner join tbl_producto on tblcotizaciones.fk_codigo_producto = tbl_producto.pk_codigo_producto; ";
             OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, con.conexion());
             return dataTable;
         }
         public OdbcDataAdapter llenarTbl2(string tabla)// metodo  que obtinene el contenio de una tabla
         {
             //string para almacenar los campos de OBTENERCAMPOS y utilizar el 1ro
-            string sql = "SELECT * FROM " + tabla + "  ;";
+            string sql = "select PkId_CajaProveedores as IdCajaProveedores, FkId_ComprasEncabezado as IdComprasEncabezado,tblcomprasencabezado.FkId_Proveedores as IdProveedores,tblcomprasencabezado.FechaCompra_ComprasEncabezado as FechaCompra,tblcomprasencabezado.Total_ComprasEncabezado as TotalCompra, Saldo_CajaProveedores as Saldo  from " + tabla + " inner join tblcomprasencabezado on tblcajaproveedores.FkId_ComprasEncabezado = tblcomprasencabezado.PkId_ComprasEncabezado;";
             OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, con.conexion());
             return dataTable;
         }
