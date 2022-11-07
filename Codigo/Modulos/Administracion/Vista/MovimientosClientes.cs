@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ComprasControlador;
 
 namespace ComprasVista
 {
     public partial class MovimientosClientes : Form
     {
-        ComprasControlador.csContralador AdminCn = new ComprasControlador.csContralador();
+        csControladorJ AdminCn = new csControladorJ();
+
         public MovimientosClientes()
         {
             InitializeComponent();

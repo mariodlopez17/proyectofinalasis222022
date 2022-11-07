@@ -32,5 +32,21 @@ namespace ComprasControlador
             }
 
         } //Fin codigo movimiento Clientes
+
+        public void fillTablePriceList(string ntabla, DataGridView tabla, string tipo, string dato)//Funcion para llenar tabla
+        {
+            try
+            {
+                OdbcDataAdapter dt = sn.llenartablaListPrecio(ntabla, tipo, dato);
+                DataTable table = new DataTable();
+                dt.Fill(table);
+                tabla.DataSource = table;
+            }
+            catch (Exception e)
+            {
+                System.Windows.MessageBox.Show("Error:" + e);
+            }
+
+        } //Fin codigo movimiento Clientes
     }
 }
