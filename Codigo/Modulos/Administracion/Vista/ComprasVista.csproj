@@ -70,12 +70,6 @@
     <Compile Include="AyudaCompras.Designer.cs">
       <DependentUpon>AyudaCompras.cs</DependentUpon>
     </Compile>
-    <Compile Include="AyudaPedido.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AyudaPedido.designer.cs">
-      <DependentUpon>AyudaPedido.cs</DependentUpon>
-    </Compile>
     <Compile Include="Caja_Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,12 +112,6 @@
     <Compile Include="CotizacionesVentas.Designer.cs">
       <DependentUpon>CotizacionesVentas.cs</DependentUpon>
     </Compile>
-    <Compile Include="FacturaVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FacturaVentas.Designer.cs">
-      <DependentUpon>FacturaVentas.cs</DependentUpon>
-    </Compile>
     <Compile Include="ListadoPrecios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,12 +142,6 @@
     <Compile Include="OrdenesCompras.Designer.cs">
       <DependentUpon>OrdenesCompras.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pedidos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pedidos.designer.cs">
-      <DependentUpon>Pedidos.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -183,9 +165,6 @@
     <EmbeddedResource Include="AyudaCompras.resx">
       <DependentUpon>AyudaCompras.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AyudaPedido.resx">
-      <DependentUpon>AyudaPedido.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Caja_Clientes.resx">
       <DependentUpon>Caja_Clientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,9 +186,6 @@
     <EmbeddedResource Include="CotizacionesVentas.resx">
       <DependentUpon>CotizacionesVentas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FacturaVentas.resx">
-      <DependentUpon>FacturaVentas.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ListadoPrecios.resx">
       <DependentUpon>ListadoPrecios.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,9 +200,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OrdenesCompras.resx">
       <DependentUpon>OrdenesCompras.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pedidos.resx">
-      <DependentUpon>Pedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -205,10 +205,7 @@ namespace ComprasVista
         private void btnProveedores_Click(object sender, EventArgs e)
         {
             //Codigo
-            Pedidos p = new Pedidos();
-            p.MdiParent = this;
-            p.Show();
-            pictureBox2.Visible = false;
+            
             //Ocultar submenu
             hideSubMenu();
         }
@@ -272,8 +269,7 @@ namespace ComprasVista
         private void btnFactura_Click(object sender, EventArgs e)
         {
             //Codigo
-            Form formFacturaVentas = new FacturaVentas();
-            formFacturaVentas.ShowDialog();
+            
             //Ocultar submenu
             hideSubMenu();
         }
