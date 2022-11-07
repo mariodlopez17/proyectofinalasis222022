@@ -204,7 +204,9 @@ namespace ComprasVista
 
         private void btnProveedores_Click(object sender, EventArgs e)
         {
-           
+            //Codigo
+            
+            //Ocultar submenu
             hideSubMenu();
         }
 
@@ -266,7 +268,6 @@ namespace ComprasVista
 
         private void btnFactura_Click(object sender, EventArgs e)
         {
-            
             hideSubMenu();
         }
 

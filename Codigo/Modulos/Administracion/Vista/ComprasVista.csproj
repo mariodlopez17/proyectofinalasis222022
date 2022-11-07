@@ -31,6 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="ComprasControlador, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Controlador\bin\Debug\ComprasControlador.dll</HintPath>
@@ -38,6 +39,10 @@
     <Reference Include="Controlador">
       <HintPath>..\Controlador\bin\Debug\Controlador.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.1.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
@@ -53,6 +58,8 @@
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -69,6 +76,18 @@
     </Compile>
     <Compile Include="AyudaCompras.Designer.cs">
       <DependentUpon>AyudaCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AyudaPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AyudaPedido.designer.cs">
+      <DependentUpon>AyudaPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AyudaVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AyudaVenta.designer.cs">
+      <DependentUpon>AyudaVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Caja_Clientes.cs">
       <SubType>Form</SubType>
@@ -118,6 +137,17 @@
     <Compile Include="CotizacionesVentas.Designer.cs">
       <DependentUpon>CotizacionesVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FacturaVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacturaVentas.designer.cs">
+      <DependentUpon>FacturaVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="facturaventas1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>facturaventas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ListadoPrecios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +178,12 @@
     <Compile Include="OrdenesCompras.Designer.cs">
       <DependentUpon>OrdenesCompras.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pedidos.designer.cs">
+      <DependentUpon>Pedidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -160,16 +196,34 @@
     <Compile Include="Proveedores.Designer.cs">
       <DependentUpon>Proveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteFactura.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteFactura.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="VendedoresVentas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VendedoresVentas.Designer.cs">
       <DependentUpon>VendedoresVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas.designer.cs">
+      <DependentUpon>Ventas.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AyudaCompras.resx">
       <DependentUpon>AyudaCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AyudaPedido.resx">
+      <DependentUpon>AyudaPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AyudaVenta.resx">
+      <DependentUpon>AyudaVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Caja_Clientes.resx">
       <DependentUpon>Caja_Clientes.cs</DependentUpon>
@@ -195,6 +249,9 @@
     <EmbeddedResource Include="CotizacionesVentas.resx">
       <DependentUpon>CotizacionesVentas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FacturaVentas.resx">
+      <DependentUpon>FacturaVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListadoPrecios.resx">
       <DependentUpon>ListadoPrecios.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +267,9 @@
     <EmbeddedResource Include="OrdenesCompras.resx">
       <DependentUpon>OrdenesCompras.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pedidos.resx">
+      <DependentUpon>Pedidos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -220,13 +280,36 @@
     <EmbeddedResource Include="VendedoresVentas.resx">
       <DependentUpon>VendedoresVentas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReporteFactura.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteFactura.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VendedoresVentas.resx">
+      <DependentUpon>VendedoresVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas.resx">
+      <DependentUpon>Ventas.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="facturaventas.xsc">
+      <DependentUpon>facturaventas.xsd</DependentUpon>
+    </None>
+    <None Include="facturaventas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>facturaventas1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="facturaventas.xss">
+      <DependentUpon>facturaventas.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Resources\Soluciones Contables.PNG" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Administracion.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

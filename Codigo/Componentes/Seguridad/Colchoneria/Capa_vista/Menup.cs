@@ -58,7 +58,7 @@ namespace Vista_Seguridad
 
         private void btncompras_Click(object sender, EventArgs e)
         {
-            ComprasVista.central_Compra b = new ComprasVista.central_Compra();
+           ComprasVista.central_Compra b = new ComprasVista.central_Compra();
             b.Show();
             cn.setBtitacora("3000", "Ingreso Compras");
         }
@@ -87,6 +87,7 @@ namespace Vista_Seguridad
         private void btnContabilidad_Click(object sender, EventArgs e)
         {
            /*Capa_VistaContabilidad.Nuevo_MDI b = new Capa_VistaContabilidad.Nuevo_MDI();
+
            b.Show();
             cn.setBtitacora("8000", "Ingreso Contabilidad");*/
         }

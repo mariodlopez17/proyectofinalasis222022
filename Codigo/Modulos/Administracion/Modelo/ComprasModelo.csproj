@@ -54,6 +54,7 @@
     <Compile Include="Sentencias.cs" />
     <Compile Include="SentenciasF.cs" />
     <Compile Include="SentenciasJ.cs" />
+    <Compile Include="Sentenciast.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
