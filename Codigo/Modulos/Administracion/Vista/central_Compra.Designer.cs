@@ -40,6 +40,7 @@ namespace ComprasVista
             this.btnBalance = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
             this.panelClientes = new System.Windows.Forms.Panel();
+            this.btnComisiones = new System.Windows.Forms.Button();
             this.btnCompra = new System.Windows.Forms.Button();
             this.btnCompraOrden = new System.Windows.Forms.Button();
             this.btnFacturaProveedores = new System.Windows.Forms.Button();
@@ -223,6 +224,7 @@ namespace ComprasVista
             // panelClientes
             // 
             this.panelClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(215)))), ((int)(((byte)(249)))));
+            this.panelClientes.Controls.Add(this.btnComisiones);
             this.panelClientes.Controls.Add(this.btnCompra);
             this.panelClientes.Controls.Add(this.btnCompraOrden);
             this.panelClientes.Controls.Add(this.btnFacturaProveedores);
@@ -238,6 +240,22 @@ namespace ComprasVista
             this.panelClientes.Size = new System.Drawing.Size(220, 515);
             this.panelClientes.TabIndex = 3;
             // 
+            // btnComisiones
+            // 
+            this.btnComisiones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnComisiones.FlatAppearance.BorderSize = 0;
+            this.btnComisiones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnComisiones.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnComisiones.Location = new System.Drawing.Point(0, 315);
+            this.btnComisiones.Name = "btnComisiones";
+            this.btnComisiones.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnComisiones.Size = new System.Drawing.Size(220, 35);
+            this.btnComisiones.TabIndex = 27;
+            this.btnComisiones.Text = "Comisiones";
+            this.btnComisiones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnComisiones.UseVisualStyleBackColor = true;
+            this.btnComisiones.Click += new System.EventHandler(this.btnComisiones_Click);
+            // 
             // btnCompra
             // 
             this.btnCompra.Dock = System.Windows.Forms.DockStyle.Top;
@@ -252,6 +270,7 @@ namespace ComprasVista
             this.btnCompra.Text = "Compras";
             this.btnCompra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompra.UseVisualStyleBackColor = true;
+            this.btnCompra.Click += new System.EventHandler(this.btnCompra_Click_1);
             // 
             // btnCompraOrden
             // 
@@ -267,6 +286,7 @@ namespace ComprasVista
             this.btnCompraOrden.Text = "Orden de Compra";
             this.btnCompraOrden.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraOrden.UseVisualStyleBackColor = true;
+            this.btnCompraOrden.Click += new System.EventHandler(this.btnCompraOrden_Click);
             // 
             // btnFacturaProveedores
             // 
@@ -539,5 +559,6 @@ namespace ComprasVista
         private System.Windows.Forms.Button btnCompraOrden;
         private System.Windows.Forms.Button btnFacturaProveedores;
         private System.Windows.Forms.Button btnCompra;
+        private System.Windows.Forms.Button btnComisiones;
     }
 }
