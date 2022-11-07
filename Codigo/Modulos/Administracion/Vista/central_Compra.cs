@@ -18,7 +18,9 @@ namespace ComprasVista
             InitializeComponent();
             customizeDesing();
 
-            Button [] apps = { btnCliente, btnProveedores, btnPedidos,btnVentas, btnFactura, btnComisiones, btnCompraOrden, btnCompra };
+            Button [] apps = { btnCliente, btnProveedores, btnPedidos,btnVentas, btnFactura, btnComisiones, btnCompraOrden, btnCompra,
+                btnListado, btnMovientosClientes, btnMoviemientosProveedor, btnCotizaciones,btnClientesCaja, btnProveedorCaja
+            };
             cnseg.deshabilitarApps(apps);
 
             cnseg.getAccesoApp(3001, apps[0]);
@@ -29,6 +31,12 @@ namespace ComprasVista
             cnseg.getAccesoApp(3106, apps[5]);
             cnseg.getAccesoApp(3109, apps[6]);
             cnseg.getAccesoApp(3110, apps[7]);
+            cnseg.getAccesoApp(3102, apps[8]);
+            cnseg.getAccesoApp(3112, apps[9]);
+            cnseg.getAccesoApp(3113, apps[10]);
+            cnseg.getAccesoApp(3103, apps[11]);
+            cnseg.getAccesoApp(3104, apps[12]);
+
         }
         private void customizeDesing()
         {
@@ -36,8 +44,7 @@ namespace ComprasVista
             panelCompras.Visible = false;
             panelClientes.Visible = false;
             panel1.Visible = false;
-            panel2.Visible = false;
-            panel3.Visible = false;
+           
         }
 
         private void hideSubMenu()
@@ -48,10 +55,7 @@ namespace ComprasVista
                 panelClientes.Visible = false;
             if (panel1.Visible == true)
                 panel1.Visible = false;
-            if (panel2.Visible == true)
-                panel2.Visible = false;
-            if (panel3.Visible == true)
-                panel3.Visible = false;
+            
 
         }
 
@@ -241,8 +245,10 @@ namespace ComprasVista
         private void btnPagosDia_Click(object sender, EventArgs e)
         {
             //Codigo
-            MovimientosProveedores mp = new MovimientosProveedores();
-            mp.ShowDialog();
+            MovimientosProveedores lp = new MovimientosProveedores();
+            lp.MdiParent = this;
+            lp.Show();
+            pictureBox2.Visible = false;
             //Ocultar submenu
             hideSubMenu();
         }
@@ -280,7 +286,7 @@ namespace ComprasVista
 
         private void button1_Click(object sender, EventArgs e)
         {
-            showSubMenu(panel2);
+            /*showSubMenu(panel2);*/
         }
 
         private void btnFactura_Click(object sender, EventArgs e)
@@ -348,7 +354,7 @@ namespace ComprasVista
 
         private void btnAyuda_Click(object sender, EventArgs e)
         {
-            showSubMenu(panel3);
+           // showSubMenu(panel3);
         }
 
         private void btnComisiones_Click(object sender, EventArgs e)
