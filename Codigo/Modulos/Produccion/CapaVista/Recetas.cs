@@ -14,7 +14,7 @@ namespace CapaVistaProduccion
 {
     public partial class Recetas : Form
     {
-        string connectionString = @"Server=localhost;Database=colchoneria;Uid=root;Pwd=root";
+        string connectionString = @"Server=colchoneria.mysql.database.azure.com;Database=colchoneria;Uid=administrador;Pwd=Jm123456";
         int pk_idrecetas_tbl_recetas = 0;
         public Recetas()
         {
