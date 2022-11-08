@@ -31,6 +31,7 @@ namespace ComprasVista
         {
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
             this.panelClientes = new System.Windows.Forms.Panel();
             this.btnMoviemientosProveedor = new System.Windows.Forms.Button();
@@ -53,7 +54,6 @@ namespace ComprasVista
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelClientes.SuspendLayout();
@@ -90,6 +90,22 @@ namespace ComprasVista
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(220, 260);
             this.panel1.TabIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(220, 35);
+            this.button1.TabIndex = 31;
+            this.button1.Text = "Administrador";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnReportes
             // 
@@ -429,22 +445,6 @@ namespace ComprasVista
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(220, 35);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "Movimientos Clientes";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // central_Compra
             // 

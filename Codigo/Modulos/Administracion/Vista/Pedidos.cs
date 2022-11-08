@@ -169,7 +169,7 @@ namespace ComprasVista
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
-            Help.ShowHelp(this, @"C:\Users\luist\OneDrive\Universidad\8semestre\Analisis2\proyectofinalasis222022\Codigo\Modulos\Administracion\Ayudast\ayudast.chm", "AyudaPedido.html");
+            Help.ShowHelp(this, @"C:\Users\Developer\Desktop\proyectofinalasis222022\Codigo\Modulos\Administracion\Ayudast\ayudast.chm", "AyudaPedido.html");
         }
     }
 }

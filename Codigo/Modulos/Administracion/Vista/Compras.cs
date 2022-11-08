@@ -14,12 +14,16 @@ namespace ComprasVista
     public partial class Compras : Form
     {
         csControladorF cn = new csControladorF();
+        ControladorR cnr = new ControladorR();
         public TextBox[] textDetalle = { };
+        public static string idApp;
+        
         public Compras()
         {
             InitializeComponent();
             TextBox[] txtDetalleOrden = { Txt_idproducto, TxtCantidad, Txt_precio, Txt_Costo };
             textDetalle = txtDetalleOrden;
+            idApp = "3110";
         }
 
         private void grpOrden_Enter(object sender, EventArgs e)
@@ -119,6 +123,17 @@ namespace ComprasVista
             {
                 cn.llenardatoscombo(Txt_Costo, Txt_precio, Txt_idproducto.Text);
             }
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            Report();
+        }
+        public void Report()
+        {
+
+            cnr.reporte(idApp);
+
         }
     }
 }

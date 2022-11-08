@@ -55,6 +55,7 @@
     <Compile Include="SentenciasC.cs" />
     <Compile Include="SentenciasF.cs" />
     <Compile Include="SentenciasJ.cs" />
+    <Compile Include="SentenciasR.cs" />
     <Compile Include="Sentenciast.cs" />
   </ItemGroup>
   <ItemGroup>

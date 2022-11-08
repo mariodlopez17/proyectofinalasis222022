@@ -44,6 +44,9 @@ namespace ComprasVista
             this.Txt_idproducto = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.grpcompra = new System.Windows.Forms.GroupBox();
+            this.btnorden = new System.Windows.Forms.Button();
+            this.txtOrden = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.Dtp_fechaentrega = new System.Windows.Forms.DateTimePicker();
             this.btnProveedor = new System.Windows.Forms.Button();
@@ -59,9 +62,7 @@ namespace ComprasVista
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnorden = new System.Windows.Forms.Button();
-            this.txtOrden = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.btnReporte = new FontAwesome.Sharp.IconButton();
             this.grpDetalle.SuspendLayout();
             this.grpcompra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -225,6 +226,7 @@ namespace ComprasVista
             // 
             // grpcompra
             // 
+            this.grpcompra.Controls.Add(this.btnReporte);
             this.grpcompra.Controls.Add(this.btnorden);
             this.grpcompra.Controls.Add(this.txtOrden);
             this.grpcompra.Controls.Add(this.label3);
@@ -245,6 +247,33 @@ namespace ComprasVista
             this.grpcompra.TabStop = false;
             this.grpcompra.Text = "Compra";
             this.grpcompra.Enter += new System.EventHandler(this.grpOrden_Enter);
+            // 
+            // btnorden
+            // 
+            this.btnorden.Location = new System.Drawing.Point(240, 60);
+            this.btnorden.Name = "btnorden";
+            this.btnorden.Size = new System.Drawing.Size(19, 23);
+            this.btnorden.TabIndex = 65;
+            this.btnorden.Text = "?";
+            this.btnorden.UseVisualStyleBackColor = true;
+            this.btnorden.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // txtOrden
+            // 
+            this.txtOrden.Location = new System.Drawing.Point(127, 60);
+            this.txtOrden.Name = "txtOrden";
+            this.txtOrden.Size = new System.Drawing.Size(107, 25);
+            this.txtOrden.TabIndex = 64;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(23, 63);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 17);
+            this.label3.TabIndex = 63;
+            this.label3.Text = "Id Orden";
             // 
             // label9
             // 
@@ -383,32 +412,24 @@ namespace ComprasVista
             this.Total.HeaderText = "Total";
             this.Total.Name = "Total";
             // 
-            // btnorden
+            // btnReporte
             // 
-            this.btnorden.Location = new System.Drawing.Point(240, 60);
-            this.btnorden.Name = "btnorden";
-            this.btnorden.Size = new System.Drawing.Size(19, 23);
-            this.btnorden.TabIndex = 65;
-            this.btnorden.Text = "?";
-            this.btnorden.UseVisualStyleBackColor = true;
-            this.btnorden.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // txtOrden
-            // 
-            this.txtOrden.Location = new System.Drawing.Point(127, 60);
-            this.txtOrden.Name = "txtOrden";
-            this.txtOrden.Size = new System.Drawing.Size(107, 25);
-            this.txtOrden.TabIndex = 64;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(23, 63);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 17);
-            this.label3.TabIndex = 63;
-            this.label3.Text = "Id Orden";
+            this.btnReporte.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnReporte.FlatAppearance.BorderSize = 2;
+            this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporte.IconChar = FontAwesome.Sharp.IconChar.Print;
+            this.btnReporte.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
+            this.btnReporte.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnReporte.IconSize = 36;
+            this.btnReporte.Location = new System.Drawing.Point(913, 87);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(69, 61);
+            this.btnReporte.TabIndex = 66;
+            this.btnReporte.Text = "Reportes";
+            this.btnReporte.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // Compras
             // 
@@ -469,5 +490,6 @@ namespace ComprasVista
         private System.Windows.Forms.Button btnorden;
         private System.Windows.Forms.TextBox txtOrden;
         private System.Windows.Forms.Label label3;
+        private FontAwesome.Sharp.IconButton btnReporte;
     }
 }

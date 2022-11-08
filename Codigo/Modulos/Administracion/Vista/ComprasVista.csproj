@@ -32,6 +32,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CapaVistaReporteria, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Componentes\Reporteador\CapaVistaReporteria\bin\Debug\CapaVistaReporteria.dll</HintPath>
+    </Reference>
     <Reference Include="ComprasControlador, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Controlador\bin\Debug\ComprasControlador.dll</HintPath>

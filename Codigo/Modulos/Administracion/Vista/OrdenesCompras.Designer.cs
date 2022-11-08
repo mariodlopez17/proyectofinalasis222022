@@ -61,6 +61,7 @@ namespace ComprasVista
             this.label1 = new System.Windows.Forms.Label();
             this.txtTotalF = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnReporte = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.grpDetalle.SuspendLayout();
             this.grpOrden.SuspendLayout();
@@ -247,6 +248,7 @@ namespace ComprasVista
             // 
             // grpOrden
             // 
+            this.grpOrden.Controls.Add(this.btnReporte);
             this.grpOrden.Controls.Add(this.label11);
             this.grpOrden.Controls.Add(this.Dtp_fechavencimiento);
             this.grpOrden.Controls.Add(this.label9);
@@ -400,6 +402,25 @@ namespace ComprasVista
             this.label7.TabIndex = 59;
             this.label7.Text = "Total";
             // 
+            // btnReporte
+            // 
+            this.btnReporte.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnReporte.FlatAppearance.BorderSize = 2;
+            this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporte.IconChar = FontAwesome.Sharp.IconChar.Print;
+            this.btnReporte.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
+            this.btnReporte.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnReporte.IconSize = 36;
+            this.btnReporte.Location = new System.Drawing.Point(920, 87);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(69, 61);
+            this.btnReporte.TabIndex = 67;
+            this.btnReporte.Text = "Reportes";
+            this.btnReporte.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
             // OrdenesCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -457,5 +478,6 @@ namespace ComprasVista
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Costo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private FontAwesome.Sharp.IconButton btnReporte;
     }
 }

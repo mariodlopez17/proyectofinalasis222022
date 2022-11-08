@@ -14,9 +14,11 @@ namespace ComprasVista
     public partial class OrdenesCompras : Form
     {
         csControladorF cn = new csControladorF();
+        ControladorR cnr = new ControladorR();
         public TextBox[] textDetalle = { };
         public TextBox[] texproductos = { };
-        
+        public static string idApp;
+
         public OrdenesCompras()
         {
             InitializeComponent();
@@ -24,6 +26,7 @@ namespace ComprasVista
             textDetalle = txtDetalleOrden;
             TextBox[] txtproducto = { Txt_Costo, Txt_precio };
             texproductos = txtproducto;
+            idApp = "3109";
         }
 
         private void OrdenesCompras_Load(object sender, EventArgs e)
@@ -127,6 +130,17 @@ namespace ComprasVista
             cn.limpiarpedido(groupBoxes);
             dataGridView1.Rows.Clear();
             cn.inicio(Dtp_fechavencimiento, Dtp_fechaentrega, Txt_idpedido, Txt_precio, Txt_Costo, txtTotalF);
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            Report();
+        }
+        public void Report()
+        {
+
+            cnr.reporte(idApp);
+
         }
     }
 }

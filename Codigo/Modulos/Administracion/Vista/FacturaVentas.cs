@@ -76,7 +76,7 @@ namespace ComprasVista
                     ); 
 
             }
-            rp.Load(@"C:\Users\luist\OneDrive\Universidad\8semestre\Analisis2\proyectofinalasis222022\Codigo\Modulos\Administracion\Vista\ReporteFactura.rpt");
+            rp.Load(@"C:\Users\Developer\Desktop\proyectofinalasis222022\Codigo\Modulos\Administracion\Vista\ReporteFactura.rpt");
             rp.SetDataSource(dsfactura);
             Crv_factura.ReportSource = rp;
 

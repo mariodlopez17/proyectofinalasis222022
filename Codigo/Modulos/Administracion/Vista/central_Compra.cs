@@ -34,8 +34,10 @@ namespace ComprasVista
             cnseg.getAccesoApp(3102, apps[8]);
             cnseg.getAccesoApp(3112, apps[9]);
             cnseg.getAccesoApp(3113, apps[10]);
-            cnseg.getAccesoApp(3103, apps[11]);
-            cnseg.getAccesoApp(3104, apps[12]);
+            cnseg.getAccesoApp(3114, apps[11]);
+            cnseg.getAccesoApp(3103, apps[12]);
+            cnseg.getAccesoApp(3104, apps[13]);
+
 
         }
         private void customizeDesing()
@@ -422,7 +424,16 @@ namespace ComprasVista
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+           
+           
+
+
+            CapaVistaReporteria.menu_reporteria lp = new CapaVistaReporteria.menu_reporteria();
             
+            lp.Show();
+            
+            //Ocultar submenu
+            hideSubMenu();
         }
     }
 }
