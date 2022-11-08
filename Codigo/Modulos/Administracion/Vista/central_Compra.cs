@@ -190,8 +190,11 @@ namespace ComprasVista
         private void btnComprobantesClientes_Click(object sender, EventArgs e)
         {
             //Codigo
-            Cotizaciones c = new Cotizaciones();
-            c.ShowDialog();
+            Cotizaciones p = new Cotizaciones();
+            p.MdiParent = this;
+            p.Show();
+            pictureBox2.Visible = false;
+            //Ocultar submenu
             //Ocultar submenu
             hideSubMenu();
         }
@@ -390,6 +393,16 @@ namespace ComprasVista
         private void btnVentas_Click_1(object sender, EventArgs e)
         {
             Ventas lp = new Ventas();
+            lp.MdiParent = this;
+            lp.Show();
+            pictureBox2.Visible = false;
+            //Ocultar submenu
+            hideSubMenu();
+        }
+
+        private void btnMoviemientosProveedor_Click(object sender, EventArgs e)
+        {
+            MovimientosProveedores lp = new MovimientosProveedores();
             lp.MdiParent = this;
             lp.Show();
             pictureBox2.Visible = false;

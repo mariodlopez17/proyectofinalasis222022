@@ -33,6 +33,8 @@ namespace ComprasVista
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnReportes = new System.Windows.Forms.Button();
             this.panelClientes = new System.Windows.Forms.Panel();
+            this.btnMoviemientosProveedor = new System.Windows.Forms.Button();
+            this.btnMovientosClientes = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
             this.btnComisiones = new System.Windows.Forms.Button();
             this.btnCompra = new System.Windows.Forms.Button();
@@ -51,8 +53,6 @@ namespace ComprasVista
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnMovientosClientes = new System.Windows.Forms.Button();
-            this.btnMoviemientosProveedor = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelClientes.SuspendLayout();
             this.panelCompras.SuspendLayout();
@@ -126,6 +126,37 @@ namespace ComprasVista
             this.panelClientes.Name = "panelClientes";
             this.panelClientes.Size = new System.Drawing.Size(220, 515);
             this.panelClientes.TabIndex = 3;
+            // 
+            // btnMoviemientosProveedor
+            // 
+            this.btnMoviemientosProveedor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMoviemientosProveedor.FlatAppearance.BorderSize = 0;
+            this.btnMoviemientosProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMoviemientosProveedor.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnMoviemientosProveedor.Location = new System.Drawing.Point(0, 385);
+            this.btnMoviemientosProveedor.Name = "btnMoviemientosProveedor";
+            this.btnMoviemientosProveedor.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnMoviemientosProveedor.Size = new System.Drawing.Size(220, 35);
+            this.btnMoviemientosProveedor.TabIndex = 30;
+            this.btnMoviemientosProveedor.Text = "Movimientos Proveedor";
+            this.btnMoviemientosProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMoviemientosProveedor.UseVisualStyleBackColor = true;
+            this.btnMoviemientosProveedor.Click += new System.EventHandler(this.btnMoviemientosProveedor_Click);
+            // 
+            // btnMovientosClientes
+            // 
+            this.btnMovientosClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMovientosClientes.FlatAppearance.BorderSize = 0;
+            this.btnMovientosClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMovientosClientes.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnMovientosClientes.Location = new System.Drawing.Point(0, 350);
+            this.btnMovientosClientes.Name = "btnMovientosClientes";
+            this.btnMovientosClientes.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnMovientosClientes.Size = new System.Drawing.Size(220, 35);
+            this.btnMovientosClientes.TabIndex = 29;
+            this.btnMovientosClientes.Text = "Movimientos Clientes";
+            this.btnMovientosClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMovientosClientes.UseVisualStyleBackColor = true;
             // 
             // btnVentas
             // 
@@ -394,36 +425,6 @@ namespace ComprasVista
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
-            // 
-            // btnMovientosClientes
-            // 
-            this.btnMovientosClientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMovientosClientes.FlatAppearance.BorderSize = 0;
-            this.btnMovientosClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMovientosClientes.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btnMovientosClientes.Location = new System.Drawing.Point(0, 350);
-            this.btnMovientosClientes.Name = "btnMovientosClientes";
-            this.btnMovientosClientes.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btnMovientosClientes.Size = new System.Drawing.Size(220, 35);
-            this.btnMovientosClientes.TabIndex = 29;
-            this.btnMovientosClientes.Text = "Movimientos Clientes";
-            this.btnMovientosClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMovientosClientes.UseVisualStyleBackColor = true;
-            // 
-            // btnMoviemientosProveedor
-            // 
-            this.btnMoviemientosProveedor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMoviemientosProveedor.FlatAppearance.BorderSize = 0;
-            this.btnMoviemientosProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMoviemientosProveedor.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btnMoviemientosProveedor.Location = new System.Drawing.Point(0, 385);
-            this.btnMoviemientosProveedor.Name = "btnMoviemientosProveedor";
-            this.btnMoviemientosProveedor.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btnMoviemientosProveedor.Size = new System.Drawing.Size(220, 35);
-            this.btnMoviemientosProveedor.TabIndex = 30;
-            this.btnMoviemientosProveedor.Text = "Movimientos Proveedor";
-            this.btnMoviemientosProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMoviemientosProveedor.UseVisualStyleBackColor = true;
             // 
             // central_Compra
             // 
