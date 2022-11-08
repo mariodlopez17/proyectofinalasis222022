@@ -42,6 +42,7 @@ namespace ComprasVista
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnExit = new FontAwesome.Sharp.IconButton();
+            this.btnReporte = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -212,12 +213,32 @@ namespace ComprasVista
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnReporte
+            // 
+            this.btnReporte.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnReporte.FlatAppearance.BorderSize = 2;
+            this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporte.IconChar = FontAwesome.Sharp.IconChar.Print;
+            this.btnReporte.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
+            this.btnReporte.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnReporte.IconSize = 36;
+            this.btnReporte.Location = new System.Drawing.Point(309, 12);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(69, 61);
+            this.btnReporte.TabIndex = 73;
+            this.btnReporte.Text = "Reportes";
+            this.btnReporte.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
             // MovimientosProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
             this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label2);
@@ -255,5 +276,6 @@ namespace ComprasVista
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private FontAwesome.Sharp.IconButton btnExit;
+        private FontAwesome.Sharp.IconButton btnReporte;
     }
 }

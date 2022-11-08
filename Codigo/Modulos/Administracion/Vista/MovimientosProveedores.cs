@@ -70,5 +70,11 @@ namespace ComprasVista
         {
             Close();
         }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            ReporteMovimientoProveedores frm = new ReporteMovimientoProveedores();
+            frm.Show();
+        }
     }
 }

@@ -202,6 +202,18 @@
     <Compile Include="ReporteMovimientoCliente.Designer.cs">
       <DependentUpon>ReporteMovimientoCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteMovimientoProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteMovimientoProveedores.Designer.cs">
+      <DependentUpon>ReporteMovimientoProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteMovProveedores.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteMovProveedores.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="VendedoresVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,6 +289,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteMovimientoCliente.resx">
       <DependentUpon>ReporteMovimientoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteMovimientoProveedores.resx">
+      <DependentUpon>ReporteMovimientoProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteMovProveedores.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteMovProveedores.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="VendedoresVentas.resx">
       <DependentUpon>VendedoresVentas.cs</DependentUpon>
