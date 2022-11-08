@@ -57,5 +57,13 @@ namespace ComprasVista
         {
             Close();
         }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            //Codigo
+            //this.Hide();
+            ReporteMovimientoCliente frm = new ReporteMovimientoCliente();
+            frm.Show();
+        }
     }
 }

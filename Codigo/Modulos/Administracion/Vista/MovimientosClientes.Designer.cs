@@ -30,6 +30,7 @@ namespace ComprasVista
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnReporte = new FontAwesome.Sharp.IconButton();
             this.btnExit = new FontAwesome.Sharp.IconButton();
             this.btnConsultar = new FontAwesome.Sharp.IconButton();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
@@ -43,6 +44,7 @@ namespace ComprasVista
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnReporte);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.btnConsultar);
             this.panel1.Controls.Add(this.btnCancelar);
@@ -51,6 +53,25 @@ namespace ComprasVista
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1084, 87);
             this.panel1.TabIndex = 2;
+            // 
+            // btnReporte
+            // 
+            this.btnReporte.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnReporte.FlatAppearance.BorderSize = 2;
+            this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporte.IconChar = FontAwesome.Sharp.IconChar.Print;
+            this.btnReporte.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
+            this.btnReporte.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnReporte.IconSize = 36;
+            this.btnReporte.Location = new System.Drawing.Point(170, 12);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(69, 61);
+            this.btnReporte.TabIndex = 67;
+            this.btnReporte.Text = "Reportes";
+            this.btnReporte.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // btnExit
             // 
@@ -164,5 +185,6 @@ namespace ComprasVista
         private FontAwesome.Sharp.IconButton btnExit;
         private FontAwesome.Sharp.IconButton btnConsultar;
         private FontAwesome.Sharp.IconButton btnCancelar;
+        private FontAwesome.Sharp.IconButton btnReporte;
     }
 }
