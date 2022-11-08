@@ -409,5 +409,20 @@ namespace ComprasVista
             //Ocultar submenu
             hideSubMenu();
         }
+
+        private void btnMovientosClientes_Click(object sender, EventArgs e)
+        {
+            MovimientosClientes lp = new MovimientosClientes();
+            lp.MdiParent = this;
+            lp.Show();
+            pictureBox2.Visible = false;
+            //Ocultar submenu
+            hideSubMenu();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

@@ -53,7 +53,9 @@ namespace ComprasVista
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panelClientes.SuspendLayout();
             this.panelCompras.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -82,6 +84,7 @@ namespace ComprasVista
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(215)))), ((int)(((byte)(249)))));
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 984);
             this.panel1.Name = "panel1";
@@ -157,6 +160,7 @@ namespace ComprasVista
             this.btnMovientosClientes.Text = "Movimientos Clientes";
             this.btnMovientosClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMovientosClientes.UseVisualStyleBackColor = true;
+            this.btnMovientosClientes.Click += new System.EventHandler(this.btnMovientosClientes_Click);
             // 
             // btnVentas
             // 
@@ -426,6 +430,22 @@ namespace ComprasVista
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(220, 35);
+            this.button1.TabIndex = 31;
+            this.button1.Text = "Movimientos Clientes";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // central_Compra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -438,6 +458,7 @@ namespace ComprasVista
             this.Name = "central_Compra";
             this.Text = "Central_Compra_3000";
             this.panelSideMenu.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.panelClientes.ResumeLayout(false);
             this.panelCompras.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
@@ -473,5 +494,6 @@ namespace ComprasVista
         private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Button btnMoviemientosProveedor;
         private System.Windows.Forms.Button btnMovientosClientes;
+        private System.Windows.Forms.Button button1;
     }
 }
