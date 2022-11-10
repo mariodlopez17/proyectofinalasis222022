@@ -65,5 +65,16 @@ namespace ComprasVista
             ReporteMovimientoCliente frm = new ReporteMovimientoCliente();
             frm.Show();
         }
+
+        private void MovimientosClientes_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            listclientes frm = new listclientes();
+            frm.Show();
+        }
     }
 }

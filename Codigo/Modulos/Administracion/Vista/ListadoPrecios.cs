@@ -21,6 +21,8 @@ namespace ComprasVista
 
         private void ListadoPrecios_Load(object sender, EventArgs e)
         {
+            tabla = Dgv_ListadoPrecios;
+            AdminCn.fillTablePriceList(tabla.Tag.ToString(), Dgv_ListadoPrecios, "pk_codigo_producto", txtIdLineaProducto.Text);
 
         }
 
@@ -40,7 +42,7 @@ namespace ComprasVista
             else
             {
                 tabla = Dgv_ListadoPrecios;
-                AdminCn.fillTablePriceList(tabla.Tag.ToString(), Dgv_ListadoPrecios, "fk_linea_inventario", txtIdLineaProducto.Text);
+                AdminCn.fillTablePriceList(tabla.Tag.ToString(), Dgv_ListadoPrecios, "pk_codigo_producto", txtIdLineaProducto.Text);
             }
         }
 
@@ -53,5 +55,12 @@ namespace ComprasVista
         {
             Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LineaInventario frm = new LineaInventario();
+            frm.Show();
+        }
+
     }
 }

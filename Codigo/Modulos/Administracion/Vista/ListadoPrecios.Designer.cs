@@ -32,17 +32,18 @@ namespace ComprasVista
             this.txtIdLineaProducto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Dgv_ListadoPrecios = new System.Windows.Forms.DataGridView();
             this.btnExit = new FontAwesome.Sharp.IconButton();
             this.btnConsultar = new FontAwesome.Sharp.IconButton();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
+            this.Dgv_ListadoPrecios = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_ListadoPrecios)).BeginInit();
             this.SuspendLayout();
             // 
             // txtIdLineaProducto
             // 
-            this.txtIdLineaProducto.Location = new System.Drawing.Point(38, 169);
+            this.txtIdLineaProducto.Location = new System.Drawing.Point(17, 136);
             this.txtIdLineaProducto.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.txtIdLineaProducto.Name = "txtIdLineaProducto";
             this.txtIdLineaProducto.Size = new System.Drawing.Size(167, 26);
@@ -51,12 +52,12 @@ namespace ComprasVista
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 145);
+            this.label1.Location = new System.Drawing.Point(14, 112);
             this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 18);
+            this.label1.Size = new System.Drawing.Size(156, 18);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Id Linea de inventario";
+            this.label1.Text = "Id Linea Inventario";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel1
@@ -71,17 +72,6 @@ namespace ComprasVista
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1023, 87);
             this.panel1.TabIndex = 14;
-            // 
-            // Dgv_ListadoPrecios
-            // 
-            this.Dgv_ListadoPrecios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.Dgv_ListadoPrecios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dgv_ListadoPrecios.Location = new System.Drawing.Point(22, 239);
-            this.Dgv_ListadoPrecios.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.Dgv_ListadoPrecios.Name = "Dgv_ListadoPrecios";
-            this.Dgv_ListadoPrecios.Size = new System.Drawing.Size(989, 307);
-            this.Dgv_ListadoPrecios.TabIndex = 21;
-            this.Dgv_ListadoPrecios.Tag = "tbl_producto";
             // 
             // btnExit
             // 
@@ -141,12 +131,34 @@ namespace ComprasVista
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // Dgv_ListadoPrecios
+            // 
+            this.Dgv_ListadoPrecios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Dgv_ListadoPrecios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgv_ListadoPrecios.Location = new System.Drawing.Point(17, 234);
+            this.Dgv_ListadoPrecios.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.Dgv_ListadoPrecios.Name = "Dgv_ListadoPrecios";
+            this.Dgv_ListadoPrecios.Size = new System.Drawing.Size(989, 312);
+            this.Dgv_ListadoPrecios.TabIndex = 21;
+            this.Dgv_ListadoPrecios.Tag = "tbl_producto";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(195, 138);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(29, 24);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "?";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ListadoPrecios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
             this.ClientSize = new System.Drawing.Size(1023, 561);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Dgv_ListadoPrecios);
             this.Controls.Add(this.txtIdLineaProducto);
             this.Controls.Add(this.label1);
@@ -171,5 +183,6 @@ namespace ComprasVista
         private FontAwesome.Sharp.IconButton btnExit;
         private FontAwesome.Sharp.IconButton btnConsultar;
         private FontAwesome.Sharp.IconButton btnCancelar;
+        private System.Windows.Forms.Button button1;
     }
 }
