@@ -36,6 +36,12 @@ namespace ModeloLogistica
             return datatable;
         }
 
+        public OdbcDataAdapter existencia(string tabla)
+        {
+            string sql = "select  fk_codigo_bodega as ID_BODEGA, fk_codigo_producto AS Producto, existencia_producto as CANTIDAD from tbl_exisbodega ;";
+            OdbcDataAdapter datatable = new OdbcDataAdapter(sql, con.conexion());
+            return datatable;
+        }
 
         public void insertar(string dato, string tipo, string tabla)
         {

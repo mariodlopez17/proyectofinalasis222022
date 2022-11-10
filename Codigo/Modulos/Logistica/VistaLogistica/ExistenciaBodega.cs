@@ -149,5 +149,25 @@ namespace VistaLogistica
 
            
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            cn.existencia(dataGridView3.Tag.ToString(), dataGridView3);
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
