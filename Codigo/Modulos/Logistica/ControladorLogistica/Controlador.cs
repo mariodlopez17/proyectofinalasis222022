@@ -43,6 +43,15 @@ namespace ControladorLogistica
             tabla.DataSource = table;
         }
 
+        public void producto(string ntabla, DataGridView tabla)
+        {
+            OdbcDataAdapter dt = sn.producto(ntabla);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            tabla.DataSource = table;
+        }
+
+
 
         public void ingresar(TextBox[] textbox, string tabla)
         {

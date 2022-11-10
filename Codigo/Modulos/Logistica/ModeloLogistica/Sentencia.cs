@@ -29,6 +29,13 @@ namespace ModeloLogistica
             return datatable;
         }
 
+        public OdbcDataAdapter producto(string tabla)
+        {
+            string sql = "select  pk_codigo_producto as ID, descripcion AS Producto, estado_producto as Estado from tbl_producto where estado_producto != 0;";
+            OdbcDataAdapter datatable = new OdbcDataAdapter(sql, con.conexion());
+            return datatable;
+        }
+
 
         public void insertar(string dato, string tipo, string tabla)
         {
@@ -45,12 +52,7 @@ namespace ModeloLogistica
             }
         }
 
-        public OdbcDataAdapter llenarListaAsignaciones(string tabla, string id)
-        {
-            string sql = "Select *from " + tabla + " where ID = " + id + " ;";
-            OdbcDataAdapter datatable = new OdbcDataAdapter(sql, con.conexion());
-            return datatable;
-        }
+        
 
     }
 }

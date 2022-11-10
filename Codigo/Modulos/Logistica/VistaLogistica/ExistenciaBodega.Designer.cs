@@ -43,10 +43,12 @@ namespace VistaLogistica
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgExisBodega)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -109,6 +111,7 @@ namespace VistaLogistica
             this.button2.TabIndex = 43;
             this.button2.Text = "?";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtIdProducto
             // 
@@ -164,11 +167,13 @@ namespace VistaLogistica
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.dataGridView2);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(464, 372);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(487, 274);
+            this.panel1.Size = new System.Drawing.Size(487, 281);
             this.panel1.TabIndex = 64;
+            this.panel1.Visible = false;
             // 
             // dataGridView1
             // 
@@ -177,7 +182,7 @@ namespace VistaLogistica
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(481, 120);
+            this.dataGridView1.Size = new System.Drawing.Size(481, 112);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.Tag = "tbl_bodega";
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -202,6 +207,18 @@ namespace VistaLogistica
             this.textBox1.Tag = "fk_codigo_producto";
             this.textBox1.Visible = false;
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(0, 150);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(481, 112);
+            this.dataGridView2.TabIndex = 1;
+            this.dataGridView2.Tag = "tbl_producto";
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
             // ExistenciaBodega
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -221,6 +238,7 @@ namespace VistaLogistica
             ((System.ComponentModel.ISupportInitialize)(this.dtgExisBodega)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -241,5 +259,6 @@ namespace VistaLogistica
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }

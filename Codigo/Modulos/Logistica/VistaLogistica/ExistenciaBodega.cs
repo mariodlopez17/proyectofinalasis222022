@@ -53,7 +53,7 @@ namespace VistaLogistica
             try
             {
                 string dato;
-                dato = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                dato = dataGridView2.CurrentRow.Cells[0].Value.ToString();
                 if (txtIdProducto.Text == "")
                 {
                     txtIdProducto.Text = dato;
@@ -101,6 +101,7 @@ namespace VistaLogistica
 
         private void button3_Click(object sender, EventArgs e)
         {
+            panel1.Visible = true;
             cont = 1;
            // dataGridView1.Columns.Clear();
             cn.llenarListPuestos(dataGridView1.Tag.ToString(), dataGridView1);
@@ -108,18 +109,9 @@ namespace VistaLogistica
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (cont == 1)
-            {
-                //Metodo que lleva valor Unico
+            
                 getId();
-            }
-            else if (cont == 2)
-            {
-                //Metodo que lleva valor con coma 1,2,3
-                getIds();
-            }
-
-            panel1.Visible = false;
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -138,6 +130,24 @@ namespace VistaLogistica
             //actualizardatagriew();
            
             MessageBox.Show(message);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = true;
+            cont = 2;
+            // dataGridView1.Columns.Clear();
+            cn.producto(dataGridView2.Tag.ToString(), dataGridView2);
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+         
+
+                getIds();
+            
+
+           
         }
     }
 }
