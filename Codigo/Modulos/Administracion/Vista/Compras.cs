@@ -135,5 +135,14 @@ namespace ComprasVista
             cnr.reporte(idApp);
 
         }
+
+        private void btncancelar_Click(object sender, EventArgs e)
+        {
+            GroupBox[] groupBoxes = { grpcompra, grpDetalle };
+            cn.limpiarpedido(groupBoxes);
+            dataGridView1.Rows.Clear();
+            txtTotalF.Clear();
+            cn.inicio2(Txt_idpedido, Txt_precio, Txt_Costo, txtTotalF);
+        }
     }
 }

@@ -44,6 +44,7 @@ namespace ComprasVista
             this.Txt_idproducto = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.grpcompra = new System.Windows.Forms.GroupBox();
+            this.btnReporte = new FontAwesome.Sharp.IconButton();
             this.btnorden = new System.Windows.Forms.Button();
             this.txtOrden = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -62,7 +63,6 @@ namespace ComprasVista
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnReporte = new FontAwesome.Sharp.IconButton();
             this.grpDetalle.SuspendLayout();
             this.grpcompra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -248,6 +248,25 @@ namespace ComprasVista
             this.grpcompra.Text = "Compra";
             this.grpcompra.Enter += new System.EventHandler(this.grpOrden_Enter);
             // 
+            // btnReporte
+            // 
+            this.btnReporte.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnReporte.FlatAppearance.BorderSize = 2;
+            this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporte.IconChar = FontAwesome.Sharp.IconChar.Print;
+            this.btnReporte.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
+            this.btnReporte.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnReporte.IconSize = 36;
+            this.btnReporte.Location = new System.Drawing.Point(913, 87);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(69, 61);
+            this.btnReporte.TabIndex = 66;
+            this.btnReporte.Text = "Reportes";
+            this.btnReporte.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
             // btnorden
             // 
             this.btnorden.Location = new System.Drawing.Point(240, 60);
@@ -319,6 +338,7 @@ namespace ComprasVista
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // btninsertar
             // 
@@ -411,25 +431,6 @@ namespace ComprasVista
             // 
             this.Total.HeaderText = "Total";
             this.Total.Name = "Total";
-            // 
-            // btnReporte
-            // 
-            this.btnReporte.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnReporte.FlatAppearance.BorderSize = 2;
-            this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReporte.IconChar = FontAwesome.Sharp.IconChar.Print;
-            this.btnReporte.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
-            this.btnReporte.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnReporte.IconSize = 36;
-            this.btnReporte.Location = new System.Drawing.Point(913, 87);
-            this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(69, 61);
-            this.btnReporte.TabIndex = 66;
-            this.btnReporte.Text = "Reportes";
-            this.btnReporte.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnReporte.UseVisualStyleBackColor = true;
-            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // Compras
             // 
