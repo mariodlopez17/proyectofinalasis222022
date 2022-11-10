@@ -54,6 +54,7 @@ namespace VistaLogistica
             this.btnMostrar.TabIndex = 75;
             this.btnMostrar.Text = "Mostrar";
             this.btnMostrar.UseVisualStyleBackColor = true;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // btnSalir
             // 
