@@ -21,6 +21,7 @@ namespace CapaVistaProduccion
         private void customizeDesing()
         {
             panel2.Visible = false;
+            panel4.Visible = false;
             panel3.Visible = false;
             panel6.Visible = false;
             panel7.Visible = false;
@@ -36,6 +37,8 @@ namespace CapaVistaProduccion
                 panel2.Visible = false;
             if (panel3.Visible == true)
                 panel3.Visible = false;
+            if (panel4.Visible == true)
+                panel4.Visible = false;
             if (panel6.Visible == true)
                 panel6.Visible = false;
             if (panel7.Visible == true)
@@ -117,24 +120,87 @@ namespace CapaVistaProduccion
 
         private void button4_Click_1(object sender, EventArgs e)
         {
+            bool abierto = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "ordenes")
+                {
+                    abierto = true;
+                    f.Focus();
+                    break;
+                }
+            }
+            if (abierto == false)
+            {
+                ordenes rep = new ordenes();
+                rep.MdiParent = this;
+                rep.Show();
+            }
 
             hideSubMenu();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-          
+            bool abierto = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "ver_ordenes")
+                {
+                    abierto = true;
+                    f.Focus();
+                    break;
+                }
+            }
+            if (abierto == false)
+            {
+                ver_ordenes rep = new ver_ordenes();
+                rep.MdiParent = this;
+                rep.Show();
+            }
             hideSubMenu();
 
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
+            bool abierto = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Recetas")
+                {
+                    abierto = true;
+                    f.Focus();
+                    break;
+                }
+            }
+            if (abierto == false)
+            {
+                Recetas rep = new Recetas();
+                rep.MdiParent = this;
+                rep.Show();
+            }
             hideSubMenu();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
+            bool abierto = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Recetas")
+                {
+                    abierto = true;
+                    f.Focus();
+                    break;
+                }
+            }
+            if (abierto == false)
+            {
+                ver_receta rep = new ver_receta();
+                rep.MdiParent = this;
+                rep.Show();
+            }
             hideSubMenu();
         }
 
@@ -161,11 +227,14 @@ namespace CapaVistaProduccion
 
         private void button11_Click(object sender, EventArgs e)
         {
+            CapaVistaReporteria.Inicio b = new CapaVistaReporteria.Inicio();
+            b.Show();
             hideSubMenu();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
+            Help.ShowHelp(this, "..\\..\\..\\..\\..\\..\\..\\Ayuda\\Modulos\\Produccion\\AyudaProduccion.chm", "MDIproduccion.html");
             hideSubMenu();
         }
 
@@ -197,6 +266,16 @@ namespace CapaVistaProduccion
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panel4);
         }
     }
 }
