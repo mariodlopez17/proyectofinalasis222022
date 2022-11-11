@@ -146,16 +146,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>facturaventas.xsd</DependentUpon>
     </Compile>
+    <Compile Include="LineaInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LineaInventario.designer.cs">
+      <DependentUpon>LineaInventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListadoPrecios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ListadoPrecios.designer.cs">
       <DependentUpon>ListadoPrecios.cs</DependentUpon>
     </Compile>
+    <Compile Include="listclientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listclientes.designer.cs">
+      <DependentUpon>listclientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="MovimientosClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MovimientosClientes.Designer.cs">
+    <Compile Include="MovimientosClientes.designer.cs">
       <DependentUpon>MovimientosClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="MovimientosProveedores.cs">
@@ -265,8 +277,14 @@
     <EmbeddedResource Include="FacturaVentas.resx">
       <DependentUpon>FacturaVentas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LineaInventario.resx">
+      <DependentUpon>LineaInventario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListadoPrecios.resx">
       <DependentUpon>ListadoPrecios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listclientes.resx">
+      <DependentUpon>listclientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MovimientosClientes.resx">
       <DependentUpon>MovimientosClientes.cs</DependentUpon>

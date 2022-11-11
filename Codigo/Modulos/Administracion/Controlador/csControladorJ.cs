@@ -33,6 +33,15 @@ namespace ComprasControlador
 
         } //Fin codigo movimiento Clientes
 
+        public void fillTableClientList(string ntabla, DataGridView tabla)//Funcion para llenar tabla
+        {
+            OdbcDataAdapter dt = sn.llenartablaListaClientes(ntabla);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            tabla.DataSource = table;
+
+        } //Fin codigo movimiento Clientes
+
         public void fillTablePriceList(string ntabla, DataGridView tabla, string tipo, string dato)//Funcion para llenar tabla
         {
             try
@@ -47,6 +56,16 @@ namespace ComprasControlador
                 System.Windows.MessageBox.Show("Error:" + e);
             }
 
-        } //Fin codigo movimiento Clientes
+        } //Fin codigo listado de precios
+
+        public void fillTableLine(string ntabla, DataGridView tabla)//Funcion para llenar tabla
+        {
+            OdbcDataAdapter dt = sn.llenartablaLineaInv(ntabla);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            tabla.DataSource = table;
+
+        } //Fin codigo listado de precios
+
     }
 }

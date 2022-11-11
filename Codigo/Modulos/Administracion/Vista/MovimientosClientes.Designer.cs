@@ -37,6 +37,7 @@ namespace ComprasVista
             this.Dgv_MovimientoCliente = new System.Windows.Forms.DataGridView();
             this.txtIdCliente = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_MovimientoCliente)).BeginInit();
             this.SuspendLayout();
@@ -157,18 +158,30 @@ namespace ComprasVista
             this.label1.TabIndex = 9;
             this.label1.Text = "Id Cliente";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(264, 166);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(29, 24);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "?";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MovimientosClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
             this.ClientSize = new System.Drawing.Size(1084, 661);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtIdCliente);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Dgv_MovimientoCliente);
             this.Controls.Add(this.panel1);
             this.Name = "MovimientosClientes";
             this.Text = "MovimientosClientes";
+            this.Load += new System.EventHandler(this.MovimientosClientes_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_MovimientoCliente)).EndInit();
             this.ResumeLayout(false);
@@ -186,5 +199,6 @@ namespace ComprasVista
         private FontAwesome.Sharp.IconButton btnConsultar;
         private FontAwesome.Sharp.IconButton btnCancelar;
         private FontAwesome.Sharp.IconButton btnReporte;
+        private System.Windows.Forms.Button button1;
     }
 }
