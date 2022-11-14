@@ -8,14 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using MySql.Data.MySqlClient;
 
 namespace CapaVistaProduccion
 {
     public partial class Recetas : Form
     {
-        string connectionString = @"Server=colchoneria.mysql.database.azure.com;Database=colchoneria;Uid=administrador;Pwd=Jm123456;";
-        int pk_idrecetas_tbl_recetas = 0;
+        
         public Recetas()
         {
             InitializeComponent();
@@ -23,7 +21,7 @@ namespace CapaVistaProduccion
 
         private void button2_Click(object sender, EventArgs e)
         {
-            using (MySqlConnection mySqlCon = new MySqlConnection(connectionString))
+            /*using (MySqlConnection mySqlCon = new MySqlConnection(connectionString))
             {
                 mySqlCon.Open();
                 MySqlCommand mySqlCmd = new MySqlCommand("pa_recetas_agregareditar", mySqlCon);
@@ -36,11 +34,24 @@ namespace CapaVistaProduccion
                 mySqlCmd.ExecuteNonQuery();
                 MessageBox.Show("Guardado Correctamente");
             }
+            */
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void navegador1_Load(object sender, EventArgs e)
+        {
+            NavegadorVista.Navegador.idApp = "5101";
+            TextBox[] Grupotextbox = { textBoxidreceta, textBoxproducto, textBoxmaterial, textBoxcantidad, textBoxmedida };
+            TextBox[] Idtextbox = { textBoxidreceta, textBoxproducto };
+            navegador1.textbox = Grupotextbox;
+            navegador1.tabla = dataGridView1;
+            navegador1.textboxi = Idtextbox;
+            navegador1.actual = this;
+            navegador1.cargar(dataGridView1, Grupotextbox, "colchoneria");
         }
     }
 }

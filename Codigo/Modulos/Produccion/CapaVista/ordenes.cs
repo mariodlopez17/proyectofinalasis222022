@@ -7,15 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+
 
 
 namespace CapaVistaProduccion
 {
     public partial class ordenes : Form
     {
-        string connectionString = @"Server=colchoneria.mysql.database.azure.com;Database=colchoneria;Uid=administrador;Pwd=Jm123456;";
-        int pk_idordenes_tbl_ordenes = 0;
+       
         public ordenes()
         {
             InitializeComponent();
@@ -24,8 +23,8 @@ namespace CapaVistaProduccion
 
         void Clear()
         {
-            textBox2.Text = textBox3.Text = textBox4.Text = dateTimePicker3.Text = textBox1.Text = dateTimePicker1.Text = dateTimePicker2.Text = comboBox1.Text = "";
-            pk_idordenes_tbl_ordenes = 0;
+           /* textBox2.Text = textBox3.Text = textBox4.Text = dateTimePicker3.Text = textBox1.Text = dateTimePicker1.Text = dateTimePicker2.Text = comboBox1.Text = "";
+            pk_idordenes_tbl_ordenes = 0;*/
 
         }
 
@@ -42,7 +41,7 @@ namespace CapaVistaProduccion
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            using (MySqlConnection mysqlCon = new MySqlConnection(connectionString))
+           /* using (MySqlConnection mysqlCon = new MySqlConnection(connectionString))
             {
                 mysqlCon.Open();
                 MySqlCommand mySqlCmd = new MySqlCommand("pa_produccion_ordenes_agregareditar", mysqlCon);
@@ -62,12 +61,119 @@ namespace CapaVistaProduccion
 
                 Clear();
 
-            }
+            }*/
         }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        void textbox()
+        {
+         
+
+        }
+
+        private void textBox1_Click(object sender, EventArgs e)
+        {
+           /* fechacrea.Text = dateTimePicker3.Text;
+            num_receta.Text= textBox2.Text;
+            prioridadtxt.Text= comboBox1.Text;
+            prod_fabricar.Text= textBox3.Text;
+            fechainic.Text= dateTimePicker1.Text;
+            textBox5.Text= textBox4.Text;
+            fechaent.Text= dateTimePicker2.Text;
+            detalle.Text= textBox1.Text;*/
+        }
+
+        private void dateTimePicker3_CloseUp(object sender, EventArgs e)
+        {
+            /* fechacrea.Text = dateTimePicker3.Text;
+                num_receta.Text= textBox2.Text;
+                prioridadtxt.Text= comboBox1.Text;
+                prod_fabricar.Text= textBox3.Text;
+                fechainic.Text= dateTimePicker1.Text;
+                textBox5.Text= textBox4.Text;
+                fechaent.Text= dateTimePicker2.Text;
+                detalle.Text= textBox1.Text;*/
+        }
+
+
+        private void navegador1_Load_2(object sender, EventArgs e)
+        {
+            NavegadorVista.Navegador.idApp = "5102";
+            TextBox[] Grupotextbox = { num_orden, num_receta, prioridadtxt, prod_fabricar, textBox4, fechainic, fechaent, fechacrea, detalle };
+            TextBox[] Idtextbox = { num_orden, num_receta };
+            navegador1.textbox = Grupotextbox;
+            navegador1.tabla = dataGridView1;
+            navegador1.textboxi = Idtextbox;
+            navegador1.actual = this;
+            navegador1.cargar(dataGridView1, Grupotextbox, "colchoneria");
+        }
+
+        private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
+        {
+            fechacrea.Text = dateTimePicker1.Text;
+            prioridadtxt.Text = comboBox1.Text;
+            fechainic.Text = dateTimePicker2.Text;
+            fechaent.Text = dateTimePicker3.Text;
+        }
+
+        private void dateTimePicker3_ValueChanged(object sender, EventArgs e)
+        {
+            fechacrea.Text = dateTimePicker1.Text;
+            prioridadtxt.Text = comboBox1.Text;
+            fechainic.Text = dateTimePicker2.Text;
+            fechaent.Text = dateTimePicker3.Text;
+        }
+
+        private void detalle_TextChanged(object sender, EventArgs e)
+        {
+            fechacrea.Text = dateTimePicker1.Text;
+            prioridadtxt.Text = comboBox1.Text;
+            fechainic.Text = dateTimePicker2.Text;
+            fechaent.Text = dateTimePicker3.Text;
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+            fechacrea.Text = dateTimePicker1.Text;
+            prioridadtxt.Text = comboBox1.Text;
+            fechainic.Text = dateTimePicker2.Text;
+            fechaent.Text = dateTimePicker3.Text;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            fechacrea.Text = dateTimePicker1.Text;
+            prioridadtxt.Text = comboBox1.Text;
+            fechainic.Text = dateTimePicker2.Text;
+            fechaent.Text = dateTimePicker3.Text;
+        }
+
+        private void prod_fabricar_TextChanged(object sender, EventArgs e)
+        {
+            fechacrea.Text = dateTimePicker1.Text;
+            prioridadtxt.Text = comboBox1.Text;
+            fechainic.Text = dateTimePicker2.Text;
+            fechaent.Text = dateTimePicker3.Text;
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            fechacrea.Text = dateTimePicker1.Text;
+            prioridadtxt.Text = comboBox1.Text;
+            fechainic.Text = dateTimePicker2.Text;
+            fechaent.Text = dateTimePicker3.Text;
+        }
+
+        private void num_receta_TextChanged(object sender, EventArgs e)
+        {
+            fechacrea.Text = dateTimePicker1.Text;
+            prioridadtxt.Text = comboBox1.Text;
+            fechainic.Text = dateTimePicker2.Text;
+            fechaent.Text = dateTimePicker3.Text;
         }
     }
 }
